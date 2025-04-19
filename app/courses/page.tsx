@@ -358,13 +358,16 @@ export default function CoursesPage() {
                     ></div>
                     <div className="flex flex-wrap gap-4 mt-8" data-oid="qz40665">
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="9kju2gr"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="9u7.0sn">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="9u7.0sn"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid="ofby4pg"
@@ -373,20 +376,29 @@ export default function CoursesPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="po00rwb"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid="y8utt6g">Expert Instructors</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid="y8utt6g"
+                            >
+                                Expert Instructors
+                            </span>
                         </div>
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="u7tc1fe"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="4f2qtb5">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="4f2qtb5"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid="3jeghnj"
@@ -395,20 +407,29 @@ export default function CoursesPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="c32zazf"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid="_c5y7e:">Flexible Learning</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid="_c5y7e:"
+                            >
+                                Flexible Learning
+                            </span>
                         </div>
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="ee94w:b"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="ojoprhd">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="ojoprhd"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid="onrw7t7"
@@ -417,11 +438,17 @@ export default function CoursesPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="v9slnc9"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid="fp-fbx:">Certificate on Completion</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid="fp-fbx:"
+                            >
+                                Certificate on Completion
+                            </span>
                         </div>
                     </div>
                 </div>

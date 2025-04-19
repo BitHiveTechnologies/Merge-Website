@@ -300,14 +300,17 @@ export default function Page() {
                             className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
                             data-oid="q5bt0ph"
                         >
-                            <div className="flex items-center mb-6" data-oid=":ddeq09">
+                            <div
+                                className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                data-oid=":ddeq09"
+                            >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center"
+                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                                     data-oid="q11alpl"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white"
+                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -319,26 +322,36 @@ export default function Page() {
                                             strokeWidth={2}
                                             d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                             data-oid="8qmgkwa"
+                                            className="group-hover:animate-pulse"
                                         />
                                     </svg>
                                 </div>
                                 <div className="ml-4" data-oid="cri4ea4">
-                                    <h3 className="text-xl font-semibold" data-oid="zbb7qp-">
+                                    <h3
+                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                        data-oid="zbb7qp-"
+                                    >
                                         Learn at Your Pace
                                     </h3>
-                                    <p className="text-gray-400" data-oid="_uyah2p">
+                                    <p
+                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                        data-oid="_uyah2p"
+                                    >
                                         Access courses anytime, anywhere
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-center mb-6" data-oid="0zdv7:v">
+                            <div
+                                className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                data-oid="0zdv7:v"
+                            >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center"
+                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                                     data-oid="kk:5..w"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white"
+                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -350,26 +363,36 @@ export default function Page() {
                                             strokeWidth={2}
                                             d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                                             data-oid="jz7g9pq"
+                                            className="group-hover:animate-pulse"
                                         />
                                     </svg>
                                 </div>
                                 <div className="ml-4" data-oid="yvjew-y">
-                                    <h3 className="text-xl font-semibold" data-oid="ljg7bb7">
+                                    <h3
+                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                        data-oid="ljg7bb7"
+                                    >
                                         Community Support
                                     </h3>
-                                    <p className="text-gray-400" data-oid="8ug5wx:">
+                                    <p
+                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                        data-oid="8ug5wx:"
+                                    >
                                         Join WhatsApp groups for each course
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-center" data-oid="l2ti17k">
+                            <div
+                                className="flex items-center group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                data-oid="l2ti17k"
+                            >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center"
+                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                                     data-oid="fwbnfdw"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white"
+                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -381,14 +404,21 @@ export default function Page() {
                                             strokeWidth={2}
                                             d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                             data-oid="co91zdy"
+                                            className="group-hover:animate-pulse"
                                         />
                                     </svg>
                                 </div>
                                 <div className="ml-4" data-oid="3cddtbk">
-                                    <h3 className="text-xl font-semibold" data-oid="sh9_w4t">
+                                    <h3
+                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                        data-oid="sh9_w4t"
+                                    >
                                         Real-world Projects
                                     </h3>
-                                    <p className="text-gray-400" data-oid="v9t2t0x">
+                                    <p
+                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                        data-oid="v9t2t0x"
+                                    >
                                         Build your portfolio with hackathons
                                     </p>
                                 </div>
@@ -420,16 +450,16 @@ export default function Page() {
 
                     <div className="grid md:grid-cols-3 gap-8" data-oid="h99nb_w">
                         <div
-                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-colors"
+                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
                             data-oid="l35gi2b"
                         >
                             <div
-                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6"
+                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500"
                                 data-oid="g:ivin7"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8 text-white"
+                                    className="h-8 w-8 text-white group-hover:rotate-12 transition-transform duration-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -441,29 +471,36 @@ export default function Page() {
                                         strokeWidth={2}
                                         d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                                         data-oid="tq.8tv0"
+                                        className="group-hover:animate-pulse"
                                     />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold mb-3" data-oid="1s:z6yq">
+                            <h3
+                                className="text-xl font-semibold mb-3 group-hover:text-purple-300 transition-colors duration-300"
+                                data-oid="1s:z6yq"
+                            >
                                 Industry-Relevant Curriculum
                             </h3>
-                            <p className="text-gray-300" data-oid="idio5qu">
+                            <p
+                                className="text-gray-300 group-hover:text-white transition-colors duration-300"
+                                data-oid="idio5qu"
+                            >
                                 Our courses are designed by industry experts to ensure you learn
                                 skills that are in demand right now.
                             </p>
                         </div>
 
                         <div
-                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-colors"
+                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
                             data-oid="6cl1h4e"
                         >
                             <div
-                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6"
+                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500"
                                 data-oid="oxayo:a"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8 text-white"
+                                    className="h-8 w-8 text-white group-hover:rotate-12 transition-transform duration-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -475,29 +512,36 @@ export default function Page() {
                                         strokeWidth={2}
                                         d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                                         data-oid="0abwpcm"
+                                        className="group-hover:animate-pulse"
                                     />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold mb-3" data-oid="lm8lx3a">
+                            <h3
+                                className="text-xl font-semibold mb-3 group-hover:text-purple-300 transition-colors duration-300"
+                                data-oid="lm8lx3a"
+                            >
                                 Hands-on Hackathons
                             </h3>
-                            <p className="text-gray-300" data-oid="g6474g3">
+                            <p
+                                className="text-gray-300 group-hover:text-white transition-colors duration-300"
+                                data-oid="g6474g3"
+                            >
                                 Apply your knowledge in competitive hackathons with real prizes and
                                 recognition opportunities.
                             </p>
                         </div>
 
                         <div
-                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-colors"
+                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
                             data-oid="vwfaf2x"
                         >
                             <div
-                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6"
+                                className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500"
                                 data-oid="10zxgbj"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8 text-white"
+                                    className="h-8 w-8 text-white group-hover:rotate-12 transition-transform duration-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -509,13 +553,20 @@ export default function Page() {
                                         strokeWidth={2}
                                         d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
                                         data-oid="sum:bef"
+                                        className="group-hover:animate-pulse"
                                     />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold mb-3" data-oid="5n8-w7w">
+                            <h3
+                                className="text-xl font-semibold mb-3 group-hover:text-purple-300 transition-colors duration-300"
+                                data-oid="5n8-w7w"
+                            >
                                 Active Community
                             </h3>
-                            <p className="text-gray-300" data-oid="6:-h5i5">
+                            <p
+                                className="text-gray-300 group-hover:text-white transition-colors duration-300"
+                                data-oid="6:-h5i5"
+                            >
                                 Join our WhatsApp groups for each course to get support, network,
                                 and collaborate with peers.
                             </p>

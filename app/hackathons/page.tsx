@@ -324,13 +324,16 @@ export default function HackathonsPage() {
                     ></div>
                     <div className="flex flex-wrap gap-4 mt-8" data-oid="e7qppli">
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="q429w.p"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="uvns6ms">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="uvns6ms"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid=":o1:ja4"
@@ -339,20 +342,29 @@ export default function HackathonsPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="30wk27k"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid="7.fzll6">Exciting Prizes</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid="7.fzll6"
+                            >
+                                Exciting Prizes
+                            </span>
                         </div>
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="sjchzh_"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="x-69xwc">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="x-69xwc"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid="iffbza1"
@@ -361,20 +373,29 @@ export default function HackathonsPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="16.9jl7"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid=":z_2-50">Expert Mentorship</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid=":z_2-50"
+                            >
+                                Expert Mentorship
+                            </span>
                         </div>
                         <div
-                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
                             data-oid="9cp0:sg"
                         >
-                            <span className="text-purple-400 mr-2" data-oid="p-o7rqk">
+                            <span
+                                className="text-purple-400 mr-2 group-hover:text-purple-300"
+                                data-oid="p-o7rqk"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                     data-oid="c2gwyre"
@@ -383,11 +404,17 @@ export default function HackathonsPage() {
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
+                                        className="group-hover:animate-pulse"
                                         data-oid="rgzfh71"
                                     />
                                 </svg>
                             </span>
-                            <span data-oid="iw0a7qi">Networking Opportunities</span>
+                            <span
+                                className="group-hover:text-white transition-colors duration-300"
+                                data-oid="iw0a7qi"
+                            >
+                                Networking Opportunities
+                            </span>
                         </div>
                     </div>
                 </div>
