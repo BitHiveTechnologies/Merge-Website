@@ -237,15 +237,18 @@ export default function Page() {
 
             {/* Hero Section */}
             <section
-                className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900"
+                className="py-36 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 h-[861px]"
                 data-oid="zn2v:g7"
             >
                 <div
                     className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
                     data-oid="b-stegf"
                 >
-                    <div data-oid="fyt2goq">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6" data-oid="5kiltty">
+                    <div className="py-8" data-oid="fyt2goq">
+                        <h1
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+                            data-oid="5kiltty"
+                        >
                             <span
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
                                 data-oid="3ne1zkt"
@@ -255,21 +258,25 @@ export default function Page() {
                             <br data-oid="xlg56d1" />
                             <span data-oid="x.:33ow">With Opportunity</span>
                         </h1>
-                        <p className="text-xl text-gray-300 mb-8" data-oid="rmmv3zp">
+                        <p className="text-xl md:text-2xl text-gray-300 mb-10" data-oid="rmmv3zp">
                             Join our community of learners and professionals to upskill, participate
                             in hackathons, and connect with industry experts.
                         </p>
+                        <div
+                            className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-10"
+                            data-oid="9:v-d7c"
+                        ></div>
                         <div className="flex flex-col sm:flex-row gap-4" data-oid="x82u.on">
                             <a
                                 href="/courses"
-                                className="px-8 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium"
+                                className="px-8 py-4 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium text-lg"
                                 data-oid="y931jx7"
                             >
                                 Explore Courses
                             </a>
                             <a
                                 href="/signup"
-                                className="px-8 py-3 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center font-medium"
+                                className="px-8 py-4 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center font-medium text-lg"
                                 data-oid="-0o5ol7"
                             >
                                 Join Now
@@ -278,15 +285,19 @@ export default function Page() {
                     </div>
                     <div className="hidden md:block relative" data-oid="l7zwjwm">
                         <div
-                            className="absolute -top-20 -left-20 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl"
+                            className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
                             data-oid="0z8ar8:"
                         ></div>
                         <div
-                            className="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-500/20 rounded-full filter blur-3xl"
+                            className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
                             data-oid="d0etzvh"
                         ></div>
                         <div
-                            className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700"
+                            className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                            data-oid="5z4emav"
+                        ></div>
+                        <div
+                            className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
                             data-oid="q5bt0ph"
                         >
                             <div className="flex items-center mb-6" data-oid=":ddeq09">
