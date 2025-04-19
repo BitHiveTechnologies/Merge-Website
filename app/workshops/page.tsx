@@ -484,7 +484,7 @@ export default function WorkshopsPage() {
 
             {/* Tabs */}
             <div
-                className="bg-gray-900 py-8 px-6 md:px-12 border-b border-gray-800"
+                className="bg-gray-900 py-8 px-6 md:px-12 border-b border-black"
                 data-oid="1srfy5h"
             >
                 <div className="max-w-6xl mx-auto" data-oid="4uf06ov">
