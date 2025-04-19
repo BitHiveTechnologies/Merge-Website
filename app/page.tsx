@@ -237,7 +237,7 @@ export default function Page() {
 
             {/* Hero Section */}
             <section
-                className="py-28 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 h-[750px]"
+                className="pt-10 pb-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 h-[700px]"
                 data-oid="zn2v:g7"
             >
                 <div
