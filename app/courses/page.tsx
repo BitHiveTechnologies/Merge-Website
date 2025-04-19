@@ -315,21 +315,28 @@ export default function CoursesPage() {
 
             {/* Page Header */}
             <div
-                className="bg-gradient-to-b from-black to-gray-900 py-24 px-6 md:px-12 relative overflow-hidden"
+                className="bg-gradient-to-b from-black to-gray-900 py-36 px-6 md:px-12 relative overflow-hidden"
                 data-oid="9tuq1s7"
             >
                 {/* Background elements similar to main page */}
                 <div
-                    className="absolute -top-20 -left-20 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl"
+                    className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
                     data-oid="bg-element-1"
                 ></div>
                 <div
-                    className="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-500/20 rounded-full filter blur-3xl"
+                    className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
                     data-oid="bg-element-2"
                 ></div>
+                <div
+                    className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                    data-oid="bg-element-3"
+                ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10" data-oid="wt6ho.:">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6" data-oid=":x13529">
+                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="wt6ho.:">
+                    <h1
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+                        data-oid=":x13529"
+                    >
                         Explore Our{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
@@ -338,14 +345,85 @@ export default function CoursesPage() {
                             Courses
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mb-4" data-oid="djhk9oa">
+                    <p
+                        className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
+                        data-oid="djhk9oa"
+                    >
                         Discover a wide range of courses designed to help you master new skills and
                         advance your career in technology.
                     </p>
                     <div
-                        className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-4"
+                        className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
                         data-oid="ppryuex"
                     ></div>
+                    <div className="flex flex-wrap gap-4 mt-8" data-oid="qz40665">
+                        <div
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            data-oid="9kju2gr"
+                        >
+                            <span className="text-purple-400 mr-2" data-oid="9u7.0sn">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    data-oid="ofby4pg"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clipRule="evenodd"
+                                        data-oid="po00rwb"
+                                    />
+                                </svg>
+                            </span>
+                            <span data-oid="y8utt6g">Expert Instructors</span>
+                        </div>
+                        <div
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            data-oid="u7tc1fe"
+                        >
+                            <span className="text-purple-400 mr-2" data-oid="4f2qtb5">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    data-oid="3jeghnj"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clipRule="evenodd"
+                                        data-oid="c32zazf"
+                                    />
+                                </svg>
+                            </span>
+                            <span data-oid="_c5y7e:">Flexible Learning</span>
+                        </div>
+                        <div
+                            className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
+                            data-oid="ee94w:b"
+                        >
+                            <span className="text-purple-400 mr-2" data-oid="ojoprhd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    data-oid="onrw7t7"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clipRule="evenodd"
+                                        data-oid="v9slnc9"
+                                    />
+                                </svg>
+                            </span>
+                            <span data-oid="fp-fbx:">Certificate on Completion</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
