@@ -315,7 +315,7 @@ export default function CoursesPage() {
 
             {/* Page Header */}
             <div
-                className="bg-gradient-to-b from-black to-gray-900 py-36 px-6 md:px-12 relative overflow-hidden"
+                className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
                 data-oid="9tuq1s7"
             >
                 {/* Background elements similar to main page */}
