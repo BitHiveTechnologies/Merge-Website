@@ -315,11 +315,21 @@ export default function CoursesPage() {
 
             {/* Page Header */}
             <div
-                className="bg-gradient-to-b from-black to-gray-900 py-16 px-6 md:px-12"
+                className="bg-gradient-to-b from-black to-gray-900 py-24 px-6 md:px-12 relative overflow-hidden"
                 data-oid="9tuq1s7"
             >
-                <div className="max-w-6xl mx-auto" data-oid="wt6ho.:">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid=":x13529">
+                {/* Background elements similar to main page */}
+                <div
+                    className="absolute -top-20 -left-20 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl"
+                    data-oid="bg-element-1"
+                ></div>
+                <div
+                    className="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-500/20 rounded-full filter blur-3xl"
+                    data-oid="bg-element-2"
+                ></div>
+
+                <div className="max-w-6xl mx-auto relative z-10" data-oid="wt6ho.:">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6" data-oid=":x13529">
                         Explore Our{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
@@ -328,10 +338,14 @@ export default function CoursesPage() {
                             Courses
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="djhk9oa">
+                    <p className="text-xl text-gray-300 max-w-3xl mb-4" data-oid="djhk9oa">
                         Discover a wide range of courses designed to help you master new skills and
                         advance your career in technology.
                     </p>
+                    <div
+                        className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-4"
+                        data-oid="ppryuex"
+                    ></div>
                 </div>
             </div>
 
