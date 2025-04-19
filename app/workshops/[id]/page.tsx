@@ -133,11 +133,13 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
             }
 
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const hoursRemaining = Math.floor(
+                (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+            );
+            const minutesRemaining = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            setTimeRemaining({ days, hours, minutes, seconds });
+            setTimeRemaining({ days, hours: hoursRemaining, minutes: minutesRemaining, seconds });
         };
 
         calculateTimeRemaining();
