@@ -1173,6 +1173,10 @@ export default function Page() {
                     >
                         <p data-oid="yjaoo92">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
+                            <br data-oid="e9ku6::" />
+                            <span className="text-sm block mt-2" data-oid="sr9rfeo">
+                                Designed and Developed by BitHive Technologies
+                            </span>
                         </p>
                     </div>
                 </div>
