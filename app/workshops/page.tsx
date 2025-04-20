@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Navbar from '@/components/Navbar';
 
 // Workshop type definition
 interface Workshop {
@@ -280,94 +281,7 @@ export default function WorkshopsPage() {
     return (
         <div className="min-h-screen bg-black text-white font-sans" data-oid=".yit17g">
             {/* Navbar - reusing from main page */}
-            <nav
-                className="py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800"
-                data-oid="_30t5b9"
-            >
-                <div className="flex items-center" data-oid="b20zz6j">
-                    <div className="relative h-10 w-32" data-oid="ffujizy">
-                        <div
-                            className="absolute inset-0 flex items-center justify-center"
-                            data-oid="wd-8s.d"
-                        >
-                            <div
-                                className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-pink-500"
-                                data-oid="1bat_-h"
-                            >
-                                MERGE
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-8" data-oid="lnfq_ws">
-                    <a
-                        href="/"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="5g41we6"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="/courses"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="qr3mxo9"
-                    >
-                        Courses
-                    </a>
-                    <a
-                        href="/workshops"
-                        className="text-purple-400 transition-colors"
-                        data-oid="p_8-5wt"
-                    >
-                        Workshops
-                    </a>
-                    <a
-                        href="/hackathons"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="u2654sq"
-                    >
-                        Hackathons
-                    </a>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-4" data-oid="je5v:kr">
-                    <a
-                        href="/login"
-                        className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
-                        data-oid="dxy6rpx"
-                    >
-                        Login
-                    </a>
-                    <a
-                        href="/signup"
-                        className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
-                        data-oid="dd9tb9z"
-                    >
-                        Sign Up
-                    </a>
-                </div>
-
-                <button className="md:hidden text-white" data-oid="-ptquo0">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        data-oid="pwtky3."
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h16"
-                            data-oid="yanc5l0"
-                        />
-                    </svg>
-                </button>
-            </nav>
-
+            <Navbar data-oid="h126q6s" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"

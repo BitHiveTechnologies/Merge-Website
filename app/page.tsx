@@ -1,5 +1,8 @@
 'use client';
 
+import Navbar from '@/components/Navbar';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function Page() {
@@ -91,98 +94,7 @@ export default function Page() {
     return (
         <div className="min-h-screen bg-black text-white font-sans" data-oid="x_bwgzk">
             {/* Navbar */}
-            <nav
-                className="py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800"
-                data-oid="qd4941z"
-            >
-                <div className="flex items-center" data-oid="2_lhtvq">
-                    <div className="relative h-10 w-32" data-oid=":u_pmn8">
-                        <div
-                            className="absolute inset-0 flex items-center justify-center"
-                            data-oid="39x7_52"
-                        >
-                            <div
-                                className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-pink-500"
-                                data-oid=":0wnzol"
-                            >
-                                MERGEa
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-8" data-oid="v28txam">
-                    <a
-                        href="/"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="kcecr26"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="/courses"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="dhmrp_m"
-                    >
-                        Courses
-                    </a>
-                    <a
-                        href="/workshops"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="o6d1xf6"
-                    >
-                        Workshops
-                    </a>
-                    <a
-                        href="/hackathons"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="vbgt2m5"
-                    >
-                        Hackathons
-                    </a>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-4" data-oid="tkbytzz">
-                    <a
-                        href="/login"
-                        className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
-                        data-oid="pwik_c."
-                    >
-                        Login
-                    </a>
-                    <a
-                        href="/signup"
-                        className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
-                        data-oid="l2ohss8"
-                    >
-                        Sign Up
-                    </a>
-                </div>
-
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    data-oid="tw1drhf"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        data-oid=":7fz1y-"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h16"
-                            data-oid="5tuf6y8"
-                        />
-                    </svg>
-                </button>
-            </nav>
-
+            <Navbar data-oid="3q97y-i" />
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-gray-900 p-4" data-oid="rj-re:y">
@@ -948,12 +860,15 @@ export default function Page() {
                 <div className="max-w-6xl mx-auto" data-oid="h1g5kgn">
                     <div className="grid md:grid-cols-4 gap-8 mb-12" data-oid="3jm.fmz">
                         <div data-oid=".1pwni9">
-                            <div
-                                className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 mb-4"
-                                data-oid="ie4q5c-"
-                            >
-                                MERGE
-                            </div>
+                            <Link href="/" data-oid="l3kzhst">
+                                <Image
+                                    src="/images/Merge.png"
+                                    alt="Merge logo"
+                                    width={150}
+                                    height={150}
+                                    data-oid="xoq2qa:"
+                                />
+                            </Link>
                             <p className="text-gray-400 mb-6" data-oid="eiej-o7">
                                 Empowering tech enthusiasts to learn, build, and grow together.
                             </p>

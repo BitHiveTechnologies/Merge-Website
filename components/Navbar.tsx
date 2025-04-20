@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -23,12 +24,15 @@ export default function Navbar() {
                         className="absolute inset-0 flex items-center justify-center"
                         data-oid="vwftdeo"
                     >
-                        <div
-                            className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-pink-500"
-                            data-oid="qn4:-jp"
-                        >
-                            MERGE
-                        </div>
+                        <Link href="/" data-oid="l3kzhst">
+                            <Image
+                                src="/images/Merge.png"
+                                alt="Merge logo"
+                                width={200}
+                                height={200}
+                                data-oid="xoq2qa:"
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>

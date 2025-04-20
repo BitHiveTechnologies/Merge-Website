@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Navbar from '@/components/Navbar';
 
 // Course type definition
 interface Course {
@@ -181,94 +182,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     return (
         <div className="min-h-screen bg-black text-white font-sans" data-oid="q5foxwy">
             {/* Navbar - reusing from main page */}
-            <nav
-                className="py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800"
-                data-oid="auq:c-t"
-            >
-                <div className="flex items-center" data-oid="i4l8a1d">
-                    <div className="relative h-10 w-32" data-oid="_wqr1ru">
-                        <div
-                            className="absolute inset-0 flex items-center justify-center"
-                            data-oid="-45nkmm"
-                        >
-                            <div
-                                className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-pink-500"
-                                data-oid="xu2aql-"
-                            >
-                                MERGE
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-8" data-oid="-5qnb1i">
-                    <a
-                        href="/"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="7fr1q.n"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="/courses"
-                        className="text-purple-400 transition-colors"
-                        data-oid="6wkj.rr"
-                    >
-                        Courses
-                    </a>
-                    <a
-                        href="/workshops"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="i5whhfh"
-                    >
-                        Workshops
-                    </a>
-                    <a
-                        href="/hackathons"
-                        className="hover:text-purple-400 transition-colors"
-                        data-oid="h3p_moq"
-                    >
-                        Hackathons
-                    </a>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-4" data-oid="op48eq3">
-                    <a
-                        href="/login"
-                        className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
-                        data-oid="1sz439s"
-                    >
-                        Login
-                    </a>
-                    <a
-                        href="/signup"
-                        className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
-                        data-oid="e044vok"
-                    >
-                        Sign Up
-                    </a>
-                </div>
-
-                <button className="md:hidden text-white" data-oid="2d06.6_">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        data-oid="m2m81rh"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h16"
-                            data-oid="sxzkc-l"
-                        />
-                    </svg>
-                </button>
-            </nav>
-
+            <Navbar data-oid="gt5:.91" />
             {/* Back Button */}
             <div className="bg-gray-900 py-4 px-6 md:px-12" data-oid="-1g1_14">
                 <div className="max-w-6xl mx-auto" data-oid="c6x78-5">
