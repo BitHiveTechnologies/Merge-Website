@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Workshop type definition
 interface Workshop {
@@ -189,51 +191,51 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8" data-oid="510rh1z">
-                    <a
+                    <Link
                         href="/"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="w1o3hu4"
                     >
                         Home
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/courses"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="uy7yqds"
                     >
                         Courses
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/workshops"
                         className="text-purple-400 transition-colors"
                         data-oid="5mnb591"
                     >
                         Workshops
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/hackathons"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="ifbf6xf"
                     >
                         Hackathons
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4" data-oid="7mwttr-">
-                    <a
+                    <Link
                         href="/login"
                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
                         data-oid="oeax7k1"
                     >
                         Login
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/signup"
                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
                         data-oid="3o3h9rr"
                     >
                         Sign Up
-                    </a>
+                    </Link>
                 </div>
 
                 <button className="md:hidden text-white" data-oid="8fn--4q">
@@ -297,12 +299,15 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     className="relative h-64 md:h-full rounded-xl overflow-hidden"
                                     data-oid="gtq1vii"
                                 >
-                                    <img
-                                        src={workshop.image}
-                                        alt={workshop.title}
-                                        className="w-full h-full object-cover"
-                                        data-oid="0dkrkwo"
-                                    />
+                                    <div className="relative w-full h-full" data-oid="k91qgd6">
+                                        <Image
+                                            src={workshop.image}
+                                            alt={workshop.title}
+                                            fill
+                                            className="object-cover"
+                                            data-oid="0dkrkwo"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="flex flex-col justify-between" data-oid="1j4tbwe">
                                     <div data-oid="19gy61a">
@@ -486,7 +491,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                         </div>
                                     )}
 
-                                    <a
+                                    <Link
                                         href={workshop.registrationLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -494,7 +499,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                         data-oid="nk7a_rl"
                                     >
                                         Register Now
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -580,15 +585,21 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                 className="w-16 h-16 rounded-full overflow-hidden mr-4"
                                                 data-oid="t03h9iz"
                                             >
-                                                <img
-                                                    src={
-                                                        workshop.instructorImage ||
-                                                        'https://via.placeholder.com/150'
-                                                    }
-                                                    alt={workshop.instructor}
-                                                    className="w-full h-full object-cover"
-                                                    data-oid="ac2mbpj"
-                                                />
+                                                <div
+                                                    className="relative w-full h-full"
+                                                    data-oid="noy5a-o"
+                                                >
+                                                    <Image
+                                                        src={
+                                                            workshop.instructorImage ||
+                                                            'https://via.placeholder.com/150'
+                                                        }
+                                                        alt={workshop.instructor}
+                                                        fill
+                                                        className="object-cover"
+                                                        data-oid="ac2mbpj"
+                                                    />
+                                                </div>
                                             </div>
                                             <div data-oid="k:0.gkc">
                                                 <h3

@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Page() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +27,7 @@ export default function Page() {
             name: 'Sarah Chen',
             role: 'UI/UX Designer',
             content:
-                "Participating in Merge's hackathons gave me real-world experience and helped me build my portfolio. I landed my dream job shortly after!",
+                'Participating in Merge&apos;s hackathons gave me real-world experience and helped me build my portfolio. I landed my dream job shortly after!',
             avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
         },
         {
@@ -112,51 +114,51 @@ export default function Page() {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8" data-oid="v28txam">
-                    <a
+                    <Link
                         href="/"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="kcecr26"
                     >
                         Home
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/courses"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="dhmrp_m"
                     >
                         Courses
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/workshops"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="o6d1xf6"
                     >
                         Workshops
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/hackathons"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="vbgt2m5"
                     >
                         Hackathons
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4" data-oid="tkbytzz">
-                    <a
+                    <Link
                         href="/login"
                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
                         data-oid="pwik_c."
                     >
                         Login
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/signup"
                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
                         data-oid="l2ohss8"
                     >
                         Sign Up
-                    </a>
+                    </Link>
                 </div>
 
                 <button
@@ -187,49 +189,49 @@ export default function Page() {
             {isMenuOpen && (
                 <div className="md:hidden bg-gray-900 p-4" data-oid="rj-re:y">
                     <div className="flex flex-col space-y-3" data-oid="x:vv3at">
-                        <a
+                        <Link
                             href="/"
                             className="hover:text-purple-400 transition-colors py-2"
                             data-oid="4_o53gv"
                         >
                             Home
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="/courses"
                             className="hover:text-purple-400 transition-colors py-2"
                             data-oid="g5gnwy6"
                         >
                             Courses
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="/workshops"
                             className="hover:text-purple-400 transition-colors py-2"
                             data-oid="ifz82fa"
                         >
                             Workshops
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="/hackathons"
                             className="hover:text-purple-400 transition-colors py-2"
                             data-oid="bfw:_et"
                         >
                             Hackathons
-                        </a>
+                        </Link>
                         <div className="pt-4 flex space-x-4" data-oid="7f1oubw">
-                            <a
+                            <Link
                                 href="/login"
                                 className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center"
                                 data-oid="tr7x7e1"
                             >
                                 Login
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/signup"
                                 className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center"
                                 data-oid=".kblntp"
                             >
                                 Sign Up
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -267,20 +269,20 @@ export default function Page() {
                             data-oid="77fn3d1"
                         ></div>
                         <div className="flex flex-col sm:flex-row gap-4" data-oid="gen8ahs">
-                            <a
+                            <Link
                                 href="/courses"
                                 className="px-8 py-4 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium text-lg"
                                 data-oid="n93aku2"
                             >
                                 Explore Courses
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/signup"
                                 className="px-8 py-4 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center font-medium text-lg"
                                 data-oid="gxoymup"
                             >
                                 Join Now
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="hidden md:block relative" data-oid="hl_59fy">
@@ -587,13 +589,13 @@ export default function Page() {
                                 Start your learning journey with our top courses
                             </p>
                         </div>
-                        <a
+                        <Link
                             href="/courses"
                             className="hidden md:block text-purple-400 hover:text-purple-300 transition-colors"
                             data-oid="kwr:8b0"
                         >
                             View All Courses →
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8" data-oid="po.ymq1">
@@ -603,11 +605,12 @@ export default function Page() {
                                 className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
                                 data-oid=".3a5uh-"
                             >
-                                <div className="h-48 overflow-hidden" data-oid="yy4e::q">
-                                    <img
+                                <div className="h-48 overflow-hidden relative" data-oid="yy4e::q">
+                                    <Image
                                         src={course.image}
                                         alt={course.title}
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                         data-oid="3c_1j5w"
                                     />
                                 </div>
@@ -644,26 +647,26 @@ export default function Page() {
                                             {course.price}
                                         </span>
                                     </div>
-                                    <a
+                                    <Link
                                         href={`/courses/${index}`}
                                         className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
                                         data-oid="vygamc-"
                                     >
                                         Enroll Now
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     <div className="mt-8 text-center md:hidden" data-oid="e3r.ob3">
-                        <a
+                        <Link
                             href="/courses"
                             className="text-purple-400 hover:text-purple-300 transition-colors"
                             data-oid="gx6lyl9"
                         >
                             View All Courses →
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -701,12 +704,18 @@ export default function Page() {
                                                 className="flex items-center mb-6"
                                                 data-oid="7ld.b9q"
                                             >
-                                                <img
-                                                    src={testimonial.avatar}
-                                                    alt={testimonial.name}
-                                                    className="w-16 h-16 rounded-full object-cover"
-                                                    data-oid=".n-8om:"
-                                                />
+                                                <div
+                                                    className="relative w-16 h-16 rounded-full overflow-hidden"
+                                                    data-oid="plc7uqs"
+                                                >
+                                                    <Image
+                                                        src={testimonial.avatar}
+                                                        alt={testimonial.name}
+                                                        fill
+                                                        className="object-cover"
+                                                        data-oid=".n-8om:"
+                                                    />
+                                                </div>
 
                                                 <div className="ml-4" data-oid="99t08rq">
                                                     <h3
@@ -759,13 +768,13 @@ export default function Page() {
                                 Join our workshops, webinars, and hackathons
                             </p>
                         </div>
-                        <a
+                        <Link
                             href="/workshops"
                             className="hidden md:block text-purple-400 hover:text-purple-300 transition-colors"
                             data-oid="4xpmrjq"
                         >
                             View All Events →
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8" data-oid=".gm:.8x">
@@ -843,25 +852,25 @@ export default function Page() {
                                         <span data-oid="uknifbs">{event.time}</span>
                                     </div>
                                 </div>
-                                <a
+                                <Link
                                     href={`/${event.type.toLowerCase()}s/${index}`}
                                     className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
                                     data-oid="3vr27tb"
                                 >
                                     Register Now
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>
 
                     <div className="mt-8 text-center md:hidden" data-oid="7s37tt3">
-                        <a
+                        <Link
                             href="/workshops"
                             className="text-purple-400 hover:text-purple-300 transition-colors"
                             data-oid="5xckur9"
                         >
                             View All Events →
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -929,13 +938,13 @@ export default function Page() {
                             Connect with fellow learners, get instant updates, and access exclusive
                             resources.
                         </p>
-                        <a
+                        <Link
                             href="https://chat.whatsapp.com/YourGroupInviteLink"
                             className="block w-full py-3 text-center rounded-md bg-[#25D366] hover:bg-[#20BD5A] transition-colors font-medium text-black"
                             data-oid="uz4nkzl"
                         >
                             Join WhatsApp Group
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -1047,58 +1056,58 @@ export default function Page() {
                             </h4>
                             <ul className="space-y-2" data-oid="tt3438n">
                                 <li data-oid="tdu-pes">
-                                    <a
+                                    <Link
                                         href="/"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="pn2exl1"
                                     >
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li data-oid="hb4uxxr">
-                                    <a
+                                    <Link
                                         href="/courses"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="dfa_beh"
                                     >
                                         Courses
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li data-oid="s9g5pw:">
-                                    <a
+                                    <Link
                                         href="/workshops"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="5p0-fx0"
                                     >
                                         Workshops
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li data-oid="z93_obc">
-                                    <a
+                                    <Link
                                         href="/hackathons"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="qocf58j"
                                     >
                                         Hackathons
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li data-oid="96wsrco">
-                                    <a
+                                    <Link
                                         href="/login"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="7h0ypb7"
                                     >
                                         Login
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li data-oid="zwe_7-n">
-                                    <a
+                                    <Link
                                         href="/signup"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="._tzl5q"
                                     >
                                         Sign Up
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

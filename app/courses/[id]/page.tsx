@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Course type definition
 interface Course {
@@ -202,51 +204,51 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8" data-oid="pj7lfwt">
-                    <a
+                    <Link
                         href="/"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="f_8au2x"
                     >
                         Home
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/courses"
                         className="text-purple-400 transition-colors"
                         data-oid="h4v8a5m"
                     >
                         Courses
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/workshops"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="ecfn6tr"
                     >
                         Workshops
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/hackathons"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="cs33lw6"
                     >
                         Hackathons
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4" data-oid="yj1oj1d">
-                    <a
+                    <Link
                         href="/login"
                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
                         data-oid="6dnb_:g"
                     >
                         Login
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/signup"
                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
                         data-oid="_3k64z2"
                     >
                         Sign Up
-                    </a>
+                    </Link>
                 </div>
 
                 <button className="md:hidden text-white" data-oid="cowjxz0">
@@ -320,12 +322,15 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                 className="rounded-xl overflow-hidden border border-gray-700"
                                 data-oid="0eeg:a5"
                             >
-                                <img
-                                    src={course.image}
-                                    alt={course.title}
-                                    className="w-full h-full object-cover"
-                                    data-oid="p.0dk9n"
-                                />
+                                <div className="relative w-full h-full" data-oid="olxybd3">
+                                    <Image
+                                        src={course.image}
+                                        alt={course.title}
+                                        fill
+                                        className="object-cover"
+                                        data-oid="p.0dk9n"
+                                    />
+                                </div>
                             </div>
                             <div data-oid="cx_a7de">
                                 <div className="flex items-center mb-4" data-oid="n1prb7p">

@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Hackathon type definition
 interface Hackathon {
@@ -200,15 +202,15 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                     faqs: [
                         {
                             question: 'Who can participate in HackBIT 2025?',
-                            answer: "HackBIT 2025 is open to all students and professionals with an interest in technology and innovation. Whether you're a beginner or an experienced developer, you're welcome to join!",
+                            answer: 'HackBIT 2025 is open to all students and professionals with an interest in technology and innovation. Whether you&apos;re a beginner or an experienced developer, you&apos;re welcome to join!',
                         },
                         {
                             question: 'Do I need to have a team to register?',
-                            answer: "No, you can register individually and form a team during the event. We'll have a team formation session at the beginning of the hackathon.",
+                            answer: 'No, you can register individually and form a team during the event. We&apos;ll have a team formation session at the beginning of the hackathon.',
                         },
                         {
                             question: 'What should I bring to the hackathon?',
-                            answer: "You should bring your laptop, charger, any necessary peripherals, and your student/professional ID. If it's an in-person event, consider bringing toiletries and a change of clothes for overnight stays.",
+                            answer: 'You should bring your laptop, charger, any necessary peripherals, and your student/professional ID. If it&apos;s an in-person event, consider bringing toiletries and a change of clothes for overnight stays.',
                         },
                         {
                             question: 'Is there a registration fee?',
@@ -340,51 +342,51 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8" data-oid="oq__.zs">
-                    <a
+                    <Link
                         href="/"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="pc4jgpl"
                     >
                         Home
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/courses"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="-7eui8g"
                     >
                         Courses
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/workshops"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="fx7mwbg"
                     >
                         Workshops
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/hackathons"
                         className="text-purple-400 transition-colors"
                         data-oid="n-9dyvj"
                     >
                         Hackathons
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4" data-oid="-n9x0fl">
-                    <a
+                    <Link
                         href="/login"
                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
                         data-oid=".738s7e"
                     >
                         Login
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/signup"
                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
                         data-oid="jys_pcf"
                     >
                         Sign Up
-                    </a>
+                    </Link>
                 </div>
 
                 <button className="md:hidden text-white" data-oid="teiwbnb">
@@ -448,12 +450,15 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                 data-oid="zrsxy9l"
                             >
                                 <div className="absolute inset-0" data-oid="pkkg9jt">
-                                    <img
-                                        src={hackathon.image}
-                                        alt={hackathon.title}
-                                        className="w-full h-full object-cover"
-                                        data-oid="nw-vddp"
-                                    />
+                                    <div className="relative w-full h-full" data-oid="yi7u2tm">
+                                        <Image
+                                            src={hackathon.image}
+                                            alt={hackathon.title}
+                                            fill
+                                            className="object-cover"
+                                            data-oid="nw-vddp"
+                                        />
+                                    </div>
 
                                     <div
                                         className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"
@@ -768,12 +773,18 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                                 className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4"
                                                                 data-oid=".3:1sw8"
                                                             >
-                                                                <img
-                                                                    src={judge.image}
-                                                                    alt={judge.name}
-                                                                    className="w-full h-full object-cover"
-                                                                    data-oid="nx:tuhc"
-                                                                />
+                                                                <div
+                                                                    className="relative w-full h-full"
+                                                                    data-oid="2_atiip"
+                                                                >
+                                                                    <Image
+                                                                        src={judge.image}
+                                                                        alt={judge.name}
+                                                                        fill
+                                                                        className="object-cover"
+                                                                        data-oid="nx:tuhc"
+                                                                    />
+                                                                </div>
                                                             </div>
                                                             <h4
                                                                 className="text-xl font-semibold mb-1"
@@ -840,16 +851,22 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                                                     className="bg-gray-800/30 p-4 rounded-lg"
                                                                                     data-oid="ztw0g83"
                                                                                 >
-                                                                                    <img
-                                                                                        src={
-                                                                                            sponsor.logo
-                                                                                        }
-                                                                                        alt={
-                                                                                            sponsor.name
-                                                                                        }
-                                                                                        className="h-12 object-contain"
-                                                                                        data-oid="gdofrnb"
-                                                                                    />
+                                                                                    <div
+                                                                                        className="relative h-12 w-full"
+                                                                                        data-oid="jexier_"
+                                                                                    >
+                                                                                        <Image
+                                                                                            src={
+                                                                                                sponsor.logo
+                                                                                            }
+                                                                                            alt={
+                                                                                                sponsor.name
+                                                                                            }
+                                                                                            fill
+                                                                                            className="object-contain"
+                                                                                            data-oid="gdofrnb"
+                                                                                        />
+                                                                                    </div>
                                                                                 </div>
                                                                             ),
                                                                         )}

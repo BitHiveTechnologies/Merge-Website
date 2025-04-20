@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Hackathon type definition
 interface Hackathon {
@@ -192,51 +194,51 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8" data-oid=".msfiii">
-                    <a
+                    <Link
                         href="/"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="0axewv5"
                     >
                         Home
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/courses"
                         className="hover:text-purple-400 transition-colors"
                         data-oid="-qg8hl-"
                     >
                         Courses
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/workshops"
                         className="hover:text-purple-400 transition-colors"
                         data-oid=":wh__pm"
                     >
                         Workshops
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/hackathons"
                         className="text-purple-400 transition-colors"
                         data-oid="6nsfyan"
                     >
                         Hackathons
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4" data-oid="0:r7e-c">
-                    <a
+                    <Link
                         href="/login"
                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
                         data-oid="n3ufzbw"
                     >
                         Login
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/signup"
                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
                         data-oid="okilwg1"
                     >
                         Sign Up
-                    </a>
+                    </Link>
                 </div>
 
                 <button className="md:hidden text-white" data-oid="53cyfv9">
@@ -415,12 +417,18 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
                                             data-oid="dz8i.dg"
                                         >
                                             <div className="w-full md:w-1/4" data-oid="gzguq4a">
-                                                <img
-                                                    src={hackathon.image}
-                                                    alt={hackathon.title}
-                                                    className="w-full h-32 object-cover rounded-lg"
-                                                    data-oid="3_1ukst"
-                                                />
+                                                <div
+                                                    className="relative w-full h-32 rounded-lg overflow-hidden"
+                                                    data-oid="t55i21x"
+                                                >
+                                                    <Image
+                                                        src={hackathon.image}
+                                                        alt={hackathon.title}
+                                                        fill
+                                                        className="object-cover"
+                                                        data-oid="3_1ukst"
+                                                    />
+                                                </div>
                                             </div>
                                             <div className="w-full md:w-3/4" data-oid="2g_m_:r">
                                                 <h2
@@ -937,21 +945,21 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
                                                     data-oid="-qf:spt"
                                                 >
                                                     I agree to the{' '}
-                                                    <a
+                                                    <Link
                                                         href="#"
                                                         className="text-purple-400 hover:underline"
                                                         data-oid="ynlj_x."
                                                     >
                                                         terms and conditions
-                                                    </a>{' '}
+                                                    </Link>{' '}
                                                     and{' '}
-                                                    <a
+                                                    <Link
                                                         href="#"
                                                         className="text-purple-400 hover:underline"
                                                         data-oid="ocwcv-r"
                                                     >
                                                         code of conduct
-                                                    </a>
+                                                    </Link>
                                                     <span
                                                         className="text-red-500"
                                                         data-oid="xbs7w-e"
