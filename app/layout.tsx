@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata: Metadata = {
     title: 'Merge',
     icons: {
-        icon: 'images/BitHive.ico',
+        icon: 'images/merge.ico',
     },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
