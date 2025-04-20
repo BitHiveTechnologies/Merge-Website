@@ -149,190 +149,201 @@ export default function Page() {
 
             {/* Hero Section */}
             <section
-                className="pt-10 pb-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 md:h-[700px]"
+                className="pt-10 pb-20 px-6 md:px-12 bg-black md:h-[700px] relative"
                 data-oid="ud2:47k"
             >
+                {/* Background gradient overlay */}
                 <div
-                    className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
-                    data-oid="mkstezz"
-                >
-                    <div className="py-8" data-oid="q_prcus">
-                        <h1
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                            data-oid="odw8vjd"
-                        >
-                            <span
-                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                data-oid="rwq_dhd"
+                    className="absolute inset-0 bg-gradient-to-b from-black to-gray-900 z-0"
+                    data-oid="sz-7wsw"
+                ></div>
+                {/* Content container with relative positioning */}
+                <div className="relative z-10" data-oid="b6i9:.7">
+                    <div
+                        className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+                        data-oid="mkstezz"
+                    >
+                        <div className="py-8" data-oid="q_prcus">
+                            <h1
+                                className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+                                data-oid="odw8vjd"
                             >
-                                Merge <br data-oid="fgaulcx" /> Your Skills
-                            </span>
-                            <br data-oid="gmqpcj2" />
-                            <span data-oid="jkvw3k2">With Opportunity</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-gray-300 mb-10" data-oid="tzddh82">
-                            Join our community of learners and professionals to upskill, participate
-                            in hackathons, and connect with industry experts.
-                        </p>
-                        <div
-                            className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-10"
-                            data-oid="77fn3d1"
-                        ></div>
-                        <div className="flex flex-col sm:flex-row gap-4" data-oid="gen8ahs">
-                            <a
-                                href="/courses"
-                                className="px-8 py-4 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium text-lg"
-                                data-oid="n93aku2"
+                                <span
+                                    className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                    data-oid="rwq_dhd"
+                                >
+                                    Merge <br data-oid="fgaulcx" /> Your Skills
+                                </span>
+                                <br data-oid="gmqpcj2" />
+                                <span data-oid="jkvw3k2">With Opportunity</span>
+                            </h1>
+                            <p
+                                className="text-xl md:text-2xl text-gray-300 mb-10"
+                                data-oid="tzddh82"
                             >
-                                Explore Courses
-                            </a>
-                            <a
-                                href="/signup"
-                                className="px-8 py-4 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center font-medium text-lg"
-                                data-oid="gxoymup"
-                            >
-                                Join Now
-                            </a>
+                                Join our community of learners and professionals to upskill,
+                                participate in hackathons, and connect with industry experts.
+                            </p>
+                            <div
+                                className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-10"
+                                data-oid="77fn3d1"
+                            ></div>
+                            <div className="flex flex-col sm:flex-row gap-4" data-oid="gen8ahs">
+                                <a
+                                    href="/courses"
+                                    className="px-8 py-4 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium text-lg"
+                                    data-oid="n93aku2"
+                                >
+                                    Explore Courses
+                                </a>
+                                <a
+                                    href="/signup"
+                                    className="px-8 py-4 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center font-medium text-lg"
+                                    data-oid="gxoymup"
+                                >
+                                    Join Now
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="hidden md:block relative" data-oid="hl_59fy">
-                        <div
-                            className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                            data-oid="01wckeh"
-                        ></div>
-                        <div
-                            className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                            data-oid="7-educt"
-                        ></div>
-                        <div
-                            className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                            data-oid="__j0niz"
-                        ></div>
-                        <div
-                            className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
-                            data-oid="yvjela0"
-                        >
+                        <div className="hidden md:block relative" data-oid="hl_59fy">
                             <div
-                                className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
-                                data-oid="xmng:k4"
+                                className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
+                                data-oid="01wckeh"
+                            ></div>
+                            <div
+                                className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
+                                data-oid="7-educt"
+                            ></div>
+                            <div
+                                className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                                data-oid="__j0niz"
+                            ></div>
+                            <div
+                                className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
+                                data-oid="yvjela0"
                             >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                    data-oid="zp4zuht"
+                                    className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                    data-oid="xmng:k4"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        data-oid="qrs6745"
+                                    <div
+                                        className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                        data-oid="zp4zuht"
                                     >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                            className="group-hover:animate-pulse"
-                                            data-oid="2kq8j23"
-                                        />
-                                    </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="qrs6745"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                                className="group-hover:animate-pulse"
+                                                data-oid="2kq8j23"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-4" data-oid="l6682ay">
+                                        <h3
+                                            className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                            data-oid="aoeentk"
+                                        >
+                                            Learn at Your Pace
+                                        </h3>
+                                        <p
+                                            className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                            data-oid="wbqh8ot"
+                                        >
+                                            Access courses anytime, anywhere
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="ml-4" data-oid="l6682ay">
-                                    <h3
-                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
-                                        data-oid="aoeentk"
-                                    >
-                                        Learn at Your Pace
-                                    </h3>
-                                    <p
-                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
-                                        data-oid="wbqh8ot"
-                                    >
-                                        Access courses anytime, anywhere
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
-                                data-oid="mj_8rtg"
-                            >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                    data-oid="evho655"
+                                    className="flex items-center mb-6 group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                    data-oid="mj_8rtg"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        data-oid="3wgqrak"
+                                    <div
+                                        className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                        data-oid="evho655"
                                     >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                            className="group-hover:animate-pulse"
-                                            data-oid=":5yx8m8"
-                                        />
-                                    </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="3wgqrak"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                                className="group-hover:animate-pulse"
+                                                data-oid=":5yx8m8"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-4" data-oid="1qkhyu3">
+                                        <h3
+                                            className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                            data-oid="-_yt2ol"
+                                        >
+                                            Community Support
+                                        </h3>
+                                        <p
+                                            className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                            data-oid="kq9s4as"
+                                        >
+                                            Join WhatsApp groups for each course
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="ml-4" data-oid="1qkhyu3">
-                                    <h3
-                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
-                                        data-oid="-_yt2ol"
-                                    >
-                                        Community Support
-                                    </h3>
-                                    <p
-                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
-                                        data-oid="kq9s4as"
-                                    >
-                                        Join WhatsApp groups for each course
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="flex items-center group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
-                                data-oid="pwqhu6w"
-                            >
                                 <div
-                                    className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                    data-oid="lx.frt1"
+                                    className="flex items-center group hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-300 cursor-pointer"
+                                    data-oid="pwqhu6w"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        data-oid="wrvcvvw"
+                                    <div
+                                        className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                        data-oid="lx.frt1"
                                     >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                            className="group-hover:animate-pulse"
-                                            data-oid="6r8lvx3"
-                                        />
-                                    </svg>
-                                </div>
-                                <div className="ml-4" data-oid="3y_e-ko">
-                                    <h3
-                                        className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
-                                        data-oid="5f29f4d"
-                                    >
-                                        Real-world Projects
-                                    </h3>
-                                    <p
-                                        className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
-                                        data-oid="vyte0ja"
-                                    >
-                                        Build your portfolio with hackathons
-                                    </p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-500"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="wrvcvvw"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                                className="group-hover:animate-pulse"
+                                                data-oid="6r8lvx3"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-4" data-oid="3y_e-ko">
+                                        <h3
+                                            className="text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300"
+                                            data-oid="5f29f4d"
+                                        >
+                                            Real-world Projects
+                                        </h3>
+                                        <p
+                                            className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
+                                            data-oid="vyte0ja"
+                                        >
+                                            Build your portfolio with hackathons
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

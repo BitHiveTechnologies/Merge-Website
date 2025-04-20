@@ -1,20 +1,20 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-/* Mobile background fix */
+@tailwind utilities; /* Enhanced mobile styles */
 @media (max-width: 768px) {
-    .bg-gradient-to-b {
-        background-attachment: fixed;
+    /* Ensure gradients render properly on mobile */
+    .bg-gradient-to-b,
+    .bg-gradient-to-r,
+    .bg-gradient-to-br {
+        background-attachment: scroll;
+        background-size: 100% 100%;
     }
 }
-
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 }
-
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
@@ -22,13 +22,11 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
-
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
 }
-
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -84,7 +82,6 @@
         --chart-5: 340 75% 55%;
     }
 }
-
 @layer base {
     * {
         @apply border-border;
