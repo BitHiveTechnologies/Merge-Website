@@ -149,14 +149,23 @@ export default function Page() {
 
             {/* Hero Section */}
             <section
-                className="pt-10 pb-10 px-6 md:px-12 bg-black md:h-[700px] relative"
+                className="pt-10 pb-10 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 md:h-[700px] relative overflow-hidden"
                 data-oid="ud2:47k"
             >
-                {/* Background gradient overlay */}
+                {/* Background blur elements */}
                 <div
-                    className="absolute inset-0 bg-gradient-to-b from-black to-gray-900 z-0"
-                    data-oid="sz-7wsw"
+                    className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
+                    data-oid="01wckeh"
                 ></div>
+                <div
+                    className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
+                    data-oid="7-educt"
+                ></div>
+                <div
+                    className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                    data-oid="__j0niz"
+                ></div>
+
                 {/* Content container with relative positioning */}
                 <div className="relative z-10" data-oid="b6i9:.7">
                     <div
@@ -206,18 +215,6 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="hidden md:block relative" data-oid="hl_59fy">
-                            <div
-                                className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                                data-oid="01wckeh"
-                            ></div>
-                            <div
-                                className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                                data-oid="7-educt"
-                            ></div>
-                            <div
-                                className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                                data-oid="__j0niz"
-                            ></div>
                             <div
                                 className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
                                 data-oid="yvjela0"
