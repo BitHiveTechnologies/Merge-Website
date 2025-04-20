@@ -149,7 +149,7 @@ export default function Page() {
 
             {/* Hero Section */}
             <section
-                className="pt-10 pb-20 px-6 md:px-12 bg-black md:h-[700px] relative"
+                className="pt-10 pb-10 px-6 md:px-12 bg-black md:h-[700px] relative"
                 data-oid="ud2:47k"
             >
                 {/* Background gradient overlay */}
@@ -352,7 +352,7 @@ export default function Page() {
             </section>
 
             {/* Features Section */}
-            <section className="py-10 md:py-20 px-6 md:px-12 bg-gray-900" data-oid="cw6-t9q">
+            <section className="py-8 md:py-16 px-6 md:px-12 bg-gray-900" data-oid="cw6-t9q">
                 <div className="max-w-6xl mx-auto" data-oid="27g1ua5">
                     <div className="text-center mb-16" data-oid="j_cy2ub">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="eicl_tg">
