@@ -3,9 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Navbar() {
     const pathname = usePathname();
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
 
     const isActive = (path: string) => {
         if (path === '/' && pathname === '/') return true;
@@ -85,7 +91,7 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <button className="md:hidden text-white" data-oid="6wkj-h9">
+            <button className="md:hidden text-white" onClick={toggleMobileMenu} data-oid="6wkj-h9">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -103,6 +109,70 @@ export default function Navbar() {
                     />
                 </svg>
             </button>
+
+            {/* Mobile menu */}
+            {mobileMenuOpen && (
+                <div
+                    className="md:hidden absolute top-full left-0 right-0 bg-black bg-opacity-95 backdrop-blur-sm border-b border-gray-800 py-4 px-6"
+                    data-oid="_dme71n"
+                >
+                    <div className="flex flex-col space-y-4" data-oid="9i7jbuu">
+                        <Link
+                            href="/"
+                            className={`${isActive('/') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            data-oid="dh3p87:"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/courses"
+                            className={`${isActive('/courses') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            data-oid="z3iu5v7"
+                        >
+                            Courses
+                        </Link>
+                        <Link
+                            href="/workshops"
+                            className={`${isActive('/workshops') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            data-oid="7e-bk:x"
+                        >
+                            Workshops
+                        </Link>
+                        <Link
+                            href="/hackathons"
+                            className={`${isActive('/hackathons') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            data-oid="tbo__ip"
+                        >
+                            Hackathons
+                        </Link>
+                        <div
+                            className="flex flex-col space-y-2 pt-2 border-t border-gray-800"
+                            data-oid="w5ce_pw"
+                        >
+                            <Link
+                                href="/login"
+                                className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center"
+                                onClick={() => setMobileMenuOpen(false)}
+                                data-oid="n-o6pt5"
+                            >
+                                Login
+                            </Link>
+                            <Link
+                                href="/signup"
+                                className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center"
+                                onClick={() => setMobileMenuOpen(false)}
+                                data-oid="dwqsb5i"
+                            >
+                                Sign Up
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }
