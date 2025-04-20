@@ -279,142 +279,142 @@ export default function WorkshopsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid=".yit17g">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="0jur-jx">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="h126q6s" />
+            <Navbar data-oid="hr0j7yg" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
-                data-oid="ar6pmdf"
+                data-oid="82_zaat"
             >
                 {/* Background elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="hdmoqu8"
+                    data-oid="es6xazu"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="99keerk"
+                    data-oid="0ve-vro"
                 ></div>
                 <div
                     className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                    data-oid="jls5jkb"
+                    data-oid="12i11va"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="3zb88c6">
+                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="_37yj0g">
                     <h1
                         className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                        data-oid="453xp4z"
+                        data-oid="am.-_5k"
                     >
                         Our{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="4-u6tci"
+                            data-oid="cpr:o21"
                         >
                             Workshops
                         </span>
                     </h1>
                     <p
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
-                        data-oid="q4z_mn."
+                        data-oid="3tn507w"
                     >
                         Join our interactive workshops and webinars to enhance your skills in
                         open-source, Git, GitHub, and more.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
-                        data-oid="w_6r350"
+                        data-oid=":v83qq."
                     ></div>
-                    <div className="flex flex-wrap gap-4 mt-8" data-oid="e7rspqh">
+                    <div className="flex flex-wrap gap-4 mt-8" data-oid="yo99.jj">
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="iyvchgs"
+                            data-oid="mwa1rib"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="gdpnbm-"
+                                data-oid="ba_vi1w"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="pa1wc-l"
+                                    data-oid="lf64hqn"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="e0ec1v1"
+                                        data-oid="hsnid1p"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="o2ralaa"
+                                data-oid="e55meyv"
                             >
                                 Expert Instructors
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="3::8:r5"
+                            data-oid="cdgetwn"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="vbz4ta0"
+                                data-oid="fs1-ppa"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="1.s9nd2"
+                                    data-oid=":xmr4-9"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="ffzxdzh"
+                                        data-oid="7x1_t62"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="j2sd6y_"
+                                data-oid="ttbmok7"
                             >
                                 Interactive Sessions
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="q.8:b2d"
+                            data-oid="mbs7ina"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="mqdkzp-"
+                                data-oid="u34j42b"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="cw1n6-0"
+                                    data-oid="9uvw8ww"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="noaxpn1"
+                                        data-oid="8zkf8a0"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="otbplm4"
+                                data-oid="x-yf5ma"
                             >
                                 Hands-on Learning
                             </span>
@@ -426,10 +426,10 @@ export default function WorkshopsPage() {
             {/* Tabs */}
             <div
                 className="bg-gray-900 py-8 px-6 md:px-12 border-b border-black"
-                data-oid="whd01-s"
+                data-oid="g:685p7"
             >
-                <div className="max-w-6xl mx-auto" data-oid="56y66x.">
-                    <div className="flex space-x-4 border-b border-gray-800" data-oid="9luv4jc">
+                <div className="max-w-6xl mx-auto" data-oid="o4h3nv0">
+                    <div className="flex space-x-4 border-b border-gray-800" data-oid="7_ch_:h">
                         <button
                             onClick={() => setActiveTab('upcoming')}
                             className={cn(
@@ -438,7 +438,7 @@ export default function WorkshopsPage() {
                                     ? 'text-purple-400 border-b-2 border-purple-400'
                                     : 'text-gray-400 hover:text-gray-300',
                             )}
-                            data-oid="h2_go9s"
+                            data-oid="959.cg_"
                         >
                             Upcoming Workshops
                         </button>
@@ -450,7 +450,7 @@ export default function WorkshopsPage() {
                                     ? 'text-purple-400 border-b-2 border-purple-400'
                                     : 'text-gray-400 hover:text-gray-300',
                             )}
-                            data-oid="8yohoor"
+                            data-oid="h8m-d:g"
                         >
                             Past Workshops
                         </button>
@@ -459,86 +459,86 @@ export default function WorkshopsPage() {
             </div>
 
             {/* Workshop Listings */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid=":dlkkjt">
-                <div className="max-w-6xl mx-auto" data-oid="1827-4p">
+            <div className="py-12 px-6 md:px-12 bg-black" data-oid="692.s5l">
+                <div className="max-w-6xl mx-auto" data-oid="h1igja_">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="hzcuq_a">
+                        <div className="flex justify-center items-center py-20" data-oid="b3yzria">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="u13kjgq"
+                                data-oid="jbdbdlo"
                             ></div>
                         </div>
                     ) : activeTab === 'upcoming' ? (
                         <div
                             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                            data-oid="-oser7z"
+                            data-oid="ezov3wt"
                         >
                             {upcomingWorkshops.map((workshop) => (
                                 <div
                                     key={workshop.id}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                     onClick={() => handleWorkshopClick(workshop.id)}
-                                    data-oid="__mmghf"
+                                    data-oid="7yi7ufp"
                                 >
                                     <div
                                         className="relative h-48 overflow-hidden"
-                                        data-oid=":v-cxpo"
+                                        data-oid="5thl0kf"
                                     >
                                         <img
                                             src={workshop.image}
                                             alt={workshop.title}
                                             className="w-full h-full object-cover"
-                                            data-oid=":xe_ysb"
+                                            data-oid="s_klptp"
                                         />
 
                                         <div
                                             className="absolute top-0 left-0 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold px-3 py-1"
-                                            data-oid="zq_j7xx"
+                                            data-oid="jjz2hz6"
                                         >
                                             {formatDate(workshop.date)}
                                         </div>
                                     </div>
-                                    <div className="p-6" data-oid="hz72_4f">
+                                    <div className="p-6" data-oid="ui2mrz_">
                                         <h3
                                             className="text-xl font-semibold mb-2"
-                                            data-oid="jh6l5n."
+                                            data-oid="kw2zio5"
                                         >
                                             {workshop.title}
                                         </h3>
                                         <p
                                             className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                            data-oid="2g0ue_q"
+                                            data-oid="yv0my-a"
                                         >
                                             {workshop.description}
                                         </p>
-                                        <div className="flex items-center mb-3" data-oid="xfefg_b">
+                                        <div className="flex items-center mb-3" data-oid="7pxcclz">
                                             <div
                                                 className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                                data-oid="y0dk50v"
+                                                data-oid="1j4x0bc"
                                             ></div>
                                             <span
                                                 className="text-gray-300 text-sm"
-                                                data-oid="nk53f6x"
+                                                data-oid="hhkjzhx"
                                             >
                                                 {workshop.instructor}
                                             </span>
                                         </div>
                                         <div
                                             className="flex justify-between text-gray-400 text-sm mb-4"
-                                            data-oid="8p96-gs"
+                                            data-oid="fp3c:y:"
                                         >
-                                            <span data-oid="3u683v3">{workshop.time}</span>
-                                            <span data-oid="mihtr97">{workshop.location}</span>
+                                            <span data-oid="mmfkufh">{workshop.time}</span>
+                                            <span data-oid="di-krxb">{workshop.location}</span>
                                         </div>
                                         <div
                                             className="flex flex-wrap gap-2 mb-4"
-                                            data-oid="bpf:hs2"
+                                            data-oid="eo0drwd"
                                         >
                                             {workshop.tags.map((tag, index) => (
                                                 <span
                                                     key={index}
                                                     className="px-2 py-1 bg-gray-700 rounded-md text-xs text-gray-300"
-                                                    data-oid="0r8v98g"
+                                                    data-oid="kn9tex9"
                                                 >
                                                     {tag}
                                                 </span>
@@ -546,7 +546,7 @@ export default function WorkshopsPage() {
                                         </div>
                                         <div
                                             className="flex justify-between items-center"
-                                            data-oid="0e4dkna"
+                                            data-oid="a3bz9ih"
                                         >
                                             <span
                                                 className={cn(
@@ -555,13 +555,13 @@ export default function WorkshopsPage() {
                                                         ? 'text-green-400'
                                                         : 'text-white',
                                                 )}
-                                                data-oid="uyg44-5"
+                                                data-oid="6fd9rbc"
                                             >
                                                 {formatPrice(workshop.price)}
                                             </span>
                                             <button
                                                 className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium"
-                                                data-oid="ejuh8yw"
+                                                data-oid="3sf708m"
                                             >
                                                 Register
                                             </button>
@@ -571,18 +571,18 @@ export default function WorkshopsPage() {
                             ))}
                         </div>
                     ) : (
-                        <div className="space-y-12" data-oid="jitq0d8">
-                            <div className="mb-8" data-oid="1ugbmov">
-                                <h2 className="text-3xl font-bold mb-6" data-oid="ho:ndjh">
+                        <div className="space-y-12" data-oid="rq_:5_o">
+                            <div className="mb-8" data-oid="knufpo4">
+                                <h2 className="text-3xl font-bold mb-6" data-oid="wt1z1j_">
                                     <span
                                         className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="qqc5t3p"
+                                        data-oid="p:ifxtj"
                                     >
                                         Successful Webinars
                                     </span>{' '}
                                     Conducted by Merge
                                 </h2>
-                                <p className="text-gray-300 mb-8 max-w-4xl" data-oid="2iqx6bf">
+                                <p className="text-gray-300 mb-8 max-w-4xl" data-oid="dh1dgwc">
                                     At Merge, we are committed to empowering students with hands-on
                                     knowledge and skills in open-source contributions, Git, GitHub,
                                     and software development. We have successfully organized free
@@ -591,87 +591,87 @@ export default function WorkshopsPage() {
                                 </p>
                             </div>
 
-                            <div className="grid gap-8" data-oid="8.ctcun">
+                            <div className="grid gap-8" data-oid="61gt2h4">
                                 {pastWorkshops.map((workshop) => (
                                     <div
                                         key={workshop.id}
                                         className="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 p-6"
-                                        data-oid="agufok_"
+                                        data-oid="n:p9uvl"
                                     >
                                         <div
                                             className="flex flex-col md:flex-row gap-6"
-                                            data-oid="yqm_1xw"
+                                            data-oid=".bup5xj"
                                         >
-                                            <div className="md:w-1/4" data-oid="0:5a7ej">
+                                            <div className="md:w-1/4" data-oid="03emz_t">
                                                 <h3
                                                     className="text-2xl font-bold text-purple-400 mb-2"
-                                                    data-oid="d.5tngp"
+                                                    data-oid="h4ix55p"
                                                 >
                                                     {workshop.institution}
                                                 </h3>
                                                 <div
                                                     className="flex items-center mb-4"
-                                                    data-oid="d0lc4q4"
+                                                    data-oid="7qew.f1"
                                                 >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         className="h-5 w-5 text-pink-500 mr-2"
                                                         viewBox="0 0 20 20"
                                                         fill="currentColor"
-                                                        data-oid="mq.9khv"
+                                                        data-oid="-1tfiel"
                                                     >
                                                         <path
                                                             fillRule="evenodd"
                                                             d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                                             clipRule="evenodd"
-                                                            data-oid="gjmz3gl"
+                                                            data-oid="joq_kx3"
                                                         />
                                                     </svg>
                                                     <span
                                                         className="text-gray-300"
-                                                        data-oid="4d-q66a"
+                                                        data-oid="my72gm2"
                                                     >
                                                         {workshop.date}
                                                     </span>
                                                 </div>
                                                 <div
                                                     className="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium px-3 py-2 rounded-md inline-block"
-                                                    data-oid="j22xhz8"
+                                                    data-oid=":ay:3wd"
                                                 >
                                                     {workshop.topic}
                                                 </div>
                                             </div>
-                                            <div className="md:w-3/4" data-oid="f9w-5er">
-                                                <div className="mb-4" data-oid="bp_:5vj">
+                                            <div className="md:w-3/4" data-oid="kuvo8_v">
+                                                <div className="mb-4" data-oid="zysir0s">
                                                     <h4
                                                         className="text-lg font-semibold mb-2"
-                                                        data-oid="erttv0w"
+                                                        data-oid="t1:.dh3"
                                                     >
                                                         Highlights:
                                                     </h4>
                                                     <ul
                                                         className="list-disc pl-5 space-y-1 text-gray-300"
-                                                        data-oid="15gjrw_"
+                                                        data-oid="t6fe9wt"
                                                     >
                                                         {workshop.highlights.map(
                                                             (highlight, index) => (
-                                                                <li key={index} data-oid="a0rcac0">
+                                                                <li key={index} data-oid="b5lhf11">
                                                                     {highlight}
                                                                 </li>
                                                             ),
                                                         )}
                                                     </ul>
                                                 </div>
-                                                <div data-oid="mslwjdf">
+                                                <div data-oid="9_tvjd8">
                                                     <h4
                                                         className="text-lg font-semibold mb-2"
-                                                        data-oid="f0fohkm"
+                                                        data-oid="ixjm9zx"
                                                     >
                                                         Media Links:
                                                     </h4>
                                                     <div
                                                         className="flex flex-wrap gap-2"
-                                                        data-oid="jwssed_"
+                                                        data-oid="v47jc6_"
                                                     >
                                                         {workshop.mediaLinks.map((link, index) => (
                                                             <a
@@ -680,7 +680,7 @@ export default function WorkshopsPage() {
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="text-purple-400 hover:text-purple-300 underline text-sm"
-                                                                data-oid="--4bw68"
+                                                                data-oid="su8uovs"
                                                             >
                                                                 {index === 0
                                                                     ? 'Photos'
@@ -704,11 +704,11 @@ export default function WorkshopsPage() {
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="rhdj8he"
+                data-oid="kn5qv2o"
             >
-                <div className="max-w-6xl mx-auto" data-oid="upgmwed">
-                    <div className="text-center text-gray-500" data-oid="vohf6m_">
-                        <p data-oid="ckub.4e">
+                <div className="max-w-6xl mx-auto" data-oid="52xzdcd">
+                    <div className="text-center text-gray-500" data-oid="792ft9j">
+                        <p data-oid="pwrzy1i">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>
