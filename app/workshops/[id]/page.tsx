@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
+import Navbar from '@/components/Navbar';
 
 // Workshop type definition
 interface Workshop {

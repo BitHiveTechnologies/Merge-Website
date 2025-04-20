@@ -105,7 +105,7 @@ export default function Page() {
                                 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-pink-500"
                                 data-oid=":0wnzol"
                             >
-                                MERGE
+                                MERGEa
                             </div>
                         </div>
                     </div>
