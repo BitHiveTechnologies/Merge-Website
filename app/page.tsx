@@ -92,7 +92,7 @@ export default function Page() {
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="x_bwgzk">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="x_bwgzk">
             {/* Navbar */}
             <Navbar data-oid="3q97y-i" />
             {/* Mobile Menu */}
@@ -165,7 +165,7 @@ export default function Page() {
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
                                 data-oid="rwq_dhd"
                             >
-                                Merge Your Skills
+                                Merge <br data-oid="fgaulcx" /> Your Skills
                             </span>
                             <br data-oid="gmqpcj2" />
                             <span data-oid="jkvw3k2">With Opportunity</span>

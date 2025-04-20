@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800"
+            className="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800 bg-black bg-opacity-95 backdrop-blur-sm"
             data-oid="lowoczr"
         >
             <div className="flex items-center" data-oid="g6m3gi4">

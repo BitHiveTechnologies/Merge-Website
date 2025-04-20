@@ -190,7 +190,7 @@ export default function HackathonsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="8r1_7ep">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="8r1_7ep">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="_udth97" />
 

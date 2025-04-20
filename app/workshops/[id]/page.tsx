@@ -169,7 +169,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="efzb324">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="efzb324">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="xo7i-32" />
 

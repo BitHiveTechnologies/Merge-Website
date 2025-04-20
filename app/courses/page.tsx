@@ -224,7 +224,7 @@ export default function CoursesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid=":soj:2c">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid=":soj:2c">
             <Navbar data-oid="2eg-wlg" />
             {/* Page Header */}
             <div

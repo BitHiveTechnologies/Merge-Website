@@ -320,7 +320,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="yax6ld3">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="yax6ld3">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="glaiiqk" />
             {/* Hackathon Detail Content */}

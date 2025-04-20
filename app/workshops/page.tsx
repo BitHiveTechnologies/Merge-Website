@@ -279,7 +279,7 @@ export default function WorkshopsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid=".yit17g">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid=".yit17g">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="h126q6s" />
             {/* Page Header */}

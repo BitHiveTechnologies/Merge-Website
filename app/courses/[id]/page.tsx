@@ -180,7 +180,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="q5foxwy">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="q5foxwy">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="gt5:.91" />
             {/* Back Button */}
