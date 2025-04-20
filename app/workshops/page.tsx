@@ -318,8 +318,8 @@ export default function WorkshopsPage() {
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
                         data-oid="3tn507w"
                     >
-                        Join our interactive workshops and webinars to enhance your skills in
-                        open-source, Git, GitHub, and more.
+                        Join our Interactive Workshops and Webinars to Enhance your Skills in
+                        Open-source, Git, GitHub and more.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"

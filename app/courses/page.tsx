@@ -262,8 +262,8 @@ export default function CoursesPage() {
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
                         data-oid="xcx3p3r"
                     >
-                        Discover a wide range of courses designed to help you master new skills and
-                        advance your career in technology.
+                        Discover a Wide Range of Courses designed to help you Master New Skills and
+                        Advance your Career in Technology.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"

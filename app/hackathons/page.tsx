@@ -230,8 +230,8 @@ export default function HackathonsPage() {
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
                         data-oid="y26l4ds"
                     >
-                        Join our innovation-driven hackathons to solve real-world challenges,
-                        collaborate with like-minded individuals, and win exciting prizes.
+                        Join our Innovation-driven Hackathons to Solve Real-world Challenges,
+                        Collaborate with Like-minded Individuals, and Win Exciting Prizes.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
