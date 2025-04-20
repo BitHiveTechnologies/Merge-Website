@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en" data-oid="2bex0rx">
-            <body className="" data-oid="k6_a2c0">
+        <html lang="en" data-oid="tf:4-x:">
+            <body className="" data-oid="e7e-tqt">
                 {children}
             </body>
         </html>
