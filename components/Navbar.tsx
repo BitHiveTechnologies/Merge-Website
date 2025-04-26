@@ -3,14 +3,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { isAuthenticated, logout, getUsername } from '@/lib/auth';
 
 export default function Navbar() {
     const pathname = usePathname();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState('User');
+
+    useEffect(() => {
+        // Check authentication status when component mounts
+        setIsLoggedIn(isAuthenticated());
+
+        // Get username
+        setUsername(getUsername());
+    }, []);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const handleLogout = () => {
+        logout();
+        setIsLoggedIn(false);
     };
 
     const isActive = (path: string) => {
@@ -75,20 +91,47 @@ export default function Navbar() {
             </div>
 
             <div className="hidden md:flex items-center space-x-4" data-oid=".rhimv6">
-                <Link
-                    href="/login"
-                    className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
-                    data-oid="ptw-ks."
-                >
-                    Login
-                </Link>
-                <Link
-                    href="/signup"
-                    className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
-                    data-oid="cs0hs8y"
-                >
-                    Sign Up
-                </Link>
+                {isLoggedIn ? (
+                    <div className="flex items-center space-x-3" data-oid="p2ewj_g">
+                        <div className="flex items-center space-x-2" data-oid="kmdol66">
+                            <div
+                                className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center"
+                                data-oid="uma.7lu"
+                            >
+                                <span className="text-white font-medium" data-oid="wyqgq5d">
+                                    {username.charAt(0).toUpperCase()}
+                                </span>
+                            </div>
+                            <span className="text-white" data-oid="54ci4dt">
+                                {username}
+                            </span>
+                        </div>
+                        <button
+                            onClick={handleLogout}
+                            className="px-4 py-2 rounded-md border border-red-500 hover:bg-red-500/10 transition-colors"
+                            data-oid="0roh0zy"
+                        >
+                            Logout
+                        </button>
+                    </div>
+                ) : (
+                    <>
+                        <Link
+                            href="/login"
+                            className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
+                            data-oid="ptw-ks."
+                        >
+                            Login
+                        </Link>
+                        <Link
+                            href="/signup"
+                            className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
+                            data-oid="cs0hs8y"
+                        >
+                            Sign Up
+                        </Link>
+                    </>
+                )}
             </div>
 
             <button className="md:hidden text-white" onClick={toggleMobileMenu} data-oid="dux:l:k">
@@ -153,22 +196,58 @@ export default function Navbar() {
                             className="flex flex-col space-y-2 pt-2 border-t border-gray-800"
                             data-oid="j2x:zks"
                         >
-                            <Link
-                                href="/login"
-                                className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center"
-                                onClick={() => setMobileMenuOpen(false)}
-                                data-oid="cbec0wj"
-                            >
-                                Login
-                            </Link>
-                            <Link
-                                href="/signup"
-                                className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center"
-                                onClick={() => setMobileMenuOpen(false)}
-                                data-oid="g:ls54h"
-                            >
-                                Sign Up
-                            </Link>
+                            {isLoggedIn ? (
+                                <>
+                                    <div
+                                        className="flex items-center space-x-2 py-2"
+                                        data-oid="lg23iw0"
+                                    >
+                                        <div
+                                            className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center"
+                                            data-oid="v4l29.-"
+                                        >
+                                            <span
+                                                className="text-white font-medium"
+                                                data-oid="e01_8gw"
+                                            >
+                                                {username.charAt(0).toUpperCase()}
+                                            </span>
+                                        </div>
+                                        <span className="text-white" data-oid="h0on2:7">
+                                            {username}
+                                        </span>
+                                    </div>
+                                    <button
+                                        onClick={() => {
+                                            handleLogout();
+                                            setMobileMenuOpen(false);
+                                        }}
+                                        className="px-4 py-2 rounded-md border border-red-500 hover:bg-red-500/10 transition-colors text-center"
+                                        data-oid="1bpr2yy"
+                                    >
+                                        Logout
+                                    </button>
+                                </>
+                            ) : (
+                                <>
+                                    <Link
+                                        href="/login"
+                                        className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        data-oid="cbec0wj"
+                                    >
+                                        Login
+                                    </Link>
+                                    <Link
+                                        href="/signup"
+                                        className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        data-oid="g:ls54h"
+                                    >
+                                        Sign Up
+                                    </Link>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

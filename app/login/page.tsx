@@ -46,6 +46,15 @@ export default function LoginPage() {
                 localStorage.setItem('authToken', data.token);
             }
 
+            // Store username for display in navbar
+            if (data.user && data.user.name) {
+                localStorage.setItem('username', data.user.name);
+            } else {
+                // If no name is provided, use email as fallback (without domain)
+                const username = email.split('@')[0];
+                localStorage.setItem('username', username);
+            }
+
             // Redirect to home page after successful login
             window.location.href = '/';
         } catch (err) {
