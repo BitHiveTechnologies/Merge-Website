@@ -67,7 +67,7 @@ export default function SignupPage() {
 
             <div className="pt-32 pb-20 px-6 md:px-12" data-oid="1a_7fe-">
                 <div
-                    className="max-w-2xl mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
+                    className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
                     data-oid="b5b4txr"
                 >
                     {/* Background blur elements */}
@@ -83,8 +83,8 @@ export default function SignupPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-6" data-oid="btt-652">
-                        <div className="text-center mb-6" data-oid="3eaj:3x">
+                    <div className="relative p-8" data-oid="btt-652">
+                        <div className="text-center mb-8" data-oid="3eaj:3x">
                             <h1 className="text-3xl font-bold mb-2" data-oid="hok_h1:">
                                 Create an Account
                             </h1>
@@ -103,103 +103,93 @@ export default function SignupPage() {
                         )}
 
                         <form onSubmit={handleSubmit} data-oid="nxxd_en">
-                            <div
-                                className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-                                data-oid="d73iyz1"
-                            >
-                                <div data-oid="_h2q1oq">
-                                    <label
-                                        htmlFor="name"
-                                        className="block text-sm font-medium mb-2"
-                                        data-oid="uas0m0_"
-                                    >
-                                        Full Name
-                                    </label>
-                                    <input
-                                        id="name"
-                                        name="name"
-                                        type="text"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                        placeholder="John Doe"
-                                        required
-                                        data-oid="zcv.ifm"
-                                    />
-                                </div>
-
-                                <div data-oid="bo1-0bk">
-                                    <label
-                                        htmlFor="email"
-                                        className="block text-sm font-medium mb-2"
-                                        data-oid="91h.2w-"
-                                    >
-                                        Email Address
-                                    </label>
-                                    <input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                        placeholder="your@email.com"
-                                        required
-                                        data-oid="ax.jgp1"
-                                    />
-                                </div>
+                            <div className="mb-6" data-oid="_h2q1oq">
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium mb-2"
+                                    data-oid="uas0m0_"
+                                >
+                                    Full Name
+                                </label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                    placeholder="John Doe"
+                                    required
+                                    data-oid="zcv.ifm"
+                                />
                             </div>
 
-                            <div
-                                className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-                                data-oid="bafgcxc"
-                            >
-                                <div data-oid="yffiav.">
-                                    <label
-                                        htmlFor="password"
-                                        className="block text-sm font-medium mb-2"
-                                        data-oid="o_-p:jz"
-                                    >
-                                        Password
-                                    </label>
-                                    <input
-                                        id="password"
-                                        name="password"
-                                        type="password"
-                                        value={formData.password}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                        placeholder="••••••••"
-                                        required
-                                        data-oid="y_nf:3_"
-                                    />
-                                </div>
-
-                                <div data-oid="xa9nbh0">
-                                    <label
-                                        htmlFor="confirmPassword"
-                                        className="block text-sm font-medium mb-2"
-                                        data-oid="10:izl2"
-                                    >
-                                        Confirm Password
-                                    </label>
-                                    <input
-                                        id="confirmPassword"
-                                        name="confirmPassword"
-                                        type="password"
-                                        value={formData.confirmPassword}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                        placeholder="••••••••"
-                                        required
-                                        data-oid="ma8jw3o"
-                                    />
-                                </div>
+                            <div className="mb-6" data-oid="bo1-0bk">
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium mb-2"
+                                    data-oid="91h.2w-"
+                                >
+                                    Email Address
+                                </label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                    placeholder="your@email.com"
+                                    required
+                                    data-oid="ax.jgp1"
+                                />
                             </div>
 
-                            <p className="text-xs text-gray-400 mb-4" data-oid="mq9:muj">
-                                Password must be at least 8 characters long
-                            </p>
+                            <div className="mb-6" data-oid="yffiav.">
+                                <label
+                                    htmlFor="password"
+                                    className="block text-sm font-medium mb-2"
+                                    data-oid="o_-p:jz"
+                                >
+                                    Password
+                                </label>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                    placeholder="••••••••"
+                                    required
+                                    data-oid="y_nf:3_"
+                                />
+
+                                <p className="mt-1 text-xs text-gray-400" data-oid="mq9:muj">
+                                    Password must be at least 8 characters long
+                                </p>
+                            </div>
+
+                            <div className="mb-6" data-oid="xa9nbh0">
+                                <label
+                                    htmlFor="confirmPassword"
+                                    className="block text-sm font-medium mb-2"
+                                    data-oid="10:izl2"
+                                >
+                                    Confirm Password
+                                </label>
+                                <input
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    type="password"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                                    placeholder="••••••••"
+                                    required
+                                    data-oid="ma8jw3o"
+                                />
+                            </div>
 
                             <div className="flex items-start mb-6" data-oid="p88.gbw">
                                 <div className="flex items-center h-5" data-oid="cwf35.6">
