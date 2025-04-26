@@ -41,7 +41,7 @@ export default function SignupPage() {
 
         try {
             // Make API call to your backend
-            const response = await fetch('/api/auth/signup', {
+            const response = await fetch('http://localhost:8001/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
