@@ -108,10 +108,24 @@ export default function Navbar() {
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="px-4 py-2 rounded-md border border-red-500 hover:bg-red-500/10 transition-colors"
+                            className="p-2 rounded-full hover:bg-gray-800 transition-colors text-gray-400 hover:text-red-500"
+                            title="Logout"
                             data-oid="0roh0zy"
                         >
-                            Logout
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                data-oid="fe67.v5"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H3zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                                    clipRule="evenodd"
+                                    data-oid="6-hhmnn"
+                                />
+                            </svg>
                         </button>
                     </div>
                 ) : (
@@ -222,10 +236,24 @@ export default function Navbar() {
                                             handleLogout();
                                             setMobileMenuOpen(false);
                                         }}
-                                        className="px-4 py-2 rounded-md border border-red-500 hover:bg-red-500/10 transition-colors text-center"
+                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-400 hover:text-red-500"
                                         data-oid="1bpr2yy"
                                     >
-                                        Logout
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            data-oid="6xul0a4"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H3zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                                                clipRule="evenodd"
+                                                data-oid="66z6h30"
+                                            />
+                                        </svg>
+                                        <span data-oid="ll-u.jk">Logout</span>
                                     </button>
                                 </>
                             ) : (
