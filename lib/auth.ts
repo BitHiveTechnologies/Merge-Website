@@ -62,3 +62,11 @@ export const getUser = async (): Promise<any> => {
         return null;
     }
 };
+
+// Get username from localStorage
+export const getUsername = (): string => {
+    if (typeof window === 'undefined') return 'User';
+
+    const username = localStorage.getItem('username');
+    return username || 'User';
+};

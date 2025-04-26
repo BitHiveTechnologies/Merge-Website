@@ -64,8 +64,19 @@ export default function SignupPage() {
             // Registration successful
             console.log('Registration successful:', data);
 
-            // Redirect to login page after successful registration
-            window.location.href = '/login';
+            // If the API returns a token, store it to automatically log in the user
+            if (data.token) {
+                localStorage.setItem('authToken', data.token);
+
+                // Store username for display in navbar
+                localStorage.setItem('username', formData.name || formData.email.split('@')[0]);
+
+                // Redirect to home page after successful registration and auto-login
+                window.location.href = '/';
+            } else {
+                // If no token is provided, redirect to login page
+                window.location.href = '/login';
+            }
         } catch (err) {
             console.error('Registration error:', err);
             setError('An error occurred during registration. Please try again.');
