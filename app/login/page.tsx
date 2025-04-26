@@ -57,177 +57,33 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            <Navbar />
+        <div className="min-h-screen bg-black text-white font-sans" data-oid="wu1_g_z">
+            <Navbar data-oid=":.b2pqm" />
 
-            <div className="pt-32 pb-20 px-6 md:px-12">
-                <div className="max-w-xl mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
-                    {/* Background blur elements */}
-                    <div className="relative">
-                        <div className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"></div>
-                        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"></div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative p-6">
-                        <div className="text-center mb-6">
-                            <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
-                            <p className="text-gray-400">
-                                Sign in to continue your learning journey
-                            </p>
-                        </div>
-
-                        {error && (
-                            <div className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm">
-                                {error}
-                            </div>
-                        )}
-
-                        <form onSubmit={handleSubmit}>
-                            <div className="mb-6">
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                                    Email Address
-                                </label>
-                                <input
-                                    id="email"
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                    placeholder="your@email.com"
-                                    required
-                                />
-                            </div>
-
-                            <div className="mb-6">
-                                <div className="flex justify-between items-center mb-2">
-                                    <label htmlFor="password" className="block text-sm font-medium">
-                                        Password
-                                    </label>
-                                    <Link
-                                        href="#"
-                                        className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                                    >
-                                        Forgot Password?
-                                    </Link>
-                                </div>
-                                <input
-                                    id="password"
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                    placeholder="••••••••"
-                                    required
-                                />
-                            </div>
-
-                            <div className="flex items-center mb-6">
-                                <input
-                                    id="remember-me"
-                                    type="checkbox"
-                                    checked={rememberMe}
-                                    onChange={(e) => setRememberMe(e.target.checked)}
-                                    className="h-4 w-4 rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500"
-                                />
-                                <label
-                                    htmlFor="remember-me"
-                                    className="ml-2 block text-sm text-gray-300"
-                                >
-                                    Remember me
-                                </label>
-                            </div>
-
-                            <button
-                                type="submit"
-                                disabled={isLoading}
-                                className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
-                                    isLoading ? 'opacity-70 cursor-not-allowed' : ''
-                                }`}
-                            >
-                                {isLoading ? 'Signing in...' : 'Sign In'}
-                            </button>
-                        </form>
-
-                        <div className="mt-6 text-center">
-                            <p className="text-gray-400">
-                                Don't have an account?{' '}
-                                <Link
-                                    href="/signup"
-                                    className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
-                                >
-                                    Sign Up
-                                </Link>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
-('use client');
-
-import Navbar from '@/components/Navbar';
-import Link from 'next/link';
-import { useState } from 'react';
-
-export default function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState('');
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setError('');
-        setIsLoading(true);
-
-        try {
-            // Simulate API call
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-
-            // Here you would typically make an API call to authenticate the user
-            console.log('Login attempt with:', { email, password, rememberMe });
-
-            // Redirect to home page after successful login
-            window.location.href = '/';
-        } catch (err) {
-            setError('Invalid email or password. Please try again.');
-        } finally {
-            setIsLoading(false);
-        }
-    };
-
-    return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="h7j6kir">
-            <Navbar data-oid="q74waa-" />
-
-            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="lnt9xr9">
+            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="y4lj.pf">
                 <div
                     className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-                    data-oid=".kg_o:h"
+                    data-oid="2nwyvbt"
                 >
                     {/* Background blur elements */}
-                    <div className="relative" data-oid="uu_k6:2">
+                    <div className="relative" data-oid="1hm2:ow">
                         <div
                             className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"
-                            data-oid="s4f4w06"
+                            data-oid="sbamfuk"
                         ></div>
                         <div
                             className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"
-                            data-oid="_.abyt2"
+                            data-oid="yfz-pr4"
                         ></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-8" data-oid="bpog0hx">
-                        <div className="text-center mb-8" data-oid=":h5qyls">
-                            <h1 className="text-3xl font-bold mb-2" data-oid="pcyrl9x">
+                    <div className="relative p-6" data-oid="g9j6nwf">
+                        <div className="text-center mb-6" data-oid="7r:ir4k">
+                            <h1 className="text-3xl font-bold mb-2" data-oid="undp.m_">
                                 Welcome Back
                             </h1>
-                            <p className="text-gray-400" data-oid="zh2ks:3">
+                            <p className="text-gray-400" data-oid="6b3nm_:">
                                 Sign in to continue your learning journey
                             </p>
                         </div>
@@ -235,18 +91,18 @@ export default function LoginPage() {
                         {error && (
                             <div
                                 className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm"
-                                data-oid="t8qvvt5"
+                                data-oid="f034hoq"
                             >
                                 {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} data-oid="u974.tm">
-                            <div className="mb-6" data-oid="jkv.gh2">
+                        <form onSubmit={handleSubmit} data-oid="ghhb5v.">
+                            <div className="mb-6" data-oid="lp3kpql">
                                 <label
                                     htmlFor="email"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="zgs91aw"
+                                    data-oid=":vlg2p."
                                 >
                                     Email Address
                                 </label>
@@ -258,26 +114,26 @@ export default function LoginPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="your@email.com"
                                     required
-                                    data-oid="hys.9u-"
+                                    data-oid="s.5d5it"
                                 />
                             </div>
 
-                            <div className="mb-6" data-oid="ffpm59l">
+                            <div className="mb-6" data-oid=":oqf7ug">
                                 <div
                                     className="flex justify-between items-center mb-2"
-                                    data-oid="huwy03k"
+                                    data-oid="13..kqp"
                                 >
                                     <label
                                         htmlFor="password"
                                         className="block text-sm font-medium"
-                                        data-oid="iz9vtk1"
+                                        data-oid="9y-xmr5"
                                     >
                                         Password
                                     </label>
                                     <Link
                                         href="#"
                                         className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                                        data-oid="6_73vm8"
+                                        data-oid="21b7jz3"
                                     >
                                         Forgot Password?
                                     </Link>
@@ -290,24 +146,24 @@ export default function LoginPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="••••••••"
                                     required
-                                    data-oid="6njf3or"
+                                    data-oid="vjvcb1i"
                                 />
                             </div>
 
-                            <div className="flex items-center mb-6" data-oid="tss-oz:">
+                            <div className="flex items-center mb-6" data-oid=":1he2oh">
                                 <input
                                     id="remember-me"
                                     type="checkbox"
                                     checked={rememberMe}
                                     onChange={(e) => setRememberMe(e.target.checked)}
                                     className="h-4 w-4 rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500"
-                                    data-oid="whhvwz0"
+                                    data-oid="ges8v_c"
                                 />
 
                                 <label
                                     htmlFor="remember-me"
                                     className="ml-2 block text-sm text-gray-300"
-                                    data-oid="evoapyd"
+                                    data-oid="jndo4oy"
                                 >
                                     Remember me
                                 </label>
@@ -319,19 +175,19 @@ export default function LoginPage() {
                                 className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
                                     isLoading ? 'opacity-70 cursor-not-allowed' : ''
                                 }`}
-                                data-oid="pzsc_94"
+                                data-oid="zwr.r_7"
                             >
                                 {isLoading ? 'Signing in...' : 'Sign In'}
                             </button>
                         </form>
 
-                        <div className="mt-8 text-center" data-oid="r2n.y4m">
-                            <p className="text-gray-400" data-oid="ebq35yu">
+                        <div className="mt-6 text-center" data-oid="h:fylke">
+                            <p className="text-gray-400" data-oid="2ma5t_o">
                                 Don't have an account?{' '}
                                 <Link
                                     href="/signup"
                                     className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
-                                    data-oid="qhkmhye"
+                                    data-oid="wbcu7bz"
                                 >
                                     Sign Up
                                 </Link>
