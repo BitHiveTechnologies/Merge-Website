@@ -66,7 +66,7 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="wu1_g_z">
+        <div className="min-h-screen bg-black text-white font-sans mt-12" data-oid="wu1_g_z">
             <Navbar data-oid=":.b2pqm" />
 
             <div className="pt-32 pb-20 px-6 md:px-12" data-oid="y4lj.pf">

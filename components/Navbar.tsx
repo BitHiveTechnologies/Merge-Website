@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { isAuthenticated, logout, getUser } from '@/lib/auth';
-import { LogOut, SwitchCameraIcon } from 'lucide-react';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -125,11 +124,31 @@ export default function Navbar() {
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="p-2 rounded-full hover:bg-gray-800 transition-colors text-gray-400 hover:text-red-500"
+                            className="p-2 rounded-full hover:bg-gray-800 transition-all duration-300 text-gray-400 hover:text-red-500 hover:scale-110 hover:shadow-glow relative group"
                             title="Logout"
                             data-oid="0roh0zy"
-                        ></button>
-                        <LogOut size={18} data-oid="t22zgeh" />
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                data-oid="i9ygc.c"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                                    data-oid="8u9qxs."
+                                />
+                            </svg>
+                            <span
+                                className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"
+                                data-oid="i26arn7"
+                            ></span>
+                        </button>
                     </div>
                 ) : (
                     <>
@@ -239,24 +258,31 @@ export default function Navbar() {
                                             handleLogout();
                                             setMobileMenuOpen(false);
                                         }}
-                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-gray-400 hover:text-red-500"
+                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-400 hover:text-red-500 group"
                                         data-oid="1bpr2yy"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            data-oid="6xul0a4"
+                                            className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            data-oid="ebqn7dj"
                                         >
                                             <path
-                                                fillRule="evenodd"
-                                                d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H3zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-                                                clipRule="evenodd"
-                                                data-oid="66z6h30"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                                                data-oid=":x5kwft"
                                             />
                                         </svg>
-                                        <span data-oid="ll-u.jk">Logout</span>
+                                        <span
+                                            className="transition-transform duration-300 group-hover:translate-x-1"
+                                            data-oid="ll-u.jk"
+                                        >
+                                            Logout
+                                        </span>
                                     </button>
                                 </>
                             ) : (
