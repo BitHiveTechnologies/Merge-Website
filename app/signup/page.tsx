@@ -9,7 +9,6 @@ export default function SignupPage() {
         name: '',
         email: '',
         password: '',
-        confirmPassword: '',
         agreeToTerms: false,
     });
     const [isLoading, setIsLoading] = useState(false);
@@ -28,10 +27,6 @@ export default function SignupPage() {
         setError('');
 
         // Basic validation
-        if (formData.password !== formData.confirmPassword) {
-            setError('Passwords do not match');
-            return;
-        }
 
         if (formData.password.length < 8) {
             setError('Password must be at least 8 characters long');
@@ -83,8 +78,8 @@ export default function SignupPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-8" data-oid="btt-652">
-                        <div className="text-center mb-8" data-oid="3eaj:3x">
+                    <div className="relative p-6" data-oid="btt-652">
+                        <div className="text-center mb-6" data-oid="3eaj:3x">
                             <h1 className="text-3xl font-bold mb-2" data-oid="hok_h1:">
                                 Create an Account
                             </h1>
@@ -170,27 +165,6 @@ export default function SignupPage() {
                                 </p>
                             </div>
 
-                            <div className="mb-6" data-oid="xa9nbh0">
-                                <label
-                                    htmlFor="confirmPassword"
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="10:izl2"
-                                >
-                                    Confirm Password
-                                </label>
-                                <input
-                                    id="confirmPassword"
-                                    name="confirmPassword"
-                                    type="password"
-                                    value={formData.confirmPassword}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
-                                    placeholder="••••••••"
-                                    required
-                                    data-oid="ma8jw3o"
-                                />
-                            </div>
-
                             <div className="flex items-start mb-6" data-oid="p88.gbw">
                                 <div className="flex items-center h-5" data-oid="cwf35.6">
                                     <input
@@ -242,7 +216,7 @@ export default function SignupPage() {
                             </button>
                         </form>
 
-                        <div className="mt-8 text-center" data-oid="z1dt26n">
+                        <div className="mt-6 text-center" data-oid="z1dt26n">
                             <p className="text-gray-400" data-oid="-an0cjf">
                                 Already have an account?{' '}
                                 <Link
