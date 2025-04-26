@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { isAuthenticated, logout, getUsername } from '@/lib/auth';
+import { isAuthenticated, logout, getUser } from '@/lib/auth';
+import { LogOut, SwitchCameraIcon } from 'lucide-react';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -13,11 +14,27 @@ export default function Navbar() {
     const [username, setUsername] = useState('User');
 
     useEffect(() => {
-        // Check authentication status when component mounts
-        setIsLoggedIn(isAuthenticated());
+        const checkAuth = async () => {
+            const isLoggedIn = isAuthenticated();
+            setIsLoggedIn(isLoggedIn);
 
-        // Get username
-        setUsername(getUsername());
+            if (isLoggedIn) {
+                try {
+                    // Fetch user data from backend
+                    const userData = await getUser();
+                    if (userData && userData.name) {
+                        setUsername(userData.name);
+                    } else if (userData && userData.email) {
+                        // Fallback to email if name is not available
+                        setUsername(userData.email.split('@')[0]);
+                    }
+                } catch (error) {
+                    console.error('Error fetching user data:', error);
+                }
+            }
+        };
+
+        checkAuth();
     }, []);
 
     const toggleMobileMenu = () => {
@@ -111,22 +128,8 @@ export default function Navbar() {
                             className="p-2 rounded-full hover:bg-gray-800 transition-colors text-gray-400 hover:text-red-500"
                             title="Logout"
                             data-oid="0roh0zy"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                data-oid="fe67.v5"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H3zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-                                    clipRule="evenodd"
-                                    data-oid="6-hhmnn"
-                                />
-                            </svg>
-                        </button>
+                        ></button>
+                        <LogOut size={18} data-oid="t22zgeh" />
                     </div>
                 ) : (
                     <>

@@ -32,6 +32,10 @@ export const removeAuthToken = (): void => {
 // Logout the user
 export const logout = (): void => {
     removeAuthToken();
+    // Clear any user-related data
+    if (typeof window !== 'undefined') {
+        localStorage.removeItem('username');
+    }
     // Redirect to login page
     window.location.href = '/login';
 };
@@ -46,7 +50,7 @@ export const getUser = async (): Promise<any> => {
         }
 
         // Make API call to get user data
-        const response = await fetch('/api/auth/user', {
+        const response = await fetch('http://localhost:8001/api/auth/user', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
