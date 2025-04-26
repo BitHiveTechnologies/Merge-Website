@@ -27,7 +27,6 @@ export default function SignupPage() {
         setError('');
 
         // Basic validation
-
         if (formData.password.length < 8) {
             setError('Password must be at least 8 characters long');
             return;
@@ -41,15 +40,34 @@ export default function SignupPage() {
         setIsLoading(true);
 
         try {
-            // Simulate API call
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            // Make API call to your backend
+            const response = await fetch('/api/auth/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    password: formData.password,
+                }),
+            });
 
-            // Here you would typically make an API call to register the user
-            console.log('Registration attempt with:', formData);
+            const data = await response.json();
 
-            // Redirect to home page after successful registration
-            window.location.href = '/';
+            if (!response.ok) {
+                // Handle error response from your backend
+                setError(data.message || 'Registration failed. Please try again.');
+                return;
+            }
+
+            // Registration successful
+            console.log('Registration successful:', data);
+
+            // Redirect to login page after successful registration
+            window.location.href = '/login';
         } catch (err) {
+            console.error('Registration error:', err);
             setError('An error occurred during registration. Please try again.');
         } finally {
             setIsLoading(false);
