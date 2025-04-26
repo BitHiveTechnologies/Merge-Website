@@ -193,7 +193,7 @@ export default function CoursesPage() {
         const hasHalfStar = rating % 1 >= 0.5;
 
         return (
-            <div className="flex items-center" data-oid="0ean_31">
+            <div className="flex items-center" data-oid="be4hio_">
                 {[...Array(5)].map((_, i) => (
                     <svg
                         key={i}
@@ -208,15 +208,15 @@ export default function CoursesPage() {
                         )}
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        data-oid="hor305z"
+                        data-oid=".3z9kb5"
                     >
                         <path
                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            data-oid="1dy0u4f"
+                            data-oid="bwq329q"
                         />
                     </svg>
                 ))}
-                <span className="ml-1 text-gray-300" data-oid="arj6eyt">
+                <span className="ml-1 text-gray-300" data-oid="xog7jqy">
                     {rating.toFixed(1)}
                 </span>
             </div>
@@ -224,141 +224,141 @@ export default function CoursesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="eq782m-">
-            <Navbar data-oid="thki2i_" />
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="fysxt9v">
+            <Navbar data-oid="3ao5j65" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
-                data-oid="c30wm4s"
+                data-oid="9bxy1al"
             >
                 {/* Background elements similar to main page */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="rrvcvqs"
+                    data-oid="xgim0k0"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="tgnajqq"
+                    data-oid="f-awdpw"
                 ></div>
                 <div
                     className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                    data-oid="a:c2wy_"
+                    data-oid="e7ij5jm"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="6qnzwsa">
+                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="f25mh7d">
                     <h1
                         className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                        data-oid="63z1mdg"
+                        data-oid="0q-vn.-"
                     >
                         Explore Our{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="8orula6"
+                            data-oid="h0dc5_t"
                         >
                             Courses
                         </span>
                     </h1>
                     <p
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
-                        data-oid="xcx3p3r"
+                        data-oid="og84g5d"
                     >
                         Discover a Wide Range of Courses designed to help you Master New Skills and
                         Advance your Career in Technology.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
-                        data-oid="3lvel13"
+                        data-oid="t.:_qpg"
                     ></div>
-                    <div className="flex flex-wrap gap-4 mt-8" data-oid="kkcrsm4">
+                    <div className="flex flex-wrap gap-4 mt-8" data-oid="drpc3ap">
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="6cfyzik"
+                            data-oid="ofhlgpp"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="o4p533-"
+                                data-oid="ts2awrh"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="d11iwe2"
+                                    data-oid="zjj957f"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="j675lhx"
+                                        data-oid="9sbk8ev"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="jqwpgef"
+                                data-oid="rfba3pv"
                             >
                                 Expert Instructors
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="a70ysmw"
+                            data-oid="gexb71-"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="6m8q7fb"
+                                data-oid="fjf.dab"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="8iup:9l"
+                                    data-oid="yefzrhx"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="ibv1ial"
+                                        data-oid="w8nexvc"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="2nb29zg"
+                                data-oid=".:k-rem"
                             >
                                 Flexible Learning
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="spactdj"
+                            data-oid="-wsc.-4"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="64y.2t2"
+                                data-oid="04q1obs"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="g9-9yb7"
+                                    data-oid="jl3ixvg"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="j8pq24z"
+                                        data-oid="4hgi34m"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="vqkyd.f"
+                                data-oid="o4v875j"
                             >
                                 Certificate on Completion
                             </span>
@@ -370,22 +370,22 @@ export default function CoursesPage() {
             {/* Filters and Search */}
             <div
                 className="bg-gray-900 py-8 px-6 md:px-12 border-b border-gray-800"
-                data-oid="v294kbw"
+                data-oid="o5sw-l9"
             >
-                <div className="max-w-6xl mx-auto" data-oid="81ac6y7">
+                <div className="max-w-6xl mx-auto" data-oid="sjabwja">
                     <div
                         className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between"
-                        data-oid="8.:fsw."
+                        data-oid="56mt_1:"
                     >
-                        <div className="flex flex-col sm:flex-row gap-4" data-oid="g5bcrmf">
-                            <div className="flex items-center space-x-4" data-oid="7j_5y4i">
+                        <div className="flex flex-col sm:flex-row gap-4" data-oid="vrmxcfn">
+                            <div className="flex items-center space-x-4" data-oid="caph3te">
                                 <label
                                     className="text-gray-300 whitespace-nowrap"
-                                    data-oid="on7vjsl"
+                                    data-oid="ih4i04p"
                                 >
                                     Price:
                                 </label>
-                                <div className="flex space-x-2" data-oid="qunhofc">
+                                <div className="flex space-x-2" data-oid="nshx-ya">
                                     <button
                                         onClick={() => setPriceFilter('all')}
                                         className={cn(
@@ -394,7 +394,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="yo9f_lj"
+                                        data-oid="7k:j8-u"
                                     >
                                         All
                                     </button>
@@ -406,7 +406,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="89wy5ne"
+                                        data-oid="9hw0ok7"
                                     >
                                         Free
                                     </button>
@@ -418,21 +418,21 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="lhbmulr"
+                                        data-oid="fzap4im"
                                     >
                                         Paid
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4" data-oid="9:hf6t5">
+                            <div className="flex items-center space-x-4" data-oid="ip_puz_">
                                 <label
                                     className="text-gray-300 whitespace-nowrap"
-                                    data-oid="1338pmy"
+                                    data-oid="xratspk"
                                 >
                                     Level:
                                 </label>
-                                <div className="flex space-x-2" data-oid="2ocr6oc">
+                                <div className="flex space-x-2" data-oid="j9kmfu7">
                                     <button
                                         onClick={() => setLevelFilter('all')}
                                         className={cn(
@@ -441,7 +441,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="_9hvboy"
+                                        data-oid="o2s7dzs"
                                     >
                                         All
                                     </button>
@@ -453,7 +453,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid=":dwblwq"
+                                        data-oid="avsiu.t"
                                     >
                                         Beginner
                                     </button>
@@ -465,7 +465,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="_dc02uc"
+                                        data-oid="o5nt10d"
                                     >
                                         Intermediate
                                     </button>
@@ -477,7 +477,7 @@ export default function CoursesPage() {
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
                                         )}
-                                        data-oid="m3m2pdm"
+                                        data-oid="ugakqr-"
                                     >
                                         Advanced
                                     </button>
@@ -485,15 +485,15 @@ export default function CoursesPage() {
                             </div>
                         </div>
 
-                        <div className="w-full md:w-auto" data-oid="75:n8qj">
-                            <div className="relative" data-oid="-98zkyl">
+                        <div className="w-full md:w-auto" data-oid="muryrk4">
+                            <div className="relative" data-oid="gh_80lt">
                                 <input
                                     type="text"
                                     placeholder="Search courses..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     className="w-full md:w-64 px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500 text-white"
-                                    data-oid="lhhv3ae"
+                                    data-oid="lnd-.d1"
                                 />
 
                                 <svg
@@ -502,14 +502,14 @@ export default function CoursesPage() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
-                                    data-oid="m8je-k7"
+                                    data-oid="f3h_46u"
                                 >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                        data-oid="h8p1tg0"
+                                        data-oid=":3htyav"
                                     />
                                 </svg>
                             </div>
@@ -519,67 +519,67 @@ export default function CoursesPage() {
             </div>
 
             {/* Course Listings */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid="v3a1ba6">
-                <div className="max-w-6xl mx-auto" data-oid="jw2al4i">
+            <div className="py-12 px-6 md:px-12 bg-black" data-oid="xb:eonn">
+                <div className="max-w-6xl mx-auto" data-oid="d83w5gz">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="fjqm-2e">
+                        <div className="flex justify-center items-center py-20" data-oid="seqlcfd">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="y9_dvts"
+                                data-oid="pdeawru"
                             ></div>
                         </div>
                     ) : filteredCourses.length === 0 ? (
-                        <div className="text-center py-20" data-oid="6-6k5c:">
+                        <div className="text-center py-20" data-oid="g84famv">
                             <h3
                                 className="text-2xl font-semibold text-gray-300 mb-4"
-                                data-oid="hy-_ml6"
+                                data-oid="tzkdxg1"
                             >
                                 No courses found
                             </h3>
-                            <p className="text-gray-400" data-oid="9x_v88p">
+                            <p className="text-gray-400" data-oid="l:rwkyd">
                                 Try adjusting your filters or search query
                             </p>
                         </div>
                     ) : (
                         <div
                             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                            data-oid="yx57tpj"
+                            data-oid="-5wcr2c"
                         >
                             {filteredCourses.map((course) => (
                                 <div
                                     key={course.id}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                     onClick={() => handleCourseClick(course.id)}
-                                    data-oid="43hl--4"
+                                    data-oid="0pdkgbr"
                                 >
                                     <div
                                         className="relative h-48 overflow-hidden"
-                                        data-oid="-xen0n5"
+                                        data-oid="m5fe6hb"
                                     >
                                         <img
                                             src={course.image}
                                             alt={course.title}
                                             className="w-full h-full object-cover"
-                                            data-oid="htn2iou"
+                                            data-oid=":n7qr8t"
                                         />
 
                                         {course.isFeatured && (
                                             <div
                                                 className="absolute top-0 right-0 bg-gradient-to-l from-purple-600 to-pink-500 text-white text-xs font-bold px-3 py-1"
-                                                data-oid="4onrzfa"
+                                                data-oid="an74:76"
                                             >
                                                 Featured
                                             </div>
                                         )}
                                     </div>
-                                    <div className="p-6" data-oid="3_m-vwu">
+                                    <div className="p-6" data-oid="y5spw_c">
                                         <div
                                             className="flex justify-between items-start mb-2"
-                                            data-oid="cgnbtyy"
+                                            data-oid="xal-jwx"
                                         >
                                             <h3
                                                 className="text-xl font-semibold"
-                                                data-oid="pq5m4le"
+                                                data-oid="xg2qdcp"
                                             >
                                                 {course.title}
                                             </h3>
@@ -592,39 +592,39 @@ export default function CoursesPage() {
                                                           ? 'bg-blue-500/20 text-blue-300'
                                                           : 'bg-purple-500/20 text-purple-300',
                                                 )}
-                                                data-oid="ch48:uy"
+                                                data-oid="rqtfjrg"
                                             >
                                                 {course.level}
                                             </span>
                                         </div>
                                         <p
                                             className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                            data-oid="y1yn0ma"
+                                            data-oid="a08:n4o"
                                         >
                                             {course.description}
                                         </p>
-                                        <div className="flex items-center mb-3" data-oid=":e_0qlr">
+                                        <div className="flex items-center mb-3" data-oid="6sx:7l1">
                                             <div
                                                 className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                                data-oid="pjgq6c8"
+                                                data-oid="hm8-n99"
                                             ></div>
                                             <span
                                                 className="text-gray-300 text-sm"
-                                                data-oid="q9j8zut"
+                                                data-oid="1qd8jty"
                                             >
                                                 {course.instructor}
                                             </span>
                                         </div>
                                         <div
                                             className="flex justify-between text-gray-400 text-sm mb-4"
-                                            data-oid="wgf3u5q"
+                                            data-oid="-hpsbmx"
                                         >
-                                            <span data-oid="d32yo-z">{course.duration}</span>
+                                            <span data-oid="54_dxzl">{course.duration}</span>
                                             {renderRating(course.rating)}
                                         </div>
                                         <div
                                             className="flex justify-between items-center"
-                                            data-oid="9:5lie0"
+                                            data-oid="qpk2tr."
                                         >
                                             <span
                                                 className={cn(
@@ -633,13 +633,13 @@ export default function CoursesPage() {
                                                         ? 'text-green-400'
                                                         : 'text-white',
                                                 )}
-                                                data-oid=":e0u4qr"
+                                                data-oid="nfuxw2s"
                                             >
                                                 {formatPrice(course.price)}
                                             </span>
                                             <button
                                                 className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium"
-                                                data-oid="7-q.1s8"
+                                                data-oid="3y2-gf9"
                                             >
                                                 Enroll Now
                                             </button>
@@ -655,11 +655,11 @@ export default function CoursesPage() {
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="9n..7n-"
+                data-oid=":3b2um:"
             >
-                <div className="max-w-6xl mx-auto" data-oid="nhfa7go">
-                    <div className="text-center text-gray-500" data-oid="_joz418">
-                        <p data-oid="-u2qq3l">
+                <div className="max-w-6xl mx-auto" data-oid="b3tecv-">
+                    <div className="text-center text-gray-500" data-oid="e05wdm_">
+                        <p data-oid=":cmy8w_">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>
