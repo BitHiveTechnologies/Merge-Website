@@ -1,6 +1,8 @@
 // API service functions for interacting with the backend
 
-const API_BASE_URL = 'http://localhost:8001/api';
+import { BACKEND_URL } from "./utils";
+
+const API_BASE_URL = `${BACKEND_URL}/api`;
 
 // Generic fetch function with authentication
 async function fetchWithAuth(endpoint: string, options: RequestInit = {}) {

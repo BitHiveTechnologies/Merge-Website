@@ -68,79 +68,79 @@ export default function Navbar() {
     return (
         <nav
             className="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800 bg-black bg-opacity-95 backdrop-blur-sm"
-            data-oid="i7wlsh5"
+            data-oid="zeiyf6l"
         >
-            <div className="flex items-center" data-oid="f2eac01">
-                <div className="relative h-10 w-32" data-oid="wldn30r">
+            <div className="flex items-center" data-oid="ghbz.tt">
+                <div className="relative h-10 w-32" data-oid="bm54x--">
                     <div
                         className="absolute inset-0 flex items-center justify-center"
-                        data-oid="ehl:t9w"
+                        data-oid="7jgs4z4"
                     >
-                        <Link href="/" data-oid="np979l2">
+                        <Link href="/" data-oid="urdp8vj">
                             <Image
                                 src="/images/Merge.png"
                                 alt="Merge logo"
                                 width={200}
                                 height={200}
-                                data-oid="jguunez"
+                                data-oid="8djpfx5"
                             />
                         </Link>
                     </div>
                 </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8" data-oid="_94wvgt">
+            <div className="hidden md:flex items-center space-x-8" data-oid="bh3r7kz">
                 <Link
                     href="/"
                     className={`${isActive('/') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
-                    data-oid="p1mdy80"
+                    data-oid="o7o_iha"
                 >
                     Home
                 </Link>
                 <Link
                     href="/courses"
                     className={`${isActive('/courses') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
-                    data-oid="ytn1jw-"
+                    data-oid="iefcf5f"
                 >
                     Courses
                 </Link>
                 <Link
                     href="/workshops"
                     className={`${isActive('/workshops') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
-                    data-oid="mgnm:ik"
+                    data-oid="2hbfgrd"
                 >
                     Workshops
                 </Link>
                 <Link
                     href="/hackathons"
                     className={`${isActive('/hackathons') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
-                    data-oid=".bn-i8n"
+                    data-oid="vjfl4j."
                 >
                     Hackathons
                 </Link>
             </div>
 
-            <div className="hidden md:flex items-center space-x-4" data-oid=".rhimv6">
+            <div className="hidden md:flex items-center space-x-4" data-oid="6fap3ep">
                 {isLoggedIn ? (
                     <div
                         className="flex items-center space-x-3 relative"
                         ref={dropdownRef}
-                        data-oid="p2ewj_g"
+                        data-oid="1l9w1r8"
                     >
                         <div
                             className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 rounded-full px-2 py-1 transition-colors"
                             onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                            data-oid="kmdol66"
+                            data-oid="0brbk_z"
                         >
                             <div
                                 className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center"
-                                data-oid="uma.7lu"
+                                data-oid="wpncits"
                             >
-                                <span className="text-white font-medium" data-oid="wyqgq5d">
+                                <span className="text-white font-medium" data-oid="hj2xqke">
                                     {username.charAt(0).toUpperCase()}
                                 </span>
                             </div>
-                            <span className="text-white" data-oid="54ci4dt">
+                            <span className="text-white" data-oid="ys.l3yz">
                                 {username}
                             </span>
                             <svg
@@ -149,14 +149,14 @@ export default function Navbar() {
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                data-oid="y:g.xlk"
+                                data-oid="p.0e0w-"
                             >
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth={2}
                                     d="M19 9l-7 7-7-7"
-                                    data-oid="lpgbete"
+                                    data-oid="0hh-cnu"
                                 />
                             </svg>
                         </div>
@@ -165,29 +165,29 @@ export default function Navbar() {
                         {profileDropdownOpen && (
                             <div
                                 className="absolute top-full right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 border border-gray-700"
-                                data-oid="t9ad:2h"
+                                data-oid="s_yagqs"
                             >
                                 <Link
                                     href="/dashboard/enrolled-courses"
                                     className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
                                     onClick={() => setProfileDropdownOpen(false)}
-                                    data-oid="zja0lj:"
+                                    data-oid="dy05i3q"
                                 >
-                                    <div className="flex items-center" data-oid="l:jvxn.">
+                                    <div className="flex items-center" data-oid="j:.j8xz">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-2 text-purple-400"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="dj.nx6p"
+                                            data-oid="nzgmiw1"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                                data-oid="b7xxzsm"
+                                                data-oid="cl9d2ct"
                                             />
                                         </svg>
                                         My Enrolled Courses
@@ -197,23 +197,23 @@ export default function Navbar() {
                                     href="/dashboard/registered-workshops"
                                     className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
                                     onClick={() => setProfileDropdownOpen(false)}
-                                    data-oid="npjmgdx"
+                                    data-oid="3s7q3tb"
                                 >
-                                    <div className="flex items-center" data-oid="6n6bwg_">
+                                    <div className="flex items-center" data-oid="6ylhzzh">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-2 text-purple-400"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="vujy-_b"
+                                            data-oid="714mc2-"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                data-oid="5wx:zh1"
+                                                data-oid="-ytikw:"
                                             />
                                         </svg>
                                         My Registered Workshops
@@ -223,23 +223,23 @@ export default function Navbar() {
                                     href="/dashboard/profile"
                                     className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
                                     onClick={() => setProfileDropdownOpen(false)}
-                                    data-oid="9i3-5km"
+                                    data-oid="g7.va7h"
                                 >
-                                    <div className="flex items-center" data-oid="7ji8u3.">
+                                    <div className="flex items-center" data-oid="9fz56s9">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-2 text-purple-400"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="9pcz4np"
+                                            data-oid="2oqbmlx"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                                data-oid="2b4vnpb"
+                                                data-oid="sdq5oag"
                                             />
                                         </svg>
                                         Profile Settings
@@ -247,7 +247,7 @@ export default function Navbar() {
                                 </Link>
                                 <div
                                     className="border-t border-gray-700 my-1"
-                                    data-oid="xxu8vho"
+                                    data-oid="2_i3lmw"
                                 ></div>
                                 <button
                                     onClick={() => {
@@ -255,23 +255,23 @@ export default function Navbar() {
                                         setProfileDropdownOpen(false);
                                     }}
                                     className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-red-400 transition-colors"
-                                    data-oid="dlkjzp_"
+                                    data-oid="u4vu628"
                                 >
-                                    <div className="flex items-center" data-oid="7n317zv">
+                                    <div className="flex items-center" data-oid="t500f2j">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-2 text-red-400"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="6kio39f"
+                                            data-oid=".:3lmgc"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                                                data-oid="jolvb1l"
+                                                data-oid="j9ph43k"
                                             />
                                         </svg>
                                         Logout
@@ -285,14 +285,14 @@ export default function Navbar() {
                         <Link
                             href="/login"
                             className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors"
-                            data-oid="ptw-ks."
+                            data-oid="4nq9c0u"
                         >
                             Login
                         </Link>
                         <Link
                             href="/signup"
                             className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors"
-                            data-oid="cs0hs8y"
+                            data-oid="s1kky0j"
                         >
                             Sign Up
                         </Link>
@@ -300,21 +300,21 @@ export default function Navbar() {
                 )}
             </div>
 
-            <button className="md:hidden text-white" onClick={toggleMobileMenu} data-oid="dux:l:k">
+            <button className="md:hidden text-white" onClick={toggleMobileMenu} data-oid="7tkg_5l">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    data-oid="x:xs-n."
+                    data-oid="39490r."
                 >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M4 6h16M4 12h16M4 18h16"
-                        data-oid="p1stdg5"
+                        data-oid="kuth7hm"
                     />
                 </svg>
             </button>
@@ -323,14 +323,14 @@ export default function Navbar() {
             {mobileMenuOpen && (
                 <div
                     className="md:hidden absolute top-full left-0 right-0 bg-black bg-opacity-95 backdrop-blur-sm border-b border-gray-800 py-4 px-6"
-                    data-oid="hsfgsrw"
+                    data-oid="nk_i1_4"
                 >
-                    <div className="flex flex-col space-y-4" data-oid="n23nquy">
+                    <div className="flex flex-col space-y-4" data-oid="tx-6vkb">
                         <Link
                             href="/"
                             className={`${isActive('/') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
                             onClick={() => setMobileMenuOpen(false)}
-                            data-oid="rugqww8"
+                            data-oid="bl9q_-f"
                         >
                             Home
                         </Link>
@@ -338,7 +338,7 @@ export default function Navbar() {
                             href="/courses"
                             className={`${isActive('/courses') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
                             onClick={() => setMobileMenuOpen(false)}
-                            data-oid="z5qoxfu"
+                            data-oid="3w7v_r7"
                         >
                             Courses
                         </Link>
@@ -346,7 +346,7 @@ export default function Navbar() {
                             href="/workshops"
                             className={`${isActive('/workshops') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
                             onClick={() => setMobileMenuOpen(false)}
-                            data-oid="rq.zbr2"
+                            data-oid="of1oy-f"
                         >
                             Workshops
                         </Link>
@@ -354,32 +354,32 @@ export default function Navbar() {
                             href="/hackathons"
                             className={`${isActive('/hackathons') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
                             onClick={() => setMobileMenuOpen(false)}
-                            data-oid="s7qetrc"
+                            data-oid="nrh0y8o"
                         >
                             Hackathons
                         </Link>
                         <div
                             className="flex flex-col space-y-2 pt-2 border-t border-gray-800"
-                            data-oid="j2x:zks"
+                            data-oid="opjast3"
                         >
                             {isLoggedIn ? (
                                 <>
                                     <div
                                         className="flex items-center space-x-2 py-2"
-                                        data-oid="lg23iw0"
+                                        data-oid="pifdseu"
                                     >
                                         <div
                                             className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center"
-                                            data-oid="v4l29.-"
+                                            data-oid="j2uxa5p"
                                         >
                                             <span
                                                 className="text-white font-medium"
-                                                data-oid="e01_8gw"
+                                                data-oid="s_86x:y"
                                             >
                                                 {username.charAt(0).toUpperCase()}
                                             </span>
                                         </div>
-                                        <span className="text-white" data-oid="h0on2:7">
+                                        <span className="text-white" data-oid="9da:m0p">
                                             {username}
                                         </span>
                                     </div>
@@ -387,7 +387,7 @@ export default function Navbar() {
                                         href="/dashboard/enrolled-courses"
                                         className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        data-oid="q3vmbsn"
+                                        data-oid="13c-ihw"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -395,19 +395,19 @@ export default function Navbar() {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="utd49ez"
+                                            data-oid="9lv70kz"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                                data-oid="3ks2qfx"
+                                                data-oid="y2771gm"
                                             />
                                         </svg>
                                         <span
                                             className="transition-transform duration-300 group-hover:translate-x-1"
-                                            data-oid="g2.xxrg"
+                                            data-oid="_z7-l5z"
                                         >
                                             My Enrolled Courses
                                         </span>
@@ -416,7 +416,7 @@ export default function Navbar() {
                                         href="/dashboard/registered-workshops"
                                         className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        data-oid="dvancgi"
+                                        data-oid="pmqw_6o"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -424,19 +424,19 @@ export default function Navbar() {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="7d.6cld"
+                                            data-oid="lpq:p3e"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                data-oid="oe:07w3"
+                                                data-oid="iky7b7."
                                             />
                                         </svg>
                                         <span
                                             className="transition-transform duration-300 group-hover:translate-x-1"
-                                            data-oid="ws62s__"
+                                            data-oid="n5uktdq"
                                         >
                                             My Registered Workshops
                                         </span>
@@ -445,7 +445,7 @@ export default function Navbar() {
                                         href="/dashboard/profile"
                                         className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        data-oid="zjqkx11"
+                                        data-oid="xbbqils"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -453,26 +453,26 @@ export default function Navbar() {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="lk-aoaz"
+                                            data-oid="0n7ybdc"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                                data-oid="x05vz:u"
+                                                data-oid="74k7rbn"
                                             />
                                         </svg>
                                         <span
                                             className="transition-transform duration-300 group-hover:translate-x-1"
-                                            data-oid=".j56m7m"
+                                            data-oid="g6gg779"
                                         >
                                             Profile Settings
                                         </span>
                                     </Link>
                                     <div
                                         className="border-t border-gray-800 my-2"
-                                        data-oid="18hizt-"
+                                        data-oid="a_5m:i7"
                                     ></div>
                                     <button
                                         onClick={() => {
@@ -480,7 +480,7 @@ export default function Navbar() {
                                             setMobileMenuOpen(false);
                                         }}
                                         className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-400 hover:text-red-500 group"
-                                        data-oid="1bpr2yy"
+                                        data-oid="2f4z1n3"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -489,18 +489,18 @@ export default function Navbar() {
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
                                             strokeWidth="2"
-                                            data-oid="ebqn7dj"
+                                            data-oid="3jx9alw"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                                                data-oid=":x5kwft"
+                                                data-oid="jve-iob"
                                             />
                                         </svg>
                                         <span
                                             className="transition-transform duration-300 group-hover:translate-x-1"
-                                            data-oid="ll-u.jk"
+                                            data-oid="vdnujpn"
                                         >
                                             Logout
                                         </span>
@@ -512,7 +512,7 @@ export default function Navbar() {
                                         href="/login"
                                         className="px-4 py-2 rounded-md border border-purple-500 hover:bg-purple-500/10 transition-colors text-center"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        data-oid="cbec0wj"
+                                        data-oid="s7ux_pf"
                                     >
                                         Login
                                     </Link>
@@ -520,7 +520,7 @@ export default function Navbar() {
                                         href="/signup"
                                         className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        data-oid="g:ls54h"
+                                        data-oid="y6f9mah"
                                     >
                                         Sign Up
                                     </Link>

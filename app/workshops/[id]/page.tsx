@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { isAuthenticated, getAuthToken } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils';
+import { BACKEND_URL, cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
@@ -53,7 +53,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
             setIsLoading(true);
             try {
                 // Fetch workshop details
-                const response = await fetch(`http://localhost:8001/api/workshops/${params.id}`);
+                const response = await fetch(`${BACKEND_URL}/api/workshops/${params.id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch workshop details');
                 }
@@ -65,7 +65,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                 if (isAuthenticated()) {
                     const token = getAuthToken();
                     const registrationsResponse = await fetch(
-                        'http://localhost:8001/api/workshops/registrations',
+                        `${BACKEND_URL}/api/workshops/registrations`,
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`,
@@ -157,16 +157,13 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
         setRegistrationLoading(true);
         try {
             const token = getAuthToken();
-            const response = await fetch(
-                `http://localhost:8001/api/workshops/register/${params.id}`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${token}`,
-                    },
+            const response = await fetch(`${BACKEND_URL}/api/workshops/register/${params.id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
                 },
-            );
+            });
 
             if (!response.ok) {
                 const errorData = await response.json();
@@ -200,69 +197,69 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="nv6s5r5">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="_4qv.pt">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="4.ol4rz" />
+            <Navbar data-oid="ltuk4x:" />
 
             {/* Workshop Detail Content */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid="yl5tr9-">
-                <div className="max-w-6xl mx-auto" data-oid="-icf10z">
+            <div className="py-12 px-6 md:px-12 bg-black" data-oid="ad.wf4f">
+                <div className="max-w-6xl mx-auto" data-oid="en9.s6g">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="4me.9xc">
+                        <div className="flex justify-center items-center py-20" data-oid="lz:xwk-">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="j5a.mr1"
+                                data-oid="vicj_-f"
                             ></div>
                         </div>
                     ) : workshop ? (
-                        <div data-oid="qp-a:85">
+                        <div data-oid="y2zfbji">
                             {/* Back button */}
                             <button
                                 onClick={() => router.push('/workshops')}
                                 className="flex items-center text-gray-400 hover:text-purple-400 mb-8 transition-colors"
-                                data-oid="g0y4bo-"
+                                data-oid="ug90q.b"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 mr-2"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="2zy__md"
+                                    data-oid=".mbiqjg"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
                                         clipRule="evenodd"
-                                        data-oid=".zdln-n"
+                                        data-oid="ugs5yc2"
                                     />
                                 </svg>
                                 Back to Workshops
                             </button>
 
                             {/* Workshop header */}
-                            <div className="grid md:grid-cols-2 gap-8 mb-12" data-oid="o1vf.04">
+                            <div className="grid md:grid-cols-2 gap-8 mb-12" data-oid="lrz3aks">
                                 <div
                                     className="relative h-64 md:h-full rounded-xl overflow-hidden"
-                                    data-oid="wafrn6h"
+                                    data-oid="92k4eku"
                                 >
                                     <img
                                         src={workshop.image}
                                         alt={workshop.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="b43bvnt"
+                                        data-oid="nqd4d4u"
                                     />
                                 </div>
-                                <div className="flex flex-col justify-between" data-oid="pj6_.pb">
-                                    <div data-oid="f98piyr">
+                                <div className="flex flex-col justify-between" data-oid="77dxvxc">
+                                    <div data-oid="wcwueim">
                                         <div
                                             className="flex flex-wrap gap-2 mb-4"
-                                            data-oid="wrs3-w:"
+                                            data-oid="mxx2nin"
                                         >
                                             {workshop.tags.map((tag, index) => (
                                                 <span
                                                     key={index}
                                                     className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
-                                                    data-oid="hgdn6l:"
+                                                    data-oid="c7q_xpp"
                                                 >
                                                     {tag}
                                                 </span>
@@ -270,67 +267,67 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                         </div>
                                         <h1
                                             className="text-3xl md:text-4xl font-bold mb-4"
-                                            data-oid="90n1ufe"
+                                            data-oid="cbel0fe"
                                         >
                                             {workshop.title}
                                         </h1>
-                                        <p className="text-gray-300 mb-6" data-oid="1qnt.lv">
+                                        <p className="text-gray-300 mb-6" data-oid="ca2p5_t">
                                             {workshop.description}
                                         </p>
 
                                         <div
                                             className="grid grid-cols-2 gap-4 mb-6"
-                                            data-oid="ni7ku.5"
+                                            data-oid="gks85bv"
                                         >
                                             <div
                                                 className="bg-gray-800/50 p-4 rounded-lg"
-                                                data-oid="2w.8n9:"
+                                                data-oid="tzh4m3u"
                                             >
                                                 <div
                                                     className="text-purple-400 mb-1 text-sm"
-                                                    data-oid="5xujguh"
+                                                    data-oid=":5x1lva"
                                                 >
                                                     Date
                                                 </div>
-                                                <div className="font-medium" data-oid="u2pcb_o">
+                                                <div className="font-medium" data-oid="o3edyra">
                                                     {formatDate(workshop.date)}
                                                 </div>
                                             </div>
                                             <div
                                                 className="bg-gray-800/50 p-4 rounded-lg"
-                                                data-oid="2ws2sjp"
+                                                data-oid="39g5_yn"
                                             >
                                                 <div
                                                     className="text-purple-400 mb-1 text-sm"
-                                                    data-oid="82_8s._"
+                                                    data-oid="fic3ywd"
                                                 >
                                                     Time
                                                 </div>
-                                                <div className="font-medium" data-oid="4ufi_jb">
+                                                <div className="font-medium" data-oid="08j8dlr">
                                                     {workshop.time}
                                                 </div>
                                             </div>
                                             <div
                                                 className="bg-gray-800/50 p-4 rounded-lg"
-                                                data-oid="58xwtqh"
+                                                data-oid="ny-32tq"
                                             >
                                                 <div
                                                     className="text-purple-400 mb-1 text-sm"
-                                                    data-oid="wf4nd_2"
+                                                    data-oid="p:lvzck"
                                                 >
                                                     Location
                                                 </div>
-                                                <div className="font-medium" data-oid="4y-tbe6">
+                                                <div className="font-medium" data-oid="l2ac4fa">
                                                     {workshop.location}
                                                 </div>
                                             </div>
                                             <div
                                                 className="bg-gray-800/50 p-4 rounded-lg"
-                                                data-oid="3c-g8hg"
+                                                data-oid="86cn-j7"
                                             >
                                                 <div
                                                     className="text-purple-400 mb-1 text-sm"
-                                                    data-oid="o0jnvrs"
+                                                    data-oid="axe4pqm"
                                                 >
                                                     Price
                                                 </div>
@@ -341,7 +338,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                             ? 'text-green-400'
                                                             : 'text-white',
                                                     )}
-                                                    data-oid="5r.1a71"
+                                                    data-oid="gae:g30"
                                                 >
                                                     {formatPrice(workshop.price)}
                                                 </div>
@@ -351,81 +348,81 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
 
                                     {/* Countdown timer */}
                                     {workshop.isUpcoming && timeRemaining && (
-                                        <div className="mb-6" data-oid="5aggl7x">
+                                        <div className="mb-6" data-oid="5mlr-zk">
                                             <h3
                                                 className="text-lg font-semibold mb-3"
-                                                data-oid="v6f.53."
+                                                data-oid="9d.7a91"
                                             >
                                                 Workshop starts in:
                                             </h3>
                                             <div
                                                 className="grid grid-cols-4 gap-2 text-center"
-                                                data-oid="t_lmx37"
+                                                data-oid="v.rfd38"
                                             >
                                                 <div
                                                     className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="z:5.xyj"
+                                                    data-oid="8pw34oi"
                                                 >
                                                     <div
                                                         className="text-2xl font-bold text-purple-400"
-                                                        data-oid="x47gvn4"
+                                                        data-oid="2gblr.c"
                                                     >
                                                         {timeRemaining.days}
                                                     </div>
                                                     <div
                                                         className="text-xs text-gray-400"
-                                                        data-oid="6y7v5xd"
+                                                        data-oid="vuxph1l"
                                                     >
                                                         Days
                                                     </div>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="6guzx2b"
+                                                    data-oid="uv7v4bo"
                                                 >
                                                     <div
                                                         className="text-2xl font-bold text-purple-400"
-                                                        data-oid="no0_u.1"
+                                                        data-oid="juq3nch"
                                                     >
                                                         {timeRemaining.hours}
                                                     </div>
                                                     <div
                                                         className="text-xs text-gray-400"
-                                                        data-oid=":9wrqy5"
+                                                        data-oid="jk_a_p2"
                                                     >
                                                         Hours
                                                     </div>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="v30if6a"
+                                                    data-oid="arct886"
                                                 >
                                                     <div
                                                         className="text-2xl font-bold text-purple-400"
-                                                        data-oid="g75urp0"
+                                                        data-oid="u3f7mdj"
                                                     >
                                                         {timeRemaining.minutes}
                                                     </div>
                                                     <div
                                                         className="text-xs text-gray-400"
-                                                        data-oid="3uikq59"
+                                                        data-oid="szdi-as"
                                                     >
                                                         Minutes
                                                     </div>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="s0xed7g"
+                                                    data-oid="otcfofg"
                                                 >
                                                     <div
                                                         className="text-2xl font-bold text-purple-400"
-                                                        data-oid="9ek-d_o"
+                                                        data-oid="32xyibc"
                                                     >
                                                         {timeRemaining.seconds}
                                                     </div>
                                                     <div
                                                         className="text-xs text-gray-400"
-                                                        data-oid="gnq:w6v"
+                                                        data-oid="fx0n2dh"
                                                     >
                                                         Seconds
                                                     </div>
@@ -438,7 +435,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                         <button
                                             disabled
                                             className="w-full py-3 rounded-md bg-green-600 text-center font-medium cursor-default"
-                                            data-oid="6jos9rw"
+                                            data-oid="ymmeiic"
                                         >
                                             Already Registered
                                         </button>
@@ -449,7 +446,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                             className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium ${
                                                 registrationLoading ? 'opacity-70 cursor-wait' : ''
                                             }`}
-                                            data-oid="1-6j4ne"
+                                            data-oid="rp-jyek"
                                         >
                                             {registrationLoading ? 'Processing...' : 'Register Now'}
                                         </button>
@@ -458,21 +455,21 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                             </div>
 
                             {/* Workshop details */}
-                            <div className="grid md:grid-cols-3 gap-8" data-oid="5i_2.op">
-                                <div className="md:col-span-2" data-oid="rp-nqdy">
+                            <div className="grid md:grid-cols-3 gap-8" data-oid="88bylv0">
+                                <div className="md:col-span-2" data-oid="o0249cv">
                                     {/* About the workshop */}
                                     <div
                                         className="bg-gray-800/30 rounded-xl p-6 mb-8"
-                                        data-oid="cw_hgii"
+                                        data-oid="lxlr41j"
                                     >
-                                        <h2 className="text-2xl font-bold mb-4" data-oid=".02:c23">
+                                        <h2 className="text-2xl font-bold mb-4" data-oid="4l9tlil">
                                             About the Workshop
                                         </h2>
-                                        <div className="text-gray-300 space-y-4" data-oid="z_3u0s3">
+                                        <div className="text-gray-300 space-y-4" data-oid="1p06sun">
                                             {workshop.longDescription
                                                 ?.split('\n\n')
                                                 .map((paragraph, index) => (
-                                                    <p key={index} data-oid="adsfqcc">
+                                                    <p key={index} data-oid="koj1yt7">
                                                         {paragraph}
                                                     </p>
                                                 ))}
@@ -483,37 +480,37 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     {workshop.agenda && (
                                         <div
                                             className="bg-gray-800/30 rounded-xl p-6"
-                                            data-oid="qdr5n-m"
+                                            data-oid="5a-.7wf"
                                         >
                                             <h2
                                                 className="text-2xl font-bold mb-4"
-                                                data-oid="lzyefpi"
+                                                data-oid=":.akkit"
                                             >
                                                 Workshop Agenda
                                             </h2>
-                                            <div className="space-y-6" data-oid="2a96d3h">
+                                            <div className="space-y-6" data-oid="71:5am:">
                                                 {workshop.agenda.map((item, index) => (
                                                     <div
                                                         key={index}
                                                         className="flex"
-                                                        data-oid="vrydj2l"
+                                                        data-oid="6mqd0u8"
                                                     >
                                                         <div
                                                             className="w-1/4 text-purple-400 font-medium"
-                                                            data-oid="b4et4to"
+                                                            data-oid="-45.-ys"
                                                         >
                                                             {item.time}
                                                         </div>
-                                                        <div className="w-3/4" data-oid="qa42hjk">
+                                                        <div className="w-3/4" data-oid="xxqixtj">
                                                             <h3
                                                                 className="font-semibold mb-1"
-                                                                data-oid="eykiff_"
+                                                                data-oid="gjk1_d2"
                                                             >
                                                                 {item.title}
                                                             </h3>
                                                             <p
                                                                 className="text-gray-400 text-sm"
-                                                                data-oid="iqzv9v3"
+                                                                data-oid="vd:nj8-"
                                                             >
                                                                 {item.description}
                                                             </p>
@@ -525,19 +522,19 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     )}
                                 </div>
 
-                                <div data-oid="tpz45ky">
+                                <div data-oid="7g1jfcw">
                                     {/* Instructor info */}
                                     <div
                                         className="bg-gray-800/30 rounded-xl p-6"
-                                        data-oid="kdyo.qs"
+                                        data-oid="mwz-9jt"
                                     >
-                                        <h2 className="text-xl font-bold mb-4" data-oid="9fy0o_f">
+                                        <h2 className="text-xl font-bold mb-4" data-oid="xn14_51">
                                             Instructor
                                         </h2>
-                                        <div className="flex items-center mb-4" data-oid="ge8kjme">
+                                        <div className="flex items-center mb-4" data-oid="dxpxq42">
                                             <div
                                                 className="w-16 h-16 rounded-full overflow-hidden mr-4"
-                                                data-oid="1:ii18r"
+                                                data-oid="ufqyw6x"
                                             >
                                                 <img
                                                     src={
@@ -546,25 +543,25 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                     }
                                                     alt={workshop.instructor}
                                                     className="w-full h-full object-cover"
-                                                    data-oid="6uiav:7"
+                                                    data-oid="x2kli.i"
                                                 />
                                             </div>
-                                            <div data-oid="u7z1sc_">
+                                            <div data-oid="qd778ed">
                                                 <h3
                                                     className="font-semibold text-lg"
-                                                    data-oid="h_w6u90"
+                                                    data-oid="3qqer:p"
                                                 >
                                                     {workshop.instructor}
                                                 </h3>
                                                 <p
                                                     className="text-purple-400 text-sm"
-                                                    data-oid="0izk8yp"
+                                                    data-oid="m:ilyom"
                                                 >
                                                     Workshop Instructor
                                                 </p>
                                             </div>
                                         </div>
-                                        <p className="text-gray-300 text-sm" data-oid="sccp3c_">
+                                        <p className="text-gray-300 text-sm" data-oid="rc1uv42">
                                             {workshop.instructorBio || 'No bio available.'}
                                         </p>
                                     </div>
@@ -572,20 +569,20 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                             </div>
                         </div>
                     ) : (
-                        <div className="text-center py-20" data-oid="3.j09b4">
+                        <div className="text-center py-20" data-oid="vchlnff">
                             <h3
                                 className="text-2xl font-semibold text-gray-300 mb-4"
-                                data-oid=":-bnosh"
+                                data-oid="tx:y2hg"
                             >
                                 Workshop not found
                             </h3>
-                            <p className="text-gray-400 mb-8" data-oid="5-qmn93">
+                            <p className="text-gray-400 mb-8" data-oid="_d71gw4">
                                 The workshop you're looking for doesn't exist or has been removed.
                             </p>
                             <button
                                 onClick={() => router.push('/workshops')}
                                 className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                data-oid="uhkvhbc"
+                                data-oid="_q3gaz0"
                             >
                                 Back to Workshops
                             </button>
@@ -597,11 +594,11 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="60vj-78"
+                data-oid="l9cfh5h"
             >
-                <div className="max-w-6xl mx-auto" data-oid="wk-gn0y">
-                    <div className="text-center text-gray-500" data-oid="7a1oqeo">
-                        <p data-oid="9zjy5_v">
+                <div className="max-w-6xl mx-auto" data-oid=":i2uvk5">
+                    <div className="text-center text-gray-500" data-oid="ue.m:b2">
+                        <p data-oid="d5eee45">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>

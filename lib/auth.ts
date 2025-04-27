@@ -1,5 +1,7 @@
 // Simple authentication utility functions for frontend use
 
+import { BACKEND_URL } from "./utils";
+
 // Check if user is logged in
 export const isAuthenticated = (): boolean => {
     if (typeof window === 'undefined') return false;
@@ -50,7 +52,7 @@ export const getUser = async (): Promise<any> => {
         }
 
         // Make API call to get user data
-        const response = await fetch('http://localhost:8001/api/user/profile', {
+        const response = await fetch(`${BACKEND_URL}/api/user/profile`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
