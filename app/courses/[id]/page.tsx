@@ -18,11 +18,14 @@ interface Course {
     image: string;
     isFeatured?: boolean;
     curriculum?: {
-        section: string;
+        title: string;
         lessons: {
             title: string;
+            content: string;
             duration: string;
+            _id: string;
         }[];
+        _id: string;
     }[];
 }
 
@@ -380,9 +383,9 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                 Course Curriculum
                             </h2>
                             <div className="space-y-6" data-oid="9a7leaq">
-                                {course.curriculum?.map((section, index) => (
+                                {course.curriculum?.map((module) => (
                                     <div
-                                        key={index}
+                                        key={module._id}
                                         className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
                                         data-oid="2v_qzk8"
                                     >
@@ -391,14 +394,14 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                 className="text-xl font-semibold"
                                                 data-oid="qx68gfm"
                                             >
-                                                {section.section}
+                                                {module.title}
                                             </h3>
                                         </div>
                                         <div className="p-6" data-oid="e1rsbu-">
                                             <ul className="space-y-4" data-oid="3gshek4">
-                                                {section.lessons.map((lesson, lessonIndex) => (
+                                                {module.lessons.map((lesson) => (
                                                     <li
-                                                        key={lessonIndex}
+                                                        key={lesson._id}
                                                         className="flex justify-between items-center"
                                                         data-oid="i-krc07"
                                                     >
@@ -430,12 +433,26 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                                     data-oid="_t15vu3"
                                                                 />
                                                             </svg>
-                                                            <span data-oid="e:gerck">
-                                                                {lesson.title}
-                                                            </span>
+                                                            <div
+                                                                className="flex flex-col"
+                                                                data-oid="li8_r5_"
+                                                            >
+                                                                <span
+                                                                    className="font-medium"
+                                                                    data-oid="e:gerck"
+                                                                >
+                                                                    {lesson.title}
+                                                                </span>
+                                                                <p
+                                                                    className="text-sm text-gray-400 mt-1"
+                                                                    data-oid="fdt4voz"
+                                                                >
+                                                                    {lesson.content}
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                         <span
-                                                            className="text-gray-400 text-sm"
+                                                            className="text-gray-400 text-sm ml-4"
                                                             data-oid="6xpmu:x"
                                                         >
                                                             {lesson.duration}
