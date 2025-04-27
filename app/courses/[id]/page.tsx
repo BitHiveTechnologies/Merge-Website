@@ -30,7 +30,37 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     const router = useRouter();
     const [course, setCourse] = useState<Course | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [isEnrolled, setIsEnrolled] = useState(false);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
+
+    // Check if user is enrolled in this course
+    useEffect(() => {
+        const checkEnrollment = async () => {
+            const authToken = localStorage.getItem('authToken');
+            if (!authToken) return;
+
+            try {
+                const response = await fetch('http://localhost:8001/api/courses/enrolled', {
+                    headers: {
+                        Authorization: `Bearer ${authToken}`,
+                    },
+                });
+
+                if (!response.ok) return;
+
+                const enrollments = await response.json();
+                const enrolled = enrollments.some(
+                    (enrollment: any) => enrollment.courseId._id === params.id,
+                );
+
+                setIsEnrolled(enrolled);
+            } catch (error) {
+                console.error('Error checking enrollment:', error);
+            }
+        };
+
+        checkEnrollment();
+    }, [params.id]);
 
     // Fetch course details from backend
     useEffect(() => {
@@ -314,10 +344,15 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                     </div>
                                     <button
                                         onClick={handleEnroll}
-                                        className="px-8 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
+                                        disabled={isEnrolled}
+                                        className={`px-8 py-3 rounded-md ${
+                                            isEnrolled
+                                                ? 'bg-green-600 cursor-default'
+                                                : 'bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600'
+                                        } transition-colors font-medium`}
                                         data-oid="2a7fj.:"
                                     >
-                                        Enroll Now
+                                        {isEnrolled ? 'Already Enrolled' : 'Enroll Now'}
                                     </button>
                                 </div>
                             </div>
