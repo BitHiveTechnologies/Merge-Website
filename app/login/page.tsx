@@ -71,12 +71,12 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans mt-12" data-oid="wu1_g_z">
+        <div className="min-h-screen bg-black text-white font-sans" data-oid="wu1_g_z">
             <Navbar data-oid=":.b2pqm" />
 
             <div className="pt-32 pb-20 px-6 md:px-12" data-oid="y4lj.pf">
                 <div
-                    className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
+                    className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden  mt-12"
                     data-oid="2nwyvbt"
                 >
                     {/* Background blur elements */}
@@ -98,7 +98,7 @@ export default function LoginPage() {
                                 Welcome Back
                             </h1>
                             <p className="text-gray-400" data-oid="6b3nm_:">
-                                Sign in to continue your learning journey
+                                Sign in to continue your Learning Journey
                             </p>
                         </div>
 
