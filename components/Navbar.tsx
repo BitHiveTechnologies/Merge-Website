@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { isAuthenticated, logout, getUser } from '@/lib/auth';
 
 export default function Navbar() {
@@ -11,6 +11,8 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState('User');
+    const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -34,6 +36,18 @@ export default function Navbar() {
         };
 
         checkAuth();
+
+        // Close dropdown when clicking outside
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setProfileDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     const toggleMobileMenu = () => {
@@ -108,8 +122,16 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center space-x-4" data-oid=".rhimv6">
                 {isLoggedIn ? (
-                    <div className="flex items-center space-x-3" data-oid="p2ewj_g">
-                        <div className="flex items-center space-x-2" data-oid="kmdol66">
+                    <div
+                        className="flex items-center space-x-3 relative"
+                        ref={dropdownRef}
+                        data-oid="p2ewj_g"
+                    >
+                        <div
+                            className="flex items-center space-x-2 cursor-pointer hover:bg-gray-800 rounded-full px-2 py-1 transition-colors"
+                            onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
+                            data-oid="kmdol66"
+                        >
                             <div
                                 className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center"
                                 data-oid="uma.7lu"
@@ -121,34 +143,116 @@ export default function Navbar() {
                             <span className="text-white" data-oid="54ci4dt">
                                 {username}
                             </span>
-                        </div>
-                        <button
-                            onClick={handleLogout}
-                            className="p-2 rounded-full hover:bg-gray-800 transition-all duration-300 text-gray-400 hover:text-red-500 hover:scale-110 hover:shadow-glow relative group"
-                            title="Logout"
-                            data-oid="0roh0zy"
-                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12"
+                                className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${profileDropdownOpen ? 'rotate-180' : ''}`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                strokeWidth="2"
-                                data-oid="i9ygc.c"
+                                data-oid="y:g.xlk"
                             >
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                                    data-oid="8u9qxs."
+                                    strokeWidth={2}
+                                    d="M19 9l-7 7-7-7"
+                                    data-oid="lpgbete"
                                 />
                             </svg>
-                            <span
-                                className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"
-                                data-oid="i26arn7"
-                            ></span>
-                        </button>
+                        </div>
+
+                        {/* Profile Dropdown */}
+                        {profileDropdownOpen && (
+                            <div
+                                className="absolute top-full right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 border border-gray-700"
+                                data-oid="t9ad:2h"
+                            >
+                                <Link
+                                    href="/dashboard/enrolled-courses"
+                                    className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
+                                    onClick={() => setProfileDropdownOpen(false)}
+                                    data-oid="zja0lj:"
+                                >
+                                    <div className="flex items-center" data-oid="l:jvxn.">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-2 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="dj.nx6p"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                                data-oid="b7xxzsm"
+                                            />
+                                        </svg>
+                                        My Enrolled Courses
+                                    </div>
+                                </Link>
+                                <Link
+                                    href="/dashboard/profile"
+                                    className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
+                                    onClick={() => setProfileDropdownOpen(false)}
+                                    data-oid="9i3-5km"
+                                >
+                                    <div className="flex items-center" data-oid="7ji8u3.">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-2 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="9pcz4np"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                                data-oid="2b4vnpb"
+                                            />
+                                        </svg>
+                                        Profile Settings
+                                    </div>
+                                </Link>
+                                <div
+                                    className="border-t border-gray-700 my-1"
+                                    data-oid="xxu8vho"
+                                ></div>
+                                <button
+                                    onClick={() => {
+                                        handleLogout();
+                                        setProfileDropdownOpen(false);
+                                    }}
+                                    className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-red-400 transition-colors"
+                                    data-oid="dlkjzp_"
+                                >
+                                    <div className="flex items-center" data-oid="7n317zv">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-2 text-red-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="6kio39f"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                                                data-oid="jolvb1l"
+                                            />
+                                        </svg>
+                                        Logout
+                                    </div>
+                                </button>
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <>
@@ -253,6 +357,68 @@ export default function Navbar() {
                                             {username}
                                         </span>
                                     </div>
+                                    <Link
+                                        href="/dashboard/enrolled-courses"
+                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        data-oid="q3vmbsn"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="utd49ez"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                                data-oid="3ks2qfx"
+                                            />
+                                        </svg>
+                                        <span
+                                            className="transition-transform duration-300 group-hover:translate-x-1"
+                                            data-oid="g2.xxrg"
+                                        >
+                                            My Enrolled Courses
+                                        </span>
+                                    </Link>
+                                    <Link
+                                        href="/dashboard/profile"
+                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        data-oid="zjqkx11"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="lk-aoaz"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                                data-oid="x05vz:u"
+                                            />
+                                        </svg>
+                                        <span
+                                            className="transition-transform duration-300 group-hover:translate-x-1"
+                                            data-oid=".j56m7m"
+                                        >
+                                            Profile Settings
+                                        </span>
+                                    </Link>
+                                    <div
+                                        className="border-t border-gray-800 my-2"
+                                        data-oid="18hizt-"
+                                    ></div>
                                     <button
                                         onClick={() => {
                                             handleLogout();
