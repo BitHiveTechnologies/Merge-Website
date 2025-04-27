@@ -21,37 +21,16 @@ interface Hackathon {
     registrationLink: string;
     isLive: boolean;
     isUpcoming: boolean;
-    tracks: {
-        name: string;
-        description: string[];
-    }[];
-    structure: {
-        step: string;
-        description: string;
-    }[];
-    prizes: string;
-    prerequisites: {
-        category: string;
-        items: {
-            icon?: string;
-            text: string;
-        }[];
-    }[];
+    tracks: string[];
+    structure: string[];
+    prizes: string[];
+    prerequisites: string[];
     faqs?: {
         question: string;
         answer: string;
     }[];
-    sponsors?: {
-        name: string;
-        logo: string;
-        tier: 'platinum' | 'gold' | 'silver' | 'bronze';
-    }[];
-    judges?: {
-        name: string;
-        position: string;
-        company: string;
-        image: string;
-    }[];
+    sponsors?: string[];
+    judges?: string[];
 }
 
 export default function HackathonDetailPage({ params }: { params: { id: string } }) {
@@ -87,9 +66,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                     location: hackathonData.location || 'Online',
                     description: hackathonData.description || 'No description available',
                     longDescription:
-                        hackathonData.longDescription ||
-                        hackathonData.description ||
-                        'No detailed description available',
+                        hackathonData.description || 'No detailed description available',
                     image:
                         hackathonData.image ||
                         'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -97,53 +74,27 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                     isLive:
                         new Date(hackathonData.startDate) <= new Date() &&
                         new Date(hackathonData.endDate) >= new Date(),
-                    isUpcoming: new Date(hackathonData.startDate) > new Date(),
+                    isUpcoming:
+                        hackathonData.isUpcoming !== undefined
+                            ? hackathonData.isUpcoming
+                            : new Date(hackathonData.startDate) > new Date(),
 
-                    // Default tracks if not provided
-                    tracks: hackathonData.tracks
-                        ? hackathonData.tracks.map((track: any) => ({
-                              name: track.name || 'General',
-                              description: track.description || ['No specific requirements'],
-                          }))
-                        : [
-                              {
-                                  name: 'General',
-                                  description: ['Open to all types of projects'],
-                              },
-                          ],
+                    // Use tracks array directly from backend
+                    tracks: hackathonData.tracks || ['General'],
 
-                    // Default structure if not provided
+                    // Use structure array directly from backend
                     structure: hackathonData.structure || [
-                        {
-                            step: 'Registration',
-                            description:
-                                'Complete the registration process to participate in the hackathon.',
-                        },
-                        {
-                            step: 'Hackathon Event',
-                            description: 'Participate in the hackathon and build your project.',
-                        },
-                        {
-                            step: 'Submission',
-                            description: 'Submit your project for evaluation.',
-                        },
+                        'Registration: Complete the registration process to participate in the hackathon.',
+                        'Hackathon Event: Participate in the hackathon and build your project.',
+                        'Submission: Submit your project for evaluation.',
                     ],
 
-                    prizes: hackathonData.prizes || 'To be announced',
+                    prizes: hackathonData.prizes || ['To be announced'],
 
-                    // Default prerequisites if not provided
+                    // Use prerequisites array directly from backend
                     prerequisites: hackathonData.prerequisites || [
-                        {
-                            category: 'General Requirements',
-                            items: [
-                                {
-                                    text: 'A laptop with necessary development tools',
-                                },
-                                {
-                                    text: 'Basic programming knowledge',
-                                },
-                            ],
-                        },
+                        'A laptop with necessary development tools',
+                        'Basic programming knowledge',
                     ],
 
                     faqs: hackathonData.faqs || [
@@ -367,7 +318,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                     />
                                                 </svg>
                                                 <span data-oid="wgt51o_">
-                                                    Prizes: {hackathon.prizes}
+                                                    Prizes: {hackathon.prizes.join(', ')}
                                                 </span>
                                             </div>
                                         </div>
@@ -561,7 +512,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                         </p>
 
                                         {/* Judges section */}
-                                        {hackathon.judges && (
+                                        {hackathon.judges && hackathon.judges.length > 0 && (
                                             <div className="mt-12" data-oid="2s9c:t7">
                                                 <h3
                                                     className="text-2xl font-bold mb-6"
@@ -579,35 +530,12 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                             className="bg-gray-800/30 rounded-xl p-6 text-center"
                                                             data-oid="j.a4t98"
                                                         >
-                                                            <div
-                                                                className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4"
-                                                                data-oid="hjmcwne"
-                                                            >
-                                                                <img
-                                                                    src={judge.image}
-                                                                    alt={judge.name}
-                                                                    className="w-full h-full object-cover"
-                                                                    data-oid="6rcu5tp"
-                                                                />
-                                                            </div>
                                                             <h4
                                                                 className="text-xl font-semibold mb-1"
                                                                 data-oid="6spdrlh"
                                                             >
-                                                                {judge.name}
+                                                                {judge}
                                                             </h4>
-                                                            <p
-                                                                className="text-purple-400 mb-2"
-                                                                data-oid="1g4_3t3"
-                                                            >
-                                                                {judge.position}
-                                                            </p>
-                                                            <p
-                                                                className="text-gray-400 text-sm"
-                                                                data-oid="jn391i0"
-                                                            >
-                                                                {judge.company}
-                                                            </p>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -615,7 +543,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                         )}
 
                                         {/* Sponsors section */}
-                                        {hackathon.sponsors && (
+                                        {hackathon.sponsors && hackathon.sponsors.length > 0 && (
                                             <div className="mt-12" data-oid="krbikbc">
                                                 <h3
                                                     className="text-2xl font-bold mb-6"
@@ -623,56 +551,24 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                 >
                                                     Our Sponsors
                                                 </h3>
-                                                <div className="space-y-8" data-oid="nglbzki">
-                                                    {['platinum', 'gold', 'silver', 'bronze'].map(
-                                                        (tier) => {
-                                                            const tierSponsors =
-                                                                hackathon.sponsors?.filter(
-                                                                    (s) => s.tier === tier,
-                                                                );
-                                                            if (
-                                                                !tierSponsors ||
-                                                                tierSponsors.length === 0
-                                                            )
-                                                                return null;
-
-                                                            return (
-                                                                <div key={tier} data-oid="mjp96.h">
-                                                                    <h4
-                                                                        className="text-lg font-medium mb-4 capitalize"
-                                                                        data-oid="yx_vh80"
-                                                                    >
-                                                                        {tier} Sponsors
-                                                                    </h4>
-                                                                    <div
-                                                                        className="flex flex-wrap gap-6 items-center"
-                                                                        data-oid="rgo-6.:"
-                                                                    >
-                                                                        {tierSponsors.map(
-                                                                            (sponsor, index) => (
-                                                                                <div
-                                                                                    key={index}
-                                                                                    className="bg-gray-800/30 p-4 rounded-lg"
-                                                                                    data-oid="m0du6-q"
-                                                                                >
-                                                                                    <img
-                                                                                        src={
-                                                                                            sponsor.logo
-                                                                                        }
-                                                                                        alt={
-                                                                                            sponsor.name
-                                                                                        }
-                                                                                        className="h-12 object-contain"
-                                                                                        data-oid="8m2sdbd"
-                                                                                    />
-                                                                                </div>
-                                                                            ),
-                                                                        )}
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        },
-                                                    )}
+                                                <div
+                                                    className="flex flex-wrap gap-6 items-center"
+                                                    data-oid="nglbzki"
+                                                >
+                                                    {hackathon.sponsors.map((sponsor, index) => (
+                                                        <div
+                                                            key={index}
+                                                            className="bg-gray-800/30 p-4 rounded-lg"
+                                                            data-oid="m0du6-q"
+                                                        >
+                                                            <span
+                                                                className="text-white"
+                                                                data-oid="bo_fw_v"
+                                                            >
+                                                                {sponsor}
+                                                            </span>
+                                                        </div>
+                                                    ))}
                                                 </div>
                                             </div>
                                         )}
@@ -705,30 +601,8 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                         className="text-xl font-semibold mb-4 text-purple-400"
                                                         data-oid="_8125mh"
                                                     >
-                                                        🔹 {track.name}
+                                                        🔹 {track}
                                                     </h3>
-                                                    <ul
-                                                        className="space-y-2 text-gray-300"
-                                                        data-oid="a0u07zc"
-                                                    >
-                                                        {track.description.map((item, idx) => (
-                                                            <li
-                                                                key={idx}
-                                                                className="flex items-start"
-                                                                data-oid="h59lky9"
-                                                            >
-                                                                <span
-                                                                    className="text-purple-400 mr-2"
-                                                                    data-oid="9gbl0dt"
-                                                                >
-                                                                    •
-                                                                </span>
-                                                                <span data-oid="qg3ppq8">
-                                                                    {item}
-                                                                </span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
                                                 </div>
                                             ))}
                                         </div>
@@ -748,7 +622,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                             Structure
                                         </h2>
                                         <div className="space-y-6" data-oid="-:2ja4b">
-                                            {hackathon.structure.map((step, index) => (
+                                            {hackathon.structure.map((structureItem, index) => (
                                                 <div
                                                     key={index}
                                                     className="bg-gray-800/30 rounded-xl p-6 flex"
@@ -766,17 +640,11 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                         </div>
                                                     </div>
                                                     <div data-oid="ing97cz">
-                                                        <h3
-                                                            className="text-xl font-semibold mb-2"
-                                                            data-oid="nenylfz"
-                                                        >
-                                                            {step.step}
-                                                        </h3>
                                                         <p
                                                             className="text-gray-300"
                                                             data-oid="vly2gih"
                                                         >
-                                                            {step.description}
+                                                            {structureItem}
                                                         </p>
                                                     </div>
                                                 </div>
@@ -877,81 +745,28 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                             participants should meet the following prerequisites:
                                         </p>
 
-                                        <div className="space-y-8" data-oid="1rw.11y">
-                                            {hackathon.prerequisites.map((category, index) => (
-                                                <div key={index} data-oid="orq1hb.">
-                                                    <h3
-                                                        className="text-xl font-semibold mb-4 flex items-center"
-                                                        data-oid="yzaxdak"
+                                        <div
+                                            className="grid md:grid-cols-2 gap-4"
+                                            data-oid="1rw.11y"
+                                        >
+                                            {hackathon.prerequisites.map((prerequisite, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="bg-gray-800/30 rounded-xl p-6 flex items-start"
+                                                    data-oid="hihslff"
+                                                >
+                                                    <span
+                                                        className="text-purple-400 mr-3"
+                                                        data-oid="w82xuwu"
                                                     >
-                                                        <span
-                                                            className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center font-bold mr-2 text-sm"
-                                                            data-oid="__6nbvt"
-                                                        >
-                                                            {index + 1}
-                                                        </span>
-                                                        <span data-oid="2-u9ptr">
-                                                            {category.category}
-                                                        </span>
-                                                    </h3>
-                                                    <div
-                                                        className="grid md:grid-cols-2 gap-4"
-                                                        data-oid="b08c33z"
+                                                        ✔
+                                                    </span>
+                                                    <span
+                                                        className="text-gray-300"
+                                                        data-oid="sj6a4c_"
                                                     >
-                                                        {category.items.map((item, idx) => (
-                                                            <div
-                                                                key={idx}
-                                                                className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                                data-oid="hihslff"
-                                                            >
-                                                                {item.icon ? (
-                                                                    <span
-                                                                        className="text-purple-400 mr-3"
-                                                                        data-oid="5:9n.2y"
-                                                                    >
-                                                                        {item.icon}
-                                                                    </span>
-                                                                ) : category.category ===
-                                                                  'Technical Skills' ? (
-                                                                    <span
-                                                                        className="text-purple-400 mr-3"
-                                                                        data-oid="9n8xrrj"
-                                                                    >
-                                                                        ✅
-                                                                    </span>
-                                                                ) : category.category ===
-                                                                  'Software & Tools' ? (
-                                                                    <span
-                                                                        className="text-purple-400 mr-3"
-                                                                        data-oid="2lplf0v"
-                                                                    >
-                                                                        🔹
-                                                                    </span>
-                                                                ) : category.category ===
-                                                                  'Team & Collaboration Skills' ? (
-                                                                    <span
-                                                                        className="text-purple-400 mr-3"
-                                                                        data-oid="8ntg5y."
-                                                                    >
-                                                                        💡
-                                                                    </span>
-                                                                ) : (
-                                                                    <span
-                                                                        className="text-purple-400 mr-3"
-                                                                        data-oid="w82xuwu"
-                                                                    >
-                                                                        ✔
-                                                                    </span>
-                                                                )}
-                                                                <span
-                                                                    className="text-gray-300"
-                                                                    data-oid="sj6a4c_"
-                                                                >
-                                                                    {item.text}
-                                                                </span>
-                                                            </div>
-                                                        ))}
-                                                    </div>
+                                                        {prerequisite}
+                                                    </span>
                                                 </div>
                                             ))}
                                         </div>
