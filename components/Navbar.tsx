@@ -194,6 +194,32 @@ export default function Navbar() {
                                     </div>
                                 </Link>
                                 <Link
+                                    href="/dashboard/registered-workshops"
+                                    className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
+                                    onClick={() => setProfileDropdownOpen(false)}
+                                    data-oid="npjmgdx"
+                                >
+                                    <div className="flex items-center" data-oid="6n6bwg_">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-2 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="vujy-_b"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                data-oid="5wx:zh1"
+                                            />
+                                        </svg>
+                                        My Registered Workshops
+                                    </div>
+                                </Link>
+                                <Link
                                     href="/dashboard/profile"
                                     className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition-colors"
                                     onClick={() => setProfileDropdownOpen(false)}
@@ -384,6 +410,35 @@ export default function Navbar() {
                                             data-oid="g2.xxrg"
                                         >
                                             My Enrolled Courses
+                                        </span>
+                                    </Link>
+                                    <Link
+                                        href="/dashboard/registered-workshops"
+                                        className="flex items-center space-x-2 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300 text-gray-300 hover:text-purple-400 group"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        data-oid="dvancgi"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 text-purple-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            data-oid="7d.6cld"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                data-oid="oe:07w3"
+                                            />
+                                        </svg>
+                                        <span
+                                            className="transition-transform duration-300 group-hover:translate-x-1"
+                                            data-oid="ws62s__"
+                                        >
+                                            My Registered Workshops
                                         </span>
                                     </Link>
                                     <Link

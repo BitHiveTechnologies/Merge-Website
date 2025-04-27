@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 
 // Workshop type definition
 interface Workshop {
-    id: number;
+    _id: string;
     title: string;
     date: string;
     time: string;
@@ -23,7 +23,7 @@ interface Workshop {
 
 // Past workshop type definition
 interface PastWorkshop {
-    id: number;
+    _id: string;
     institution: string;
     date: string;
     topic: string;
@@ -38,227 +38,44 @@ export default function WorkshopsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
 
-    // Fetch workshops (simulated)
+    // Fetch workshops from backend API
     useEffect(() => {
-        // In a real app, this would be an API call
-        const fetchWorkshops = () => {
+        const fetchWorkshops = async () => {
             setIsLoading(true);
+            try {
+                // Fetch upcoming workshops
+                const upcomingResponse = await fetch(
+                    'http://localhost:8001/api/workshops/upcoming',
+                );
+                if (!upcomingResponse.ok) {
+                    throw new Error('Failed to fetch upcoming workshops');
+                }
+                const upcomingData = await upcomingResponse.json();
 
-            // Simulated API response for upcoming workshops
-            const upcomingWorkshopsData: Workshop[] = [
-                {
-                    id: 1,
-                    title: 'Introduction to Open Source Contributions',
-                    date: '2023-06-15',
-                    time: '10:00 AM - 12:00 PM IST',
-                    location: 'Online (Zoom)',
-                    instructor: 'Rahul Sharma',
-                    description:
-                        'Learn how to start contributing to open source projects and make your first pull request. This workshop will cover the basics of Git, GitHub, and the open source ecosystem.',
-                    price: 'Free',
-                    image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: 'https://example.com/register/1',
-                    isUpcoming: true,
-                    tags: ['Open Source', 'Git', 'GitHub', 'Beginner'],
-                },
-                {
-                    id: 2,
-                    title: 'Advanced Git Workflows for Teams',
-                    date: '2023-06-22',
-                    time: '2:00 PM - 4:00 PM IST',
-                    location: 'Online (Zoom)',
-                    instructor: 'Priya Patel',
-                    description:
-                        'Take your Git skills to the next level with advanced workflows, branching strategies, and collaboration techniques used by professional development teams.',
-                    price: 499,
-                    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: 'https://example.com/register/2',
-                    isUpcoming: true,
-                    tags: ['Git', 'GitHub', 'Team Collaboration', 'Advanced'],
-                },
-                {
-                    id: 3,
-                    title: 'Preparing for Google Summer of Code 2023',
-                    date: '2023-07-05',
-                    time: '11:00 AM - 1:00 PM IST',
-                    location: 'Online (Zoom)',
-                    instructor: 'Amit Kumar',
-                    description:
-                        'Learn how to prepare for Google Summer of Code, from selecting organizations to writing successful proposals and completing your projects.',
-                    price: 'Free',
-                    image: 'https://images.unsplash.com/photo-1591267990532-e5bdb1b0ceb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: 'https://example.com/register/3',
-                    isUpcoming: true,
-                    tags: ['GSoC', 'Open Source', 'Student Programs'],
-                },
-            ];
+                // Fetch past workshops
+                const pastResponse = await fetch('http://localhost:8001/api/workshops/past');
+                if (!pastResponse.ok) {
+                    throw new Error('Failed to fetch past workshops');
+                }
+                const pastData = await pastResponse.json();
 
-            // Simulated API response for past workshops
-            const pastWorkshopsData: PastWorkshop[] = [
-                {
-                    id: 1,
-                    institution: 'BIT Mesra',
-                    date: '16 Feb',
-                    topic: 'Introduction to Google Summer of Code',
-                    highlights: [
-                        'Hands-on session on Google Summer of code',
-                        'Live demonstration of pull requests and open-source contributions',
-                        'Q&A session with interactive participation',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/file/d/1U2k1TQVQrvQxMchAGq7H6xBTL0cXK1FZ/view?usp=sharing',
-                        'https://drive.google.com/file/d/1Yp7GXSJYUmG0XiABIoynhvmAydfQzDv3/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7302371781523255296/',
-                    ],
-                },
-                {
-                    id: 2,
-                    institution: 'IIT Patna',
-                    date: '21 Feb',
-                    topic: 'Google Summer of Code and Github',
-                    highlights: [
-                        'Deep dive into Git workflows and branching strategies',
-                        'Understanding the open-source ecosystem and real-world collaboration',
-                        'Guidance on applying for GSoC and MLH Fellowship',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/file/d/1kVLiABjC214SraRgAKUdIgZKjtlUfmzN/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7298731374025351168/',
-                    ],
-                },
-                {
-                    id: 3,
-                    institution: 'Nirma University',
-                    date: '26 Feb',
-                    topic: 'Google Summer of Code',
-                    highlights: [
-                        'Importance of version control in software development In Open Source',
-                        'Hands-on Google summer of code',
-                        'Best practices for writing clean commits and managing issues',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/file/d/168ja6-1LsX7vGx_k6Tnv_6J7zLYyw8Jl/view?usp=sharing',
-                        'https://drive.google.com/file/d/1X4uzDLUR1JfKWWBpYA7dhXvZIdYDiage/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7300533593871634433/',
-                    ],
-                },
-                {
-                    id: 4,
-                    institution: 'NIAMT Ranchi',
-                    date: '8 March',
-                    topic: 'Google Summer of Code',
-                    highlights: [
-                        'Overview on Google summer of Code',
-                        'How to Run open Source Project in Your Machine',
-                        'Live project contributions & Q&A session',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/drive/folders/1Jd4YIXbjABB6SFoPkLZ6VlITBXRWka6O?usp=sharing',
-                        'https://drive.google.com/file/d/1ic2iwY66JyHSHNO0Lahy0507YkgSYwnC/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7304144150486994944/',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7305117422796115968/',
-                    ],
-                },
-                {
-                    id: 5,
-                    institution: 'DA-IICT',
-                    date: '11 March',
-                    topic: 'Google Summer of Code',
-                    highlights: [
-                        'Overview on Google summer of Code',
-                        'How to Run open Source Project in Your Machine',
-                        'Live Demonstration of Contribution',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/file/d/1lAx8ns1rNnZOsXIxVOI9jhch-C5WIR_S/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7305230926886617089/',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7307852927312814081/',
-                    ],
-                },
-                {
-                    id: 6,
-                    institution: 'BIT Mesra',
-                    date: '19 March',
-                    topic: 'Git & Github',
-                    highlights: [
-                        'Hands-on session on Git Commands',
-                        'Live demonstration of pull requests from open-source Projects',
-                        'Q&A session with interactive participation',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/drive/folders/19QXw7STJYEn1dmn7Ziaqtrb76ORC_RPk?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7308136071177875457/',
-                    ],
-                },
-                {
-                    id: 7,
-                    institution: 'Quantum University',
-                    date: '23 March',
-                    topic: 'Open Source',
-                    highlights: [
-                        'Hands-on session on Google Summer of code',
-                        'Hands on Session on Summer of Bitcoin',
-                        'Live Demonstration of Contribution',
-                        'Q&A session with interactive participation',
-                    ],
-
-                    mediaLinks: [
-                        'https://drive.google.com/file/d/1ObAImm9SQxhcfrIEyxWPbn-Iw2cIFvGG/view?usp=sharing',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7309604624653565953/',
-                    ],
-                },
-                {
-                    id: 8,
-                    institution: 'IES University Noida',
-                    date: '12 April',
-                    topic: 'Open Source',
-                    highlights: [
-                        'Hands-on session on Google Summer of code',
-                        'Hands on Session on Summer of Bitcoin',
-                        'Live Demonstration of Contribution',
-                        'Q&A session with interactive participation',
-                    ],
-
-                    mediaLinks: [
-                        'https://gdg.community.dev/events/details/google-gdg-on-campus-iec-college-of-engineering-technology-greater-noida-india-presents-unveiling-the-path-to-open-source-success-google-summer-of-code-gsoc-and-beyond/',
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7316814199454646274/',
-                    ],
-                },
-                {
-                    id: 9,
-                    institution: 'TIT Institute Bhopal',
-                    date: '18 & 19 April',
-                    topic: 'Open Source & Git and Github',
-                    highlights: [
-                        'Hands-on session on Google Summer of code',
-                        'Hands on Session on Summer of Bitcoin',
-                        'Live Demonstration of Contribution',
-                        'Git and Github',
-                        'Q&A session with interactive participation',
-                    ],
-
-                    mediaLinks: [
-                        'https://www.linkedin.com/feed/update/urn:li:activity:7319392414148804608/',
-                    ],
-                },
-            ];
-
-            setUpcomingWorkshops(upcomingWorkshopsData);
-            setPastWorkshops(pastWorkshopsData);
-            setIsLoading(false);
+                setUpcomingWorkshops(upcomingData);
+                setPastWorkshops(pastData);
+            } catch (error) {
+                console.error('Error fetching workshops:', error);
+                // Set fallback data or empty arrays if API fails
+                setUpcomingWorkshops([]);
+                setPastWorkshops([]);
+            } finally {
+                setIsLoading(false);
+            }
         };
 
         fetchWorkshops();
     }, []);
 
     // Navigate to workshop detail
-    const handleWorkshopClick = (workshopId: number) => {
+    const handleWorkshopClick = (workshopId: string) => {
         router.push(`/workshops/${workshopId}`);
     };
 
@@ -475,9 +292,9 @@ export default function WorkshopsPage() {
                         >
                             {upcomingWorkshops.map((workshop) => (
                                 <div
-                                    key={workshop.id}
+                                    key={workshop._id}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
-                                    onClick={() => handleWorkshopClick(workshop.id)}
+                                    onClick={() => handleWorkshopClick(workshop._id)}
                                     data-oid="cjrxoar"
                                 >
                                     <div
@@ -594,7 +411,7 @@ export default function WorkshopsPage() {
                             <div className="grid gap-8" data-oid="hp74wcz">
                                 {pastWorkshops.map((workshop) => (
                                     <div
-                                        key={workshop.id}
+                                        key={workshop._id}
                                         className="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 p-6"
                                         data-oid="2ise:wz"
                                     >

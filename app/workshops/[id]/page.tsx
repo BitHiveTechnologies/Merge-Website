@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { isAuthenticated, getAuthToken } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ import Navbar from '@/components/Navbar';
 
 // Workshop type definition
 interface Workshop {
-    id: number;
+    _id: string;
     title: string;
     date: string;
     time: string;
@@ -27,10 +28,18 @@ interface Workshop {
     instructorImage?: string;
 }
 
+interface WorkshopRegistration {
+    _id: string;
+    userId: string;
+    workshopId: string;
+}
+
 export default function WorkshopDetailPage({ params }: { params: { id: string } }) {
     const router = useRouter();
     const [workshop, setWorkshop] = useState<Workshop | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [isRegistered, setIsRegistered] = useState(false);
+    const [registrationLoading, setRegistrationLoading] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState<{
         days: number;
         hours: number;
@@ -38,67 +47,46 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
         seconds: number;
     } | null>(null);
 
-    // Fetch workshop details (simulated)
+    // Fetch workshop details from API
     useEffect(() => {
-        const fetchWorkshopDetails = () => {
+        const fetchWorkshopDetails = async () => {
             setIsLoading(true);
+            try {
+                // Fetch workshop details
+                const response = await fetch(`http://localhost:8001/api/workshops/${params.id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch workshop details');
+                }
 
-            // In a real app, this would be an API call with the ID
-            setTimeout(() => {
-                // Simulated API response
-                const workshopData: Workshop = {
-                    id: parseInt(params.id),
-                    title: 'Introduction to Open Source Contributions',
-                    date: '2023-06-15',
-                    time: '10:00 AM - 12:00 PM IST',
-                    location: 'Online (Zoom)',
-                    instructor: 'Rahul Sharma',
-                    description:
-                        'Learn how to start contributing to open source projects and make your first pull request.',
-                    longDescription:
-                        "This comprehensive workshop will guide you through the entire process of contributing to open source projects. From setting up your development environment to submitting your first pull request, you'll learn all the essential skills needed to become an active contributor to the open source community.\n\nWe'll cover Git fundamentals, GitHub workflows, how to find beginner-friendly projects, understanding project guidelines, and best practices for creating valuable contributions. By the end of this workshop, you'll have the confidence and knowledge to start making meaningful contributions to open source projects.",
-                    price: 'Free',
-                    image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-                    registrationLink: 'https://example.com/register/1',
-                    isUpcoming: true,
-                    tags: ['Open Source', 'Git', 'GitHub', 'Beginner'],
-                    agenda: [
-                        {
-                            time: '10:00 AM - 10:15 AM',
-                            title: 'Introduction',
-                            description: 'Overview of the workshop and introduction to open source',
-                        },
-                        {
-                            time: '10:15 AM - 10:45 AM',
-                            title: 'Git Basics',
-                            description: 'Essential Git commands and workflows',
-                        },
-                        {
-                            time: '10:45 AM - 11:15 AM',
-                            title: 'Finding Projects',
-                            description: 'How to find beginner-friendly projects and issues',
-                        },
-                        {
-                            time: '11:15 AM - 11:45 AM',
-                            title: 'Making Contributions',
-                            description: 'Step-by-step guide to making your first pull request',
-                        },
-                        {
-                            time: '11:45 AM - 12:00 PM',
-                            title: 'Q&A Session',
-                            description: 'Open discussion and questions',
-                        },
-                    ],
-
-                    instructorBio:
-                        'Rahul Sharma is an experienced open source contributor with over 5 years of experience in the field. He has contributed to various popular projects including React, Node.js, and TensorFlow. Rahul is passionate about helping newcomers navigate the open source ecosystem and has mentored numerous students in programs like Google Summer of Code.',
-                    instructorImage:
-                        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                };
-
+                const workshopData = await response.json();
                 setWorkshop(workshopData);
+
+                // Check if user is registered for this workshop
+                if (isAuthenticated()) {
+                    const token = getAuthToken();
+                    const registrationsResponse = await fetch(
+                        'http://localhost:8001/api/workshops/registrations',
+                        {
+                            headers: {
+                                Authorization: `Bearer ${token}`,
+                            },
+                        },
+                    );
+
+                    if (registrationsResponse.ok) {
+                        const registrations = await registrationsResponse.json();
+                        const isAlreadyRegistered = registrations.some(
+                            (reg: WorkshopRegistration) => reg.workshopId === params.id,
+                        );
+                        setIsRegistered(isAlreadyRegistered);
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching workshop details:', error);
+                setWorkshop(null);
+            } finally {
                 setIsLoading(false);
-            }, 1000);
+            }
         };
 
         fetchWorkshopDetails();
@@ -156,6 +144,49 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
     const formatPrice = (price: number | 'Free') => {
         if (price === 'Free') return 'Free';
         return `₹${price.toLocaleString('en-IN')}`;
+    };
+
+    // Handle workshop registration
+    const handleRegister = async () => {
+        if (!isAuthenticated()) {
+            // Redirect to login if not authenticated
+            router.push('/login');
+            return;
+        }
+
+        setRegistrationLoading(true);
+        try {
+            const token = getAuthToken();
+            const response = await fetch(
+                `http://localhost:8001/api/workshops/register/${params.id}`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                },
+            );
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                if (errorData.msg === 'Already registered') {
+                    setIsRegistered(true);
+                    alert('You are already registered for this workshop.');
+                } else {
+                    throw new Error('Registration failed');
+                }
+            } else {
+                const data = await response.json();
+                setIsRegistered(true);
+                alert('Successfully registered for the workshop!');
+            }
+        } catch (error) {
+            console.error('Registration error:', error);
+            alert('Failed to register. Please try again.');
+        } finally {
+            setRegistrationLoading(false);
+        }
     };
 
     // Format date for display
@@ -403,15 +434,26 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                         </div>
                                     )}
 
-                                    <a
-                                        href={workshop.registrationLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium"
-                                        data-oid="6jos9rw"
-                                    >
-                                        Register Now
-                                    </a>
+                                    {isRegistered ? (
+                                        <button
+                                            disabled
+                                            className="w-full py-3 rounded-md bg-green-600 text-center font-medium cursor-default"
+                                            data-oid="6jos9rw"
+                                        >
+                                            Already Registered
+                                        </button>
+                                    ) : (
+                                        <button
+                                            onClick={handleRegister}
+                                            disabled={registrationLoading}
+                                            className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-center font-medium ${
+                                                registrationLoading ? 'opacity-70 cursor-wait' : ''
+                                            }`}
+                                            data-oid="1-6j4ne"
+                                        >
+                                            {registrationLoading ? 'Processing...' : 'Register Now'}
+                                        </button>
+                                    )}
                                 </div>
                             </div>
 
