@@ -34,95 +34,95 @@ export default function ProfilePage() {
     }, [router]);
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="aa9lfj4">
-            <Navbar data-oid="udiopp4" />
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="h-j38_s">
+            <Navbar data-oid="2h7m6gx" />
 
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-16 pb-20 px-6 md:px-12 relative overflow-hidden"
-                data-oid="13_ceud"
+                data-oid="ymhvsrv"
             >
                 {/* Background elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="mcx62-8"
+                    data-oid="fw8brxh"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="spn_lp-"
+                    data-oid="zotjl5m"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10" data-oid=":6kl-t3">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid=":o4lu4-">
+                <div className="max-w-6xl mx-auto relative z-10" data-oid="2al.zf:">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid="9xic7nj">
                         Profile{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="5bzcrct"
+                            data-oid="jdreexq"
                         >
                             Settings
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="q97ky96">
+                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="f-aat0y">
                         Manage your account information and preferences.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6"
-                        data-oid="fe1-ez-"
+                        data-oid="tzgo1iw"
                     ></div>
                 </div>
             </div>
 
             {/* Profile Content */}
-            <div className="py-16 px-6 md:px-12 bg-black" data-oid="fq6uv4l">
-                <div className="max-w-4xl mx-auto" data-oid="qv0uqov">
+            <div className="py-16 px-6 md:px-12 bg-black" data-oid="i1m1n5.">
+                <div className="max-w-4xl mx-auto" data-oid="xirdr-i">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="ckzjbz9">
+                        <div className="flex justify-center items-center py-20" data-oid="2lhvol8">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="l4rrccz"
+                                data-oid="se3vxww"
                             ></div>
                         </div>
                     ) : userData ? (
                         <div
                             className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-                            data-oid="ctp1olq"
+                            data-oid="vx0-_g4"
                         >
-                            <div className="p-8" data-oid="q59-bja">
+                            <div className="p-8" data-oid="rullwn4">
                                 <div
                                     className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8"
-                                    data-oid="_ze7ss1"
+                                    data-oid="jnper.u"
                                 >
                                     <div
                                         className="w-24 h-24 rounded-full bg-purple-600 flex items-center justify-center text-3xl font-bold"
-                                        data-oid="a7wjap9"
+                                        data-oid="gmpe5lj"
                                     >
                                         {userData.name
                                             ? userData.name.charAt(0).toUpperCase()
                                             : 'U'}
                                     </div>
-                                    <div data-oid="-03xucb">
-                                        <h2 className="text-2xl font-bold" data-oid="sk7v.-z">
+                                    <div data-oid="zra4uan">
+                                        <h2 className="text-2xl font-bold" data-oid="abjo0gf">
                                             {userData.name || 'User'}
                                         </h2>
-                                        <p className="text-gray-400" data-oid="spwq3jo">
+                                        <p className="text-gray-400" data-oid="kasc71t">
                                             {userData.email || 'No email provided'}
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="grid md:grid-cols-2 gap-8" data-oid="58a1k1o">
-                                    <div data-oid="4r03ulw">
+                                <div className="grid md:grid-cols-2 gap-8" data-oid="6_vmvp9">
+                                    <div data-oid="5j-hz9e">
                                         <h3
                                             className="text-xl font-semibold mb-4 text-purple-400"
-                                            data-oid="gvyq0rx"
+                                            data-oid="du6isrq"
                                         >
                                             Account Information
                                         </h3>
-                                        <div className="space-y-4" data-oid="457:vyb">
-                                            <div data-oid="g7_ak.5">
+                                        <div className="space-y-4" data-oid="eigsllo">
+                                            <div data-oid="osf8230">
                                                 <label
                                                     className="block text-gray-400 mb-1"
-                                                    data-oid="ik-5w5o"
+                                                    data-oid="k:wzns1"
                                                 >
                                                     Name
                                                 </label>
@@ -136,13 +136,13 @@ export default function ProfilePage() {
                                                         })
                                                     }
                                                     className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
-                                                    data-oid="vagoolh"
+                                                    data-oid="8s13d3d"
                                                 />
                                             </div>
-                                            <div data-oid="zkbw898">
+                                            <div data-oid="m3rxdcz">
                                                 <label
                                                     className="block text-gray-400 mb-1"
-                                                    data-oid="zk-fge9"
+                                                    data-oid="zai-lvj"
                                                 >
                                                     Email
                                                 </label>
@@ -156,13 +156,13 @@ export default function ProfilePage() {
                                                         })
                                                     }
                                                     className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
-                                                    data-oid="_vq68nn"
+                                                    data-oid="s7oi5a6"
                                                 />
                                             </div>
-                                            <div data-oid="pnnlym8">
+                                            <div data-oid=":s0g869">
                                                 <label
                                                     className="block text-gray-400 mb-1"
-                                                    data-oid="wuy.vgr"
+                                                    data-oid="9nweih6"
                                                 >
                                                     Member Since
                                                 </label>
@@ -177,10 +177,10 @@ export default function ProfilePage() {
                                                     }
                                                     readOnly
                                                     className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
-                                                    data-oid="pczzeat"
+                                                    data-oid="u-hqqcb"
                                                 />
                                             </div>
-                                            <div className="mt-6" data-oid="5nkk0m6">
+                                            <div className="mt-6" data-oid="xf186js">
                                                 <button
                                                     onClick={async () => {
                                                         try {
@@ -200,7 +200,7 @@ export default function ProfilePage() {
                                                         }
                                                     }}
                                                     className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 rounded-md transition-colors"
-                                                    data-oid="npaletx"
+                                                    data-oid=":m-i668"
                                                 >
                                                     Update Profile
                                                 </button>
@@ -208,18 +208,18 @@ export default function ProfilePage() {
                                         </div>
                                     </div>
 
-                                    <div data-oid="o1y2rhx">
+                                    <div data-oid="xz3-4w1">
                                         <h3
                                             className="text-xl font-semibold mb-4 text-purple-400"
-                                            data-oid="kg85tsn"
+                                            data-oid="7:i_62r"
                                         >
                                             Quick Links
                                         </h3>
-                                        <div className="space-y-3" data-oid="xibday1">
+                                        <div className="space-y-3" data-oid="zz3lybt">
                                             <a
                                                 href="/dashboard/enrolled-courses"
                                                 className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
-                                                data-oid="coitj1r"
+                                                data-oid="_97bmea"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -227,22 +227,22 @@ export default function ProfilePage() {
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
-                                                    data-oid="5-c-4oh"
+                                                    data-oid="vl9f03e"
                                                 >
                                                     <path
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                         strokeWidth={2}
                                                         d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                                        data-oid="yv5pfal"
+                                                        data-oid="g8uiq.j"
                                                     />
                                                 </svg>
-                                                <span data-oid="u8he0ef">My Enrolled Courses</span>
+                                                <span data-oid="qfsnpq9">My Enrolled Courses</span>
                                             </a>
                                             <a
                                                 href="/dashboard/registered-workshops"
                                                 className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
-                                                data-oid=".9uv._t"
+                                                data-oid="mnb7kv9"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -250,24 +250,24 @@ export default function ProfilePage() {
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
-                                                    data-oid=":b8f7xu"
+                                                    data-oid="3ekhepp"
                                                 >
                                                     <path
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                         strokeWidth={2}
                                                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                        data-oid="lwwxhkv"
+                                                        data-oid="mwtni0o"
                                                     />
                                                 </svg>
-                                                <span data-oid=":p2wszq">
+                                                <span data-oid="rnxxt5i">
                                                     My Registered Workshops
                                                 </span>
                                             </a>
                                             <a
                                                 href="/dashboard/registered-hackathons"
                                                 className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
-                                                data-oid="ajdc6:3"
+                                                data-oid="c0mfhet"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -275,24 +275,24 @@ export default function ProfilePage() {
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
-                                                    data-oid="1qmotiy"
+                                                    data-oid="7ikjm:9"
                                                 >
                                                     <path
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                         strokeWidth={2}
                                                         d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-                                                        data-oid="ygrj:sm"
+                                                        data-oid="-9y_ii4"
                                                     />
                                                 </svg>
-                                                <span data-oid="p6wud.p">
+                                                <span data-oid="7na1waa">
                                                     My Registered Hackathons
                                                 </span>
                                             </a>
                                             <a
                                                 href="/courses"
                                                 className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors"
-                                                data-oid="bb0ot:b"
+                                                data-oid="ex3jgrz"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -300,22 +300,22 @@ export default function ProfilePage() {
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
-                                                    data-oid="iyxu4pv"
+                                                    data-oid=":xwwq:j"
                                                 >
                                                     <path
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                         strokeWidth={2}
                                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                                        data-oid="6cb-yc:"
+                                                        data-oid="cgit:wk"
                                                     />
                                                 </svg>
-                                                <span data-oid="8erxnic">Browse Courses</span>
+                                                <span data-oid="c2n:clf">Browse Courses</span>
                                             </a>
                                             <a
                                                 href="/hackathons"
                                                 className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors"
-                                                data-oid="c4p-oy4"
+                                                data-oid="pd2bfz_"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -323,17 +323,17 @@ export default function ProfilePage() {
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
-                                                    data-oid="3.0prjf"
+                                                    data-oid="4vwy1no"
                                                 >
                                                     <path
                                                         strokeLinecap="round"
                                                         strokeLinejoin="round"
                                                         strokeWidth={2}
                                                         d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                                                        data-oid="4eendsk"
+                                                        data-oid="41.2zas"
                                                     />
                                                 </svg>
-                                                <span data-oid="c--dt76">Upcoming Hackathons</span>
+                                                <span data-oid="un2zu0m">Upcoming Hackathons</span>
                                             </a>
                                         </div>
                                     </div>
@@ -341,14 +341,14 @@ export default function ProfilePage() {
                             </div>
                         </div>
                     ) : (
-                        <div className="text-center py-12" data-oid="py:hdlr">
-                            <p className="text-red-400 mb-4" data-oid=":f1s.pl">
+                        <div className="text-center py-12" data-oid="hvv62_5">
+                            <p className="text-red-400 mb-4" data-oid="32l5j8p">
                                 Failed to load user data. Please try again later.
                             </p>
                             <button
                                 onClick={() => window.location.reload()}
                                 className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                                data-oid="phyun__"
+                                data-oid="2hbsjq8"
                             >
                                 Retry
                             </button>
@@ -360,11 +360,11 @@ export default function ProfilePage() {
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="06c2_ks"
+                data-oid="p69bp.3"
             >
-                <div className="max-w-6xl mx-auto" data-oid="ibvon07">
-                    <div className="text-center text-gray-500" data-oid="ym51ufe">
-                        <p data-oid="6rp9gwj">
+                <div className="max-w-6xl mx-auto" data-oid="szvwfiv">
+                    <div className="text-center text-gray-500" data-oid="682dbtw">
+                        <p data-oid="10-97a:">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>

@@ -17,55 +17,55 @@ export default function RegisteredHackathonsPage() {
     }, [router]);
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="2q597z9">
-            <Navbar data-oid=":ogznww" />
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="2frb6jn">
+            <Navbar data-oid="194hueo" />
 
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-16 pb-20 px-6 md:px-12 relative overflow-hidden"
-                data-oid="gn_x:ir"
+                data-oid="2aw_tyb"
             >
                 {/* Background elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="posp:xh"
+                    data-oid="8nsf.y1"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="0ajdbz8"
+                    data-oid="bq.h.f0"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10" data-oid="-x:ltj5">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid="-0c63yt">
+                <div className="max-w-6xl mx-auto relative z-10" data-oid="8yjh..l">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid="0d2g.2h">
                         Your Hackathon{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid=".wk60kg"
+                            data-oid="-1t8qnj"
                         >
                             Registrations
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="cy-xuj8">
+                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="4nsh612">
                         Track your hackathon registrations and prepare for upcoming events.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6"
-                        data-oid="u77hu.y"
+                        data-oid="go7my9g"
                     ></div>
                 </div>
             </div>
 
             {/* Registered Hackathons Component */}
-            <RegisteredHackathons data-oid="496u5ge" />
+            <RegisteredHackathons data-oid="-ylrhwe" />
 
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="osxbma0"
+                data-oid="5lek2xl"
             >
-                <div className="max-w-6xl mx-auto" data-oid="omk0qh1">
-                    <div className="text-center text-gray-500" data-oid="mzs_kc6">
-                        <p data-oid="h:ac-va">
+                <div className="max-w-6xl mx-auto" data-oid="rovwyei">
+                    <div className="text-center text-gray-500" data-oid="vo0t2up">
+                        <p data-oid="gpgop:f">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>
