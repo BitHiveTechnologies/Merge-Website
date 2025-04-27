@@ -30,117 +30,29 @@ export default function CoursesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [isLoading, setIsLoading] = useState(true);
 
-    // Fetch courses (simulated)
+    // Fetch courses from backend
     useEffect(() => {
-        // In a real app, this would be an API call
-        const fetchCourses = () => {
+        const fetchCourses = async () => {
             setIsLoading(true);
-            // Simulated API response
-            const coursesData: Course[] = [
-                {
-                    id: 1,
-                    title: 'Full Stack Web Development',
-                    description:
-                        'Learn to build complete web applications from front to back end using modern technologies like React, Node.js, and MongoDB.',
-                    instructor: 'John Smith',
-                    duration: '12 weeks',
-                    level: 'Intermediate',
-                    rating: 4.8,
-                    price: 12999,
-                    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    isFeatured: true,
-                },
-                {
-                    id: 2,
-                    title: 'UI/UX Design Fundamentals',
-                    description:
-                        'Master the principles of user interface and user experience design to create intuitive and beautiful digital products.',
-                    instructor: 'Maya Patel',
-                    duration: '8 weeks',
-                    level: 'Beginner',
-                    rating: 4.6,
-                    price: 8999,
-                    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    isFeatured: true,
-                },
-                {
-                    id: 3,
-                    title: 'Data Structures & Algorithms',
-                    description:
-                        'Develop strong problem-solving skills by mastering essential data structures and algorithms concepts.',
-                    instructor: 'David Lee',
-                    duration: '10 weeks',
-                    level: 'Advanced',
-                    rating: 4.9,
-                    price: 10999,
-                    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    isFeatured: true,
-                },
-                {
-                    id: 4,
-                    title: 'Introduction to Python Programming',
-                    description:
-                        'Learn the basics of Python programming language and its applications in various domains.',
-                    instructor: 'Sarah Johnson',
-                    duration: '6 weeks',
-                    level: 'Beginner',
-                    rating: 4.5,
-                    price: 'Free',
-                    image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                },
-                {
-                    id: 5,
-                    title: 'Mobile App Development with React Native',
-                    description:
-                        'Build cross-platform mobile applications using React Native framework.',
-                    instructor: 'Alex Chen',
-                    duration: '10 weeks',
-                    level: 'Intermediate',
-                    rating: 4.7,
-                    price: 9999,
-                    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                },
-                {
-                    id: 6,
-                    title: 'Machine Learning Fundamentals',
-                    description:
-                        'Understand the core concepts of machine learning and implement basic algorithms.',
-                    instructor: 'Priya Sharma',
-                    duration: '12 weeks',
-                    level: 'Advanced',
-                    rating: 4.9,
-                    price: 14999,
-                    image: 'https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                },
-                {
-                    id: 7,
-                    title: 'Web Accessibility Workshop',
-                    description:
-                        'Learn how to make your websites accessible to everyone, including people with disabilities.',
-                    instructor: 'Carlos Rodriguez',
-                    duration: '4 weeks',
-                    level: 'Beginner',
-                    rating: 4.4,
-                    price: 'Free',
-                    image: 'https://images.unsplash.com/photo-1584697964358-3e14ca57658b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                },
-                {
-                    id: 8,
-                    title: 'Advanced JavaScript Patterns',
-                    description:
-                        'Master advanced JavaScript concepts, design patterns, and best practices.',
-                    instructor: 'Michael Brown',
-                    duration: '8 weeks',
-                    level: 'Advanced',
-                    rating: 4.8,
-                    price: 11999,
-                    image: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                },
-            ];
+            try {
+                const response = await fetch('http://localhost:8001/api/courses');
 
-            setCourses(coursesData);
-            setFilteredCourses(coursesData);
-            setIsLoading(false);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch courses');
+                }
+
+                const coursesData = await response.json();
+
+                setCourses(coursesData);
+                setFilteredCourses(coursesData);
+            } catch (error) {
+                console.error('Error fetching courses:', error);
+                // If API fails, you could set some fallback data or show an error message
+                setCourses([]);
+                setFilteredCourses([]);
+            } finally {
+                setIsLoading(false);
+            }
         };
 
         fetchCourses();

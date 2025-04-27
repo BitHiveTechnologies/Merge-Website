@@ -32,84 +32,25 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     const [isLoading, setIsLoading] = useState(true);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
 
-    // Fetch course details (simulated)
+    // Fetch course details from backend
     useEffect(() => {
-        const fetchCourse = () => {
+        const fetchCourse = async () => {
             setIsLoading(true);
-            // In a real app, this would be an API call
-            setTimeout(() => {
-                // Simulated API response
-                const courseData: Course = {
-                    id: parseInt(params.id),
-                    title: 'Full Stack Web Development',
-                    description:
-                        'Learn to build complete web applications from front to back end using modern technologies like React, Node.js, and MongoDB. This comprehensive course covers everything you need to know to become a proficient full stack developer, from basic HTML/CSS to advanced React patterns and server-side rendering.',
-                    instructor: 'John Smith',
-                    duration: '12 weeks',
-                    level: 'Intermediate',
-                    rating: 4.8,
-                    price: params.id === '4' || params.id === '7' ? 'Free' : 12999,
-                    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-                    curriculum: [
-                        {
-                            section: 'Getting Started',
-                            lessons: [
-                                { title: 'Course Introduction', duration: '10 min' },
-                                {
-                                    title: 'Setting Up Your Development Environment',
-                                    duration: '25 min',
-                                },
-                                { title: 'Web Development Overview', duration: '15 min' },
-                            ],
-                        },
-                        {
-                            section: 'Frontend Fundamentals',
-                            lessons: [
-                                { title: 'HTML5 Essentials', duration: '45 min' },
-                                { title: 'CSS3 and Responsive Design', duration: '60 min' },
-                                { title: 'JavaScript Basics', duration: '90 min' },
-                                { title: 'DOM Manipulation', duration: '60 min' },
-                            ],
-                        },
-                        {
-                            section: 'React Framework',
-                            lessons: [
-                                { title: 'React Fundamentals', duration: '75 min' },
-                                { title: 'Components and Props', duration: '60 min' },
-                                { title: 'State Management', duration: '90 min' },
-                                { title: 'Hooks in Depth', duration: '120 min' },
-                                { title: 'Routing with React Router', duration: '45 min' },
-                            ],
-                        },
-                        {
-                            section: 'Backend Development',
-                            lessons: [
-                                { title: 'Node.js Fundamentals', duration: '60 min' },
-                                { title: 'Express.js Framework', duration: '75 min' },
-                                { title: 'RESTful API Design', duration: '90 min' },
-                                { title: 'MongoDB and Mongoose', duration: '120 min' },
-                                { title: 'Authentication and Authorization', duration: '90 min' },
-                            ],
-                        },
-                        {
-                            section: 'Full Stack Integration',
-                            lessons: [
-                                { title: 'Connecting Frontend to Backend', duration: '60 min' },
-                                {
-                                    title: 'State Management with Context API and Redux',
-                                    duration: '120 min',
-                                },
-                                { title: 'Deployment Strategies', duration: '45 min' },
-                                { title: 'Testing and Debugging', duration: '90 min' },
-                                { title: 'Final Project', duration: '180 min' },
-                            ],
-                        },
-                    ],
-                };
+            try {
+                const response = await fetch(`http://localhost:8001/api/courses/${params.id}`);
 
+                if (!response.ok) {
+                    throw new Error('Failed to fetch course details');
+                }
+
+                const courseData = await response.json();
                 setCourse(courseData);
+            } catch (error) {
+                console.error('Error fetching course details:', error);
+                setCourse(null);
+            } finally {
                 setIsLoading(false);
-            }, 800);
+            }
         };
 
         fetchCourse();
@@ -158,10 +99,41 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     };
 
     // Handle enrollment
-    const handleEnroll = () => {
+    const handleEnroll = async () => {
+        // Check if user is logged in by looking for auth token
+        const authToken = localStorage.getItem('authToken');
+
+        if (!authToken) {
+            // Redirect to login if not authenticated
+            alert('Please log in to enroll in this course');
+            router.push('/login');
+            return;
+        }
+
         if (course?.price === 'Free') {
             // For free courses, directly enroll
-            alert('You have successfully enrolled in this course!');
+            try {
+                const response = await fetch(
+                    `http://localhost:8001/api/courses/${params.id}/enroll`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${authToken}`,
+                        },
+                    },
+                );
+
+                if (!response.ok) {
+                    throw new Error('Failed to enroll');
+                }
+
+                const data = await response.json();
+                alert(data.message || 'You have successfully enrolled in this course!');
+            } catch (error) {
+                console.error('Enrollment error:', error);
+                alert('Failed to enroll. Please try again.');
+            }
         } else {
             // For paid courses, show payment modal
             setShowPaymentModal(true);
@@ -169,9 +141,44 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     };
 
     // Handle payment completion
-    const handlePaymentComplete = () => {
-        setShowPaymentModal(false);
-        alert('Payment successful! You have enrolled in this course.');
+    const handlePaymentComplete = async () => {
+        // Check if user is logged in
+        const authToken = localStorage.getItem('authToken');
+
+        if (!authToken) {
+            alert('Please log in to complete your purchase');
+            setShowPaymentModal(false);
+            router.push('/login');
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `http://localhost:8001/api/courses/${params.id}/purchase`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${authToken}`,
+                    },
+                    body: JSON.stringify({
+                        courseId: params.id,
+                        // You could add payment details here if needed
+                    }),
+                },
+            );
+
+            if (!response.ok) {
+                throw new Error('Payment failed');
+            }
+
+            const data = await response.json();
+            setShowPaymentModal(false);
+            alert(data.message || 'Payment successful! You have enrolled in this course.');
+        } catch (error) {
+            console.error('Payment error:', error);
+            alert('Payment failed. Please try again.');
+        }
     };
 
     // Handle back navigation
