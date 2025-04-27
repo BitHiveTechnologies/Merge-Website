@@ -60,25 +60,4 @@ export const hackathonApi = {
     },
 };
 
-// Events API functions
-export const eventsApi = {
-    // Get upcoming events
-    getUpcoming: async () => {
-        return fetchWithAuth('/events/upcoming');
-    },
-
-    // Get event by ID
-    getById: async (id: string) => {
-        return fetchWithAuth(`/events/${id}`);
-    },
-
-    // Register for an event
-    register: async (id: string, registrationData: any) => {
-        return fetchWithAuth(`/events/register/${id}`, {
-            method: 'POST',
-            body: JSON.stringify(registrationData),
-        });
-    },
-};
-
 // Other API services can be added here
