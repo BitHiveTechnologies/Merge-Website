@@ -1,11 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 export default function AdminDashboardPage() {
+    const router = useRouter();
     const [activeTab, setActiveTab] = useState<'courses' | 'workshops' | 'hackathons'>('courses');
+
+    // Redirect to the respective page when tab is clicked
+    useEffect(() => {
+        if (activeTab === 'courses') {
+            router.push('/admin/dashboard/courses');
+        } else if (activeTab === 'workshops') {
+            router.push('/admin/dashboard/workshops');
+        } else if (activeTab === 'hackathons') {
+            router.push('/admin/dashboard/hackathons');
+        }
+    }, [activeTab, router]);
 
     return (
         <div data-oid="q2:b5ey">
@@ -105,37 +118,6 @@ export default function AdminDashboardPage() {
                                     View All Courses
                                 </span>
                             </Link>
-                            <Link
-                                href="/admin/dashboard/courses/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="kkluel."
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="qzdv6sc"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="3esv8ny"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="54862f9"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="dlmk2er"
-                                >
-                                    Add New Course
-                                </span>
-                            </Link>
                         </div>
                     </div>
                 )}
@@ -180,37 +162,6 @@ export default function AdminDashboardPage() {
                                     data-oid="dcy2k::"
                                 >
                                     View All Workshops
-                                </span>
-                            </Link>
-                            <Link
-                                href="/admin/dashboard/workshops/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="t938m97"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="dpadxg_"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="kfe:jx-"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="z0eidaa"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="pq-ysrj"
-                                >
-                                    Add New Workshop
                                 </span>
                             </Link>
                         </div>
@@ -259,37 +210,6 @@ export default function AdminDashboardPage() {
                                     data-oid="q-8cpwj"
                                 >
                                     View All Hackathons
-                                </span>
-                            </Link>
-                            <Link
-                                href="/admin/dashboard/hackathons/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="colo0at"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="b8lmo85"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="ux756hg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="qhwa4i3"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="j55efx9"
-                                >
-                                    Add New Hackathon
                                 </span>
                             </Link>
                         </div>

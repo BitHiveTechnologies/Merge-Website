@@ -77,6 +77,10 @@ export default function WorkshopsPage() {
         router.push(`/workshops/${workshopId}`);
     };
 
+    // Automatically load all workshops when the page loads
+    useEffect(() => {
+        // This is already handled by the existing useEffect that fetches workshops
+    }, []);
     // Format price for display
     const formatPrice = (price: number | 'Free') => {
         if (!price) return 'Free';
