@@ -8,8 +8,43 @@ import { useState, useEffect } from 'react';
 export default function Page() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [courses, setCourses] = useState([]);
+    const [events, setEvents] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState('');
 
     useEffect(() => {
+        // Fetch featured courses and upcoming events
+        const fetchData = async () => {
+            setIsLoading(true);
+            try {
+                // Fetch courses
+                const coursesResponse = await fetch('http://localhost:8001/api/courses/featured');
+                if (!coursesResponse.ok) {
+                    throw new Error('Failed to fetch courses');
+                }
+                const coursesData = await coursesResponse.json();
+
+                // Fetch events
+                const eventsResponse = await fetch('http://localhost:8001/api/events/upcoming');
+                if (!eventsResponse.ok) {
+                    throw new Error('Failed to fetch events');
+                }
+                const eventsData = await eventsResponse.json();
+
+                setCourses(coursesData);
+                setEvents(eventsData);
+            } catch (err) {
+                console.error('Error fetching data:', err);
+                setError('Failed to load data. Please try again later.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+
+        // Testimonial rotation
         const interval = setInterval(() => {
             setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 5000);
@@ -40,8 +75,10 @@ export default function Page() {
         },
     ];
 
-    const courses = [
+    // Fallback data in case API fails
+    const fallbackCourses = [
         {
+            id: 1,
             title: 'Full Stack Web Development',
             instructor: 'John Smith',
             duration: '12 weeks',
@@ -50,6 +87,7 @@ export default function Page() {
             image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
         },
         {
+            id: 2,
             title: 'UI/UX Design Fundamentals',
             instructor: 'Maya Patel',
             duration: '8 weeks',
@@ -58,6 +96,7 @@ export default function Page() {
             image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
         },
         {
+            id: 3,
             title: 'Data Structures & Algorithms',
             instructor: 'David Lee',
             duration: '10 weeks',
@@ -67,8 +106,9 @@ export default function Page() {
         },
     ];
 
-    const events = [
+    const fallbackEvents = [
         {
+            id: 1,
             title: 'Web3 Development Workshop',
             date: 'June 15, 2023',
             time: '6:00 PM - 8:00 PM',
@@ -76,6 +116,7 @@ export default function Page() {
             price: 'Free',
         },
         {
+            id: 2,
             title: 'AI & Machine Learning Hackathon',
             date: 'July 8-10, 2023',
             time: '48 Hours',
@@ -83,6 +124,7 @@ export default function Page() {
             price: '₹499',
         },
         {
+            id: 3,
             title: 'Career in Tech: Industry Panel',
             date: 'June 22, 2023',
             time: '5:00 PM - 6:30 PM',
@@ -517,63 +559,122 @@ export default function Page() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8" data-oid="yqrlhii">
-                        {courses.map((course, index) => (
-                            <div
-                                key={index}
-                                className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
-                                data-oid="cci3hf4"
-                            >
-                                <div className="h-48 overflow-hidden" data-oid="8t3_bh4">
-                                    <img
-                                        src={course.image}
-                                        alt={course.title}
-                                        className="w-full h-full object-cover"
-                                        data-oid="ng6.t46"
-                                    />
-                                </div>
-                                <div className="p-6" data-oid="g:p2h7p">
+                        {isLoading ? (
+                            // Loading state
+                            Array(3)
+                                .fill(0)
+                                .map((_, index) => (
                                     <div
-                                        className="flex justify-between items-start mb-4"
-                                        data-oid="2054.5j"
+                                        key={index}
+                                        className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 animate-pulse"
+                                        data-oid="e5u_2qa"
                                     >
-                                        <h3 className="text-xl font-semibold" data-oid="_0dst0j">
-                                            {course.title}
-                                        </h3>
-                                        <span
-                                            className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-sm"
-                                            data-oid="gzy2h:i"
-                                        >
-                                            {course.level}
-                                        </span>
+                                        <div className="h-48 bg-gray-700" data-oid="27z2fif"></div>
+                                        <div className="p-6" data-oid="-z5:b.s">
+                                            <div
+                                                className="h-6 bg-gray-700 rounded mb-4 w-3/4"
+                                                data-oid="ceubhah"
+                                            ></div>
+                                            <div
+                                                className="h-4 bg-gray-700 rounded mb-4 w-1/2"
+                                                data-oid="4vh.5mt"
+                                            ></div>
+                                            <div
+                                                className="h-4 bg-gray-700 rounded mb-6 w-full"
+                                                data-oid="fo429ko"
+                                            ></div>
+                                            <div
+                                                className="h-10 bg-gray-700 rounded w-full"
+                                                data-oid="3jytng2"
+                                            ></div>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center mb-4" data-oid="5v52wl_">
-                                        <div
-                                            className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                            data-oid="-82av6y"
-                                        ></div>
-                                        <span className="text-gray-300" data-oid="jrejs0w">
-                                            {course.instructor}
-                                        </span>
-                                    </div>
-                                    <div
-                                        className="flex justify-between text-gray-400 mb-6"
-                                        data-oid="3kh18zq"
-                                    >
-                                        <span data-oid="tgsxe7.">{course.duration}</span>
-                                        <span className="text-white font-medium" data-oid="ks9tr8l">
-                                            {course.price}
-                                        </span>
-                                    </div>
-                                    <a
-                                        href={`/courses/${index}`}
-                                        className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                        data-oid="yxyqc4g"
-                                    >
-                                        Enroll Now
-                                    </a>
-                                </div>
+                                ))
+                        ) : error ? (
+                            // Error state
+                            <div className="col-span-3 text-center py-8" data-oid="10-p8b1">
+                                <p className="text-red-400 mb-4" data-oid="c652-x6">
+                                    {error}
+                                </p>
+                                <button
+                                    onClick={() => window.location.reload()}
+                                    className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                                    data-oid="_l3q3hy"
+                                >
+                                    Retry
+                                </button>
                             </div>
-                        ))}
+                        ) : (
+                            // Data loaded successfully
+                            (courses.length > 0 ? courses : fallbackCourses).map(
+                                (course, index) => (
+                                    <div
+                                        key={course.id || index}
+                                        className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
+                                        data-oid="cci3hf4"
+                                    >
+                                        <div className="h-48 overflow-hidden" data-oid="8t3_bh4">
+                                            <img
+                                                src={course.image}
+                                                alt={course.title}
+                                                className="w-full h-full object-cover"
+                                                data-oid="ng6.t46"
+                                            />
+                                        </div>
+                                        <div className="p-6" data-oid="g:p2h7p">
+                                            <div
+                                                className="flex justify-between items-start mb-4"
+                                                data-oid="2054.5j"
+                                            >
+                                                <h3
+                                                    className="text-xl font-semibold"
+                                                    data-oid="_0dst0j"
+                                                >
+                                                    {course.title}
+                                                </h3>
+                                                <span
+                                                    className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-sm"
+                                                    data-oid="gzy2h:i"
+                                                >
+                                                    {course.level}
+                                                </span>
+                                            </div>
+                                            <div
+                                                className="flex items-center mb-4"
+                                                data-oid="5v52wl_"
+                                            >
+                                                <div
+                                                    className="w-8 h-8 rounded-full bg-gray-600 mr-3"
+                                                    data-oid="-82av6y"
+                                                ></div>
+                                                <span className="text-gray-300" data-oid="jrejs0w">
+                                                    {course.instructor}
+                                                </span>
+                                            </div>
+                                            <div
+                                                className="flex justify-between text-gray-400 mb-6"
+                                                data-oid="3kh18zq"
+                                            >
+                                                <span data-oid="tgsxe7.">{course.duration}</span>
+                                                <span
+                                                    className="text-white font-medium"
+                                                    data-oid="ks9tr8l"
+                                                >
+                                                    {course.price}
+                                                </span>
+                                            </div>
+                                            <a
+                                                href={`/courses/${course.id || index}`}
+                                                className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
+                                                data-oid="yxyqc4g"
+                                            >
+                                                Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                ),
+                            )
+                        )}
                     </div>
 
                     <div className="mt-8 text-center md:hidden" data-oid="dvym2kz">
@@ -689,89 +790,138 @@ export default function Page() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8" data-oid="i:quq__">
-                        {events.map((event, index) => (
-                            <div
-                                key={index}
-                                className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
-                                data-oid=".i4rm_w"
-                            >
+                        {isLoading ? (
+                            // Loading state
+                            Array(3)
+                                .fill(0)
+                                .map((_, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-800 p-6 rounded-xl border border-gray-700 animate-pulse"
+                                        data-oid="8egz:ni"
+                                    >
+                                        <div
+                                            className="flex justify-between items-center mb-4"
+                                            data-oid="tw7w5dv"
+                                        >
+                                            <div
+                                                className="h-6 bg-gray-700 rounded w-1/3"
+                                                data-oid="v1a3wcw"
+                                            ></div>
+                                            <div
+                                                className="h-6 bg-gray-700 rounded w-1/4"
+                                                data-oid="qlzt4p9"
+                                            ></div>
+                                        </div>
+                                        <div
+                                            className="h-6 bg-gray-700 rounded mb-4 w-3/4"
+                                            data-oid=":kfew6s"
+                                        ></div>
+                                        <div
+                                            className="h-4 bg-gray-700 rounded mb-2 w-1/2"
+                                            data-oid="s55b084"
+                                        ></div>
+                                        <div
+                                            className="h-4 bg-gray-700 rounded mb-6 w-2/3"
+                                            data-oid="-c3korj"
+                                        ></div>
+                                        <div
+                                            className="h-10 bg-gray-700 rounded w-full"
+                                            data-oid="jqh-ge5"
+                                        ></div>
+                                    </div>
+                                ))
+                        ) : error ? (
+                            // Already handled in the courses section
+                            <></>
+                        ) : (
+                            // Data loaded successfully
+                            (events.length > 0 ? events : fallbackEvents).map((event, index) => (
                                 <div
-                                    className="flex justify-between items-center mb-4"
-                                    data-oid="0-y83t9"
+                                    key={event.id || index}
+                                    className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
+                                    data-oid=".i4rm_w"
                                 >
-                                    <span
-                                        className={`px-3 py-1 rounded-full text-sm ${
-                                            event.type === 'Workshop'
-                                                ? 'bg-blue-500/20 text-blue-300'
-                                                : event.type === 'Hackathon'
-                                                  ? 'bg-green-500/20 text-green-300'
-                                                  : 'bg-yellow-500/20 text-yellow-300'
-                                        }`}
-                                        data-oid="if1hwhn"
+                                    <div
+                                        className="flex justify-between items-center mb-4"
+                                        data-oid="0-y83t9"
                                     >
-                                        {event.type}
-                                    </span>
-                                    <span
-                                        className={`text-sm font-medium ${
-                                            event.price === 'Free' ? 'text-green-400' : 'text-white'
-                                        }`}
-                                        data-oid="bhb5jl."
+                                        <span
+                                            className={`px-3 py-1 rounded-full text-sm ${
+                                                event.type === 'Workshop'
+                                                    ? 'bg-blue-500/20 text-blue-300'
+                                                    : event.type === 'Hackathon'
+                                                      ? 'bg-green-500/20 text-green-300'
+                                                      : 'bg-yellow-500/20 text-yellow-300'
+                                            }`}
+                                            data-oid="if1hwhn"
+                                        >
+                                            {event.type}
+                                        </span>
+                                        <span
+                                            className={`text-sm font-medium ${
+                                                event.price === 'Free'
+                                                    ? 'text-green-400'
+                                                    : 'text-white'
+                                            }`}
+                                            data-oid="bhb5jl."
+                                        >
+                                            {event.price}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-xl font-semibold mb-2" data-oid="mkhqiwv">
+                                        {event.title}
+                                    </h3>
+                                    <div className="text-gray-400 mb-6" data-oid="z81qmep">
+                                        <div className="flex items-center mb-1" data-oid="0c:26sr">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-5 w-5 mr-2"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                data-oid="9lt3.6w"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                    data-oid="wbeck41"
+                                                />
+                                            </svg>
+                                            <span data-oid="0i7dr4w">{event.date}</span>
+                                        </div>
+                                        <div className="flex items-center" data-oid="s2i4_zz">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-5 w-5 mr-2"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                data-oid="j0-4.np"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    data-oid="fh5h95f"
+                                                />
+                                            </svg>
+                                            <span data-oid=".hal1-0">{event.time}</span>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href={`/${event.type.toLowerCase()}s/${event.id || index}`}
+                                        className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
+                                        data-oid="gdthnx9"
                                     >
-                                        {event.price}
-                                    </span>
+                                        Register Now
+                                    </a>
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2" data-oid="mkhqiwv">
-                                    {event.title}
-                                </h3>
-                                <div className="text-gray-400 mb-6" data-oid="z81qmep">
-                                    <div className="flex items-center mb-1" data-oid="0c:26sr">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 mr-2"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            data-oid="9lt3.6w"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                data-oid="wbeck41"
-                                            />
-                                        </svg>
-                                        <span data-oid="0i7dr4w">{event.date}</span>
-                                    </div>
-                                    <div className="flex items-center" data-oid="s2i4_zz">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 mr-2"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            data-oid="j0-4.np"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                data-oid="fh5h95f"
-                                            />
-                                        </svg>
-                                        <span data-oid=".hal1-0">{event.time}</span>
-                                    </div>
-                                </div>
-                                <a
-                                    href={`/${event.type.toLowerCase()}s/${index}`}
-                                    className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                    data-oid="gdthnx9"
-                                >
-                                    Register Now
-                                </a>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
 
                     <div className="mt-8 text-center md:hidden" data-oid=".tnyfk4">
@@ -803,12 +953,52 @@ export default function Page() {
                         <div className="flex flex-col sm:flex-row gap-3" data-oid="z9z6f9d">
                             <input
                                 type="email"
+                                id="newsletter-email"
                                 placeholder="Enter your email"
                                 className="flex-grow px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
                                 data-oid="2s_9t6z"
                             />
 
                             <button
+                                onClick={async () => {
+                                    const email = (
+                                        document.getElementById(
+                                            'newsletter-email',
+                                        ) as HTMLInputElement
+                                    ).value;
+                                    if (!email) return;
+
+                                    try {
+                                        const response = await fetch(
+                                            'http://localhost:8001/api/newsletter/subscribe',
+                                            {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Content-Type': 'application/json',
+                                                },
+                                                body: JSON.stringify({ email }),
+                                            },
+                                        );
+
+                                        if (response.ok) {
+                                            alert('Successfully subscribed to the newsletter!');
+                                            (
+                                                document.getElementById(
+                                                    'newsletter-email',
+                                                ) as HTMLInputElement
+                                            ).value = '';
+                                        } else {
+                                            const data = await response.json();
+                                            alert(
+                                                data.message ||
+                                                    'Failed to subscribe. Please try again.',
+                                            );
+                                        }
+                                    } catch (err) {
+                                        console.error('Newsletter subscription error:', err);
+                                        alert('An error occurred. Please try again later.');
+                                    }
+                                }}
                                 className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium whitespace-nowrap"
                                 data-oid="_70oxl9"
                             >
