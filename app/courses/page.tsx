@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 
 // Course type definition
 interface Course {
-    id: number;
+    _id: string;
     title: string;
     description: string;
     instructor: string;
@@ -35,7 +35,23 @@ export default function CoursesPage() {
         const fetchCourses = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch('http://localhost:8001/api/courses');
+                // Build query parameters based on filters
+                let url = 'http://localhost:8001/api/courses';
+                const queryParams = [];
+
+                if (levelFilter !== 'all') {
+                    queryParams.push(`level=${levelFilter}`);
+                }
+
+                if (priceFilter === 'free') {
+                    queryParams.push('price=0');
+                }
+
+                if (queryParams.length > 0) {
+                    url += `?${queryParams.join('&')}`;
+                }
+
+                const response = await fetch(url);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch courses');
@@ -56,23 +72,11 @@ export default function CoursesPage() {
         };
 
         fetchCourses();
-    }, []);
+    }, [levelFilter, priceFilter]);
 
-    // Apply filters
+    // Apply search filter locally (since backend doesn't support search)
     useEffect(() => {
         let result = [...courses];
-
-        // Apply price filter
-        if (priceFilter === 'free') {
-            result = result.filter((course) => course.price === 'Free');
-        } else if (priceFilter === 'paid') {
-            result = result.filter((course) => course.price !== 'Free');
-        }
-
-        // Apply level filter
-        if (levelFilter !== 'all') {
-            result = result.filter((course) => course.level === levelFilter);
-        }
 
         // Apply search query
         if (searchQuery) {
@@ -86,10 +90,10 @@ export default function CoursesPage() {
         }
 
         setFilteredCourses(result);
-    }, [courses, priceFilter, levelFilter, searchQuery]);
+    }, [courses, searchQuery]);
 
     // Navigate to course detail
-    const handleCourseClick = (courseId: number) => {
+    const handleCourseClick = (courseId: string) => {
         router.push(`/courses/${courseId}`);
     };
 
@@ -459,9 +463,9 @@ export default function CoursesPage() {
                         >
                             {filteredCourses.map((course) => (
                                 <div
-                                    key={course.id}
+                                    key={course._id}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
-                                    onClick={() => handleCourseClick(course.id)}
+                                    onClick={() => handleCourseClick(course._id)}
                                     data-oid="0pdkgbr"
                                 >
                                     <div

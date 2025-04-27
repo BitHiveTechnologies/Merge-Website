@@ -1,6 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
+import FeaturedCourses from '@/components/FeaturedCourses';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -14,17 +15,10 @@ export default function Page() {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        // Fetch featured courses and upcoming events
+        // Fetch upcoming events
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                // Fetch courses
-                const coursesResponse = await fetch('http://localhost:8001/api/courses/featured');
-                if (!coursesResponse.ok) {
-                    throw new Error('Failed to fetch courses');
-                }
-                const coursesData = await coursesResponse.json();
-
                 // Fetch events
                 const eventsResponse = await fetch('http://localhost:8001/api/events/upcoming');
                 if (!eventsResponse.ok) {
@@ -32,7 +26,6 @@ export default function Page() {
                 }
                 const eventsData = await eventsResponse.json();
 
-                setCourses(coursesData);
                 setEvents(eventsData);
             } catch (err) {
                 console.error('Error fetching data:', err);
@@ -537,157 +530,8 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* Course Preview Section */}
-            <section className="py-20 px-6 md:px-12 bg-black" data-oid="-8krb8.">
-                <div className="max-w-6xl mx-auto" data-oid="gw59bm.">
-                    <div className="flex justify-between items-end mb-12" data-oid="lxla2i.">
-                        <div data-oid="hcmdqof">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="0cxb6ph">
-                                Featured Courses
-                            </h2>
-                            <p className="text-xl text-gray-300" data-oid="2oo87jx">
-                                Start your learning journey with our top courses
-                            </p>
-                        </div>
-                        <a
-                            href="/courses"
-                            className="hidden md:block text-purple-400 hover:text-purple-300 transition-colors"
-                            data-oid="xwmc7yx"
-                        >
-                            View All Courses →
-                        </a>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8" data-oid="yqrlhii">
-                        {isLoading ? (
-                            // Loading state
-                            Array(3)
-                                .fill(0)
-                                .map((_, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 animate-pulse"
-                                        data-oid="e5u_2qa"
-                                    >
-                                        <div className="h-48 bg-gray-700" data-oid="27z2fif"></div>
-                                        <div className="p-6" data-oid="-z5:b.s">
-                                            <div
-                                                className="h-6 bg-gray-700 rounded mb-4 w-3/4"
-                                                data-oid="ceubhah"
-                                            ></div>
-                                            <div
-                                                className="h-4 bg-gray-700 rounded mb-4 w-1/2"
-                                                data-oid="4vh.5mt"
-                                            ></div>
-                                            <div
-                                                className="h-4 bg-gray-700 rounded mb-6 w-full"
-                                                data-oid="fo429ko"
-                                            ></div>
-                                            <div
-                                                className="h-10 bg-gray-700 rounded w-full"
-                                                data-oid="3jytng2"
-                                            ></div>
-                                        </div>
-                                    </div>
-                                ))
-                        ) : error ? (
-                            // Error state
-                            <div className="col-span-3 text-center py-8" data-oid="10-p8b1">
-                                <p className="text-red-400 mb-4" data-oid="c652-x6">
-                                    {error}
-                                </p>
-                                <button
-                                    onClick={() => window.location.reload()}
-                                    className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                                    data-oid="_l3q3hy"
-                                >
-                                    Retry
-                                </button>
-                            </div>
-                        ) : (
-                            // Data loaded successfully
-                            (courses.length > 0 ? courses : fallbackCourses).map(
-                                (course, index) => (
-                                    <div
-                                        key={course.id || index}
-                                        className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1"
-                                        data-oid="cci3hf4"
-                                    >
-                                        <div className="h-48 overflow-hidden" data-oid="8t3_bh4">
-                                            <img
-                                                src={course.image}
-                                                alt={course.title}
-                                                className="w-full h-full object-cover"
-                                                data-oid="ng6.t46"
-                                            />
-                                        </div>
-                                        <div className="p-6" data-oid="g:p2h7p">
-                                            <div
-                                                className="flex justify-between items-start mb-4"
-                                                data-oid="2054.5j"
-                                            >
-                                                <h3
-                                                    className="text-xl font-semibold"
-                                                    data-oid="_0dst0j"
-                                                >
-                                                    {course.title}
-                                                </h3>
-                                                <span
-                                                    className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-sm"
-                                                    data-oid="gzy2h:i"
-                                                >
-                                                    {course.level}
-                                                </span>
-                                            </div>
-                                            <div
-                                                className="flex items-center mb-4"
-                                                data-oid="5v52wl_"
-                                            >
-                                                <div
-                                                    className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                                    data-oid="-82av6y"
-                                                ></div>
-                                                <span className="text-gray-300" data-oid="jrejs0w">
-                                                    {course.instructor}
-                                                </span>
-                                            </div>
-                                            <div
-                                                className="flex justify-between text-gray-400 mb-6"
-                                                data-oid="3kh18zq"
-                                            >
-                                                <span data-oid="tgsxe7.">{course.duration}</span>
-                                                <span
-                                                    className="text-white font-medium"
-                                                    data-oid="ks9tr8l"
-                                                >
-                                                    {course.price}
-                                                </span>
-                                            </div>
-                                            <a
-                                                href={`/courses/${course.id || index}`}
-                                                className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                                data-oid="yxyqc4g"
-                                            >
-                                                Enroll Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                ),
-                            )
-                        )}
-                    </div>
-
-                    <div className="mt-8 text-center md:hidden" data-oid="dvym2kz">
-                        <a
-                            href="/courses"
-                            className="text-purple-400 hover:text-purple-300 transition-colors"
-                            data-oid="eqdiu5."
-                        >
-                            View All Courses →
-                        </a>
-                    </div>
-                </div>
-            </section>
+            {/* Featured Courses Section */}
+            <FeaturedCourses data-oid="hmu2.._" />
 
             {/* Testimonials Section */}
             <section

@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 
 // Course type definition
 interface Course {
-    id: number;
+    _id: string;
     title: string;
     description: string;
     instructor: string;
@@ -24,6 +24,12 @@ interface Course {
             duration: string;
         }[];
     }[];
+}
+
+interface Enrollment {
+    _id: string;
+    userId: string;
+    courseId: Course;
 }
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
@@ -50,7 +56,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
 
                 const enrollments = await response.json();
                 const enrolled = enrollments.some(
-                    (enrollment: any) => enrollment.courseId._id === params.id,
+                    (enrollment: Enrollment) => enrollment.courseId._id === params.id,
                 );
 
                 setIsEnrolled(enrolled);
@@ -183,28 +189,30 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
         }
 
         try {
-            const response = await fetch(
-                `http://localhost:8001/api/courses/${params.id}/purchase`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${authToken}`,
-                    },
-                    body: JSON.stringify({
-                        courseId: params.id,
-                        // You could add payment details here if needed
-                    }),
+            // Use the enroll endpoint after payment
+            const response = await fetch(`http://localhost:8001/api/courses/${params.id}/enroll`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${authToken}`,
                 },
-            );
+            });
 
             if (!response.ok) {
-                throw new Error('Payment failed');
+                const errorData = await response.json();
+                if (errorData.msg === 'Already enrolled') {
+                    setIsEnrolled(true);
+                    setShowPaymentModal(false);
+                    alert('You are already enrolled in this course.');
+                    return;
+                }
+                throw new Error('Enrollment failed');
             }
 
             const data = await response.json();
+            setIsEnrolled(true);
             setShowPaymentModal(false);
-            alert(data.message || 'Payment successful! You have enrolled in this course.');
+            alert('Payment successful! You have enrolled in this course.');
         } catch (error) {
             console.error('Payment error:', error);
             alert('Payment failed. Please try again.');
