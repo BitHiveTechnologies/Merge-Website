@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 
 // Hackathon type definition
 interface Hackathon {
-    id: number;
+    id: string;
     title: string;
     organizer: string;
     startDate: string;
@@ -44,116 +44,87 @@ export default function HackathonsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
 
-    // Fetch hackathons (simulated)
+    // Fetch hackathons from API
     useEffect(() => {
-        // In a real app, this would be an API call
-        const fetchHackathons = () => {
+        const fetchHackathons = async () => {
             setIsLoading(true);
+            try {
+                // Import the API service
+                const { hackathonApi } = await import('@/lib/api');
 
-            // Simulated API response
-            const hackathonsData: Hackathon[] = [
-                {
-                    id: 1,
-                    title: 'HackBIT 2025',
-                    organizer: 'BIT MESRA, PATNA',
-                    startDate: '2025-03-15',
-                    endDate: '2025-03-16',
-                    location: 'BIT Mesra, Patna Campus',
-                    description:
-                        'HackBIT 2025 is a high-energy, innovation-driven hackathon where participants tackle real-world challenges using cutting-edge technologies. Open to students and professionals, the event encourages collaboration, rapid prototyping, and creative problem-solving.',
-                    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: '/hackathons/register/1',
-                    isLive: false,
-                    isUpcoming: true,
-                    tracks: ['Web Development', 'AI/ML', 'Data Science'],
-                    prizes: '₹50,000 for 1st Place, ₹30,000 for 2nd Place, ₹20,000 for 3rd Place',
-                },
-                {
-                    id: 2,
-                    title: 'CodeFest 2024',
-                    organizer: 'IIT Patna',
-                    startDate: '2024-12-10',
-                    endDate: '2024-12-11',
-                    location: 'IIT Patna Campus',
-                    description:
-                        'A 24-hour coding marathon where participants build innovative solutions to real-world problems. Join us for a weekend of coding, learning, and networking.',
-                    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: '/hackathons/register/2',
-                    isLive: false,
-                    isUpcoming: true,
-                    tracks: ['Blockchain', 'IoT', 'Mobile Apps'],
-                    prizes: '₹40,000 for 1st Place, ₹25,000 for 2nd Place, ₹15,000 for 3rd Place',
-                },
-                {
-                    id: 3,
-                    title: 'DataHack 2024',
-                    organizer: 'DA-IICT',
-                    startDate: '2024-11-05',
-                    endDate: '2024-11-06',
-                    location: 'Online (Virtual Event)',
-                    description:
-                        'A data science hackathon focused on solving complex problems using machine learning, data analysis, and visualization techniques.',
-                    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    registrationLink: '/hackathons/register/3',
-                    isLive: true,
-                    isUpcoming: false,
-                    tracks: ['Data Science', 'Machine Learning', 'Data Visualization'],
-                    prizes: '₹35,000 for 1st Place, ₹20,000 for 2nd Place, ₹10,000 for 3rd Place',
-                },
-            ];
+                // Fetch hackathons
+                const hackathonsData = await hackathonApi.getAll();
 
-            // Simulated past hackathon winners
-            const winnersData: HackathonWinner[] = [
-                {
-                    id: 1,
-                    hackathonId: 101,
-                    hackathonName: 'HackBIT 2023',
-                    teamName: 'CodeCrafters',
-                    projectName: 'EcoTrack',
-                    projectDescription:
-                        'A sustainable living app that tracks carbon footprint and suggests eco-friendly alternatives.',
-                    track: 'Web Development',
-                    position: '1st Place',
-                    teamMembers: ['Rahul Sharma', 'Priya Patel', 'Amit Kumar'],
+                // Transform API data to match our interface
+                const transformedHackathons: Hackathon[] = hackathonsData.map((hack: any) => ({
+                    id: hack._id,
+                    title: hack.title || 'Untitled Hackathon',
+                    organizer: hack.organizer || 'Unknown Organizer',
+                    startDate: hack.startDate || new Date().toISOString(),
+                    endDate: hack.endDate || new Date().toISOString(),
+                    location: hack.location || 'Online',
+                    description: hack.description || 'No description available',
+                    image:
+                        hack.image ||
+                        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                    registrationLink: `/hackathons/register/${hack._id}`,
+                    isLive:
+                        new Date(hack.startDate) <= new Date() &&
+                        new Date(hack.endDate) >= new Date(),
+                    isUpcoming: new Date(hack.startDate) > new Date(),
+                    tracks: hack.tracks || ['General'],
+                    prizes: hack.prizes || 'To be announced',
+                }));
+
+                setHackathons(transformedHackathons);
+
+                // Fetch winners
+                const winnersData = await hackathonApi.getWinners();
+
+                // Transform winners data
+                const transformedWinners: HackathonWinner[] = winnersData.map((winner: any) => ({
+                    id: winner._id,
+                    hackathonId: winner.hackathonId?._id || 'unknown',
+                    hackathonName: winner.hackathonId?.title || 'Past Hackathon',
+                    teamName: winner.teamName || 'Unknown Team',
+                    projectName: winner.projectName || winner.teamName || 'Unnamed Project',
+                    projectDescription: winner.projectDescription || 'No description available',
+                    track: winner.track || 'General',
+                    position: winner.position || '1st Place',
+                    teamMembers: winner.teamMembers || ['Team Member'],
                     projectImage:
+                        winner.projectImage ||
                         'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    projectLink: 'https://github.com/codecrafters/ecotrack',
-                },
-                {
-                    id: 2,
-                    hackathonId: 101,
-                    hackathonName: 'HackBIT 2023',
-                    teamName: 'DataMinds',
-                    projectName: 'HealthPredict',
-                    projectDescription:
-                        'An AI-powered health prediction system that analyzes symptoms and suggests potential diagnoses.',
-                    track: 'AI/ML',
-                    position: '2nd Place',
-                    teamMembers: ['Neha Singh', 'Vikram Reddy', 'Sanjay Gupta'],
-                    projectImage:
-                        'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    projectLink: 'https://github.com/dataminds/healthpredict',
-                },
-                {
-                    id: 3,
-                    hackathonId: 102,
-                    hackathonName: 'CodeFest 2023',
-                    teamName: 'BlockChainers',
-                    projectName: 'SecureVote',
-                    projectDescription:
-                        'A blockchain-based voting system ensuring transparent and tamper-proof elections.',
-                    track: 'Blockchain',
-                    position: '1st Place',
-                    teamMembers: ['Arjun Mehta', 'Kavya Sharma', 'Rohan Joshi'],
-                    projectImage:
-                        'https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                    projectLink: 'https://github.com/blockchainers/securevote',
-                },
-            ];
+                    projectLink: winner.projectLink,
+                }));
 
-            setHackathons(hackathonsData);
-            setWinners(winnersData);
-            setIsLoading(false);
+                setWinners(transformedWinners);
+            } catch (error) {
+                console.error('Failed to fetch hackathons:', error);
+                // Fallback to sample data if API fails
+                setHackathons([
+                    {
+                        id: '1',
+                        title: 'HackBIT 2025',
+                        organizer: 'BIT MESRA, PATNA',
+                        startDate: '2025-03-15',
+                        endDate: '2025-03-16',
+                        location: 'BIT Mesra, Patna Campus',
+                        description:
+                            'HackBIT 2025 is a high-energy, innovation-driven hackathon where participants tackle real-world challenges using cutting-edge technologies.',
+                        image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                        registrationLink: '/hackathons/register/1',
+                        isLive: false,
+                        isUpcoming: true,
+                        tracks: ['Web Development', 'AI/ML', 'Data Science'],
+                        prizes: '₹50,000 for 1st Place, ₹30,000 for 2nd Place, ₹20,000 for 3rd Place',
+                    },
+                ]);
+
+                setWinners([]);
+            } finally {
+                setIsLoading(false);
+            }
         };
 
         fetchHackathons();

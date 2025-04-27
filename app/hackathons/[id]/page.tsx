@@ -9,7 +9,7 @@ import Navbar from '@/components/Navbar';
 
 // Hackathon type definition
 interface Hackathon {
-    id: number;
+    id: string;
     title: string;
     organizer: string;
     startDate: string;
@@ -66,206 +66,105 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
         seconds: number;
     } | null>(null);
 
-    // Fetch hackathon details (simulated)
+    // Fetch hackathon details from API
     useEffect(() => {
-        const fetchHackathonDetails = () => {
+        const fetchHackathonDetails = async () => {
             setIsLoading(true);
+            try {
+                // Import the API service
+                const { hackathonApi } = await import('@/lib/api');
 
-            // In a real app, this would be an API call with the ID
-            setTimeout(() => {
-                // Simulated API response
-                const hackathonData: Hackathon = {
-                    id: parseInt(params.id),
-                    title: 'HackBIT 2025',
-                    organizer: 'BIT MESRA, PATNA',
-                    startDate: '2025-03-15',
-                    endDate: '2025-03-16',
-                    location: 'BIT Mesra, Patna Campus',
-                    description:
-                        'HackBIT 2025 is a high-energy, innovation-driven hackathon where participants tackle real-world challenges using cutting-edge technologies.',
+                // Fetch hackathon by ID
+                const hackathonData = await hackathonApi.getById(params.id);
+
+                // Transform API data to match our interface
+                const transformedHackathon: Hackathon = {
+                    id: hackathonData._id,
+                    title: hackathonData.title || 'Untitled Hackathon',
+                    organizer: hackathonData.organizer || 'Unknown Organizer',
+                    startDate: hackathonData.startDate || new Date().toISOString(),
+                    endDate: hackathonData.endDate || new Date().toISOString(),
+                    location: hackathonData.location || 'Online',
+                    description: hackathonData.description || 'No description available',
                     longDescription:
-                        'HackBIT 2025 is a high-energy, innovation-driven hackathon where participants tackle real-world challenges using cutting-edge technologies. Open to students and professionals, the event encourages collaboration, rapid prototyping, and creative problem-solving. Participants can work individually or in teams to build groundbreaking solutions in Web Development, AI/ML, and Data Science.',
-                    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-                    registrationLink: '/hackathons/register/1',
-                    isLive: false,
-                    isUpcoming: true,
-                    tracks: [
-                        {
-                            name: 'Web Development',
-                            description: [
-                                'Full-stack applications (MERN, Django, etc.)',
-                                'Progressive Web Apps (PWAs)',
-                                'Blockchain-integrated solutions',
-                                'Cybersecurity and authentication-based projects',
-                            ],
-                        },
-                        {
-                            name: 'AI/ML & Data Science',
-                            description: [
-                                'Computer vision & image recognition',
-                                'NLP-based applications (chatbots, sentiment analysis)',
-                                'Predictive analytics & recommendation systems',
-                                'Deep learning & generative AI models',
-                                'Getting Insights And Decision Making From A Raw Datasets',
-                            ],
-                        },
-                    ],
+                        hackathonData.longDescription ||
+                        hackathonData.description ||
+                        'No detailed description available',
+                    image:
+                        hackathonData.image ||
+                        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                    registrationLink: `/hackathons/register/${hackathonData._id}`,
+                    isLive:
+                        new Date(hackathonData.startDate) <= new Date() &&
+                        new Date(hackathonData.endDate) >= new Date(),
+                    isUpcoming: new Date(hackathonData.startDate) > new Date(),
 
-                    structure: [
+                    // Default tracks if not provided
+                    tracks: hackathonData.tracks
+                        ? hackathonData.tracks.map((track: any) => ({
+                              name: track.name || 'General',
+                              description: track.description || ['No specific requirements'],
+                          }))
+                        : [
+                              {
+                                  name: 'General',
+                                  description: ['Open to all types of projects'],
+                              },
+                          ],
+
+                    // Default structure if not provided
+                    structure: hackathonData.structure || [
                         {
-                            step: 'Kickoff & Problem Statement Reveal',
+                            step: 'Registration',
                             description:
-                                'Introduction to the hackathon, rules, and revealing the problem statements.',
+                                'Complete the registration process to participate in the hackathon.',
                         },
                         {
-                            step: 'Ideation & Team Formation',
-                            description:
-                                'Brainstorming ideas and forming teams to tackle the challenges.',
+                            step: 'Hackathon Event',
+                            description: 'Participate in the hackathon and build your project.',
                         },
                         {
-                            step: 'Development Phase (12 hours of coding)',
-                            description: 'Intensive coding session to build your solution.',
-                        },
-                        {
-                            step: 'Mentorship & Midway Review',
-                            description: 'Get feedback and guidance from industry experts.',
-                        },
-                        {
-                            step: 'Project Submission & Demos',
-                            description: 'Submit your project and present it to the judges.',
-                        },
-                        {
-                            step: 'Judging & Prize Distribution',
-                            description: 'Projects are evaluated and winners are announced.',
+                            step: 'Submission',
+                            description: 'Submit your project for evaluation.',
                         },
                     ],
 
-                    prizes: '₹50,000 for 1st Place, ₹30,000 for 2nd Place, ₹20,000 for 3rd Place',
-                    prerequisites: [
+                    prizes: hackathonData.prizes || 'To be announced',
+
+                    // Default prerequisites if not provided
+                    prerequisites: hackathonData.prerequisites || [
                         {
-                            category: 'Technical Skills',
+                            category: 'General Requirements',
                             items: [
                                 {
-                                    text: 'Web Development: Basic knowledge of HTML, CSS, JavaScript, and frameworks like React, Angular, or Django is recommended. Familiarity with databases (SQL, Firebase, MongoDB) is a plus.',
+                                    text: 'A laptop with necessary development tools',
                                 },
                                 {
-                                    text: 'AI/ML & Data Science: Understanding of Python, machine learning frameworks (TensorFlow, PyTorch, Scikit-Learn), and data handling using Pandas & NumPy. Experience with Jupyter Notebooks and APIs is beneficial.',
-                                },
-                            ],
-                        },
-                        {
-                            category: 'Software & Tools',
-                            items: [
-                                {
-                                    text: 'Laptop with necessary software installed (VS Code, Jupyter Notebook, Postman, etc.)',
-                                },
-                                {
-                                    text: 'GitHub/GitLab account for version control and collaboration',
-                                },
-                                {
-                                    text: 'Cloud computing familiarity (Google Colab, AWS, Azure, or GCP) is a plus',
-                                },
-                                {
-                                    text: 'API knowledge for data fetching and integrations',
-                                },
-                            ],
-                        },
-                        {
-                            category: 'Team & Collaboration Skills',
-                            items: [
-                                {
-                                    text: 'Ability to brainstorm innovative solutions',
-                                },
-                                {
-                                    text: 'Effective communication & teamwork',
-                                },
-                                {
-                                    text: 'Familiarity with hackathon workflows (agile development, sprints)',
-                                },
-                            ],
-                        },
-                        {
-                            category: 'Additional Requirements',
-                            items: [
-                                {
-                                    text: 'A valid student/participant ID for verification',
-                                },
-                                {
-                                    text: 'Pre-registration and confirmation of participation',
-                                },
-                                {
-                                    text: 'Enthusiasm, problem-solving mindset, and a willingness to learn!',
+                                    text: 'Basic programming knowledge',
                                 },
                             ],
                         },
                     ],
 
-                    faqs: [
+                    faqs: hackathonData.faqs || [
                         {
-                            question: 'Who can participate in HackBIT 2025?',
-                            answer: "HackBIT 2025 is open to all students and professionals with an interest in technology and innovation. Whether you're a beginner or an experienced developer, you're welcome to join!",
-                        },
-                        {
-                            question: 'Do I need to have a team to register?',
-                            answer: "No, you can register individually and form a team during the event. We'll have a team formation session at the beginning of the hackathon.",
-                        },
-                        {
-                            question: 'What should I bring to the hackathon?',
-                            answer: "You should bring your laptop, charger, any necessary peripherals, and your student/professional ID. If it's an in-person event, consider bringing toiletries and a change of clothes for overnight stays.",
-                        },
-                        {
-                            question: 'Is there a registration fee?',
-                            answer: 'No, participation in HackBIT 2025 is completely free of charge.',
-                        },
-                        {
-                            question: 'Will food and refreshments be provided?',
-                            answer: 'Yes, meals and refreshments will be provided throughout the event for all participants.',
+                            question: 'How can I register?',
+                            answer: 'You can register by clicking the "Register Now" button and filling out the registration form.',
                         },
                     ],
 
-                    judges: [
-                        {
-                            name: 'Dr. Rajesh Kumar',
-                            position: 'CTO',
-                            company: 'TechInnovate',
-                            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                        },
-                        {
-                            name: 'Priya Sharma',
-                            position: 'AI Research Lead',
-                            company: 'DataMinds',
-                            image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                        },
-                        {
-                            name: 'Vikram Reddy',
-                            position: 'Senior Developer',
-                            company: 'Google',
-                            image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                        },
-                    ],
-
-                    sponsors: [
-                        {
-                            name: 'TechCorp',
-                            logo: 'https://via.placeholder.com/150',
-                            tier: 'platinum',
-                        },
-                        {
-                            name: 'DataSystems',
-                            logo: 'https://via.placeholder.com/150',
-                            tier: 'gold',
-                        },
-                        {
-                            name: 'CloudNet',
-                            logo: 'https://via.placeholder.com/150',
-                            tier: 'silver',
-                        },
-                    ],
+                    judges: hackathonData.judges || [],
+                    sponsors: hackathonData.sponsors || [],
                 };
 
-                setHackathon(hackathonData);
+                setHackathon(transformedHackathon);
+            } catch (error) {
+                console.error('Failed to fetch hackathon details:', error);
+                // If API fails, we'll show the "Hackathon not found" message
+                setHackathon(null);
+            } finally {
                 setIsLoading(false);
-            }, 1000);
+            }
         };
 
         fetchHackathonDetails();

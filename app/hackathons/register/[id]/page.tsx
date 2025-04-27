@@ -9,7 +9,7 @@ import Navbar from '@/components/Navbar';
 
 // Hackathon type definition
 interface Hackathon {
-    id: number;
+    id: string;
     title: string;
     organizer: string;
     startDate: string;
@@ -35,33 +35,45 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
         expectations: '',
         agreeToTerms: false,
     });
-    const [errors, setErrors] = useState<Record<string, string>>({});
+    const [errors, setErrors] = useState<Record<string, string>>({
+        form: '',
+    });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Fetch hackathon details (simulated)
+    // Fetch hackathon details from API
     useEffect(() => {
-        const fetchHackathonDetails = () => {
+        const fetchHackathonDetails = async () => {
             setIsLoading(true);
+            try {
+                // Import the API service
+                const { hackathonApi } = await import('@/lib/api');
 
-            // In a real app, this would be an API call with the ID
-            setTimeout(() => {
-                // Simulated API response
-                const hackathonData: Hackathon = {
-                    id: parseInt(params.id),
-                    title: 'HackBIT 2025',
-                    organizer: 'BIT MESRA, PATNA',
-                    startDate: '2025-03-15',
-                    endDate: '2025-03-16',
-                    location: 'BIT Mesra, Patna Campus',
-                    description:
-                        'HackBIT 2025 is a high-energy, innovation-driven hackathon where participants tackle real-world challenges using cutting-edge technologies.',
-                    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                // Fetch hackathon by ID
+                const hackathonData = await hackathonApi.getById(params.id);
+
+                // Transform API data to match our interface
+                const transformedHackathon: Hackathon = {
+                    id: hackathonData._id,
+                    title: hackathonData.title || 'Untitled Hackathon',
+                    organizer: hackathonData.organizer || 'Unknown Organizer',
+                    startDate: hackathonData.startDate || new Date().toISOString(),
+                    endDate: hackathonData.endDate || new Date().toISOString(),
+                    location: hackathonData.location || 'Online',
+                    description: hackathonData.description || 'No description available',
+                    image:
+                        hackathonData.image ||
+                        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
                 };
 
-                setHackathon(hackathonData);
+                setHackathon(transformedHackathon);
+            } catch (error) {
+                console.error('Failed to fetch hackathon details:', error);
+                // If API fails, we'll show the "Hackathon not found" message
+                setHackathon(null);
+            } finally {
                 setIsLoading(false);
-            }, 1000);
+            }
         };
 
         fetchHackathonDetails();
@@ -144,20 +156,52 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
     };
 
     // Handle form submission
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (validateForm()) {
             setIsSubmitting(true);
 
-            // Simulate API call
-            setTimeout(() => {
-                setIsSubmitting(false);
-                setIsSubmitted(true);
+            try {
+                // Import the API service
+                const { hackathonApi } = await import('@/lib/api');
+                const { isAuthenticated } = await import('@/lib/auth');
 
-                // In a real app, you would send the form data to your backend here
-                console.log('Form submitted:', formData);
-            }, 1500);
+                // Check if user is authenticated
+                if (!isAuthenticated()) {
+                    // Redirect to login page if not authenticated
+                    router.push(`/login?redirect=/hackathons/register/${params.id}`);
+                    return;
+                }
+
+                // Register for the hackathon
+                await hackathonApi.register(params.id, {
+                    teamName: formData.teamName,
+                    teamSize: parseInt(formData.teamSize),
+                    track: formData.track,
+                });
+
+                // Show success message
+                setIsSubmitted(true);
+            } catch (error: any) {
+                // Handle errors
+                console.error('Registration failed:', error);
+
+                // Show error message
+                if (error.message.includes('Already registered')) {
+                    setErrors({
+                        ...errors,
+                        form: 'You have already registered for this hackathon.',
+                    });
+                } else {
+                    setErrors({
+                        ...errors,
+                        form: 'Registration failed. Please try again later.',
+                    });
+                }
+            } finally {
+                setIsSubmitting(false);
+            }
         }
     };
 
@@ -886,6 +930,21 @@ export default function HackathonRegistrationPage({ params }: { params: { id: st
                                                 </p>
                                             )}
                                         </div>
+
+                                        {/* Form Error Message */}
+                                        {errors.form && (
+                                            <div
+                                                className="bg-red-500/20 border border-red-500 rounded-xl p-4 mb-6"
+                                                data-oid="7bj8.9d"
+                                            >
+                                                <p
+                                                    className="text-red-400 text-center"
+                                                    data-oid="lqpl:w."
+                                                >
+                                                    {errors.form}
+                                                </p>
+                                            </div>
+                                        )}
 
                                         {/* Submit Button */}
                                         <div className="flex justify-center" data-oid="_g9:mkx">
