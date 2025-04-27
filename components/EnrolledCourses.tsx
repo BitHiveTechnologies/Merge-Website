@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getAuthToken } from '@/lib/auth';
+import { userApi } from '@/lib/api';
 
 // Course type definition
 interface Course {
@@ -41,17 +42,7 @@ export default function EnrolledCourses() {
                     return;
                 }
 
-                const response = await fetch('http://localhost:8001/api/courses/enrolled', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch enrolled courses');
-                }
-
-                const enrollmentsData = await response.json();
+                const enrollmentsData = await userApi.getEnrollments();
                 setEnrollments(enrollmentsData);
             } catch (error) {
                 console.error('Error fetching enrolled courses:', error);

@@ -50,7 +50,7 @@ export const getUser = async (): Promise<any> => {
         }
 
         // Make API call to get user data
-        const response = await fetch('http://localhost:8001/api/auth/user', {
+        const response = await fetch('http://localhost:8001/api/user/profile', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

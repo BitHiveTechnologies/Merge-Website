@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getAuthToken } from '@/lib/auth';
+import { userApi } from '@/lib/api';
 
 // Workshop type definition
 interface Workshop {
@@ -42,18 +43,9 @@ export default function RegisteredWorkshops() {
                     return;
                 }
 
-                const response = await fetch('http://localhost:8001/api/workshops/registrations', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch registered workshops');
-                }
-
-                const registrationsData = await response.json();
-                setRegistrations(registrationsData);
+                const registrationsData = await userApi.getRegistrations();
+                // Extract workshop registrations from the response
+                setRegistrations(registrationsData.workshops || []);
             } catch (error) {
                 console.error('Error fetching registered workshops:', error);
                 setError('Failed to load your registered workshops. Please try again later.');

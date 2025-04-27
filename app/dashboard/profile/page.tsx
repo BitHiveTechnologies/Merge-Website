@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { isAuthenticated, getUser } from '@/lib/auth';
+import { userApi } from '@/lib/api';
 
 export default function ProfilePage() {
     const router = useRouter();
@@ -128,7 +129,12 @@ export default function ProfilePage() {
                                                 <input
                                                     type="text"
                                                     value={userData.name || ''}
-                                                    readOnly
+                                                    onChange={(e) =>
+                                                        setUserData({
+                                                            ...userData,
+                                                            name: e.target.value,
+                                                        })
+                                                    }
                                                     className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
                                                     data-oid="rolwosa"
                                                 />
@@ -143,7 +149,12 @@ export default function ProfilePage() {
                                                 <input
                                                     type="email"
                                                     value={userData.email || ''}
-                                                    readOnly
+                                                    onChange={(e) =>
+                                                        setUserData({
+                                                            ...userData,
+                                                            email: e.target.value,
+                                                        })
+                                                    }
                                                     className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
                                                     data-oid="p6d16oh"
                                                 />
@@ -169,6 +180,31 @@ export default function ProfilePage() {
                                                     data-oid="9tzw5.m"
                                                 />
                                             </div>
+                                            <div className="mt-6" data-oid="pq0pd0b">
+                                                <button
+                                                    onClick={async () => {
+                                                        try {
+                                                            await userApi.updateProfile({
+                                                                name: userData.name,
+                                                                email: userData.email,
+                                                            });
+                                                            alert('Profile updated successfully!');
+                                                        } catch (error) {
+                                                            console.error(
+                                                                'Error updating profile:',
+                                                                error,
+                                                            );
+                                                            alert(
+                                                                'Failed to update profile. Please try again.',
+                                                            );
+                                                        }
+                                                    }}
+                                                    className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 rounded-md transition-colors"
+                                                    data-oid="4mxlqmq"
+                                                >
+                                                    Update Profile
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -182,7 +218,7 @@ export default function ProfilePage() {
                                         <div className="space-y-3" data-oid="0_6lx5x">
                                             <a
                                                 href="/dashboard/enrolled-courses"
-                                                className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors"
+                                                className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
                                                 data-oid="-fwb0kq"
                                             >
                                                 <svg
@@ -202,6 +238,56 @@ export default function ProfilePage() {
                                                     />
                                                 </svg>
                                                 <span data-oid=".euoc35">My Enrolled Courses</span>
+                                            </a>
+                                            <a
+                                                href="/dashboard/registered-workshops"
+                                                className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
+                                                data-oid="zr-bow_"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-5 w-5 text-purple-400"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    data-oid="47if5_6"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                                        data-oid=".wgqbb_"
+                                                    />
+                                                </svg>
+                                                <span data-oid="oofeif5">
+                                                    My Registered Workshops
+                                                </span>
+                                            </a>
+                                            <a
+                                                href="/dashboard/registered-hackathons"
+                                                className="flex items-center space-x-2 p-3 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors mb-3"
+                                                data-oid="bqrzm68"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-5 w-5 text-purple-400"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    data-oid="i:jeiwv"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                                                        data-oid="rf1rev8"
+                                                    />
+                                                </svg>
+                                                <span data-oid="7i0zwvh">
+                                                    My Registered Hackathons
+                                                </span>
                                             </a>
                                             <a
                                                 href="/courses"

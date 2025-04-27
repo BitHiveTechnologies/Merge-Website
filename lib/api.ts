@@ -60,4 +60,30 @@ export const hackathonApi = {
     },
 };
 
+// User API functions
+export const userApi = {
+    // Get user profile
+    getProfile: async () => {
+        return fetchWithAuth('/user/profile');
+    },
+
+    // Update user profile
+    updateProfile: async (profileData: { name: string; email: string }) => {
+        return fetchWithAuth('/user/profile', {
+            method: 'PUT',
+            body: JSON.stringify(profileData),
+        });
+    },
+
+    // Get user enrollments
+    getEnrollments: async () => {
+        return fetchWithAuth('/user/enrollments');
+    },
+
+    // Get user registrations (hackathons and workshops)
+    getRegistrations: async () => {
+        return fetchWithAuth('/user/registrations');
+    },
+};
+
 // Other API services can be added here
