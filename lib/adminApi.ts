@@ -71,6 +71,14 @@ export const adminApi = {
             return fetch(`${BACKEND_URL}/api/hackathons`).then((res) => res.json());
         },
 
+        // Create a new hackathon
+        create: async (hackathonData: any) => {
+            return adminFetchWithAuth(`/hackathons`, {
+                method: 'POST',
+                body: JSON.stringify(hackathonData),
+            });
+        },
+
         // Get all hackathon registrations
         getRegistrations: async (hackathonId?: string) => {
             const data = await adminFetchWithAuth(`/admin/hackathons/registrations`);
