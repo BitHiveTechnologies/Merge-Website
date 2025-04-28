@@ -14,7 +14,7 @@ interface WorkshopFormData {
     instructor: string;
     description: string;
     image: string;
-    price: number;
+    price?: number;
     isUpcoming: boolean;
     tags: string[];
 }
@@ -34,7 +34,7 @@ export default function NewWorkshopPage() {
         instructor: '',
         description: '',
         image: '',
-        price: 0,
+        price: undefined,
         isUpcoming: true,
         tags: [],
     });
@@ -51,9 +51,11 @@ export default function NewWorkshopPage() {
 
     const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
+        // If value is empty, set to undefined so it won't be sent to the backend
+        const parsedValue = value === '' ? undefined : parseFloat(value);
         setFormData({
             ...formData,
-            [name]: parseFloat(value) || 0,
+            [name]: parsedValue,
         });
     };
 
@@ -109,6 +111,13 @@ export default function NewWorkshopPage() {
                 ...formData,
                 date: isoDateTime,
             };
+
+            // Remove undefined values before sending to API
+            Object.keys(workshopData).forEach((key) => {
+                if (workshopData[key] === undefined) {
+                    delete workshopData[key];
+                }
+            });
 
             // Send POST request to create workshop
             await fetch(`${BACKEND_URL}/api/workshops`, {
@@ -205,7 +214,6 @@ export default function NewWorkshopPage() {
                                 name="title"
                                 value={formData.title}
                                 onChange={handleInputChange}
-                                required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 data-oid="65_8qvx"
                             />
@@ -293,7 +301,7 @@ export default function NewWorkshopPage() {
                                 className="block text-sm font-medium text-gray-300 mb-1"
                                 data-oid="jyrj8zd"
                             >
-                                Price*
+                                Price (leave empty for free)
                             </label>
                             <input
                                 type="number"
@@ -301,7 +309,6 @@ export default function NewWorkshopPage() {
                                 name="price"
                                 value={formData.price}
                                 onChange={handleNumberChange}
-                                required
                                 min="0"
                                 step="0.01"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
