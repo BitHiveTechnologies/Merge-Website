@@ -20,7 +20,7 @@ interface Workshop {
     date: string;
     location: string;
     description: string;
-    speaker?: string;
+    instructor?: string;
 }
 
 interface Hackathon {
@@ -432,7 +432,7 @@ export default function AdminDashboardPage() {
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
                                                                 data-oid="2dkcn0n"
                                                             >
-                                                                {workshop.speaker || 'N/A'}
+                                                                {workshop.instructor || 'N/A'}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm"

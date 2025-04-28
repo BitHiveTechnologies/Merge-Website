@@ -16,7 +16,7 @@ interface CourseRegistration {
         _id: string;
         title: string;
     };
-    enrolledAt: string;
+    enrollmentDate: string;
 }
 
 interface Course {
@@ -180,7 +180,9 @@ export default function CourseRegistrationsPage() {
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
                                             data-oid="8qjxc7-"
                                         >
-                                            {new Date(registration.enrolledAt).toLocaleDateString()}
+                                            {new Date(
+                                                registration.enrollmentDate,
+                                            ).toLocaleDateString()}
                                         </td>
                                     </tr>
                                 ))}

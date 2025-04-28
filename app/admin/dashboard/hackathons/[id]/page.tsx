@@ -19,7 +19,7 @@ interface HackathonRegistration {
     teamName: string;
     teamSize: number;
     track: string;
-    registeredAt: string;
+    registrationDate: string;
 }
 
 interface Hackathon {
@@ -233,7 +233,7 @@ export default function HackathonRegistrationsPage() {
                                             data-oid="bagn8ib"
                                         >
                                             {new Date(
-                                                registration.registeredAt,
+                                                registration.registrationDate,
                                             ).toLocaleDateString()}
                                         </td>
                                     </tr>

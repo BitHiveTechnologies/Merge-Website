@@ -16,7 +16,7 @@ interface WorkshopRegistration {
         _id: string;
         title: string;
     };
-    registeredAt: string;
+    registrationDate: string;
 }
 
 interface Workshop {
@@ -186,7 +186,7 @@ export default function WorkshopRegistrationsPage() {
                                             data-oid="cb75w71"
                                         >
                                             {new Date(
-                                                registration.registeredAt,
+                                                registration.registrationDate,
                                             ).toLocaleDateString()}
                                         </td>
                                     </tr>
