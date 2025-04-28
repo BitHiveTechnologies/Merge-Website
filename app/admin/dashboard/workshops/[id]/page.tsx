@@ -98,11 +98,11 @@ export default function WorkshopRegistrationsPage() {
             <div className="flex justify-between items-center mb-6" data-oid="cp_blxx">
                 <div data-oid="6_7loy-">
                     <Link
-                        href="/admin/dashboard/workshops"
+                        href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 transition-colors mb-2 inline-block"
                         data-oid="niffn.e"
                     >
-                        ← Back to Workshops
+                        ← Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold" data-oid="2qe541s">
                         {workshop ? workshop.title : 'Workshop'} Registrations

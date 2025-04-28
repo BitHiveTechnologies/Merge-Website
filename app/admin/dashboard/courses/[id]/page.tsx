@@ -98,11 +98,11 @@ export default function CourseRegistrationsPage() {
             <div className="flex justify-between items-center mb-6" data-oid="vlzhmwe">
                 <div data-oid="fd_j_e6">
                     <Link
-                        href="/admin/dashboard/courses"
+                        href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 transition-colors mb-2 inline-block"
                         data-oid="8cvkv-6"
                     >
-                        ← Back to Courses
+                        ← Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold" data-oid="jdqalhe">
                         {course ? course.title : 'Course'} Registrations

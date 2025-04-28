@@ -935,7 +935,7 @@ export default function Page() {
                 <div className="max-w-6xl mx-auto" data-oid="fi.d9op">
                     <div className="grid md:grid-cols-4 gap-8 mb-12" data-oid="q_-2cqz">
                         <div data-oid="b5220gh">
-                            <Link href="/" data-oid="6n3.dj6">
+                            <Link href="/admin/login" data-oid="6n3.dj6">
                                 <Image
                                     src="/images/Merge.png"
                                     alt="Merge logo"

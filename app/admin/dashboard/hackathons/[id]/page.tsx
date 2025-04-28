@@ -104,11 +104,11 @@ export default function HackathonRegistrationsPage() {
             <div className="flex justify-between items-center mb-6" data-oid="01bjm-z">
                 <div data-oid="p0z82rd">
                     <Link
-                        href="/admin/dashboard/hackathons"
+                        href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 transition-colors mb-2 inline-block"
                         data-oid="094td.6"
                     >
-                        ← Back to Hackathons
+                        ← Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold" data-oid="472wxxh">
                         {hackathon ? hackathon.title : 'Hackathon'} Registrations
