@@ -1,11 +1,72 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { adminApi } from '@/lib/adminApi';
+
+interface Course {
+    _id: string;
+    title: string;
+    level: string;
+    description: string;
+    price?: number;
+    instructor?: string;
+}
+
+interface Workshop {
+    _id: string;
+    title: string;
+    date: string;
+    location: string;
+    description: string;
+    speaker?: string;
+}
+
+interface Hackathon {
+    _id: string;
+    title: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    description: string;
+    prizes?: string[];
+}
 
 export default function AdminDashboardPage() {
     const [activeTab, setActiveTab] = useState<'courses' | 'workshops' | 'hackathons'>('courses');
+    const [courses, setCourses] = useState<Course[]>([]);
+    const [workshops, setWorkshops] = useState<Workshop[]>([]);
+    const [hackathons, setHackathons] = useState<Hackathon[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            setError(null);
+
+            try {
+                if (activeTab === 'courses') {
+                    const data = await adminApi.courses.getAll();
+                    setCourses(data);
+                } else if (activeTab === 'workshops') {
+                    const data = await adminApi.workshops.getAll();
+                    setWorkshops(data);
+                } else if (activeTab === 'hackathons') {
+                    const data = await adminApi.hackathons.getAll();
+                    setHackathons(data);
+                }
+            } catch (err: any) {
+                setError(err.message || `Failed to fetch ${activeTab}`);
+                console.error(`Error fetching ${activeTab}:`, err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [activeTab]);
 
     return (
         <div data-oid="b:xfv:s">
@@ -63,237 +124,481 @@ export default function AdminDashboardPage() {
                 className="bg-gray-800 rounded-b-lg p-6 border-x border-b border-gray-700"
                 data-oid="t-7pkam"
             >
-                {activeTab === 'courses' && (
-                    <div data-oid="mrpqz3f">
-                        <h2
-                            className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="6zfh0t."
-                        >
-                            Manage Courses
-                        </h2>
-                        <p className="text-gray-300 mb-6" data-oid="merajzu">
-                            View and manage all courses and their registrations. Add new courses,
-                            update existing ones, and track student enrollments.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mt-8" data-oid="4zjyh7s">
-                            <Link
-                                href="/admin/dashboard/courses"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="qskl6nh"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="gh-hg5n"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="ywt-l4f"
-                                    >
-                                        <path
-                                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
-                                            data-oid="zevgbu3"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="5iq2rse"
-                                >
-                                    View All Courses
-                                </span>
-                            </Link>
-                            <Link
-                                href="/admin/dashboard/courses/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="21irvpf"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="45l.mzx"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid=":oioepu"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="dq_bl85"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid=".zy-poj"
-                                >
-                                    Add New Course
-                                </span>
-                            </Link>
-                        </div>
+                {loading ? (
+                    <div
+                        className="flex justify-center items-center min-h-[50vh]"
+                        data-oid="11cifj4"
+                    >
+                        <div
+                            className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
+                            data-oid="vvnew9x"
+                        ></div>
                     </div>
-                )}
+                ) : error ? (
+                    <div
+                        className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
+                        data-oid="dul392v"
+                    >
+                        <p className="text-red-200" data-oid="_vboa8q">
+                            {error}
+                        </p>
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
+                            data-oid="wnspjot"
+                        >
+                            Try Again
+                        </button>
+                    </div>
+                ) : (
+                    <>
+                        {activeTab === 'courses' && (
+                            <div data-oid="qadf9bx">
+                                <div
+                                    className="flex justify-between items-center mb-6"
+                                    data-oid="ei1kiy_"
+                                >
+                                    <h2
+                                        className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                        data-oid="t3o:g_u"
+                                    >
+                                        Manage Courses
+                                    </h2>
+                                    <Link
+                                        href="/admin/dashboard/courses/new"
+                                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
+                                        data-oid="sg1cj:o"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-1"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            data-oid=".v1ji2e"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                                clipRule="evenodd"
+                                                data-oid="p384ld0"
+                                            />
+                                        </svg>
+                                        Add New Course
+                                    </Link>
+                                </div>
 
-                {activeTab === 'workshops' && (
-                    <div data-oid="dx:.hnu">
-                        <h2
-                            className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="es5-mf1"
-                        >
-                            Manage Workshops
-                        </h2>
-                        <p className="text-gray-300 mb-6" data-oid="de82sa.">
-                            View and manage all workshops and their registrations. Create new
-                            workshops, update details, and track participant registrations.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mt-8" data-oid="7i1iv:p">
-                            <Link
-                                href="/admin/dashboard/workshops"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="b.:uzql"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="q6diygn"
+                                <div
+                                    className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+                                    data-oid="jz.ybcy"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="14jugr2"
-                                    >
-                                        <path
-                                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                                            data-oid="52tol1k"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="ef500qz"
-                                >
-                                    View All Workshops
-                                </span>
-                            </Link>
-                            <Link
-                                href="/admin/dashboard/workshops/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="0q2y6ei"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="jil-iih"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="-dw7u5d"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="atv0xxj"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="-__qvdg"
-                                >
-                                    Add New Workshop
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
-                )}
+                                    <div className="overflow-x-auto" data-oid="t80p07a">
+                                        <table
+                                            className="min-w-full divide-y divide-gray-700"
+                                            data-oid="3upa17a"
+                                        >
+                                            <thead className="bg-gray-900" data-oid="5.ap62v">
+                                                <tr data-oid="hi6o71_">
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="xe_hfcy"
+                                                    >
+                                                        Title
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="2jiqs4q"
+                                                    >
+                                                        Level
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="cb0um55"
+                                                    >
+                                                        Instructor
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="hfg7lrh"
+                                                    >
+                                                        Price
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="3z8z3_8"
+                                                    >
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody
+                                                className="bg-gray-800 divide-y divide-gray-700"
+                                                data-oid="iqbqs:v"
+                                            >
+                                                {courses.length === 0 ? (
+                                                    <tr data-oid="6mu2hf2">
+                                                        <td
+                                                            colSpan={5}
+                                                            className="px-6 py-4 text-center text-gray-400"
+                                                            data-oid="wqg:cd2"
+                                                        >
+                                                            No courses found
+                                                        </td>
+                                                    </tr>
+                                                ) : (
+                                                    courses.map((course) => (
+                                                        <tr
+                                                            key={course._id}
+                                                            className="hover:bg-gray-750"
+                                                            data-oid="x7hnkis"
+                                                        >
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                                                data-oid="9au2zmy"
+                                                            >
+                                                                {course.title}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="05q39_t"
+                                                            >
+                                                                {course.level}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="8o_x_x-"
+                                                            >
+                                                                {course.instructor || 'N/A'}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="thmz9mg"
+                                                            >
+                                                                {course.price
+                                                                    ? `${course.price}`
+                                                                    : 'Free'}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                data-oid="b1.dz1b"
+                                                            >
+                                                                <Link
+                                                                    href={`/admin/dashboard/courses/${course._id}`}
+                                                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                                                    data-oid="xsvpie6"
+                                                                >
+                                                                    View Registrations
+                                                                </Link>
+                                                            </td>
+                                                        </tr>
+                                                    ))
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
-                {activeTab === 'hackathons' && (
-                    <div data-oid="l1o78ny">
-                        <h2
-                            className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="9bl:e_j"
-                        >
-                            Manage Hackathons
-                        </h2>
-                        <p className="text-gray-300 mb-6" data-oid="y6rgmrs">
-                            View and manage all hackathons and their registrations. Create new
-                            hackathons, update details, and track team registrations.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mt-8" data-oid="jnzf6_v">
-                            <Link
-                                href="/admin/dashboard/hackathons"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="1i-44bj"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="3s:fw4g"
+                        {activeTab === 'workshops' && (
+                            <div data-oid="puxcrvd">
+                                <div
+                                    className="flex justify-between items-center mb-6"
+                                    data-oid="krfh_3z"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="4v6_4ro"
+                                    <h2
+                                        className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                        data-oid="eczysw8"
                                     >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                                            clipRule="evenodd"
-                                            data-oid="y2iz1ov"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="4f6-k0r"
-                                >
-                                    View All Hackathons
-                                </span>
-                            </Link>
-                            <Link
-                                href="/admin/dashboard/hackathons/new"
-                                className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 group"
-                                data-oid="38-73gn"
-                            >
-                                <span
-                                    className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                    data-oid="vc8n5mo"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        data-oid="3y9wh0u"
+                                        Manage Workshops
+                                    </h2>
+                                    <Link
+                                        href="/admin/dashboard/workshops/new"
+                                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
+                                        data-oid="mji9107"
                                     >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                            clipRule="evenodd"
-                                            data-oid="zd2ern1"
-                                        />
-                                    </svg>
-                                </span>
-                                <span
-                                    className="group-hover:text-white transition-colors duration-300"
-                                    data-oid="tttymmt"
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-1"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            data-oid="pmcnv_o"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                                clipRule="evenodd"
+                                                data-oid="01s29d3"
+                                            />
+                                        </svg>
+                                        Add New Workshop
+                                    </Link>
+                                </div>
+
+                                <div
+                                    className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+                                    data-oid="h-r7c2e"
                                 >
-                                    Add New Hackathon
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
+                                    <div className="overflow-x-auto" data-oid="raa11yk">
+                                        <table
+                                            className="min-w-full divide-y divide-gray-700"
+                                            data-oid="2kvwbip"
+                                        >
+                                            <thead className="bg-gray-900" data-oid="dwh5zip">
+                                                <tr data-oid="ctqssys">
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="eyxcin8"
+                                                    >
+                                                        Title
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="w5igil9"
+                                                    >
+                                                        Date
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="yb2y9co"
+                                                    >
+                                                        Location
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="fjy7bhk"
+                                                    >
+                                                        Speaker
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="gpk.-0q"
+                                                    >
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody
+                                                className="bg-gray-800 divide-y divide-gray-700"
+                                                data-oid="qqw-4q3"
+                                            >
+                                                {workshops.length === 0 ? (
+                                                    <tr data-oid="qt4i4hl">
+                                                        <td
+                                                            colSpan={5}
+                                                            className="px-6 py-4 text-center text-gray-400"
+                                                            data-oid="xt_arfv"
+                                                        >
+                                                            No workshops found
+                                                        </td>
+                                                    </tr>
+                                                ) : (
+                                                    workshops.map((workshop) => (
+                                                        <tr
+                                                            key={workshop._id}
+                                                            className="hover:bg-gray-750"
+                                                            data-oid="id3p4i3"
+                                                        >
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                                                data-oid="a.arcv3"
+                                                            >
+                                                                {workshop.title}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="ub1zfwd"
+                                                            >
+                                                                {new Date(
+                                                                    workshop.date,
+                                                                ).toLocaleDateString()}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid=".20n1.n"
+                                                            >
+                                                                {workshop.location}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="2dkcn0n"
+                                                            >
+                                                                {workshop.speaker || 'N/A'}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                data-oid="eky2oy8"
+                                                            >
+                                                                <Link
+                                                                    href={`/admin/dashboard/workshops/${workshop._id}`}
+                                                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                                                    data-oid="pgi7r9s"
+                                                                >
+                                                                    View Registrations
+                                                                </Link>
+                                                            </td>
+                                                        </tr>
+                                                    ))
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeTab === 'hackathons' && (
+                            <div data-oid="70dvn:5">
+                                <div
+                                    className="flex justify-between items-center mb-6"
+                                    data-oid="5ff:96k"
+                                >
+                                    <h2
+                                        className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                        data-oid="tbocbd4"
+                                    >
+                                        Manage Hackathons
+                                    </h2>
+                                    <Link
+                                        href="/admin/dashboard/hackathons/new"
+                                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
+                                        data-oid="7dz8:qi"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-1"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            data-oid="__qm8.a"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                                clipRule="evenodd"
+                                                data-oid="z-bn:bx"
+                                            />
+                                        </svg>
+                                        Add New Hackathon
+                                    </Link>
+                                </div>
+
+                                <div
+                                    className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+                                    data-oid="0uiwwxl"
+                                >
+                                    <div className="overflow-x-auto" data-oid="pwfnw8b">
+                                        <table
+                                            className="min-w-full divide-y divide-gray-700"
+                                            data-oid="xvt60.o"
+                                        >
+                                            <thead className="bg-gray-900" data-oid="t102rwq">
+                                                <tr data-oid="5cqr-4u">
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="v9y2yf4"
+                                                    >
+                                                        Title
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="_yu-x_r"
+                                                    >
+                                                        Dates
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="kr2hqc3"
+                                                    >
+                                                        Location
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="6.ddh_q"
+                                                    >
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody
+                                                className="bg-gray-800 divide-y divide-gray-700"
+                                                data-oid="_4jxlxv"
+                                            >
+                                                {hackathons.length === 0 ? (
+                                                    <tr data-oid="jqfo-tf">
+                                                        <td
+                                                            colSpan={4}
+                                                            className="px-6 py-4 text-center text-gray-400"
+                                                            data-oid="93-wuqp"
+                                                        >
+                                                            No hackathons found
+                                                        </td>
+                                                    </tr>
+                                                ) : (
+                                                    hackathons.map((hackathon) => (
+                                                        <tr
+                                                            key={hackathon._id}
+                                                            className="hover:bg-gray-750"
+                                                            data-oid="rtr1zqk"
+                                                        >
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                                                data-oid="9k7cdmb"
+                                                            >
+                                                                {hackathon.title}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid=":hy4wgi"
+                                                            >
+                                                                {new Date(
+                                                                    hackathon.startDate,
+                                                                ).toLocaleDateString()}{' '}
+                                                                -{' '}
+                                                                {new Date(
+                                                                    hackathon.endDate,
+                                                                ).toLocaleDateString()}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="y.3_7do"
+                                                            >
+                                                                {hackathon.location}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                data-oid="i-joq-y"
+                                                            >
+                                                                <Link
+                                                                    href={`/admin/dashboard/hackathons/${hackathon._id}`}
+                                                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                                                    data-oid="zf1pfkq"
+                                                                >
+                                                                    View Registrations
+                                                                </Link>
+                                                            </td>
+                                                        </tr>
+                                                    ))
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
         </div>
