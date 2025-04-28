@@ -23,6 +23,15 @@ interface Workshop {
     instructor?: string;
 }
 
+interface PastWorkshop {
+    _id: string;
+    institution: string;
+    date: string;
+    topic: string;
+    highlights: string[];
+    mediaLinks: string[];
+}
+
 interface Hackathon {
     _id: string;
     title: string;
@@ -34,9 +43,12 @@ interface Hackathon {
 }
 
 export default function AdminDashboardPage() {
-    const [activeTab, setActiveTab] = useState<'courses' | 'workshops' | 'hackathons'>('courses');
+    const [activeTab, setActiveTab] = useState<
+        'courses' | 'workshops' | 'pastWorkshops' | 'hackathons'
+    >('courses');
     const [courses, setCourses] = useState<Course[]>([]);
     const [workshops, setWorkshops] = useState<Workshop[]>([]);
+    const [pastWorkshops, setPastWorkshops] = useState<PastWorkshop[]>([]);
     const [hackathons, setHackathons] = useState<Hackathon[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -53,6 +65,14 @@ export default function AdminDashboardPage() {
                 } else if (activeTab === 'workshops') {
                     const data = await adminApi.workshops.getAll();
                     setWorkshops(data);
+                } else if (activeTab === 'pastWorkshops') {
+                    // Fetch past workshops from the API
+                    const response = await fetch('/api/workshops/past');
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch past workshops');
+                    }
+                    const data = await response.json();
+                    setPastWorkshops(data);
                 } else if (activeTab === 'hackathons') {
                     const data = await adminApi.hackathons.getAll();
                     setHackathons(data);
@@ -103,6 +123,18 @@ export default function AdminDashboardPage() {
                         data-oid="qpczyvt"
                     >
                         Workshops
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('pastWorkshops')}
+                        className={cn(
+                            'px-6 py-3 font-medium text-lg',
+                            activeTab === 'pastWorkshops'
+                                ? 'text-purple-400 border-b-2 border-purple-400'
+                                : 'text-gray-400 hover:text-gray-300',
+                        )}
+                        data-oid="wu3oetp"
+                    >
+                        Past Workshops
                     </button>
                     <button
                         onClick={() => setActiveTab('hackathons')}
@@ -444,6 +476,195 @@ export default function AdminDashboardPage() {
                                                                     data-oid="pgi7r9s"
                                                                 >
                                                                     View Registrations
+                                                                </Link>
+                                                            </td>
+                                                        </tr>
+                                                    ))
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {activeTab === 'pastWorkshops' && (
+                            <div data-oid="uljt1.z">
+                                <div
+                                    className="flex justify-between items-center mb-6"
+                                    data-oid="qjv5.1m"
+                                >
+                                    <h2
+                                        className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                        data-oid="6t74gz1"
+                                    >
+                                        Manage Past Workshops
+                                    </h2>
+                                    <Link
+                                        href="/admin/dashboard/past-workshops/new"
+                                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
+                                        data-oid="iozi-2."
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4 mr-1"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            data-oid="br6odtr"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                                clipRule="evenodd"
+                                                data-oid="coqf6q."
+                                            />
+                                        </svg>
+                                        Add New Past Workshop
+                                    </Link>
+                                </div>
+
+                                <div
+                                    className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+                                    data-oid="l5_fs0r"
+                                >
+                                    <div className="overflow-x-auto" data-oid="zwdkffs">
+                                        <table
+                                            className="min-w-full divide-y divide-gray-700"
+                                            data-oid="ek--:18"
+                                        >
+                                            <thead className="bg-gray-900" data-oid="2.ily36">
+                                                <tr data-oid="nk42x:b">
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="92n50z_"
+                                                    >
+                                                        Institution
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="yrx-el_"
+                                                    >
+                                                        Date
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="q5.._yr"
+                                                    >
+                                                        Topic
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="u-xytq0"
+                                                    >
+                                                        Highlights
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="fn0n3zp"
+                                                    >
+                                                        Media
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                                        data-oid="9174_4g"
+                                                    >
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody
+                                                className="bg-gray-800 divide-y divide-gray-700"
+                                                data-oid="39k8b8f"
+                                            >
+                                                {pastWorkshops.length === 0 ? (
+                                                    <tr data-oid="-4un482">
+                                                        <td
+                                                            colSpan={6}
+                                                            className="px-6 py-4 text-center text-gray-400"
+                                                            data-oid="fp0drrr"
+                                                        >
+                                                            No past workshops found
+                                                        </td>
+                                                    </tr>
+                                                ) : (
+                                                    pastWorkshops.map((workshop) => (
+                                                        <tr
+                                                            key={workshop._id}
+                                                            className="hover:bg-gray-750"
+                                                            data-oid="cryhygz"
+                                                        >
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                                                data-oid="n-5i0dq"
+                                                            >
+                                                                {workshop.institution}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="-r.a63:"
+                                                            >
+                                                                {new Date(
+                                                                    workshop.date,
+                                                                ).toLocaleDateString()}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                                                data-oid="wb0r0eh"
+                                                            >
+                                                                {workshop.topic}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 text-sm text-gray-300"
+                                                                data-oid="k3pcrau"
+                                                            >
+                                                                <ul
+                                                                    className="list-disc pl-4"
+                                                                    data-oid="90hfhsu"
+                                                                >
+                                                                    {workshop.highlights.map(
+                                                                        (highlight, index) => (
+                                                                            <li
+                                                                                key={index}
+                                                                                data-oid="9__xoo8"
+                                                                            >
+                                                                                {highlight}
+                                                                            </li>
+                                                                        ),
+                                                                    )}
+                                                                </ul>
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 text-sm text-gray-300"
+                                                                data-oid="4ag40jc"
+                                                            >
+                                                                {workshop.mediaLinks.length > 0 ? (
+                                                                    <span
+                                                                        className="text-purple-400"
+                                                                        data-oid="p685qs2"
+                                                                    >
+                                                                        {workshop.mediaLinks.length}{' '}
+                                                                        media items
+                                                                    </span>
+                                                                ) : (
+                                                                    'No media'
+                                                                )}
+                                                            </td>
+                                                            <td
+                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                data-oid="8sh0uu3"
+                                                            >
+                                                                <Link
+                                                                    href={`/admin/dashboard/past-workshops/${workshop._id}`}
+                                                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                                                    data-oid="llhtzb8"
+                                                                >
+                                                                    Edit
                                                                 </Link>
                                                             </td>
                                                         </tr>
