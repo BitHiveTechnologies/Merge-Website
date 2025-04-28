@@ -17,55 +17,55 @@ export default function RegisteredWorkshopsPage() {
     }, [router]);
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="hj5hegg">
-            <Navbar data-oid="o-qq95t" />
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="t82y7.-">
+            <Navbar data-oid="ach.ydc" />
 
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-16 pb-20 px-6 md:px-12 relative overflow-hidden"
-                data-oid="tlfk7sy"
+                data-oid="_83qwf6"
             >
                 {/* Background elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="lnz7s9c"
+                    data-oid="vok5:20"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="rmczcnu"
+                    data-oid="3p04wf7"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10" data-oid="whtox48">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid="0tl7ju3">
+                <div className="max-w-6xl mx-auto relative z-10" data-oid="heu4vse">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4" data-oid="egcdgx6">
                         Your{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="mxbcd9p"
+                            data-oid="zi7n1zq"
                         >
                             Workshops
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="vjbjuto">
+                    <p className="text-xl text-gray-300 max-w-3xl" data-oid="011vw4_">
                         Track your registered workshops and upcoming sessions.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6"
-                        data-oid="c.5x73d"
+                        data-oid=":tm1_e3"
                     ></div>
                 </div>
             </div>
 
             {/* Registered Workshops Component */}
-            <RegisteredWorkshops data-oid="i-o.3d2" />
+            <RegisteredWorkshops data-oid="3zpog7v" />
 
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="5hm5ozz"
+                data-oid="rpf0qgy"
             >
-                <div className="max-w-6xl mx-auto" data-oid="_wl_0yr">
-                    <div className="text-center text-gray-500" data-oid="qek0-u2">
-                        <p data-oid="kja0tfv">
+                <div className="max-w-6xl mx-auto" data-oid="4sg-fcq">
+                    <div className="text-center text-gray-500" data-oid="hmw9zz_">
+                        <p data-oid="cb7k3kh">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>
