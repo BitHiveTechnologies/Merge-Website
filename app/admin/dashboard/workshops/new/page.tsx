@@ -14,6 +14,7 @@ interface WorkshopFormData {
     instructor: string;
     description: string;
     image: string;
+    price: number;
     isUpcoming: boolean;
     tags: string[];
 }
@@ -33,6 +34,7 @@ export default function NewWorkshopPage() {
         instructor: '',
         description: '',
         image: '',
+        price: 0,
         isUpcoming: true,
         tags: [],
     });
@@ -44,6 +46,14 @@ export default function NewWorkshopPage() {
         setFormData({
             ...formData,
             [name]: value,
+        });
+    };
+
+    const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: parseFloat(value) || 0,
         });
     };
 
@@ -275,6 +285,27 @@ export default function NewWorkshopPage() {
                                 placeholder="e.g., Online, Conference Room A, etc."
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 data-oid="a2xt6jh"
+                            />
+                        </div>
+                        <div data-oid="price-field">
+                            <label
+                                htmlFor="price"
+                                className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="jyrj8zd"
+                            >
+                                Price*
+                            </label>
+                            <input
+                                type="number"
+                                id="price"
+                                name="price"
+                                value={formData.price}
+                                onChange={handleNumberChange}
+                                required
+                                min="0"
+                                step="0.01"
+                                className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="9thd8ox"
                             />
                         </div>
                         <div data-oid="zv7ay:z">
