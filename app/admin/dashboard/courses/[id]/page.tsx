@@ -99,10 +99,13 @@ export default function CourseRegistrationsPage() {
                 <div data-oid="fd_j_e6">
                     <Link
                         href="/admin/dashboard"
-                        className="text-purple-400 hover:text-purple-300 transition-colors mb-2 inline-block"
+                        className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
                         data-oid="8cvkv-6"
                     >
-                        ← Back to Dashboard
+                        <span className="mr-1" data-oid="ycqttty">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold" data-oid="jdqalhe">
                         {course ? course.title : 'Course'} Registrations

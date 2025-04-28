@@ -105,10 +105,13 @@ export default function HackathonRegistrationsPage() {
                 <div data-oid="p0z82rd">
                     <Link
                         href="/admin/dashboard"
-                        className="text-purple-400 hover:text-purple-300 transition-colors mb-2 inline-block"
+                        className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
                         data-oid="094td.6"
                     >
-                        ← Back to Dashboard
+                        <span className="mr-1" data-oid="en21xay">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
                     </Link>
                     <h1 className="text-3xl font-bold" data-oid="472wxxh">
                         {hackathon ? hackathon.title : 'Hackathon'} Registrations
