@@ -13,6 +13,14 @@ export const adminApi = {
             return fetch(`${BACKEND_URL}/api/courses`).then((res) => res.json());
         },
 
+        // Create a new course
+        create: async (courseData: any) => {
+            return adminFetchWithAuth(`/courses`, {
+                method: 'POST',
+                body: JSON.stringify(courseData),
+            });
+        },
+
         // Get all course registrations
         getRegistrations: async (courseId?: string) => {
             const data = await adminFetchWithAuth(`/admin/courses/registrations`);
