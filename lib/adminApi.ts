@@ -42,6 +42,14 @@ export const adminApi = {
             return fetch(`${BACKEND_URL}/api/workshops`).then((res) => res.json());
         },
 
+        // Create a new workshop
+        create: async (workshopData: any) => {
+            return adminFetchWithAuth(`/workshops`, {
+                method: 'POST',
+                body: JSON.stringify(workshopData),
+            });
+        },
+
         // Get all workshop registrations
         getRegistrations: async (workshopId?: string) => {
             const data = await adminFetchWithAuth(`/admin/workshops/registrations`);
