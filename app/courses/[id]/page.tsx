@@ -330,7 +330,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                             itemId={course._id}
                                             title={course.title}
                                             amount={Number(course.price)}
-                                            onSuccessRedirect="/courses"
+                                            onSuccessRedirect={`/courses/${course._id}`}
                                         />
 }
                                     </button>
