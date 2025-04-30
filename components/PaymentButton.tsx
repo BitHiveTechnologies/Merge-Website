@@ -18,6 +18,11 @@ interface PaymentButtonProps {
     onSuccessRedirect: string; // e.g. '/my-courses'
 }
 
+interface UserProfile {
+    name:  string;
+    email: string;
+  }
+
 export default function PaymentButton({
     itemId,
     title,
@@ -25,6 +30,7 @@ export default function PaymentButton({
     onSuccessRedirect,
 }: PaymentButtonProps) {
     const [loading, setLoading] = useState(false);
+    const [user, setUser] = useState<UserProfile | null>(null);
     const router = useRouter();
 
     useEffect(() => {
@@ -35,6 +41,25 @@ export default function PaymentButton({
             document.body.appendChild(s);
         }
     }, []);
+
+    useEffect(() => {
+        const token = localStorage.getItem('authToken');
+        if (!token) return;
+    
+        fetch(`${BACKEND_URL}/api/user/profile`, {
+          headers: { 'Authorization': `Bearer ${token}` }
+        })
+          .then(res => {
+            if (!res.ok) throw new Error('Not authenticated');
+            return res.json();
+          })
+          .then((data: { name: string; email: string }) => {
+            setUser({ name: data.name, email: data.email });
+          })
+          .catch(() => {
+            // not handling errors here
+          });
+      }, []);
 
     const handleClick = async () => {
         const token = localStorage.getItem('authToken');
@@ -87,9 +112,10 @@ export default function PaymentButton({
                     }
                 },
                 prefill: {
-                    name: (window as any).USER_NAME || '',
-                    email: (window as any).USER_EMAIL || '',
-                },
+                    name:    user?.name,
+                    email:   user?.email,
+                    contact: ''   
+                  },
                 theme: { color: '#F37254' },
             };
             new window.Razorpay(options).open();
@@ -112,7 +138,7 @@ export default function PaymentButton({
                 onClick={handleClick}
                 disabled={loading}
             >
-                {loading ? 'Processing…' : `Pay ₹${amount}`}
+                {loading ? 'Processing…' : `Buy Now`}
             </button>
         </>
     );
