@@ -12,16 +12,16 @@ declare global {
 }
 
 interface PaymentButtonProps {
-    itemId: string;            // courseId or workshopId
-    title: string;             // course/workshop title
-    amount: number;            // price in ₹
+    itemId: string; // courseId or workshopId
+    title: string; // course/workshop title
+    amount: number; // price in ₹
     onSuccessRedirect: string; // e.g. '/my-courses'
 }
 
 interface UserProfile {
-    name:  string;
+    name: string;
     email: string;
-  }
+}
 
 export default function PaymentButton({
     itemId,
@@ -45,21 +45,21 @@ export default function PaymentButton({
     useEffect(() => {
         const token = localStorage.getItem('authToken');
         if (!token) return;
-    
+
         fetch(`${BACKEND_URL}/api/user/profile`, {
-          headers: { 'Authorization': `Bearer ${token}` }
+            headers: { Authorization: `Bearer ${token}` },
         })
-          .then(res => {
-            if (!res.ok) throw new Error('Not authenticated');
-            return res.json();
-          })
-          .then((data: { name: string; email: string }) => {
-            setUser({ name: data.name, email: data.email });
-          })
-          .catch(() => {
-            // not handling errors here
-          });
-      }, []);
+            .then((res) => {
+                if (!res.ok) throw new Error('Not authenticated');
+                return res.json();
+            })
+            .then((data: { name: string; email: string }) => {
+                setUser({ name: data.name, email: data.email });
+            })
+            .catch(() => {
+                // not handling errors here
+            });
+    }, []);
 
     const handleClick = async () => {
         const token = localStorage.getItem('authToken');
@@ -77,7 +77,7 @@ export default function PaymentButton({
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify({ amount, receipt: itemId }),
             });
@@ -98,7 +98,7 @@ export default function PaymentButton({
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${token}`
+                            Authorization: `Bearer ${token}`,
                         },
                         body: JSON.stringify({
                             ...response,
@@ -112,14 +112,13 @@ export default function PaymentButton({
                     }
                 },
                 prefill: {
-                    name:    user?.name,
-                    email:   user?.email,
-                    contact: ''   
-                  },
+                    name: user?.name,
+                    email: user?.email,
+                    contact: '',
+                },
                 theme: { color: '#F37254' },
             };
             new window.Razorpay(options).open();
-
         } catch (err) {
             console.error(err);
             alert((err as Error).message || 'Payment initiation failed');
@@ -133,11 +132,10 @@ export default function PaymentButton({
             <Script
                 src="https://checkout.razorpay.com/v1/checkout.js"
                 strategy="afterInteractive"
+                data-oid="n9re7i8"
             />
-            <button
-                onClick={handleClick}
-                disabled={loading}
-            >
+
+            <button onClick={handleClick} disabled={loading} data-oid="9emuv59">
                 {loading ? 'Processing…' : `Buy Now`}
             </button>
         </>

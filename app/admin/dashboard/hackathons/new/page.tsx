@@ -242,42 +242,62 @@ export default function NewHackathonPage() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-center mb-6">
-                <div>
+        <div className="max-w-4xl mx-auto" data-oid=":2xcqc7">
+            <div className="flex justify-between items-center mb-6" data-oid="s:_ef.w">
+                <div data-oid="5fmupmr">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
+                        data-oid="g40s:a5"
                     >
-                        <span className="mr-1">←</span> Back to Dashboard
+                        <span className="mr-1" data-oid="68nmieq">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold mt-4">Add New Hackathon</h1>
+                    <h1 className="text-3xl font-bold mt-4" data-oid="ok.t_c6">
+                        Add New Hackathon
+                    </h1>
                 </div>
             </div>
 
             {error && (
-                <div className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6">
-                    <p className="text-red-200">{error}</p>
+                <div
+                    className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
+                    data-oid="::7ok:9"
+                >
+                    <p className="text-red-200" data-oid="bvz3_ti">
+                        {error}
+                    </p>
                 </div>
             )}
 
             {success && (
-                <div className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6">
-                    <p className="text-green-200">{success}</p>
+                <div
+                    className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6"
+                    data-oid="-79wyro"
+                >
+                    <p className="text-green-200" data-oid="o19xckt">
+                        {success}
+                    </p>
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" data-oid="20flvx6">
                 {/* Basic Information */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="0rgl.9x"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="28v4q4s">
                         Basic Information
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="xwsr-h4">
+                        <div data-oid="eq1hcqf">
                             <label
                                 htmlFor="title"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="vzge_mf"
                             >
                                 Hackathon Title*
                             </label>
@@ -289,12 +309,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="loi8932"
                             />
                         </div>
-                        <div>
+                        <div data-oid="1:766o:">
                             <label
                                 htmlFor="organizer"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="os9f7k8"
                             >
                                 Organizer*
                             </label>
@@ -306,12 +328,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="gsv4712"
                             />
                         </div>
-                        <div>
+                        <div data-oid="6g1x1t:">
                             <label
                                 htmlFor="startDate"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="zwwouq:"
                             >
                                 Start Date*
                             </label>
@@ -323,12 +347,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="juvfbge"
                             />
                         </div>
-                        <div>
+                        <div data-oid="fwh-th5">
                             <label
                                 htmlFor="startTime"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="b1:1pik"
                             >
                                 Start Time*
                             </label>
@@ -340,12 +366,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="b-8ao2p"
                             />
                         </div>
-                        <div>
+                        <div data-oid="2m_nv_6">
                             <label
                                 htmlFor="endDate"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="ax4x4ce"
                             >
                                 End Date*
                             </label>
@@ -357,12 +385,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="-0yqdl2"
                             />
                         </div>
-                        <div>
+                        <div data-oid="g2sv31a">
                             <label
                                 htmlFor="endTime"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="4nmw.j3"
                             >
                                 End Time*
                             </label>
@@ -374,12 +404,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="r38rf:k"
                             />
                         </div>
-                        <div>
+                        <div data-oid="cidksp7">
                             <label
                                 htmlFor="location"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="x0nsvkg"
                             >
                                 Location*
                             </label>
@@ -392,12 +424,14 @@ export default function NewHackathonPage() {
                                 required
                                 placeholder="e.g., Online, Convention Center, etc."
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="-mz4ui-"
                             />
                         </div>
-                        <div>
+                        <div data-oid="7lj8yub">
                             <label
                                 htmlFor="image"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid=".yf.mm9"
                             >
                                 Image URL
                             </label>
@@ -409,12 +443,14 @@ export default function NewHackathonPage() {
                                 onChange={handleInputChange}
                                 placeholder="https://example.com/images/hackathon.png"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="8enkfje"
                             />
                         </div>
-                        <div className="md:col-span-2">
+                        <div className="md:col-span-2" data-oid="lfd9anj">
                             <label
                                 htmlFor="description"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="x95hdjh"
                             >
                                 Description*
                             </label>
@@ -426,10 +462,11 @@ export default function NewHackathonPage() {
                                 required
                                 rows={4}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="xsq2gmf"
                             ></textarea>
                         </div>
-                        <div>
-                            <div className="flex items-center mb-4">
+                        <div data-oid="-jq.1tg">
+                            <div className="flex items-center mb-4" data-oid="z2x2r.z">
                                 <input
                                     type="checkbox"
                                     id="isLive"
@@ -437,18 +474,20 @@ export default function NewHackathonPage() {
                                     checked={formData.isLive}
                                     onChange={handleCheckboxChange}
                                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded"
+                                    data-oid=":eu8_0w"
                                 />
 
                                 <label
                                     htmlFor="isLive"
                                     className="ml-2 block text-sm text-gray-300"
+                                    data-oid="ok:4kp1"
                                 >
                                     Currently Live
                                 </label>
                             </div>
                         </div>
-                        <div>
-                            <div className="flex items-center mb-4">
+                        <div data-oid="7eqvcxq">
+                            <div className="flex items-center mb-4" data-oid="9-ut-e4">
                                 <input
                                     type="checkbox"
                                     id="isUpcoming"
@@ -456,11 +495,13 @@ export default function NewHackathonPage() {
                                     checked={formData.isUpcoming}
                                     onChange={handleCheckboxChange}
                                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded"
+                                    data-oid="pewzuj8"
                                 />
 
                                 <label
                                     htmlFor="isUpcoming"
                                     className="ml-2 block text-sm text-gray-300"
+                                    data-oid="pj5673v"
                                 >
                                     Mark as Upcoming
                                 </label>
@@ -470,10 +511,15 @@ export default function NewHackathonPage() {
                 </div>
 
                 {/* Tracks */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Tracks</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="9_cyaq1"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="dszjoz6">
+                        Tracks
+                    </h2>
+                    <div className="space-y-4" data-oid="._mopah">
+                        <div className="flex items-center" data-oid="3_65p68">
                             <input
                                 type="text"
                                 id="trackInput"
@@ -487,6 +533,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add a track and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="od_c86d"
                             />
 
                             <button
@@ -495,49 +542,61 @@ export default function NewHackathonPage() {
                                     handleArrayInput(trackInput, setTrackInput, 'tracks')
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="vl3f8kg"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="kra4wf0">
                             {formData.tracks.map((track, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="3x30wg-"
                                 >
-                                    <span>{track}</span>
+                                    <span data-oid="f-oad_l">{track}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeArrayItem('tracks', track)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid=":g.23mo"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="t_h6ujb"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="ya5dha5"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.tracks.length === 0 && (
-                                <p className="text-gray-500 text-sm">No tracks added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="tmk6qow">
+                                    No tracks added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Structure */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Structure</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="e8jih4:"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="60ryf9p">
+                        Structure
+                    </h2>
+                    <div className="space-y-4" data-oid="_rdj519">
+                        <div className="flex items-center" data-oid="_da:ix2">
                             <input
                                 type="text"
                                 id="structureInput"
@@ -555,6 +614,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add structure details and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="6k0.rbr"
                             />
 
                             <button
@@ -563,39 +623,44 @@ export default function NewHackathonPage() {
                                     handleArrayInput(structureInput, setStructureInput, 'structure')
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="yr2g5ij"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="x.epom:">
                             {formData.structure.map((item, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="vd__t5l"
                                 >
-                                    <span>{item}</span>
+                                    <span data-oid="qdxasna">{item}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeArrayItem('structure', item)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="c_:2l92"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="ku5.grh"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="h0dihye"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.structure.length === 0 && (
-                                <p className="text-gray-500 text-sm">
+                                <p className="text-gray-500 text-sm" data-oid="m.cyja5">
                                     No structure details added yet
                                 </p>
                             )}
@@ -604,10 +669,15 @@ export default function NewHackathonPage() {
                 </div>
 
                 {/* Prizes */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Prizes</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="4ee09m."
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="fcom.gr">
+                        Prizes
+                    </h2>
+                    <div className="space-y-4" data-oid="69:lxo9">
+                        <div className="flex items-center" data-oid=".zdg2wf">
                             <input
                                 type="text"
                                 id="prizeInput"
@@ -621,6 +691,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add a prize and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="1smr:9c"
                             />
 
                             <button
@@ -629,49 +700,61 @@ export default function NewHackathonPage() {
                                     handleArrayInput(prizeInput, setPrizeInput, 'prizes')
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="0tsdu-z"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="1aappbe">
                             {formData.prizes.map((prize, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="699ryz0"
                                 >
-                                    <span>{prize}</span>
+                                    <span data-oid="j0r__.s">{prize}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeArrayItem('prizes', prize)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="97ltmit"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="vk:b3s9"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid=":ugg5u:"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.prizes.length === 0 && (
-                                <p className="text-gray-500 text-sm">No prizes added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="8cr77we">
+                                    No prizes added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Prerequisites */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Prerequisites</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="7h96u99"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="ebeaqri">
+                        Prerequisites
+                    </h2>
+                    <div className="space-y-4" data-oid="8me_tbc">
+                        <div className="flex items-center" data-oid="f:8rkgq">
                             <input
                                 type="text"
                                 id="prerequisiteInput"
@@ -689,6 +772,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add a prerequisite and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="g77hde3"
                             />
 
                             <button
@@ -701,55 +785,68 @@ export default function NewHackathonPage() {
                                     )
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="us6a:6m"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="j8v--iw">
                             {formData.prerequisites.map((prerequisite, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="py469al"
                                 >
-                                    <span>{prerequisite}</span>
+                                    <span data-oid="nx2m32.">{prerequisite}</span>
                                     <button
                                         type="button"
                                         onClick={() =>
                                             removeArrayItem('prerequisites', prerequisite)
                                         }
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="0.l.li9"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="4d9hu1l"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="i-yr6b5"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.prerequisites.length === 0 && (
-                                <p className="text-gray-500 text-sm">No prerequisites added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="dv3b82e">
+                                    No prerequisites added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* FAQs */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">FAQs</h2>
-                    <div className="space-y-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="zksn:4k"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="g3ofgbd">
+                        FAQs
+                    </h2>
+                    <div className="space-y-4" data-oid="dj7zaf1">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid=".yvk0-i">
+                            <div data-oid="qgvy9am">
                                 <label
                                     htmlFor="faqQuestion"
                                     className="block text-sm font-medium text-gray-300 mb-1"
+                                    data-oid="evpfnev"
                                 >
                                     Question
                                 </label>
@@ -760,12 +857,14 @@ export default function NewHackathonPage() {
                                     onChange={(e) => setFaqQuestion(e.target.value)}
                                     placeholder="Enter a question"
                                     className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    data-oid="95:_why"
                                 />
                             </div>
-                            <div>
+                            <div data-oid="vj5sy6z">
                                 <label
                                     htmlFor="faqAnswer"
                                     className="block text-sm font-medium text-gray-300 mb-1"
+                                    data-oid="_ldkbpw"
                                 >
                                     Answer
                                 </label>
@@ -776,27 +875,42 @@ export default function NewHackathonPage() {
                                     onChange={(e) => setFaqAnswer(e.target.value)}
                                     placeholder="Enter the answer"
                                     className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    data-oid="5yl9qfk"
                                 />
                             </div>
                         </div>
-                        <div className="flex justify-end">
+                        <div className="flex justify-end" data-oid="rook688">
                             <button
                                 type="button"
                                 onClick={addFaq}
                                 className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="1u7rwzg"
                             >
                                 Add FAQ
                             </button>
                         </div>
-                        <div className="space-y-3 mt-4">
+                        <div className="space-y-3 mt-4" data-oid="8_d00i5">
                             {formData.faqs.map((faq, index) => (
-                                <div key={index} className="bg-gray-700 rounded-md p-3">
-                                    <div className="flex justify-between items-start">
-                                        <div>
-                                            <h3 className="font-medium text-white">
+                                <div
+                                    key={index}
+                                    className="bg-gray-700 rounded-md p-3"
+                                    data-oid="5tqtycf"
+                                >
+                                    <div
+                                        className="flex justify-between items-start"
+                                        data-oid="nksa1ed"
+                                    >
+                                        <div data-oid="rswv_vs">
+                                            <h3
+                                                className="font-medium text-white"
+                                                data-oid="5soe8a_"
+                                            >
                                                 {faq.question}
                                             </h3>
-                                            <p className="text-gray-300 text-sm mt-1">
+                                            <p
+                                                className="text-gray-300 text-sm mt-1"
+                                                data-oid="1wdpbbb"
+                                            >
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -804,17 +918,20 @@ export default function NewHackathonPage() {
                                             type="button"
                                             onClick={() => removeFaq(index)}
                                             className="text-gray-400 hover:text-gray-200"
+                                            data-oid="omrz13q"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 className="h-5 w-5"
                                                 viewBox="0 0 20 20"
                                                 fill="currentColor"
+                                                data-oid="b5m71e3"
                                             >
                                                 <path
                                                     fillRule="evenodd"
                                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                     clipRule="evenodd"
+                                                    data-oid="8-03z_l"
                                                 />
                                             </svg>
                                         </button>
@@ -822,17 +939,24 @@ export default function NewHackathonPage() {
                                 </div>
                             ))}
                             {formData.faqs.length === 0 && (
-                                <p className="text-gray-500 text-sm">No FAQs added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="myv4.al">
+                                    No FAQs added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Sponsors */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Sponsors</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="--hs7.y"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="8rm.cdj">
+                        Sponsors
+                    </h2>
+                    <div className="space-y-4" data-oid="73d52d9">
+                        <div className="flex items-center" data-oid="45giq4m">
                             <input
                                 type="text"
                                 id="sponsorInput"
@@ -846,6 +970,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add a sponsor and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="50xhuha"
                             />
 
                             <button
@@ -854,49 +979,61 @@ export default function NewHackathonPage() {
                                     handleArrayInput(sponsorInput, setSponsorInput, 'sponsors')
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="j6g5tfh"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="86opp09">
                             {formData.sponsors.map((sponsor, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="y76yd20"
                                 >
-                                    <span>{sponsor}</span>
+                                    <span data-oid="-ue9ubl">{sponsor}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeArrayItem('sponsors', sponsor)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="_tq-:va"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="phzvlhl"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="my9p3-."
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.sponsors.length === 0 && (
-                                <p className="text-gray-500 text-sm">No sponsors added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="jyltrlu">
+                                    No sponsors added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Judges */}
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Judges</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="hcj-pjj"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="h0d_p7g">
+                        Judges
+                    </h2>
+                    <div className="space-y-4" data-oid="37msrkj">
+                        <div className="flex items-center" data-oid="-:cku2y">
                             <input
                                 type="text"
                                 id="judgeInput"
@@ -910,6 +1047,7 @@ export default function NewHackathonPage() {
                                 }}
                                 placeholder="Add a judge and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="8.58cz4"
                             />
 
                             <button
@@ -918,48 +1056,56 @@ export default function NewHackathonPage() {
                                     handleArrayInput(judgeInput, setJudgeInput, 'judges')
                                 }
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid="65lfsub"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="ttt-:al">
                             {formData.judges.map((judge, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="97wunjb"
                                 >
-                                    <span>{judge}</span>
+                                    <span data-oid="d7nj7gj">{judge}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeArrayItem('judges', judge)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="01wd1nn"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="0z.nuo5"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="hn_zzdm"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.judges.length === 0 && (
-                                <p className="text-gray-500 text-sm">No judges added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="qlgsda:">
+                                    No judges added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
-                <div className="flex justify-end space-x-4">
+                <div className="flex justify-end space-x-4" data-oid="-p5m-lh">
                     <Link
                         href="/admin/dashboard"
                         className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
+                        data-oid="4grkk0y"
                     >
                         Cancel
                     </Link>
@@ -967,6 +1113,7 @@ export default function NewHackathonPage() {
                         type="submit"
                         disabled={isSubmitting}
                         className={`px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                        data-oid="udprgh7"
                     >
                         {isSubmitting ? 'Creating...' : 'Create Hackathon'}
                     </button>
