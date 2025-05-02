@@ -1,12 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { isAuthenticated, getAuthToken } from '@/lib/auth';
-import { useRouter } from 'next/navigation';
-import { BACKEND_URL, cn } from '@/lib/utils';
-import Link from 'next/link';
-import Image from 'next/image';
 import Navbar from '@/components/Navbar';
+import { getAuthToken, isAuthenticated } from '@/lib/auth';
+import { BACKEND_URL, cn } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // Workshop type definition
 interface Workshop {
@@ -31,7 +29,19 @@ interface Workshop {
 interface WorkshopRegistration {
     _id: string;
     userId: string;
-    workshopId: string;
+    workshopId: {
+        _id: string;
+        title: string;
+        date: string;
+        time: string;
+        location: string;
+        instructor: string;
+        description: string;
+        price: number | 'Free';
+        image: string;
+        isUpcoming: boolean;
+        tags: string[];
+    };
 }
 
 export default function WorkshopDetailPage({ params }: { params: { id: string } }) {
@@ -76,7 +86,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                     if (registrationsResponse.ok) {
                         const registrations = await registrationsResponse.json();
                         const isAlreadyRegistered = registrations.some(
-                            (reg: WorkshopRegistration) => reg.workshopId === params.id,
+                            (reg: WorkshopRegistration) => reg.workshopId._id === params.id,
                         );
                         setIsRegistered(isAlreadyRegistered);
                     }
@@ -93,52 +103,52 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
     }, [params.id]);
 
     // Calculate time remaining for countdown timer
-    useEffect(() => {
-        if (!workshop || !workshop.isUpcoming) return;
+    // useEffect(() => {
+    //     if (!workshop || !workshop.isUpcoming) return;
 
-        const calculateTimeRemaining = () => {
-            const workshopDate = new Date(workshop.date);
-            const now = new Date();
+    //     const calculateTimeRemaining = () => {
+    //         const workshopDate = new Date(workshop.date);
+    //         const now = new Date();
 
-            // Parse the time string to get hours and minutes
-            const timeString = workshop.time.split(' - ')[0]; // Get start time
-            const [time, period] = timeString.split(' ');
-            const [hours, minutes] = time.split(':').map(Number);
+    //         // Parse the time string to get hours and minutes
+    //         const timeString = workshop.time.split(' - ')[0]; // Get start time
+    //         const [time, period] = timeString.split(' ');
+    //         const [hours, minutes] = time.split(':').map(Number);
 
-            // Set the hours and minutes on the workshop date
-            workshopDate.setHours(
-                period === 'PM' && hours !== 12
-                    ? hours + 12
-                    : hours === 12 && period === 'AM'
-                      ? 0
-                      : hours,
-                minutes,
-                0,
-                0,
-            );
+    //         // Set the hours and minutes on the workshop date
+    //         workshopDate.setHours(
+    //             period === 'PM' && hours !== 12
+    //                 ? hours + 12
+    //                 : hours === 12 && period === 'AM'
+    //                   ? 0
+    //                   : hours,
+    //             minutes,
+    //             0,
+    //             0,
+    //         );
 
-            const difference = workshopDate.getTime() - now.getTime();
+    //         const difference = workshopDate.getTime() - now.getTime();
 
-            if (difference <= 0) {
-                setTimeRemaining(null);
-                return;
-            }
+    //         if (difference <= 0) {
+    //             setTimeRemaining(null);
+    //             return;
+    //         }
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hoursRemaining = Math.floor(
-                (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-            );
-            const minutesRemaining = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    //         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    //         const hoursRemaining = Math.floor(
+    //             (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    //         );
+    //         const minutesRemaining = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    //         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            setTimeRemaining({ days, hours: hoursRemaining, minutes: minutesRemaining, seconds });
-        };
+    //         setTimeRemaining({ days, hours: hoursRemaining, minutes: minutesRemaining, seconds });
+    //     };
 
-        calculateTimeRemaining();
-        const timer = setInterval(calculateTimeRemaining, 1000);
+    //     calculateTimeRemaining();
+    //     const timer = setInterval(calculateTimeRemaining, 1000);
 
-        return () => clearInterval(timer);
-    }, [workshop]);
+    //     return () => clearInterval(timer);
+    // }, [workshop]);
 
     // Format price for display
     const formatPrice = (price: number | 'Free') => {
@@ -377,89 +387,89 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     </div>
 
                                     {/* Countdown timer */}
-                                    {workshop.isUpcoming && timeRemaining && (
-                                        <div className="mb-6" data-oid="x75n04o">
-                                            <h3
-                                                className="text-lg font-semibold mb-3"
-                                                data-oid="7c32sb2"
-                                            >
-                                                Workshop starts in:
-                                            </h3>
-                                            <div
-                                                className="grid grid-cols-4 gap-2 text-center"
-                                                data-oid="swspg6t"
-                                            >
-                                                <div
-                                                    className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="wml4w4_"
-                                                >
-                                                    <div
-                                                        className="text-2xl font-bold text-purple-400"
-                                                        data-oid="cryt__-"
-                                                    >
-                                                        {timeRemaining.days}
-                                                    </div>
-                                                    <div
-                                                        className="text-xs text-gray-400"
-                                                        data-oid="u2i0qvn"
-                                                    >
-                                                        Days
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="xxpcua2"
-                                                >
-                                                    <div
-                                                        className="text-2xl font-bold text-purple-400"
-                                                        data-oid="4-u3_ro"
-                                                    >
-                                                        {timeRemaining.hours}
-                                                    </div>
-                                                    <div
-                                                        className="text-xs text-gray-400"
-                                                        data-oid="9jsxf8l"
-                                                    >
-                                                        Hours
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="s23bny2"
-                                                >
-                                                    <div
-                                                        className="text-2xl font-bold text-purple-400"
-                                                        data-oid="va_2zon"
-                                                    >
-                                                        {timeRemaining.minutes}
-                                                    </div>
-                                                    <div
-                                                        className="text-xs text-gray-400"
-                                                        data-oid="si::0:-"
-                                                    >
-                                                        Minutes
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="bg-gray-800 p-3 rounded-lg"
-                                                    data-oid="u__ws4r"
-                                                >
-                                                    <div
-                                                        className="text-2xl font-bold text-purple-400"
-                                                        data-oid="kv79pp-"
-                                                    >
-                                                        {timeRemaining.seconds}
-                                                    </div>
-                                                    <div
-                                                        className="text-xs text-gray-400"
-                                                        data-oid="1:wd1-r"
-                                                    >
-                                                        Seconds
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
+                                    {/* {workshop.isUpcoming && timeRemaining && (
+                  <div className="mb-6" data-oid="x75n04o">
+                  <h3
+                  className="text-lg font-semibold mb-3"
+                  data-oid="7c32sb2"
+                  >
+                  Workshop starts in:
+                  </h3>
+                  <div
+                  className="grid grid-cols-4 gap-2 text-center"
+                  data-oid="swspg6t"
+                  >
+                  <div
+                  className="bg-gray-800 p-3 rounded-lg"
+                  data-oid="wml4w4_"
+                  >
+                  <div
+                  className="text-2xl font-bold text-purple-400"
+                  data-oid="cryt__-"
+                  >
+                  {timeRemaining.days}
+                  </div>
+                  <div
+                  className="text-xs text-gray-400"
+                  data-oid="u2i0qvn"
+                  >
+                  Days
+                  </div>
+                  </div>
+                  <div
+                  className="bg-gray-800 p-3 rounded-lg"
+                  data-oid="xxpcua2"
+                  >
+                  <div
+                  className="text-2xl font-bold text-purple-400"
+                  data-oid="4-u3_ro"
+                  >
+                  {timeRemaining.hours}
+                  </div>
+                  <div
+                  className="text-xs text-gray-400"
+                  data-oid="9jsxf8l"
+                  >
+                  Hours
+                  </div>
+                  </div>
+                  <div
+                  className="bg-gray-800 p-3 rounded-lg"
+                  data-oid="s23bny2"
+                  >
+                  <div
+                  className="text-2xl font-bold text-purple-400"
+                  data-oid="va_2zon"
+                  >
+                  {timeRemaining.minutes}
+                  </div>
+                  <div
+                  className="text-xs text-gray-400"
+                  data-oid="si::0:-"
+                  >
+                  Minutes
+                  </div>
+                  </div>
+                  <div
+                  className="bg-gray-800 p-3 rounded-lg"
+                  data-oid="u__ws4r"
+                  >
+                  <div
+                  className="text-2xl font-bold text-purple-400"
+                  data-oid="kv79pp-"
+                  >
+                  {timeRemaining.seconds}
+                  </div>
+                  <div
+                  className="text-xs text-gray-400"
+                  data-oid="1:wd1-r"
+                  >
+                  Seconds
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  )} */}
 
                                     <div
                                         className="flex items-center justify-between mb-6"
