@@ -176,17 +176,22 @@ export default function EditPastWorkshopPage({ params }: PastWorkshopParams) {
 
     return (
         <div className="max-w-4xl mx-auto py-8 px-4" data-oid="0_o5g9y">
-            <div className="flex items-center justify-between mb-8" data-oid="9cr__eq">
-                <h1 className="text-3xl font-bold" data-oid="gr625ic">
-                    Edit Past Workshop
-                </h1>
-                <Link
-                    href="/admin/dashboard"
-                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
-                    data-oid="1252ymd"
-                >
-                    Back to Dashboard
-                </Link>
+            <div className="flex justify-between items-center mb-6" data-oid="9cr__eq">
+                <div data-oid="9sb8pxk">
+                    <Link
+                        href="/admin/dashboard"
+                        className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
+                        data-oid="1252ymd"
+                    >
+                        <span className="mr-1" data-oid="o579odb">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
+                    </Link>
+                    <h1 className="text-3xl font-bold mt-4" data-oid="gr625ic">
+                        Edit Past Workshop
+                    </h1>
+                </div>
             </div>
 
             {error && (
