@@ -64,10 +64,10 @@ export default function WorkshopRegistrationsPage() {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]" data-oid="2lenri:">
+            <div className="flex justify-center items-center min-h-[50vh]" data-oid="7hm1jzs">
                 <div
                     className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                    data-oid="_uwp27e"
+                    data-oid="phb:ai."
                 ></div>
             </div>
         );
@@ -77,15 +77,15 @@ export default function WorkshopRegistrationsPage() {
         return (
             <div
                 className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                data-oid="g.zem10"
+                data-oid="yuhedhh"
             >
-                <p className="text-red-200" data-oid="nsad-c3">
+                <p className="text-red-200" data-oid="v6l2nmp">
                     {error}
                 </p>
                 <button
                     onClick={() => window.location.reload()}
                     className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
-                    data-oid="svpj53z"
+                    data-oid="qa40j:7"
                 >
                     Try Again
                 </button>
@@ -94,24 +94,24 @@ export default function WorkshopRegistrationsPage() {
     }
 
     return (
-        <div data-oid="_tl380e">
-            <div className="flex justify-between items-center mb-6" data-oid="x2uz4yu">
-                <div data-oid="1..g1u7">
+        <div data-oid="3pe23uj">
+            <div className="flex justify-between items-center mb-6" data-oid="mq0f4vf">
+                <div data-oid="-y1:hn8">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
-                        data-oid="mem0unm"
+                        data-oid="2mowz-h"
                     >
-                        <span className="mr-1" data-oid="w:omtw2">
+                        <span className="mr-1" data-oid="0-lgehu">
                             ←
                         </span>{' '}
                         Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold" data-oid="ffs2g7q">
+                    <h1 className="text-3xl font-bold" data-oid="d.94f13">
                         {workshop ? workshop.title : 'Workshop'} Registrations
                     </h1>
                     {workshop && (
-                        <p className="text-gray-400 mt-1" data-oid="t04a9z4">
+                        <p className="text-gray-400 mt-1" data-oid="fl5zhlx">
                             {new Date(workshop.date).toLocaleDateString()} at {workshop.location}
                         </p>
                     )}
@@ -121,39 +121,39 @@ export default function WorkshopRegistrationsPage() {
             {registrations.length === 0 ? (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-8 text-center"
-                    data-oid="xm5o9qq"
+                    data-oid="50pix_d"
                 >
-                    <p className="text-gray-400" data-oid="mvs_-qv">
+                    <p className="text-gray-400" data-oid="-uq9qj:">
                         No registrations found for this workshop.
                     </p>
                 </div>
             ) : (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                    data-oid="0p9p7d4"
+                    data-oid="iqb9dq4"
                 >
-                    <div className="overflow-x-auto" data-oid="6d24qdl">
-                        <table className="min-w-full divide-y divide-gray-700" data-oid="d7nqb3f">
-                            <thead className="bg-gray-900" data-oid="9a-8nnz">
-                                <tr data-oid="_ft5-6w">
+                    <div className="overflow-x-auto" data-oid="7yrqq.m">
+                        <table className="min-w-full divide-y divide-gray-700" data-oid="5:icnlz">
+                            <thead className="bg-gray-900" data-oid="lqy2t0:">
+                                <tr data-oid="3vpj7j2">
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid=":7465:b"
+                                        data-oid="phst9pm"
                                     >
                                         Participant Name
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="3bd-l6y"
+                                        data-oid="hznqcfm"
                                     >
                                         Email
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid=":t1jiof"
+                                        data-oid="ih6sxga"
                                     >
                                         Registered At
                                     </th>
@@ -161,29 +161,29 @@ export default function WorkshopRegistrationsPage() {
                             </thead>
                             <tbody
                                 className="bg-gray-800 divide-y divide-gray-700"
-                                data-oid="k8p60d9"
+                                data-oid="ut.nnee"
                             >
                                 {registrations.map((registration) => (
                                     <tr
                                         key={registration._id}
                                         className="hover:bg-gray-750"
-                                        data-oid="x833f8r"
+                                        data-oid="t6fshh3"
                                     >
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                            data-oid="tf5t4z."
+                                            data-oid="eh-ppiv"
                                         >
                                             {registration.userId.name}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="vn2pi0."
+                                            data-oid="_1ieho4"
                                         >
                                             {registration.userId.email}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="4:wayhs"
+                                            data-oid="xrbndf2"
                                         >
                                             {new Date(
                                                 registration.registrationDate,
