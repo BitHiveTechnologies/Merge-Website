@@ -466,71 +466,81 @@ export default function WorkshopsPage() {
                                                 </div>
                                             </div>
                                             <div className="md:w-3/4" data-oid="bbgn:_v">
-                                                <div className="mb-4" data-oid=":x8si-_">
-                                                    <h4
-                                                        className="text-lg font-semibold mb-2"
-                                                        data-oid="6uc.zrz"
-                                                    >
-                                                        Highlights:
-                                                    </h4>
-                                                    <ul
-                                                        className="list-disc pl-5 space-y-1 text-gray-300"
-                                                        data-oid="4h-xmi4"
-                                                    >
-                                                        {workshop.highlights.map(
-                                                            (highlight, index) => (
-                                                                <li key={index} data-oid="4scvv42">
-                                                                    {highlight}
-                                                                </li>
-                                                            ),
-                                                        )}
-                                                    </ul>
-                                                </div>
-                                                <div data-oid="xl5enjb">
-                                                    <h4
-                                                        className="text-lg font-semibold mb-2"
-                                                        data-oid="je4x6zt"
-                                                    >
-                                                        Media Links:
-                                                    </h4>
-                                                    <div
-                                                        className="flex flex-wrap gap-3"
-                                                        data-oid="-5sedk5"
-                                                    >
-                                                        {workshop.mediaLinks.map((link, index) => (
-                                                            <a
-                                                                key={index}
-                                                                href={link}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="text-purple-400 hover:text-purple-300 flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full transition-transform hover:scale-110"
-                                                                title={
-                                                                    index === 0
-                                                                        ? 'Photos'
-                                                                        : index === 1
-                                                                          ? 'Videos'
-                                                                          : `Media ${index + 1}`
-                                                                }
-                                                                data-oid=".bqzywv"
-                                                            >
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    className="h-5 w-5"
-                                                                    fill="none"
-                                                                    viewBox="0 0 24 24"
-                                                                    stroke="currentColor"
-                                                                    data-oid="98u-ak5"
-                                                                >
-                                                                    <path
-                                                                        strokeLinecap="round"
-                                                                        strokeLinejoin="round"
-                                                                        strokeWidth={2}
-                                                                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                                                                        data-oid="yyz2boo"
-                                                                    />
-                                                                </svg>
-                                                            </a>
-                                                        ))}
+                                                <div
+                                                    className="flex flex-col md:flex-row gap-6"
+                                                    data-oid=":x8si-_"
+                                                >
+                                                    <div className="md:w-3/4" data-oid="x-vp4a4">
+                                                        <h4
+                                                            className="text-lg font-semibold mb-2"
+                                                            data-oid="6uc.zrz"
+                                                        >
+                                                            Highlights:
+                                                        </h4>
+                                                        <ul
+                                                            className="list-disc pl-5 space-y-1 text-gray-300"
+                                                            data-oid="4h-xmi4"
+                                                        >
+                                                            {workshop.highlights.map(
+                                                                (highlight, index) => (
+                                                                    <li
+                                                                        key={index}
+                                                                        data-oid="4scvv42"
+                                                                    >
+                                                                        {highlight}
+                                                                    </li>
+                                                                ),
+                                                            )}
+                                                        </ul>
+                                                    </div>
+                                                    <div className="md:w-1/4" data-oid="xl5enjb">
+                                                        <h4
+                                                            className="text-lg font-semibold mb-2"
+                                                            data-oid="je4x6zt"
+                                                        >
+                                                            Media Links:
+                                                        </h4>
+                                                        <div
+                                                            className="flex flex-wrap gap-3"
+                                                            data-oid="-5sedk5"
+                                                        >
+                                                            {workshop.mediaLinks.map(
+                                                                (link, index) => (
+                                                                    <a
+                                                                        key={index}
+                                                                        href={link}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="text-purple-400 hover:text-purple-300 flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full transition-transform hover:scale-110"
+                                                                        title={
+                                                                            index === 0
+                                                                                ? 'Photos'
+                                                                                : index === 1
+                                                                                  ? 'Videos'
+                                                                                  : `Media ${index + 1}`
+                                                                        }
+                                                                        data-oid=".bqzywv"
+                                                                    >
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            className="h-5 w-5"
+                                                                            fill="none"
+                                                                            viewBox="0 0 24 24"
+                                                                            stroke="currentColor"
+                                                                            data-oid="98u-ak5"
+                                                                        >
+                                                                            <path
+                                                                                strokeLinecap="round"
+                                                                                strokeLinejoin="round"
+                                                                                strokeWidth={2}
+                                                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                                                                                data-oid="yyz2boo"
+                                                                            />
+                                                                        </svg>
+                                                                    </a>
+                                                                ),
+                                                            )}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
