@@ -798,7 +798,7 @@ export default function Page() {
                                                     data-oid="xbmf_vu"
                                                 />
                                             </svg>
-                                            <span data-oid=":4ekucb">{event.time}</span>
+                                            <span data-oid=":4ekucb">{event.time} IST</span>
                                         </div>
                                     </div>
                                     <a
