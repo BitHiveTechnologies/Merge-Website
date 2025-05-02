@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { adminApi } from '@/lib/adminApi';
 import { BACKEND_URL } from '@/lib/utils';
 
 interface Lesson {
