@@ -21,6 +21,21 @@ export const adminApi = {
             });
         },
 
+        // Update a course
+        update: async (courseId: string, courseData: any) => {
+            return adminFetchWithAuth(`/courses/${courseId}`, {
+                method: 'PUT',
+                body: JSON.stringify(courseData),
+            });
+        },
+
+        // Delete a course
+        delete: async (courseId: string) => {
+            return adminFetchWithAuth(`/courses/${courseId}`, {
+                method: 'DELETE',
+            });
+        },
+
         // Get all course registrations
         getRegistrations: async (courseId?: string) => {
             const data = await adminFetchWithAuth(`/admin/courses/registrations`);
@@ -50,6 +65,21 @@ export const adminApi = {
             });
         },
 
+        // Update a workshop
+        update: async (workshopId: string, workshopData: any) => {
+            return adminFetchWithAuth(`/workshops/${workshopId}`, {
+                method: 'PUT',
+                body: JSON.stringify(workshopData),
+            });
+        },
+
+        // Delete a workshop
+        delete: async (workshopId: string) => {
+            return adminFetchWithAuth(`/workshops/${workshopId}`, {
+                method: 'DELETE',
+            });
+        },
+
         // Get all workshop registrations
         getRegistrations: async (workshopId?: string) => {
             const data = await adminFetchWithAuth(`/admin/workshops/registrations`);
@@ -76,6 +106,21 @@ export const adminApi = {
             return adminFetchWithAuth(`/hackathons`, {
                 method: 'POST',
                 body: JSON.stringify(hackathonData),
+            });
+        },
+
+        // Update a hackathon
+        update: async (hackathonId: string, hackathonData: any) => {
+            return adminFetchWithAuth(`/hackathons/${hackathonId}`, {
+                method: 'PUT',
+                body: JSON.stringify(hackathonData),
+            });
+        },
+
+        // Delete a hackathon
+        delete: async (hackathonId: string) => {
+            return adminFetchWithAuth(`/hackathons/${hackathonId}`, {
+                method: 'DELETE',
             });
         },
 

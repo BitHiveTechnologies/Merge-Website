@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { adminApi } from '@/lib/adminApi';
+import { useRouter } from 'next/navigation';
 
 interface Course {
     _id: string;
@@ -43,6 +44,7 @@ interface Hackathon {
 }
 
 export default function AdminDashboardPage() {
+    const router = useRouter();
     const [activeTab, setActiveTab] = useState<
         'courses' | 'workshops' | 'pastWorkshops' | 'hackathons'
     >('courses');
@@ -52,6 +54,63 @@ export default function AdminDashboardPage() {
     const [hackathons, setHackathons] = useState<Hackathon[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
+    // Function to handle course deletion
+    const handleDeleteCourse = async (courseId: string) => {
+        if (
+            window.confirm(
+                'Are you sure you want to delete this course? This action cannot be undone.',
+            )
+        ) {
+            try {
+                await adminApi.courses.delete(courseId);
+                // Refresh the courses list after deletion
+                const updatedCourses = await adminApi.courses.getAll();
+                setCourses(updatedCourses);
+            } catch (err: any) {
+                setError(err.message || 'Failed to delete course');
+                console.error('Error deleting course:', err);
+            }
+        }
+    };
+
+    // Function to handle workshop deletion
+    const handleDeleteWorkshop = async (workshopId: string) => {
+        if (
+            window.confirm(
+                'Are you sure you want to delete this workshop? This action cannot be undone.',
+            )
+        ) {
+            try {
+                await adminApi.workshops.delete(workshopId);
+                // Refresh the workshops list after deletion
+                const updatedWorkshops = await adminApi.workshops.getAll();
+                setWorkshops(updatedWorkshops);
+            } catch (err: any) {
+                setError(err.message || 'Failed to delete workshop');
+                console.error('Error deleting workshop:', err);
+            }
+        }
+    };
+
+    // Function to handle hackathon deletion
+    const handleDeleteHackathon = async (hackathonId: string) => {
+        if (
+            window.confirm(
+                'Are you sure you want to delete this hackathon? This action cannot be undone.',
+            )
+        ) {
+            try {
+                await adminApi.hackathons.delete(hackathonId);
+                // Refresh the hackathons list after deletion
+                const updatedHackathons = await adminApi.hackathons.getAll();
+                setHackathons(updatedHackathons);
+            } catch (err: any) {
+                setError(err.message || 'Failed to delete hackathon');
+                console.error('Error deleting hackathon:', err);
+            }
+        }
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -315,7 +374,7 @@ export default function AdminDashboardPage() {
                                                                     : 'Free'}
                                                             </td>
                                                             <td
-                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
                                                                 data-oid="kh9ms9y"
                                                             >
                                                                 <Link
@@ -325,6 +384,65 @@ export default function AdminDashboardPage() {
                                                                 >
                                                                     View Registrations
                                                                 </Link>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        router.push(
+                                                                            `/admin/dashboard/courses/edit/${course._id}`,
+                                                                        )
+                                                                    }
+                                                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                                                    title="Edit Course"
+                                                                    data-oid="s1:9jjv"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-pencil-square"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="brf025k"
+                                                                    >
+                                                                        <path
+                                                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                                                                            data-oid="mzxintr"
+                                                                        />
+                                                                        <path
+                                                                            fillRule="evenodd"
+                                                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
+                                                                            data-oid="3c2fm-6"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        handleDeleteCourse(
+                                                                            course._id,
+                                                                        )
+                                                                    }
+                                                                    className="text-red-400 hover:text-red-300 transition-colors"
+                                                                    title="Delete Course"
+                                                                    data-oid="i0zom3x"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-trash"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="z.d5qqd"
+                                                                    >
+                                                                        <path
+                                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                                                                            data-oid="ezapb.v"
+                                                                        />
+                                                                        <path
+                                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                                                                            data-oid="i93n.5o"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     ))
@@ -467,7 +585,7 @@ export default function AdminDashboardPage() {
                                                                 {workshop.instructor || 'N/A'}
                                                             </td>
                                                             <td
-                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
                                                                 data-oid="lc-m98x"
                                                             >
                                                                 <Link
@@ -477,6 +595,65 @@ export default function AdminDashboardPage() {
                                                                 >
                                                                     View Registrations
                                                                 </Link>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        router.push(
+                                                                            `/admin/dashboard/workshops/edit/${workshop._id}`,
+                                                                        )
+                                                                    }
+                                                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                                                    title="Edit Workshop"
+                                                                    data-oid="cd_j0cj"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-pencil-square"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="cobtwiu"
+                                                                    >
+                                                                        <path
+                                                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                                                                            data-oid="mrtkz0x"
+                                                                        />
+                                                                        <path
+                                                                            fillRule="evenodd"
+                                                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
+                                                                            data-oid="m6s1us7"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        handleDeleteWorkshop(
+                                                                            workshop._id,
+                                                                        )
+                                                                    }
+                                                                    className="text-red-400 hover:text-red-300 transition-colors"
+                                                                    title="Delete Workshop"
+                                                                    data-oid="9iy8klv"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-trash"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="iowlevl"
+                                                                    >
+                                                                        <path
+                                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                                                                            data-oid="9-ybflz"
+                                                                        />
+                                                                        <path
+                                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                                                                            data-oid="yzs08u1"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     ))
@@ -799,7 +976,7 @@ export default function AdminDashboardPage() {
                                                                 {hackathon.location}
                                                             </td>
                                                             <td
-                                                                className="px-6 py-4 whitespace-nowrap text-sm"
+                                                                className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
                                                                 data-oid="5kg00f7"
                                                             >
                                                                 <Link
@@ -809,6 +986,65 @@ export default function AdminDashboardPage() {
                                                                 >
                                                                     View Registrations
                                                                 </Link>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        router.push(
+                                                                            `/admin/dashboard/hackathons/edit/${hackathon._id}`,
+                                                                        )
+                                                                    }
+                                                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                                                    title="Edit Hackathon"
+                                                                    data-oid="wtu7t0k"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-pencil-square"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="m63jqvj"
+                                                                    >
+                                                                        <path
+                                                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                                                                            data-oid="rmypo-r"
+                                                                        />
+                                                                        <path
+                                                                            fillRule="evenodd"
+                                                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
+                                                                            data-oid="y4drbub"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        handleDeleteHackathon(
+                                                                            hackathon._id,
+                                                                        )
+                                                                    }
+                                                                    className="text-red-400 hover:text-red-300 transition-colors"
+                                                                    title="Delete Hackathon"
+                                                                    data-oid="vyszoh_"
+                                                                >
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        fill="currentColor"
+                                                                        className="bi bi-trash"
+                                                                        viewBox="0 0 16 16"
+                                                                        data-oid="4mc5o46"
+                                                                    >
+                                                                        <path
+                                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                                                                            data-oid="-:pumco"
+                                                                        />
+                                                                        <path
+                                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                                                                            data-oid="d66fqld"
+                                                                        />
+                                                                    </svg>
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     ))
