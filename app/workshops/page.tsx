@@ -455,7 +455,7 @@ export default function WorkshopsPage() {
                                                         className="text-gray-300"
                                                         data-oid="q8ki_xs"
                                                     >
-                                                        {workshop.date}
+                                                        {formatDate(workshop.date)}
                                                     </span>
                                                 </div>
                                                 <div
