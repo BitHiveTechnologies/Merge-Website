@@ -767,7 +767,19 @@ export default function Page() {
                                                     data-oid="1i3grsd"
                                                 />
                                             </svg>
-                                            <span data-oid="uii5ted">{event.date}</span>
+                                            <span data-oid="uii5ted">
+                                                {typeof event.date === 'string' &&
+                                                new Date(event.date).toString() !== 'Invalid Date'
+                                                    ? new Date(event.date).toLocaleDateString(
+                                                          'en-IN',
+                                                          {
+                                                              year: 'numeric',
+                                                              month: 'long',
+                                                              day: 'numeric',
+                                                          },
+                                                      )
+                                                    : event.date}
+                                            </span>
                                         </div>
                                         <div className="flex items-center" data-oid="l0mjshu">
                                             <svg
