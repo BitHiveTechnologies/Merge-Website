@@ -343,6 +343,23 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                     {formatPrice(workshop.price)}
                                                 </div>
                                             </div>
+                                            <div
+                                                className="bg-gray-800/50 p-4 rounded-lg"
+                                                data-oid="instructor-box"
+                                            >
+                                                <div
+                                                    className="text-purple-400 mb-1 text-sm"
+                                                    data-oid="instructor-label"
+                                                >
+                                                    Instructor
+                                                </div>
+                                                <div
+                                                    className="font-medium"
+                                                    data-oid="instructor-value"
+                                                >
+                                                    {workshop.instructor}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -503,46 +520,8 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     )}
                                 </div>
 
-                                <div data-oid="girz646">
-                                    {/* Instructor info */}
-                                    <div
-                                        className="bg-gray-800/30 rounded-xl p-6"
-                                        data-oid="qz2:om9"
-                                    >
-                                        <h2 className="text-xl font-bold mb-4" data-oid=":hrvyh1">
-                                            Instructor
-                                        </h2>
-                                        <div className="flex items-center mb-4" data-oid="-r87onm">
-                                            <div
-                                                className="w-16 h-16 rounded-full overflow-hidden mr-4"
-                                                data-oid="rlvhqp0"
-                                            >
-                                                <img
-                                                    src={
-                                                        'https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI='
-                                                    }
-                                                    alt={workshop.instructor}
-                                                    className="w-full h-full object-cover"
-                                                    data-oid="n3n:bem"
-                                                />
-                                            </div>
-                                            <div data-oid="bxwr3qr">
-                                                <h3
-                                                    className="font-semibold text-lg"
-                                                    data-oid="-v3-uz4"
-                                                >
-                                                    {workshop.instructor}
-                                                </h3>
-                                                <p
-                                                    className="text-purple-400 text-sm"
-                                                    data-oid="9dibbnm"
-                                                >
-                                                    Workshop Instructor
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {/* Empty column for layout balance */}
+                                <div className="hidden md:block" data-oid="girz646"></div>
                             </div>
                         </div>
                     ) : (
