@@ -471,58 +471,42 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                 </div>
                             </div>
 
-                            {/* Workshop details */}
-                            <div className="grid md:grid-cols-3 gap-8" data-oid=".nkq3-0">
-                                <div className="md:col-span-2" data-oid="z5gh2l2">
-                                    {/* Workshop agenda */}
-                                    {workshop.agenda && (
-                                        <div
-                                            className="bg-gray-800/30 rounded-xl p-6"
-                                            data-oid="9g972a6"
-                                        >
-                                            <h2
-                                                className="text-2xl font-bold mb-4"
-                                                data-oid="_i8oz6y"
+                            {/* Workshop agenda */}
+                            {workshop.agenda && (
+                                <div
+                                    className="bg-gray-800/30 rounded-xl p-6 mb-12"
+                                    data-oid="9g972a6"
+                                >
+                                    <h2 className="text-2xl font-bold mb-6" data-oid="_i8oz6y">
+                                        Workshop Agenda
+                                    </h2>
+                                    <div className="grid md:grid-cols-2 gap-6" data-oid="0y09eno">
+                                        {workshop.agenda.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className="bg-gray-800/50 p-4 rounded-lg"
+                                                data-oid="7q3vwyz"
                                             >
-                                                Workshop Agenda
-                                            </h2>
-                                            <div className="space-y-6" data-oid="0y09eno">
-                                                {workshop.agenda.map((item, index) => (
-                                                    <div
-                                                        key={index}
-                                                        className="flex"
-                                                        data-oid="7q3vwyz"
-                                                    >
-                                                        <div
-                                                            className="w-1/4 text-purple-400 font-medium"
-                                                            data-oid=":nz-43m"
-                                                        >
-                                                            {item.time}
-                                                        </div>
-                                                        <div className="w-3/4" data-oid="3x--qlz">
-                                                            <h3
-                                                                className="font-semibold mb-1"
-                                                                data-oid="iq7.uoq"
-                                                            >
-                                                                {item.title}
-                                                            </h3>
-                                                            <p
-                                                                className="text-gray-400 text-sm"
-                                                                data-oid="norj2-n"
-                                                            >
-                                                                {item.description}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                ))}
+                                                <div
+                                                    className="text-purple-400 font-medium mb-2"
+                                                    data-oid=":nz-43m"
+                                                >
+                                                    {item.time}
+                                                </div>
+                                                <h3
+                                                    className="font-semibold text-lg mb-2"
+                                                    data-oid="iq7.uoq"
+                                                >
+                                                    {item.title}
+                                                </h3>
+                                                <p className="text-gray-400" data-oid="norj2-n">
+                                                    {item.description}
+                                                </p>
                                             </div>
-                                        </div>
-                                    )}
+                                        ))}
+                                    </div>
                                 </div>
-
-                                {/* Empty column for layout balance */}
-                                <div className="hidden md:block" data-oid="girz646"></div>
-                            </div>
+                            )}
                         </div>
                     ) : (
                         <div className="text-center py-20" data-oid="s_nmwh0">
