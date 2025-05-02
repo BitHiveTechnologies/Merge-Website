@@ -457,25 +457,6 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                             {/* Workshop details */}
                             <div className="grid md:grid-cols-3 gap-8" data-oid=".nkq3-0">
                                 <div className="md:col-span-2" data-oid="z5gh2l2">
-                                    {/* About the workshop */}
-                                    <div
-                                        className="bg-gray-800/30 rounded-xl p-6 mb-8"
-                                        data-oid="kvjrh1-"
-                                    >
-                                        <h2 className="text-2xl font-bold mb-4" data-oid="9q-ekc_">
-                                            About the Workshop
-                                        </h2>
-                                        <div className="text-gray-300 space-y-4" data-oid="u11bx1j">
-                                            {workshop.longDescription
-                                                ?.split('\n\n')
-                                                .map((paragraph, index) => (
-                                                    <p key={index} data-oid="4fd6yrw">
-                                                        {paragraph}
-                                                    </p>
-                                                ))}
-                                        </div>
-                                    </div>
-
                                     {/* Workshop agenda */}
                                     {workshop.agenda && (
                                         <div
