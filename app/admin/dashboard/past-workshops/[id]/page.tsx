@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { adminApi } from '@/lib/adminApi';
 import { BACKEND_URL } from '@/lib/utils';
 
 interface PastWorkshopParams {
@@ -29,12 +30,16 @@ export default function EditPastWorkshopPage({ params }: PastWorkshopParams) {
     useEffect(() => {
         const fetchPastWorkshop = async () => {
             try {
-                // Fetch the individual past workshop
-                const response = await fetch(`${BACKEND_URL}/api/workshops/past/${params.id}`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch past workshop');
+                // Fetch the individual past workshop using adminApi
+                const data = await adminApi.pastWorkshops
+                    .getAll()
+                    .then((workshops) =>
+                        workshops.find((workshop: any) => workshop._id === params.id),
+                    );
+
+                if (!data) {
+                    throw new Error('Past workshop not found');
                 }
-                const data = await response.json();
 
                 // Format the date for the input field (YYYY-MM-DDTHH:MM)
                 let formattedDate = '';
@@ -137,23 +142,12 @@ export default function EditPastWorkshopPage({ params }: PastWorkshopParams) {
             const filteredHighlights = formData.highlights.filter((h) => h.trim() !== '');
             const filteredMediaLinks = formData.mediaLinks.filter((m) => m.trim() !== '');
 
-            const response = await fetch(`${BACKEND_URL}/api/workshops/past/${params.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('adminAuthToken')}`,
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    highlights: filteredHighlights,
-                    mediaLinks: filteredMediaLinks,
-                }),
+            // Use adminApi to update the past workshop
+            await adminApi.pastWorkshops.update(params.id, {
+                ...formData,
+                highlights: filteredHighlights,
+                mediaLinks: filteredMediaLinks,
             });
-
-            if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.error || 'Failed to update past workshop');
-            }
 
             setSuccess('Past workshop updated successfully!');
 

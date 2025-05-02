@@ -5,6 +5,37 @@ import { BACKEND_URL } from './utils';
 
 // Admin API functions
 export const adminApi = {
+    // Past Workshops
+    pastWorkshops: {
+        // Get all past workshops
+        getAll: async () => {
+            return fetch(`${BACKEND_URL}/api/workshops/past`).then((res) => res.json());
+        },
+
+        // Create a new past workshop
+        create: async (workshopData: any) => {
+            return adminFetchWithAuth(`/workshops/past`, {
+                method: 'POST',
+                body: JSON.stringify(workshopData),
+            });
+        },
+
+        // Update a past workshop
+        update: async (workshopId: string, workshopData: any) => {
+            return adminFetchWithAuth(`/workshops/past/${workshopId}`, {
+                method: 'PUT',
+                body: JSON.stringify(workshopData),
+            });
+        },
+
+        // Delete a past workshop
+        delete: async (workshopId: string) => {
+            return adminFetchWithAuth(`/workshops/past/${workshopId}`, {
+                method: 'DELETE',
+            });
+        },
+    },
+
     // Courses
     courses: {
         // Get all courses

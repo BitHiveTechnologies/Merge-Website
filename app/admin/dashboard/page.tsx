@@ -120,26 +120,9 @@ export default function AdminDashboardPage() {
             )
         ) {
             try {
-                // Send DELETE request to the API
-                const response = await fetch(`/api/workshops/past/${workshopId}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${localStorage.getItem('adminAuthToken')}`,
-                    },
-                });
-
-                if (!response.ok) {
-                    const errorData = await response.json().catch(() => ({}));
-                    throw new Error(errorData.message || `API error: ${response.status}`);
-                }
-
+                await adminApi.pastWorkshops.delete(workshopId);
                 // Refresh the past workshops list after deletion
-                const updatedResponse = await fetch('/api/workshops/past');
-                if (!updatedResponse.ok) {
-                    throw new Error('Failed to fetch past workshops');
-                }
-                const updatedPastWorkshops = await updatedResponse.json();
+                const updatedPastWorkshops = await adminApi.pastWorkshops.getAll();
                 setPastWorkshops(updatedPastWorkshops);
             } catch (err: any) {
                 setError(err.message || 'Failed to delete past workshop');
@@ -147,6 +130,7 @@ export default function AdminDashboardPage() {
             }
         }
     };
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -161,12 +145,8 @@ export default function AdminDashboardPage() {
                     const data = await adminApi.workshops.getAll();
                     setWorkshops(data);
                 } else if (activeTab === 'pastWorkshops') {
-                    // Fetch past workshops from the API
-                    const response = await fetch('/api/workshops/past');
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch past workshops');
-                    }
-                    const data = await response.json();
+                    // Fetch past workshops using the adminApi
+                    const data = await adminApi.pastWorkshops.getAll();
                     setPastWorkshops(data);
                 } else if (activeTab === 'hackathons') {
                     const data = await adminApi.hackathons.getAll();
