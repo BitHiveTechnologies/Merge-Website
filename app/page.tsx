@@ -743,7 +743,7 @@ export default function Page() {
                                             }`}
                                             data-oid=".0e1m-2"
                                         >
-                                            {event.price}
+                                            {event.price === 'Free' ? 'Free' : `₹${event.price}`}
                                         </span>
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2" data-oid="r4hc.p0">
