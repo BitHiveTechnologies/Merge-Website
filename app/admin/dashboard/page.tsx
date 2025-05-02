@@ -112,6 +112,42 @@ export default function AdminDashboardPage() {
         }
     };
 
+    // Function to handle past workshop deletion
+    const handleDeletePastWorkshop = async (workshopId: string) => {
+        if (
+            window.confirm(
+                'Are you sure you want to delete this past workshop? This action cannot be undone.',
+            )
+        ) {
+            try {
+                // Send DELETE request to the API
+                const response = await fetch(`/api/workshops/past/${workshopId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${localStorage.getItem('adminAuthToken')}`,
+                    },
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `API error: ${response.status}`);
+                }
+
+                // Refresh the past workshops list after deletion
+                const updatedResponse = await fetch('/api/workshops/past');
+                if (!updatedResponse.ok) {
+                    throw new Error('Failed to fetch past workshops');
+                }
+                const updatedPastWorkshops = await updatedResponse.json();
+                setPastWorkshops(updatedPastWorkshops);
+            } catch (err: any) {
+                setError(err.message || 'Failed to delete past workshop');
+                console.error('Error deleting past workshop:', err);
+            }
+        }
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
