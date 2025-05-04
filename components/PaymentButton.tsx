@@ -67,7 +67,7 @@ export default function PaymentButton({
         try {
             // 1) grab your JWT
             if (!token) {
-                alert('You must be logged in to pay.');
+                router.push('/signup');
                 setLoading(false);
                 return;
             }

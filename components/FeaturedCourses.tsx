@@ -196,9 +196,7 @@ export default function FeaturedCourses() {
                                             data-oid="1zj1w13"
                                         >
                                             <img
-                                                src={
-                                                    'https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI='
-                                                }
+                                                src={'./images/Shruti.png'}
                                                 alt={course.instructor}
                                                 className="w-full h-full object-cover"
                                                 data-oid="-bv:f.5"

@@ -321,9 +321,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                         data-oid="ax61u08"
                                     >
                                         <img
-                                            src={
-                                                'https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI='
-                                            }
+                                            src={'../images/Shruti.png'}
                                             alt={course.instructor}
                                             className="w-full h-full object-cover"
                                             data-oid="e6dcw9d"
@@ -340,9 +338,6 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                 </div>
                                 <div className="flex items-center mb-8" data-oid="9r-tmyq">
                                     {renderRating(course.rating)}
-                                    <span className="ml-4 text-gray-400" data-oid="d_kypyo">
-                                        ({Math.floor(Math.random() * 500) + 100} students)
-                                    </span>
                                 </div>
                                 <div
                                     className="flex items-center justify-between mb-6"
