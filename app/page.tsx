@@ -1166,7 +1166,7 @@ export default function Page() {
                                         />
                                     </svg>
                                     <a
-                                        href="tel:+1234567890"
+                                        href="tel:+91 70700 30645"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="s9x_e9i"
                                     >
