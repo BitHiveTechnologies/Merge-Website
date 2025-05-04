@@ -145,13 +145,6 @@ export default function LoginPage() {
                                     >
                                         Password
                                     </label>
-                                    <Link
-                                        href="#"
-                                        className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                                        data-oid="93:mp1b"
-                                    >
-                                        Forgot Password?
-                                    </Link>
                                 </div>
                                 <div className="relative" data-oid=":6fwokr">
                                     <input
