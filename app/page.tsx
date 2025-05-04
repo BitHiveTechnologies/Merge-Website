@@ -827,61 +827,116 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* WhatsApp CTA */}
+            {/* Newsletter & WhatsApp CTA */}
             <section className="py-20 px-6 md:px-12 bg-black" data-oid="ihyo6yg">
-                <div className="max-w-3xl mx-auto" data-oid="-xuffzo">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12" data-oid="-xuffzo">
                     <div
-                        className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-xl border border-purple-800 relative overflow-hidden"
+                        className="bg-gray-800 p-8 rounded-xl border border-gray-700"
+                        data-oid="pkjqnp4"
+                    >
+                        <h3 className="text-2xl font-bold mb-4" data-oid="010cp9f">
+                            Subscribe to Our Newsletter
+                        </h3>
+                        <p className="text-gray-300 mb-6" data-oid="4fos9l.">
+                            Get updates on new courses, events, and tech insights directly to your
+                            inbox.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-3" data-oid="4ugtwmt">
+                            <input
+                                type="email"
+                                id="newsletter-email"
+                                placeholder="Enter your email"
+                                className="flex-grow px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
+                                data-oid="7j5rt4i"
+                            />
+
+                            <button
+                                onClick={async () => {
+                                    const email = (
+                                        document.getElementById(
+                                            'newsletter-email',
+                                        ) as HTMLInputElement
+                                    ).value;
+                                    if (!email) return;
+
+                                    try {
+                                        const response = await fetch(
+                                            `${BACKEND_URL}/api/newsletter/subscribe`,
+                                            {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Content-Type': 'application/json',
+                                                },
+                                                body: JSON.stringify({ email }),
+                                            },
+                                        );
+
+                                        if (response.ok) {
+                                            alert('Successfully subscribed to the newsletter!');
+                                            (
+                                                document.getElementById(
+                                                    'newsletter-email',
+                                                ) as HTMLInputElement
+                                            ).value = '';
+                                        } else {
+                                            const data = await response.json();
+                                            alert(
+                                                data.message ||
+                                                    'Failed to subscribe. Please try again.',
+                                            );
+                                        }
+                                    } catch (err) {
+                                        console.error('Newsletter subscription error:', err);
+                                        alert('An error occurred. Please try again later.');
+                                    }
+                                }}
+                                className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium whitespace-nowrap"
+                                data-oid="4dvpqef"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-xl border border-purple-800"
                         data-oid="chpikn4"
                     >
-                        {/* Pulse effect elements */}
-                        <div className="absolute inset-0 z-0" data-oid="zg9gvpt">
+                        <div className="flex items-center mb-6" data-oid="ngvwcge">
                             <div
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#25D366]/20 rounded-full animate-ping"
-                                data-oid="wlu::5r"
-                            ></div>
-                            <div
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#25D366]/10 rounded-full animate-pulse"
-                                data-oid="44_.qa3"
-                            ></div>
-                        </div>
-                        <div className="relative z-10" data-oid="r7j:7ds">
-                            <div className="flex items-center mb-6" data-oid="ngvwcge">
-                                <div
-                                    className="w-12 h-12 rounded-full bg-white flex items-center justify-center"
-                                    data-oid="ma65nrp"
-                                >
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        data-oid="-tiwkom"
-                                    >
-                                        <path
-                                            d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9 16.124 19.0521 17.6242 17.5518C19.1245 16.0516 19.9724 14.0273 19.9724 11.9176C19.9724 9.80781 19.1245 7.78361 17.6242 6.28333C17.6161 6.27519 17.6081 6.26709 17.6 6.25999V6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.512 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.635 11.92C18.635 13.6664 17.916 15.3418 16.66 16.57C15.4995 17.6812 13.9687 18.3141 12.37 18.37L12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6033 13.4958 10.768 14.5293 12.16 15.17C12.5631 15.3312 12.9836 15.4424 13.41 15.5C13.7798 15.5726 14.1601 15.5413 14.5122 15.4091C14.8643 15.2769 15.1761 15.0481 15.42 14.75C15.5325 14.5251 15.6111 14.2828 15.6528 14.0315C15.6945 13.7802 15.6986 13.5229 15.6648 13.27C15.6648 13.27 15.81 13.69 15.61 13.59Z"
-                                            fill="#25D366"
-                                            data-oid="6h_:gh:"
-                                        />
-                                    </svg>
-                                </div>
-                                <h3 className="text-2xl font-bold ml-4" data-oid="sxih3ol">
-                                    Join Our WhatsApp Community
-                                </h3>
-                            </div>
-                            <p className="text-gray-300 mb-6" data-oid="k_t1ynb">
-                                Connect with fellow learners, get instant updates, and access
-                                exclusive resources.
-                            </p>
-                            <a
-                                href="https://chat.whatsapp.com/LYEHjjzyiplD9pT3r22iNo"
-                                className="block w-full py-3 text-center rounded-md bg-[#25D366] hover:bg-[#20BD5A] transition-colors font-medium text-black shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
-                                data-oid="a3rgugr"
+                                className="w-12 h-12 rounded-full bg-white flex items-center justify-center"
+                                data-oid="ma65nrp"
                             >
-                                Join WhatsApp Group
-                            </a>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    data-oid="-tiwkom"
+                                >
+                                    <path
+                                        d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9 16.124 19.0521 17.6242 17.5518C19.1245 16.0516 19.9724 14.0273 19.9724 11.9176C19.9724 9.80781 19.1245 7.78361 17.6242 6.28333C17.6161 6.27519 17.6081 6.26709 17.6 6.25999V6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.512 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.635 11.92C18.635 13.6664 17.916 15.3418 16.66 16.57C15.4995 17.6812 13.9687 18.3141 12.37 18.37L12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6033 13.4958 10.768 14.5293 12.16 15.17C12.5631 15.3312 12.9836 15.4424 13.41 15.5C13.7798 15.5726 14.1601 15.5413 14.5122 15.4091C14.8643 15.2769 15.1761 15.0481 15.42 14.75C15.5325 14.5251 15.6111 14.2828 15.6528 14.0315C15.6945 13.7802 15.6986 13.5229 15.6648 13.27C15.6648 13.27 15.81 13.69 15.61 13.59Z"
+                                        fill="#25D366"
+                                        data-oid="6h_:gh:"
+                                    />
+                                </svg>
+                            </div>
+                            <h3 className="text-2xl font-bold ml-4" data-oid="sxih3ol">
+                                Join Our WhatsApp Community
+                            </h3>
                         </div>
+                        <p className="text-gray-300 mb-6" data-oid="k_t1ynb">
+                            Connect with fellow learners, get instant updates, and access exclusive
+                            resources.
+                        </p>
+                        <a
+                            href="https://chat.whatsapp.com/LYEHjjzyiplD9pT3r22iNo"
+                            className="block w-full py-3 text-center rounded-md bg-[#25D366] hover:bg-[#20BD5A] transition-colors font-medium text-black"
+                            data-oid="a3rgugr"
+                        >
+                            Join WhatsApp Group
+                        </a>
                     </div>
                 </div>
             </section>
