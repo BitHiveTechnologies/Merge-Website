@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { env } from 'process';
 import { BACKEND_URL } from '@/lib/utils';
+import SalesBanner from '@/components/SalesBanner';
 
 export default function Page() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -163,6 +164,7 @@ export default function Page() {
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="s5m1ils">
             {/* Navbar */}
             <Navbar data-oid="xuvve3y" />
+            <SalesBanner data-oid="5jfnn.d" />
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-gray-900 p-4" data-oid="ibzr6e.">
