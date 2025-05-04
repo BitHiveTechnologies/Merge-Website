@@ -8,7 +8,8 @@ interface SalesBannerProps {
 }
 
 export default function SalesBanner({ message }: SalesBannerProps) {
-    const defaultMessage = '!! EARLYBIRD SALE - Exclusive ₹500 OFF for the First 50 Students !!';
+    const defaultMessage =
+        '!! EARLYBIRD SALE - Exclusive ₹500 OFF for the First 50 Students (Discount Auto Applied on Checkout) !!';
 
     // Animation variants for text
     const textVariants = {

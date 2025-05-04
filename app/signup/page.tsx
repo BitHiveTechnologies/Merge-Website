@@ -253,6 +253,31 @@ export default function SignupPage() {
                                 <p className="mt-1 text-xs text-gray-400" data-oid="m85uatx">
                                     Password must be at least 8 characters long
                                 </p>
+                                <div
+                                    className="mt-2 p-2 bg-yellow-500/20 border border-yellow-500 rounded-md text-yellow-200 text-sm flex items-start"
+                                    data-oid="cdj0_m0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5 mr-2 flex-shrink-0 mt-0.5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        data-oid="8_k8qkx"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                                            data-oid="0fqnl2z"
+                                        />
+                                    </svg>
+                                    <span data-oid="p99z42v">
+                                        Please remember the password or note it somewhere for future
+                                        login.
+                                    </span>
+                                </div>
                             </div>
 
                             <div className="flex items-start mb-6" data-oid="upviq04">

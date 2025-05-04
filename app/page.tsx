@@ -65,25 +65,25 @@ export default function Page() {
 
     const testimonials = [
         {
-            name: 'Alex Johnson',
-            role: 'Web Developer',
+            name: 'Srijan Raman',
+            role: 'Student, BITS Mesra',
             content:
                 'The courses at Merge helped me transition from a beginner to a professional developer in just 3 months. The community support is incredible!',
-            avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+            avatar: 'https://i.ibb.co/VY22XNhs/Image-05-05-25-at-1-27-AM.jpg',
         },
         {
-            name: 'Sarah Chen',
-            role: 'UI/UX Designer',
+            name: 'Priyansh Kandwal',
+            role: 'Student, PST',
             content:
-                "Participating in Merge's hackathons gave me real-world experience and helped me build my portfolio. I landed my dream job shortly after!",
-            avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+                "Participating in Merge's Course gave me real-world experience and helped me build my portfolio. I landed my dream Internship shortly after!",
+            avatar: 'https://i.ibb.co/chcXYNKh/PHOTO-2025-04-25-02-39-11.jpg',
         },
         {
-            name: 'Raj Patel',
-            role: 'Full Stack Developer',
+            name: 'Himanshu Prajapati',
+            role: 'Student, Starex University',
             content:
                 'The instructors are industry professionals who provide practical insights. The WhatsApp community continues to be a valuable resource.',
-            avatar: 'https://randomuser.me/api/portraits/men/22.jpg',
+            avatar: 'https://i.ibb.co/Q7HdhYw9/PHOTO-2025-05-05-01-36-16.jpg',
         },
     ];
 
