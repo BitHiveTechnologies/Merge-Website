@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { BACKEND_URL, cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
+import SalesBanner from '@/components/SalesBanner';
 
 // Course type definition
 interface Course {
@@ -142,6 +143,7 @@ export default function CoursesPage() {
     return (
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="z.6cm0s">
             <Navbar data-oid="jch-7je" />
+            <SalesBanner data-oid="0yn2hr1" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"

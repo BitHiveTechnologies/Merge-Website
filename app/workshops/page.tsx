@@ -1,6 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
+import SalesBanner from '@/components/SalesBanner';
 import { BACKEND_URL, cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -97,6 +98,7 @@ export default function WorkshopsPage() {
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="6adlm36">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="kwhywpa" />
+            <SalesBanner data-oid="u9jprea" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"

@@ -35,7 +35,7 @@ export default function SalesBanner({ message }: SalesBannerProps) {
 
     return (
         <div
-            className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-2 px-4 text-center shadow-md"
+            className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md"
             data-oid="v770x:e"
         >
             <motion.div
@@ -48,7 +48,7 @@ export default function SalesBanner({ message }: SalesBannerProps) {
                 <motion.span
                     animate="pulse"
                     variants={pulseVariants}
-                    className="font-medium"
+                    className="font-medium text-xs md:text-base"
                     data-oid="k51.8v6"
                 >
                     {message || defaultMessage}

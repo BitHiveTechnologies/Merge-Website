@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
+import SalesBanner from '@/components/SalesBanner';
 
 // Hackathon type definition
 interface Hackathon {
@@ -164,7 +165,7 @@ export default function HackathonsPage() {
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="pc-snw-">
             {/* Navbar - reusing from main page */}
             <Navbar data-oid="26b_-d6" />
-
+            <SalesBanner/>
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
