@@ -8,8 +8,7 @@ interface SalesBannerProps {
 }
 
 export default function SalesBanner({ message }: SalesBannerProps) {
-    const [isVisible, setIsVisible] = useState(true);
-    const defaultMessage = 'EARLYBIRD SALE - Exclusive ₹500 OFF for the First 50 Students';
+    const defaultMessage = '!! EARLYBIRD SALE - Exclusive ₹500 OFF for the First 50 Students !!';
 
     // Animation variants for text
     const textVariants = {
@@ -34,12 +33,10 @@ export default function SalesBanner({ message }: SalesBannerProps) {
         },
     };
 
-    if (!isVisible) return null;
-
     return (
         <div
-            className="bg-gradient-to-r from-purple-800 to-pink-700 text-white py-2 px-4 text-center relative"
-            data-oid="z8cglj3"
+            className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-2 px-4 text-center shadow-md"
+            data-oid="v770x:e"
         >
             <motion.div
                 initial="hidden"
