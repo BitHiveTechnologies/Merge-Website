@@ -146,7 +146,7 @@ export default function CoursesPage() {
             <SalesBanner data-oid="0yn2hr1" />
             {/* Page Header */}
             <div
-                className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
+                className="bg-gradient-to-b from-black to-gray-900 pt-32 md:pt-24 pb-16 md:pb-28 px-4 md:px-12 relative overflow-hidden"
                 data-oid="lzbd4oc"
             >
                 {/* Background elements similar to main page */}
@@ -163,9 +163,9 @@ export default function CoursesPage() {
                     data-oid="9-jv003"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="46u6id6">
+                <div className="max-w-6xl mx-auto relative z-10 py-4 md:py-8" data-oid="46u6id6">
                     <h1
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+                        className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-8"
                         data-oid="cc051lc"
                     >
                         Explore Our{' '}
@@ -177,14 +177,14 @@ export default function CoursesPage() {
                         </span>
                     </h1>
                     <p
-                        className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
+                        className="text-lg md:text-2xl text-gray-300 max-w-3xl mb-4 md:mb-6"
                         data-oid="v.t__e5"
                     >
                         Discover a Wide Range of Courses designed to help you Master New Skills and
                         Advance your Career in Technology.
                     </p>
                     <div
-                        className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
+                        className="w-24 md:w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-4 md:mt-6 mb-6 md:mb-8"
                         data-oid="i1zrpn8"
                     ></div>
                     <div className="flex flex-wrap gap-4 mt-8" data-oid="cvcj.n2">
@@ -287,7 +287,7 @@ export default function CoursesPage() {
 
             {/* Filters and Search */}
             <div
-                className="bg-gray-900 py-8 px-6 md:px-12 border-b border-gray-800"
+                className="bg-gray-900 py-4 md:py-8 px-4 md:px-12 border-b border-gray-800"
                 data-oid="96sx3qv"
             >
                 <div className="max-w-6xl mx-auto" data-oid="q1lt:ug">
@@ -295,19 +295,25 @@ export default function CoursesPage() {
                         className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between"
                         data-oid="w-_c_-t"
                     >
-                        <div className="flex flex-col sm:flex-row gap-4" data-oid="aag0thi">
-                            <div className="flex items-center space-x-4" data-oid="d:jgoo5">
+                        <div
+                            className="flex flex-col sm:flex-row gap-3 md:gap-4"
+                            data-oid="aag0thi"
+                        >
+                            <div
+                                className="flex items-center space-x-2 md:space-x-4"
+                                data-oid="d:jgoo5"
+                            >
                                 <label
-                                    className="text-gray-300 whitespace-nowrap"
+                                    className="text-gray-300 whitespace-nowrap text-sm md:text-base"
                                     data-oid="g8f_6-1"
                                 >
                                     Price:
                                 </label>
-                                <div className="flex space-x-2" data-oid="-4iztel">
+                                <div className="flex space-x-1 md:space-x-2" data-oid="-4iztel">
                                     <button
                                         onClick={() => setPriceFilter('all')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             priceFilter === 'all'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -319,7 +325,7 @@ export default function CoursesPage() {
                                     <button
                                         onClick={() => setPriceFilter('free')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             priceFilter === 'free'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -331,7 +337,7 @@ export default function CoursesPage() {
                                     <button
                                         onClick={() => setPriceFilter('paid')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             priceFilter === 'paid'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -343,18 +349,24 @@ export default function CoursesPage() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4" data-oid=".irr66t">
+                            <div
+                                className="flex items-center space-x-2 md:space-x-4"
+                                data-oid=".irr66t"
+                            >
                                 <label
-                                    className="text-gray-300 whitespace-nowrap"
+                                    className="text-gray-300 whitespace-nowrap text-sm md:text-base"
                                     data-oid="k0y.ea-"
                                 >
                                     Level:
                                 </label>
-                                <div className="flex space-x-2" data-oid="4f4q:8l">
+                                <div
+                                    className="flex flex-wrap gap-1 md:space-x-2"
+                                    data-oid="4f4q:8l"
+                                >
                                     <button
                                         onClick={() => setLevelFilter('all')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             levelFilter === 'all'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -366,7 +378,7 @@ export default function CoursesPage() {
                                     <button
                                         onClick={() => setLevelFilter('Beginner')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             levelFilter === 'Beginner'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -378,7 +390,7 @@ export default function CoursesPage() {
                                     <button
                                         onClick={() => setLevelFilter('Intermediate')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             levelFilter === 'Intermediate'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -390,7 +402,7 @@ export default function CoursesPage() {
                                     <button
                                         onClick={() => setLevelFilter('Advanced')}
                                         className={cn(
-                                            'px-3 py-1 rounded-md text-sm',
+                                            'px-2 md:px-3 py-1 rounded-md text-xs md:text-sm',
                                             levelFilter === 'Advanced'
                                                 ? 'bg-purple-500 text-white'
                                                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700',
@@ -410,7 +422,7 @@ export default function CoursesPage() {
                                     placeholder="Search courses..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full md:w-64 px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500 text-white"
+                                    className="w-full md:w-64 px-3 md:px-4 py-1.5 md:py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-500 text-white text-sm md:text-base"
                                     data-oid="x988rmm"
                                 />
 
@@ -437,7 +449,7 @@ export default function CoursesPage() {
             </div>
 
             {/* Course Listings */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid="118a538">
+            <div className="py-8 md:py-12 px-4 md:px-12 bg-black" data-oid="118a538">
                 <div className="max-w-6xl mx-auto" data-oid="y-9ga42">
                     {isLoading ? (
                         <div className="flex justify-center items-center py-20" data-oid="op-zw5u">
@@ -460,7 +472,7 @@ export default function CoursesPage() {
                         </div>
                     ) : (
                         <div
-                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
                             data-oid="79nglth"
                         >
                             {filteredCourses.map((course) => (
