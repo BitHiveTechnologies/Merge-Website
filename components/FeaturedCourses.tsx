@@ -92,27 +92,27 @@ export default function FeaturedCourses() {
     ];
 
     return (
-        <section className="py-20 px-6 md:px-12 bg-black" data-oid="lohbk.n">
-            <div className="max-w-6xl mx-auto" data-oid="_4s6xd-">
-                <div className="flex justify-between items-end mb-12" data-oid="xi.ko6d">
-                    <div data-oid=":xjq146">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="l51r9l-">
+        <section className="py-20 px-6 md:px-12 bg-black" data-oid="1476i-6">
+            <div className="max-w-6xl mx-auto" data-oid="w2-dhok">
+                <div className="flex justify-between items-end mb-12" data-oid="pti3scc">
+                    <div data-oid="5co8ewy">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="lwk5ya0">
                             Featured Courses
                         </h2>
-                        <p className="text-xl text-gray-300" data-oid="6zm8l_e">
+                        <p className="text-xl text-gray-300" data-oid="y88rigw">
                             Start your learning journey with our top courses
                         </p>
                     </div>
                     <a
                         href="/courses"
                         className="hidden md:block text-purple-400 hover:text-purple-300 transition-colors"
-                        data-oid="q70m0el"
+                        data-oid="0lzur0r"
                     >
                         View All Courses →
                     </a>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8" data-oid="j8rixj.">
+                <div className="grid md:grid-cols-3 gap-8" data-oid="bvfto.p">
                     {isLoading ? (
                         // Loading state
                         Array(3)
@@ -121,39 +121,39 @@ export default function FeaturedCourses() {
                                 <div
                                     key={index}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 animate-pulse"
-                                    data-oid="4.m19s7"
+                                    data-oid="ssh4u4j"
                                 >
-                                    <div className="h-48 bg-gray-700" data-oid="rwj192h"></div>
-                                    <div className="p-6" data-oid="gf5f89u">
+                                    <div className="h-48 bg-gray-700" data-oid="7-6jg_-"></div>
+                                    <div className="p-6" data-oid="g2cyj2m">
                                         <div
                                             className="h-6 bg-gray-700 rounded mb-4 w-3/4"
-                                            data-oid="h:e7ye4"
+                                            data-oid="cq6:8hx"
                                         ></div>
                                         <div
                                             className="h-4 bg-gray-700 rounded mb-4 w-1/2"
-                                            data-oid="kyp070l"
+                                            data-oid="ofe8u1k"
                                         ></div>
                                         <div
                                             className="h-4 bg-gray-700 rounded mb-6 w-full"
-                                            data-oid="b:skjw9"
+                                            data-oid="59_bxyk"
                                         ></div>
                                         <div
                                             className="h-10 bg-gray-700 rounded w-full"
-                                            data-oid="hv2z4j3"
+                                            data-oid="2z-qkc1"
                                         ></div>
                                     </div>
                                 </div>
                             ))
                     ) : error ? (
                         // Error state
-                        <div className="col-span-3 text-center py-8" data-oid="rb:7z0x">
-                            <p className="text-red-400 mb-4" data-oid="vtf1jey">
+                        <div className="col-span-3 text-center py-8" data-oid="zv:ijyg">
+                            <p className="text-red-400 mb-4" data-oid="dak-h68">
                                 {error}
                             </p>
                             <button
                                 onClick={() => window.location.reload()}
                                 className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                                data-oid="0h7p6tz"
+                                data-oid="9enb4oj"
                             >
                                 Retry
                             </button>
@@ -165,59 +165,59 @@ export default function FeaturedCourses() {
                                 key={course._id}
                                 className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                 onClick={() => handleCourseClick(course._id)}
-                                data-oid="yb:_2op"
+                                data-oid="oaxfenm"
                             >
-                                <div className="h-48 overflow-hidden" data-oid="ed0movv">
+                                <div className="h-48 overflow-hidden" data-oid="v294jfe">
                                     <img
                                         src={course.image}
                                         alt={course.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="qsnlij-"
+                                        data-oid="n-o630g"
                                     />
                                 </div>
-                                <div className="p-6" data-oid="fo_oo9d">
+                                <div className="p-6" data-oid="ouu9vlf">
                                     <div
                                         className="flex justify-between items-start mb-4"
-                                        data-oid=".52_qao"
+                                        data-oid="o-lgdm6"
                                     >
-                                        <h3 className="text-xl font-semibold" data-oid="4ni7gr0">
+                                        <h3 className="text-xl font-semibold" data-oid="y:j75fo">
                                             {course.title}
                                         </h3>
                                         <span
                                             className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-sm"
-                                            data-oid="a21lj.1"
+                                            data-oid="u613hip"
                                         >
                                             {course.level}
                                         </span>
                                     </div>
-                                    <div className="flex items-center mb-4" data-oid="ajzuiv5">
+                                    <div className="flex items-center mb-4" data-oid="rd.9gks">
                                         <div
                                             className="w-8 h-8 rounded-full overflow-hidden mr-4"
-                                            data-oid="1zj1w13"
+                                            data-oid="31c_s1j"
                                         >
                                             <img
-                                                src={'./images/Shruti.png'}
+                                                src={'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'}
                                                 alt={course.instructor}
                                                 className="w-full h-full object-cover"
-                                                data-oid="-bv:f.5"
+                                                data-oid="w:b-er6"
                                             />
                                         </div>
-                                        <span className="text-gray-300" data-oid="lwi-5.a">
+                                        <span className="text-gray-300" data-oid="e.bfvqe">
                                             {course.instructor}
                                         </span>
                                     </div>
                                     <div
                                         className="flex justify-between text-gray-400 mb-6"
-                                        data-oid=":-wnhp7"
+                                        data-oid="l3-clk4"
                                     >
-                                        <span data-oid="qxs-aht">{course.duration}</span>
-                                        <span className="text-white font-medium" data-oid="e7-2177">
+                                        <span data-oid="gwta:aa">{course.duration}</span>
+                                        <span className="text-white font-medium" data-oid="j5nwhg5">
                                             {formatPrice(course.price)}
                                         </span>
                                     </div>
                                     <button
                                         className="block w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                        data-oid="lrgq3as"
+                                        data-oid="kljdqs."
                                     >
                                         Enroll Now
                                     </button>
@@ -227,11 +227,11 @@ export default function FeaturedCourses() {
                     )}
                 </div>
 
-                <div className="mt-8 text-center md:hidden" data-oid="r7hgvyj">
+                <div className="mt-8 text-center md:hidden" data-oid="nvgoo2q">
                     <a
                         href="/courses"
                         className="text-purple-400 hover:text-purple-300 transition-colors"
-                        data-oid="npsf6_j"
+                        data-oid="tpv:-c8"
                     >
                         View All Courses →
                     </a>

@@ -9,7 +9,7 @@ interface SalesBannerProps {
 
 export default function SalesBanner({ message }: SalesBannerProps) {
     const defaultMessage =
-        '!! EARLYBIRD SALE - Exclusive ₹500 OFF for the First 50 Students (Discount Auto Applied on Checkout) !!';
+        '!! EARLYBIRD SALE - Exclusive 30% OFF for GLBITM Students (Discount Auto Applied on Checkout) !!';
 
     // Animation variants for text
     const textVariants = {
@@ -35,22 +35,17 @@ export default function SalesBanner({ message }: SalesBannerProps) {
     };
 
     return (
-        <div
-            className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md"
-            data-oid="v770x:e"
-        >
+        <div className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md">
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={textVariants}
                 className="flex items-center justify-center"
-                data-oid="h9onw:c"
             >
                 <motion.span
                     animate="pulse"
                     variants={pulseVariants}
                     className="font-medium text-xs md:text-base"
-                    data-oid="k51.8v6"
                 >
                     {message || defaultMessage}
                 </motion.span>
