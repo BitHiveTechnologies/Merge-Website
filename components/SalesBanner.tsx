@@ -9,7 +9,7 @@ interface SalesBannerProps {
 
 export default function SalesBanner({ message }: SalesBannerProps) {
     const defaultMessage =
-        '!! EARLYBIRD SALE - Exclusive 30% OFF for GLBITM Students (Discount Auto Applied on Checkout) !!';
+        '!! EARLYBIRD SALE - Exclusive 30% OFF for New Students (Discount Auto Applied on Checkout) !!';
 
     // Animation variants for text
     const textVariants = {
