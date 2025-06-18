@@ -288,7 +288,7 @@ export default function AboutUsPage() {
     );
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20 mt-10" data-oid="gx3pg7z">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="gx3pg7z">
             <SalesBanner data-oid="p9-w2lg" />
             <Navbar data-oid="9-7z411" />
 
