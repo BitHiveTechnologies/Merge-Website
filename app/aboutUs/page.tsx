@@ -1,6 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
+import SalesBanner from '@/components/SalesBanner';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -279,7 +280,8 @@ export default function AboutUsPage() {
     );
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="_2d8h1x">
+        <div className="min-h-screen bg-black text-white font-sans pt-20 mt-10" data-oid="_2d8h1x">
+            <SalesBanner data-oid="ipa3gmt" />
             <Navbar data-oid="5:w7oqv" />
 
             {/* Hero Section */}
@@ -303,7 +305,7 @@ export default function AboutUsPage() {
                     data-oid="147-r9m"
                 />
 
-                <div className="relative z-10 max-w-6xl mx-auto" data-oid="h35nlkw">
+                <div className="relative z-10 max-w-6xl mx-auto mt-10" data-oid="h35nlkw">
                     <div className="max-w-4xl" data-oid="cnjc2s1">
                         {/* Left Content */}
                         <div data-oid="sykc84l">
@@ -311,49 +313,168 @@ export default function AboutUsPage() {
                                 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
                                 data-oid="qc8lw.v"
                             >
+                                <span className="text-white" data-oid="x4:ap7b">
+                                    About{' '}
+                                </span>
                                 <span
                                     className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600"
-                                    data-oid="x4:ap7b"
+                                    data-oid="xwfi-d1"
                                 >
-                                    About
-                                </span>
-                                <br data-oid="1z7gd-z" />
-                                <span className="text-white" data-oid="xwfi-d1">
                                     Merge
                                 </span>
                             </h1>
-                            <div
-                                className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
-                                data-oid="z-emiaf"
-                            />
 
                             <p
                                 className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed"
                                 data-oid="sb3b2qo"
                             >
-                                Bridging the gap between academic education and industry readiness
+                                Bridging the Gap between Academic Education and Industry readiness
                                 through
                                 <span className="text-purple-400 font-semibold" data-oid="tpzj-f7">
                                     {' '}
-                                    personalized, mentor-led
+                                    Personalized, Mentor-led
                                 </span>{' '}
-                                learning experiences.
+                                Learning Experiences.
                             </p>
-                            <div className="flex flex-wrap gap-4" data-oid="6r158-w">
-                                <Link
-                                    href="/courses"
-                                    className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-medium"
-                                    data-oid="px9s0vi"
+
+                            <div
+                                className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
+                                data-oid="z-emiaf"
+                            />
+
+                            {/* Hero Cards */}
+                            <div
+                                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                                data-oid="sttbu7:"
+                            >
+                                <div
+                                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1"
+                                    data-oid="pw0xdyu"
                                 >
-                                    Explore Courses
-                                </Link>
-                                <Link
-                                    href="#team"
-                                    className="px-6 py-3 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
-                                    data-oid=".bg7_l0"
+                                    <div className="flex items-center mb-4" data-oid="y-d044k">
+                                        <div
+                                            className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
+                                            data-oid="z5c_rz5"
+                                        >
+                                            <svg
+                                                className="w-6 h-6 text-white"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                                data-oid="1tpg7pc"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                                    data-oid="ic5v6ng"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div data-oid="-rjt56.">
+                                            <h3
+                                                className="text-lg font-semibold text-white"
+                                                data-oid="s510xnm"
+                                            >
+                                                Our Mission
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className="text-gray-300 text-sm leading-relaxed"
+                                        data-oid="r7clv2h"
+                                    >
+                                        Democratizing tech education for Tier 2/3 colleges through
+                                        practical, industry-aligned learning experiences.
+                                    </p>
+                                </div>
+
+                                <div
+                                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1"
+                                    data-oid="2cyp-o0"
                                 >
-                                    Meet Our Team
-                                </Link>
+                                    <div className="flex items-center mb-4" data-oid="qij19-4">
+                                        <div
+                                            className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
+                                            data-oid="e-unnrf"
+                                        >
+                                            <svg
+                                                className="w-6 h-6 text-white"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                                data-oid=":bq_xvc"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    data-oid="a10nqso"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div data-oid="3jlq6t:">
+                                            <h3
+                                                className="text-lg font-semibold text-white"
+                                                data-oid="hkdiad-"
+                                            >
+                                                Our Vision
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className="text-gray-300 text-sm leading-relaxed"
+                                        data-oid="u8qqodu"
+                                    >
+                                        Creating a future where every student has access to quality
+                                        tech education and career opportunities.
+                                    </p>
+                                </div>
+
+                                <div
+                                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1"
+                                    data-oid="-k_wdsi"
+                                >
+                                    <div className="flex items-center mb-4" data-oid="lu2ks7.">
+                                        <div
+                                            className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
+                                            data-oid="3pujsn:"
+                                        >
+                                            <svg
+                                                className="w-6 h-6 text-white"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                                data-oid="-w7d:62"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                                                    data-oid="_u0_ok."
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div data-oid="9i1__t7">
+                                            <h3
+                                                className="text-lg font-semibold text-white"
+                                                data-oid="4grilmy"
+                                            >
+                                                Our Impact
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className="text-gray-300 text-sm leading-relaxed"
+                                        data-oid="ru.jqos"
+                                    >
+                                        500+ students mentored with 95% placement rate, transforming
+                                        careers across India.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -372,20 +493,20 @@ export default function AboutUsPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto" data-oid="t-rwnal">
                     <div className="text-center mb-20" data-oid="otjnewo">
-                        <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="r.1np1d">
+                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid="r.1np1d">
                             What Drives{' '}
                             <span
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
                                 data-oid="g3gvh4b"
                             >
-                                Us
+                                Us ?
                             </span>
                         </h2>
                         <p
                             className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
                             data-oid="gw8dibg"
                         >
-                            The principles that guide everything we do at Merge Learning
+                            The Principles that guide everything we do at Merge Learning
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10" data-oid="qs8ptac">
@@ -405,7 +526,7 @@ export default function AboutUsPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto" data-oid=":gm1_1v">
                     <div className="text-center mb-20" data-oid="bqki50g">
-                        <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="14fx49u">
+                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid="14fx49u">
                             The People Behind{' '}
                             <span
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
@@ -418,8 +539,8 @@ export default function AboutUsPage() {
                             className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
                             data-oid="166gtja"
                         >
-                            Passionate educators, technologists, and mentors committed to reshaping
-                            tech education
+                            Passionate Educators, Technologists, and Mentors committed to reshaping
+                            Tech Education
                         </p>
                     </div>
 
