@@ -163,17 +163,17 @@ export default function AdminDashboardPage() {
     }, [activeTab]);
 
     return (
-        <div data-oid=".cxq26a">
-            <h1 className="text-3xl font-bold mb-8" data-oid="kbv3lua">
+        <div data-oid=":ku279x">
+            <h1 className="text-3xl font-bold mb-8" data-oid="bsb81a8">
                 Admin Dashboard
             </h1>
 
             {/* Navigation Tabs */}
             <div
                 className="bg-gray-900 py-6 px-6 rounded-t-lg border border-gray-800"
-                data-oid="82yn5.3"
+                data-oid="69vh9tj"
             >
-                <div className="flex space-x-4 border-b border-gray-800" data-oid="24zbl3d">
+                <div className="flex space-x-4 border-b border-gray-800" data-oid="du_6nrx">
                     <button
                         onClick={() => setActiveTab('courses')}
                         className={cn(
@@ -182,7 +182,7 @@ export default function AdminDashboardPage() {
                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                 : 'text-gray-400 hover:text-gray-300',
                         )}
-                        data-oid="q.-6z.i"
+                        data-oid="3cf_3fm"
                     >
                         Courses
                     </button>
@@ -194,7 +194,7 @@ export default function AdminDashboardPage() {
                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                 : 'text-gray-400 hover:text-gray-300',
                         )}
-                        data-oid="fgfyjx7"
+                        data-oid="mqks._t"
                     >
                         Workshops
                     </button>
@@ -206,7 +206,7 @@ export default function AdminDashboardPage() {
                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                 : 'text-gray-400 hover:text-gray-300',
                         )}
-                        data-oid="nm4rk41"
+                        data-oid="qv6o3_-"
                     >
                         Past Workshops
                     </button>
@@ -218,7 +218,7 @@ export default function AdminDashboardPage() {
                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                 : 'text-gray-400 hover:text-gray-300',
                         )}
-                        data-oid="6f02r58"
+                        data-oid="zy6lym3"
                     >
                         Hackathons
                     </button>
@@ -228,30 +228,30 @@ export default function AdminDashboardPage() {
             {/* Content Area */}
             <div
                 className="bg-gray-800 rounded-b-lg p-6 border-x border-b border-gray-700"
-                data-oid="pmw5ci1"
+                data-oid="8zijyte"
             >
                 {loading ? (
                     <div
                         className="flex justify-center items-center min-h-[50vh]"
-                        data-oid="sh.i39:"
+                        data-oid="p2pprij"
                     >
                         <div
                             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                            data-oid="1cet325"
+                            data-oid="hy-2ggl"
                         ></div>
                     </div>
                 ) : error ? (
                     <div
                         className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                        data-oid="ju1gl6z"
+                        data-oid="r5kmb_h"
                     >
-                        <p className="text-red-200" data-oid="3mi24t3">
+                        <p className="text-red-200" data-oid="w2df8_h">
                             {error}
                         </p>
                         <button
                             onClick={() => window.location.reload()}
                             className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
-                            data-oid="tyyz2dg"
+                            data-oid="brbvmig"
                         >
                             Try Again
                         </button>
@@ -259,34 +259,34 @@ export default function AdminDashboardPage() {
                 ) : (
                     <>
                         {activeTab === 'courses' && (
-                            <div data-oid="v3wo06b">
+                            <div data-oid="tiuk2l3">
                                 <div
                                     className="flex justify-between items-center mb-6"
-                                    data-oid="oz5p3il"
+                                    data-oid="jmg576k"
                                 >
                                     <h2
                                         className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="sekm6pb"
+                                        data-oid="-7l:.js"
                                     >
                                         Manage Courses
                                     </h2>
                                     <Link
                                         href="/admin/dashboard/courses/new"
                                         className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                                        data-oid="kap.zzh"
+                                        data-oid="b_1uaea"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-1"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            data-oid="24tgkog"
+                                            data-oid="tvr9ty:"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                                 clipRule="evenodd"
-                                                data-oid="hlgkqwy"
+                                                data-oid="wmojah_"
                                             />
                                         </svg>
                                         Add New Course
@@ -295,47 +295,47 @@ export default function AdminDashboardPage() {
 
                                 <div
                                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                                    data-oid="zlznbol"
+                                    data-oid="hfyl0:m"
                                 >
-                                    <div className="overflow-x-auto" data-oid="_oi76go">
+                                    <div className="overflow-x-auto" data-oid="bkp50.9">
                                         <table
                                             className="min-w-full divide-y divide-gray-700"
-                                            data-oid="_o.hrxz"
+                                            data-oid="c15o00d"
                                         >
-                                            <thead className="bg-gray-900" data-oid="cqrgjst">
-                                                <tr data-oid="cf:c.rd">
+                                            <thead className="bg-gray-900" data-oid="nx.lfe7">
+                                                <tr data-oid="1xqj5cv">
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="8ew7w53"
+                                                        data-oid="tw2f8yx"
                                                     >
                                                         Title
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="uad80e-"
+                                                        data-oid=":7-6bgz"
                                                     >
                                                         Level
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="u038ytt"
+                                                        data-oid="e2.tg8-"
                                                     >
                                                         Instructor
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="g4re7tx"
+                                                        data-oid="5we-yc."
                                                     >
                                                         Price
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="y_5qahh"
+                                                        data-oid="oznbrle"
                                                     >
                                                         Actions
                                                     </th>
@@ -343,14 +343,14 @@ export default function AdminDashboardPage() {
                                             </thead>
                                             <tbody
                                                 className="bg-gray-800 divide-y divide-gray-700"
-                                                data-oid="25qecdw"
+                                                data-oid="wntgdxk"
                                             >
                                                 {courses.length === 0 ? (
-                                                    <tr data-oid="3ofh_6f">
+                                                    <tr data-oid="o.s38-3">
                                                         <td
                                                             colSpan={5}
                                                             className="px-6 py-4 text-center text-gray-400"
-                                                            data-oid="me:mkvy"
+                                                            data-oid="l6bev8o"
                                                         >
                                                             No courses found
                                                         </td>
@@ -360,29 +360,29 @@ export default function AdminDashboardPage() {
                                                         <tr
                                                             key={course._id}
                                                             className="hover:bg-gray-750"
-                                                            data-oid="1pd9vk5"
+                                                            data-oid="dcy8b-_"
                                                         >
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                                data-oid="_hyf6ru"
+                                                                data-oid="uy2y4cs"
                                                             >
                                                                 {course.title}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="usdr9un"
+                                                                data-oid="3zv9w.p"
                                                             >
                                                                 {course.level}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="qn77hkr"
+                                                                data-oid="dzbb59b"
                                                             >
                                                                 {course.instructor || 'N/A'}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="b5:g7l5"
+                                                                data-oid="pb8_lcs"
                                                             >
                                                                 {course.price
                                                                     ? `${course.price}`
@@ -390,13 +390,13 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
-                                                                data-oid="oditrse"
+                                                                data-oid="59mi.ju"
                                                             >
                                                                 <Link
                                                                     href={`/admin/dashboard/courses/${course._id}`}
                                                                     className="text-purple-400 hover:text-purple-300 transition-colors"
                                                                     title="View Registrations"
-                                                                    data-oid="gg0h4bq"
+                                                                    data-oid="f0fkxor"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -405,16 +405,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-eye"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="yb.n8ti"
+                                                                        data-oid="0p_dr6a"
                                                                     >
                                                                         <path
                                                                             d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
-                                                                            data-oid="sb:w_bp"
+                                                                            data-oid="5qk9ti:"
                                                                         />
 
                                                                         <path
                                                                             d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
-                                                                            data-oid="_.iqkjw"
+                                                                            data-oid="nje1ls4"
                                                                         />
                                                                     </svg>
                                                                 </Link>
@@ -426,7 +426,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-blue-400 hover:text-blue-300 transition-colors"
                                                                     title="Edit Course"
-                                                                    data-oid="lay0s_v"
+                                                                    data-oid="mmh:w:g"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -435,17 +435,17 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-pencil-square"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="mahtc_3"
+                                                                        data-oid="ndsl3.t"
                                                                     >
                                                                         <path
                                                                             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                                                            data-oid="4ipxyra"
+                                                                            data-oid="2.zgm_-"
                                                                         />
 
                                                                         <path
                                                                             fillRule="evenodd"
                                                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                                                            data-oid="81:547h"
+                                                                            data-oid="2pboa0z"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -457,7 +457,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-red-400 hover:text-red-300 transition-colors"
                                                                     title="Delete Course"
-                                                                    data-oid="sqw3pwo"
+                                                                    data-oid="_kh3c_8"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -466,16 +466,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-trash"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="dd8t_7o"
+                                                                        data-oid="obwytcb"
                                                                     >
                                                                         <path
                                                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
-                                                                            data-oid="1-kt8su"
+                                                                            data-oid="cu-xmf."
                                                                         />
 
                                                                         <path
                                                                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
-                                                                            data-oid="wspof_t"
+                                                                            data-oid="n0_uyuv"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -491,34 +491,34 @@ export default function AdminDashboardPage() {
                         )}
 
                         {activeTab === 'workshops' && (
-                            <div data-oid="rxrmwt-">
+                            <div data-oid=":rygf1m">
                                 <div
                                     className="flex justify-between items-center mb-6"
-                                    data-oid="q61-yty"
+                                    data-oid="jbbky6q"
                                 >
                                     <h2
                                         className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="8n25rxj"
+                                        data-oid="1tm.iua"
                                     >
                                         Manage Workshops
                                     </h2>
                                     <Link
                                         href="/admin/dashboard/workshops/new"
                                         className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                                        data-oid="-r:tcgd"
+                                        data-oid="_.5:v1j"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-1"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            data-oid="ug01fec"
+                                            data-oid="ny.st.x"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                                 clipRule="evenodd"
-                                                data-oid="tcbjdsg"
+                                                data-oid="nctc3lo"
                                             />
                                         </svg>
                                         Add New Workshop
@@ -527,47 +527,47 @@ export default function AdminDashboardPage() {
 
                                 <div
                                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                                    data-oid="5hphi69"
+                                    data-oid="9t-6tzq"
                                 >
-                                    <div className="overflow-x-auto" data-oid="kq9:-af">
+                                    <div className="overflow-x-auto" data-oid="558uecb">
                                         <table
                                             className="min-w-full divide-y divide-gray-700"
-                                            data-oid="3dwv7xq"
+                                            data-oid="tc53g5t"
                                         >
-                                            <thead className="bg-gray-900" data-oid="f:mqeo8">
-                                                <tr data-oid="10jaatg">
+                                            <thead className="bg-gray-900" data-oid="53jolj8">
+                                                <tr data-oid="_b824ec">
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="i10df93"
+                                                        data-oid="76karer"
                                                     >
                                                         Title
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="9yrull-"
+                                                        data-oid="39w-gfn"
                                                     >
                                                         Date
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="wzo:bpv"
+                                                        data-oid="ay.fv-4"
                                                     >
                                                         Location
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="88t0unm"
+                                                        data-oid="jga10vp"
                                                     >
                                                         Speaker
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="lpymlja"
+                                                        data-oid="ib59g-:"
                                                     >
                                                         Actions
                                                     </th>
@@ -575,14 +575,14 @@ export default function AdminDashboardPage() {
                                             </thead>
                                             <tbody
                                                 className="bg-gray-800 divide-y divide-gray-700"
-                                                data-oid="go0sxei"
+                                                data-oid="j3lmq28"
                                             >
                                                 {workshops.length === 0 ? (
-                                                    <tr data-oid="0qt7a57">
+                                                    <tr data-oid="re5:b81">
                                                         <td
                                                             colSpan={5}
                                                             className="px-6 py-4 text-center text-gray-400"
-                                                            data-oid="d3rhvyg"
+                                                            data-oid="ulz8u59"
                                                         >
                                                             No workshops found
                                                         </td>
@@ -592,17 +592,17 @@ export default function AdminDashboardPage() {
                                                         <tr
                                                             key={workshop._id}
                                                             className="hover:bg-gray-750"
-                                                            data-oid="qcub02a"
+                                                            data-oid="uelikbf"
                                                         >
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                                data-oid="u0jvkdc"
+                                                                data-oid="_a2g7aa"
                                                             >
                                                                 {workshop.title}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="6ll1t74"
+                                                                data-oid="1e9_ni2"
                                                             >
                                                                 {new Date(
                                                                     workshop.date,
@@ -610,25 +610,25 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="rw9ue.x"
+                                                                data-oid="46ak015"
                                                             >
                                                                 {workshop.location}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="fyups_9"
+                                                                data-oid="6:c83-i"
                                                             >
                                                                 {workshop.instructor || 'N/A'}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
-                                                                data-oid="_q3.u8x"
+                                                                data-oid="5rz02ub"
                                                             >
                                                                 <Link
                                                                     href={`/admin/dashboard/workshops/${workshop._id}`}
                                                                     className="text-purple-400 hover:text-purple-300 transition-colors"
                                                                     title="View Registrations"
-                                                                    data-oid="_gaoxne"
+                                                                    data-oid="g514:ta"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -637,16 +637,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-eye"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="t2t_x.8"
+                                                                        data-oid="d_gnn0l"
                                                                     >
                                                                         <path
                                                                             d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
-                                                                            data-oid="_7le02m"
+                                                                            data-oid="fb3j22w"
                                                                         />
 
                                                                         <path
                                                                             d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
-                                                                            data-oid="p6cewq5"
+                                                                            data-oid="78hv7m9"
                                                                         />
                                                                     </svg>
                                                                 </Link>
@@ -658,7 +658,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-blue-400 hover:text-blue-300 transition-colors"
                                                                     title="Edit Workshop"
-                                                                    data-oid="tqam1dl"
+                                                                    data-oid="nx880hm"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -667,17 +667,17 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-pencil-square"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="pncueac"
+                                                                        data-oid="eg2ry4y"
                                                                     >
                                                                         <path
                                                                             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                                                            data-oid="4m9aid6"
+                                                                            data-oid="53cdhie"
                                                                         />
 
                                                                         <path
                                                                             fillRule="evenodd"
                                                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                                                            data-oid="39.te0s"
+                                                                            data-oid="4g8:had"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -689,7 +689,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-red-400 hover:text-red-300 transition-colors"
                                                                     title="Delete Workshop"
-                                                                    data-oid="r10oefc"
+                                                                    data-oid="o8u7c-u"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -698,16 +698,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-trash"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid=".x4qog9"
+                                                                        data-oid="1adsn:h"
                                                                     >
                                                                         <path
                                                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
-                                                                            data-oid="kuzy37f"
+                                                                            data-oid="mxovb64"
                                                                         />
 
                                                                         <path
                                                                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
-                                                                            data-oid="-c36-_-"
+                                                                            data-oid="op166_9"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -723,34 +723,34 @@ export default function AdminDashboardPage() {
                         )}
 
                         {activeTab === 'pastWorkshops' && (
-                            <div data-oid="oqhbjxl">
+                            <div data-oid="etw95f8">
                                 <div
                                     className="flex justify-between items-center mb-6"
-                                    data-oid="_d_d33b"
+                                    data-oid="e4xqje3"
                                 >
                                     <h2
                                         className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="zv_n3px"
+                                        data-oid="qzyw5y8"
                                     >
                                         Manage Past Workshops
                                     </h2>
                                     <Link
                                         href="/admin/dashboard/past-workshops/new"
                                         className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                                        data-oid="c92man0"
+                                        data-oid="jb9fm-6"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-1"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            data-oid="w8gjz-v"
+                                            data-oid="govrp3v"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                                 clipRule="evenodd"
-                                                data-oid="_qawcg6"
+                                                data-oid="zebkzht"
                                             />
                                         </svg>
                                         Add New Past Workshop
@@ -759,54 +759,54 @@ export default function AdminDashboardPage() {
 
                                 <div
                                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                                    data-oid="72wq1f7"
+                                    data-oid="p3zpi7r"
                                 >
-                                    <div className="overflow-x-auto" data-oid="345jihf">
+                                    <div className="overflow-x-auto" data-oid="l226idz">
                                         <table
                                             className="min-w-full divide-y divide-gray-700"
-                                            data-oid="z2sp-dw"
+                                            data-oid="7v0i33v"
                                         >
-                                            <thead className="bg-gray-900" data-oid="d5mnc.t">
-                                                <tr data-oid="m.2bko0">
+                                            <thead className="bg-gray-900" data-oid="x2sjrn3">
+                                                <tr data-oid="5c.nmuy">
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="rl:xmwp"
+                                                        data-oid="7kv5t01"
                                                     >
                                                         Institution
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="xzx-2av"
+                                                        data-oid="26s2jlg"
                                                     >
                                                         Date
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="pc0-bof"
+                                                        data-oid="i0cf1fm"
                                                     >
                                                         Topic
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="0nyvqf0"
+                                                        data-oid="1yjtsm:"
                                                     >
                                                         Highlights
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="1srsurt"
+                                                        data-oid="0.yxlsv"
                                                     >
                                                         Media
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid=".t5_aqi"
+                                                        data-oid="ert85-6"
                                                     >
                                                         Actions
                                                     </th>
@@ -814,14 +814,14 @@ export default function AdminDashboardPage() {
                                             </thead>
                                             <tbody
                                                 className="bg-gray-800 divide-y divide-gray-700"
-                                                data-oid="4cu4z4u"
+                                                data-oid="8mwhl_:"
                                             >
                                                 {pastWorkshops.length === 0 ? (
-                                                    <tr data-oid="air3w8g">
+                                                    <tr data-oid="qsuvwa4">
                                                         <td
                                                             colSpan={6}
                                                             className="px-6 py-4 text-center text-gray-400"
-                                                            data-oid="03htcv:"
+                                                            data-oid="mia0-0t"
                                                         >
                                                             No past workshops found
                                                         </td>
@@ -831,17 +831,17 @@ export default function AdminDashboardPage() {
                                                         <tr
                                                             key={workshop._id}
                                                             className="hover:bg-gray-750"
-                                                            data-oid="k9hbaci"
+                                                            data-oid="3tz633t"
                                                         >
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                                data-oid="fqo:_0_"
+                                                                data-oid="9skzaeg"
                                                             >
                                                                 {workshop.institution}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="2ij3_:k"
+                                                                data-oid=".wfr7xw"
                                                             >
                                                                 {new Date(
                                                                     workshop.date,
@@ -849,23 +849,23 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="284rgic"
+                                                                data-oid="_z9jdh7"
                                                             >
                                                                 {workshop.topic}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 text-sm text-gray-300"
-                                                                data-oid="305_oi6"
+                                                                data-oid="3_07j:v"
                                                             >
                                                                 <ul
                                                                     className="list-disc pl-4"
-                                                                    data-oid="1-b5w9t"
+                                                                    data-oid="j00w-2d"
                                                                 >
                                                                     {workshop.highlights.map(
                                                                         (highlight, index) => (
                                                                             <li
                                                                                 key={index}
-                                                                                data-oid="u7..fc8"
+                                                                                data-oid="152zfm1"
                                                                             >
                                                                                 {highlight}
                                                                             </li>
@@ -875,12 +875,12 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 text-sm text-gray-300"
-                                                                data-oid="1-z:je7"
+                                                                data-oid="qyib1vo"
                                                             >
                                                                 {workshop.mediaLinks.length > 0 ? (
                                                                     <span
                                                                         className="text-purple-400"
-                                                                        data-oid="_7v2qmz"
+                                                                        data-oid="3ssg2_2"
                                                                     >
                                                                         {workshop.mediaLinks.length}{' '}
                                                                         media items
@@ -891,13 +891,13 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
-                                                                data-oid="djpp6l3"
+                                                                data-oid="-o:_hgu"
                                                             >
                                                                 <Link
                                                                     href={`/admin/dashboard/past-workshops/${workshop._id}`}
                                                                     className="text-purple-400 hover:text-purple-300 transition-colors"
                                                                     title="Edit Past Workshop"
-                                                                    data-oid="prf-oxm"
+                                                                    data-oid=".k2yunr"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -906,17 +906,17 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-pencil-square"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="pfbvqrr"
+                                                                        data-oid="ng008xo"
                                                                     >
                                                                         <path
                                                                             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                                                            data-oid="6gs9cru"
+                                                                            data-oid="uj33i:e"
                                                                         />
 
                                                                         <path
                                                                             fillRule="evenodd"
                                                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                                                            data-oid="asjml30"
+                                                                            data-oid="zi0w:su"
                                                                         />
                                                                     </svg>
                                                                 </Link>
@@ -928,7 +928,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-red-400 hover:text-red-300 transition-colors"
                                                                     title="Delete Past Workshop"
-                                                                    data-oid="ctfznvj"
+                                                                    data-oid="mgw:.7b"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -937,16 +937,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-trash"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="86k:4zj"
+                                                                        data-oid="q75:1v0"
                                                                     >
                                                                         <path
                                                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
-                                                                            data-oid="vid034x"
+                                                                            data-oid="833kajf"
                                                                         />
 
                                                                         <path
                                                                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
-                                                                            data-oid=".be_567"
+                                                                            data-oid="q60vjj5"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -962,34 +962,34 @@ export default function AdminDashboardPage() {
                         )}
 
                         {activeTab === 'hackathons' && (
-                            <div data-oid=":ldb0np">
+                            <div data-oid="6wyr07h">
                                 <div
                                     className="flex justify-between items-center mb-6"
-                                    data-oid="h18qdlf"
+                                    data-oid="s1c_vbm"
                                 >
                                     <h2
                                         className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="vc.hcl1"
+                                        data-oid="jfgk3:."
                                     >
                                         Manage Hackathons
                                     </h2>
                                     <Link
                                         href="/admin/dashboard/hackathons/new"
                                         className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                                        data-oid="fzkp3y3"
+                                        data-oid="v.:hiik"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4 mr-1"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            data-oid="i1_il2w"
+                                            data-oid="077lzxa"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                                 clipRule="evenodd"
-                                                data-oid="0u0:glh"
+                                                data-oid="73dxdu0"
                                             />
                                         </svg>
                                         Add New Hackathon
@@ -998,40 +998,40 @@ export default function AdminDashboardPage() {
 
                                 <div
                                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                                    data-oid=".vsjivk"
+                                    data-oid="0rbk8zh"
                                 >
-                                    <div className="overflow-x-auto" data-oid="s0doetb">
+                                    <div className="overflow-x-auto" data-oid="k3:pram">
                                         <table
                                             className="min-w-full divide-y divide-gray-700"
-                                            data-oid="vgifm8n"
+                                            data-oid="1y-chzd"
                                         >
-                                            <thead className="bg-gray-900" data-oid="g:q_yf2">
-                                                <tr data-oid="rt6salk">
+                                            <thead className="bg-gray-900" data-oid="szcf25s">
+                                                <tr data-oid="1ginnu9">
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="7:8dhg0"
+                                                        data-oid="q-il.22"
                                                     >
                                                         Title
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="0a93_e8"
+                                                        data-oid="ssjhl_r"
                                                     >
                                                         Dates
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="u:o:vo7"
+                                                        data-oid="1s69uef"
                                                     >
                                                         Location
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                                        data-oid="iq3snb4"
+                                                        data-oid="jb-0oe8"
                                                     >
                                                         Actions
                                                     </th>
@@ -1039,14 +1039,14 @@ export default function AdminDashboardPage() {
                                             </thead>
                                             <tbody
                                                 className="bg-gray-800 divide-y divide-gray-700"
-                                                data-oid="c1nsp4c"
+                                                data-oid="be80od."
                                             >
                                                 {hackathons.length === 0 ? (
-                                                    <tr data-oid="eszf29_">
+                                                    <tr data-oid="g_5s3j0">
                                                         <td
                                                             colSpan={4}
                                                             className="px-6 py-4 text-center text-gray-400"
-                                                            data-oid="x_d6qxd"
+                                                            data-oid="imll0nt"
                                                         >
                                                             No hackathons found
                                                         </td>
@@ -1056,17 +1056,17 @@ export default function AdminDashboardPage() {
                                                         <tr
                                                             key={hackathon._id}
                                                             className="hover:bg-gray-750"
-                                                            data-oid="ove7xxm"
+                                                            data-oid="mgb-ek1"
                                                         >
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                                data-oid="vzh:69p"
+                                                                data-oid="e0_d5ov"
                                                             >
                                                                 {hackathon.title}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="7o6i27y"
+                                                                data-oid="--osbv2"
                                                             >
                                                                 {new Date(
                                                                     hackathon.startDate,
@@ -1078,19 +1078,19 @@ export default function AdminDashboardPage() {
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                                                data-oid="a:1gmlo"
+                                                                data-oid="i694::2"
                                                             >
                                                                 {hackathon.location}
                                                             </td>
                                                             <td
                                                                 className="px-6 py-4 whitespace-nowrap text-sm flex items-center space-x-4"
-                                                                data-oid=".8zthu."
+                                                                data-oid="7r66yoz"
                                                             >
                                                                 <Link
                                                                     href={`/admin/dashboard/hackathons/${hackathon._id}`}
                                                                     className="text-purple-400 hover:text-purple-300 transition-colors"
                                                                     title="View Registrations"
-                                                                    data-oid="nppoj_8"
+                                                                    data-oid="l735n6e"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -1099,16 +1099,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-eye"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid=".r1jfee"
+                                                                        data-oid="9lkiavj"
                                                                     >
                                                                         <path
                                                                             d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
-                                                                            data-oid="4_z1.kr"
+                                                                            data-oid="2.auuss"
                                                                         />
 
                                                                         <path
                                                                             d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
-                                                                            data-oid="jgkr8:t"
+                                                                            data-oid="irjfqdf"
                                                                         />
                                                                     </svg>
                                                                 </Link>
@@ -1120,7 +1120,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-blue-400 hover:text-blue-300 transition-colors"
                                                                     title="Edit Hackathon"
-                                                                    data-oid="n8o_s9x"
+                                                                    data-oid="17kzr1v"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -1129,17 +1129,17 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-pencil-square"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="uvahzse"
+                                                                        data-oid="68q.0pb"
                                                                     >
                                                                         <path
                                                                             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
-                                                                            data-oid="w76-4w_"
+                                                                            data-oid="c1616ts"
                                                                         />
 
                                                                         <path
                                                                             fillRule="evenodd"
                                                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
-                                                                            data-oid="npey41i"
+                                                                            data-oid="4gte4i:"
                                                                         />
                                                                     </svg>
                                                                 </button>
@@ -1151,7 +1151,7 @@ export default function AdminDashboardPage() {
                                                                     }
                                                                     className="text-red-400 hover:text-red-300 transition-colors"
                                                                     title="Delete Hackathon"
-                                                                    data-oid="fr5ol6u"
+                                                                    data-oid="whursi_"
                                                                 >
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
@@ -1160,16 +1160,16 @@ export default function AdminDashboardPage() {
                                                                         fill="currentColor"
                                                                         className="bi bi-trash"
                                                                         viewBox="0 0 16 16"
-                                                                        data-oid="fsxu.xe"
+                                                                        data-oid="avfpba6"
                                                                     >
                                                                         <path
                                                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
-                                                                            data-oid="sd9fnux"
+                                                                            data-oid="61wqmdr"
                                                                         />
 
                                                                         <path
                                                                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
-                                                                            data-oid="tzrqcsl"
+                                                                            data-oid="je-qb8:"
                                                                         />
                                                                     </svg>
                                                                 </button>

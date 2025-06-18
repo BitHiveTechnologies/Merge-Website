@@ -37,20 +37,20 @@ export default function SalesBanner({ message }: SalesBannerProps) {
     return (
         <div
             className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md"
-            data-oid="fzq4_v:"
+            data-oid="vbj7ezh"
         >
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={textVariants}
                 className="flex items-center justify-center"
-                data-oid="oq45.2w"
+                data-oid="0myq13z"
             >
                 <motion.span
                     animate="pulse"
                     variants={pulseVariants}
                     className="font-medium text-xs md:text-base"
-                    data-oid="zgh85p4"
+                    data-oid="8plha_."
                 >
                     {message || defaultMessage}
                 </motion.span>

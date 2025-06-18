@@ -207,30 +207,30 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="3w2y19r">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="5z-zg3a">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="mxz.ouq" />
+            <Navbar data-oid="-.f3c2w" />
 
             {/* Back Button */}
-            <div className="bg-gray-900 py-4 px-6 md:px-12" data-oid="qr4h5ql">
-                <div className="max-w-6xl mx-auto" data-oid="sxav29e">
+            <div className="bg-gray-900 py-4 px-6 md:px-12" data-oid="rwe-7w.">
+                <div className="max-w-6xl mx-auto" data-oid="wzkz:qf">
                     <button
                         onClick={() => router.push('/workshops')}
                         className="flex items-center text-gray-300 hover:text-purple-400 transition-colors"
-                        data-oid="j5cjwje"
+                        data-oid="bz5ofdr"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 mr-2"
                             viewBox="0 0 20 20"
                             fill="currentColor"
-                            data-oid="kpgp1zn"
+                            data-oid="-scsz3s"
                         >
                             <path
                                 fillRule="evenodd"
                                 d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
                                 clipRule="evenodd"
-                                data-oid="ydttwkk"
+                                data-oid="x9t7b3x"
                             />
                         </svg>
                         Back to Workshops
@@ -239,10 +239,10 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
             </div>
 
             {isLoading ? (
-                <div className="flex justify-center items-center py-32" data-oid="ymaadgj">
+                <div className="flex justify-center items-center py-32" data-oid="qppswpe">
                     <div
                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                        data-oid=".8gw3by"
+                        data-oid="90p-_o9"
                     ></div>
                 </div>
             ) : workshop ? (
@@ -250,32 +250,32 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                     {/* Workshop Hero Section */}
                     <div
                         className="bg-gradient-to-b from-gray-900 to-black py-12 px-6 md:px-12"
-                        data-oid="bjw:028"
+                        data-oid="hcl-:_2"
                     >
                         <div
                             className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12"
-                            data-oid="_3mxutl"
+                            data-oid="7-0igo1"
                         >
                             <div
                                 className="rounded-xl overflow-hidden border border-gray-700"
-                                data-oid="3sdkl1a"
+                                data-oid=":ru4ylg"
                             >
                                 <img
                                     src={workshop.image}
                                     alt={workshop.title}
                                     className="w-full h-full object-cover"
-                                    data-oid="wo5t3w3"
+                                    data-oid="j2cuonb"
                                 />
                             </div>
-                            <div className="flex flex-col justify-between" data-oid="zycj-_2">
-                                <div data-oid="m8c4l0_">
-                                    <div className="flex items-center mb-4" data-oid="l-ry::l">
-                                        <div className="flex flex-wrap gap-2" data-oid="ukq_ftq">
+                            <div className="flex flex-col justify-between" data-oid="h8f8..:">
+                                <div data-oid="8dnv4c-">
+                                    <div className="flex items-center mb-4" data-oid="evyslxl">
+                                        <div className="flex flex-wrap gap-2" data-oid="f..b0y1">
                                             {workshop.tags.map((tag, index) => (
                                                 <span
                                                     key={index}
                                                     className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
-                                                    data-oid="9n2an::"
+                                                    data-oid="ya6po-b"
                                                 >
                                                     {tag}
                                                 </span>
@@ -284,19 +284,19 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                     </div>
                                     <h1
                                         className="text-3xl md:text-4xl font-bold mb-4"
-                                        data-oid=":vvt:y3"
+                                        data-oid="k0:gf6-"
                                     >
                                         {workshop.title}
                                     </h1>
-                                    <p className="text-gray-300 mb-6" data-oid=".uko8_i">
+                                    <p className="text-gray-300 mb-6" data-oid="w_yryp8">
                                         {workshop.description}
                                     </p>
 
                                     {/* Instructor info */}
-                                    <div className="flex items-center mb-6" data-oid="o.ln785">
+                                    <div className="flex items-center mb-6" data-oid="hb7pish">
                                         <div
                                             className="w-8 h-8 rounded-full overflow-hidden mr-4"
-                                            data-oid="1gkhaf9"
+                                            data-oid="vqprct2"
                                         >
                                             <img
                                                 src={
@@ -305,70 +305,70 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                 }
                                                 alt={workshop.instructor}
                                                 className="w-full h-full object-cover"
-                                                data-oid="lo1zy12"
+                                                data-oid="-gu-8s9"
                                             />
                                         </div>
-                                        <div data-oid="8esk:8s">
-                                            <h3 className="font-medium" data-oid="42a_5p-">
+                                        <div data-oid="2o225hg">
+                                            <h3 className="font-medium" data-oid="h45vlip">
                                                 Instructor
                                             </h3>
-                                            <p className="text-gray-300" data-oid="ja8-3i9">
+                                            <p className="text-gray-300" data-oid="jhaloug">
                                                 {workshop.instructor}
                                             </p>
                                         </div>
                                     </div>
 
                                     {/* Workshop details */}
-                                    <div className="grid grid-cols-2 gap-4 mb-6" data-oid="ygh.4uj">
+                                    <div className="grid grid-cols-2 gap-4 mb-6" data-oid="apnor09">
                                         <div
                                             className="bg-gray-800/50 p-4 rounded-lg"
-                                            data-oid="sn4jylz"
+                                            data-oid="-6_6umv"
                                         >
                                             <div
                                                 className="text-purple-400 mb-1 text-sm"
-                                                data-oid="1dmtw:e"
+                                                data-oid="ut0_knc"
                                             >
                                                 Date
                                             </div>
-                                            <div className="font-medium" data-oid="t17erqk">
+                                            <div className="font-medium" data-oid="3ggfg08">
                                                 {formatDate(workshop.date)}
                                             </div>
                                         </div>
                                         <div
                                             className="bg-gray-800/50 p-4 rounded-lg"
-                                            data-oid="a7m6de1"
+                                            data-oid="5t-1-h8"
                                         >
                                             <div
                                                 className="text-purple-400 mb-1 text-sm"
-                                                data-oid="u5_ultw"
+                                                data-oid="j2.k2cf"
                                             >
                                                 Time
                                             </div>
-                                            <div className="font-medium" data-oid="bfpx9od">
+                                            <div className="font-medium" data-oid="vecqc9j">
                                                 {workshop.time}
                                             </div>
                                         </div>
                                         <div
                                             className="bg-gray-800/50 p-4 rounded-lg"
-                                            data-oid="2tiz877"
+                                            data-oid="fbl7ch8"
                                         >
                                             <div
                                                 className="text-purple-400 mb-1 text-sm"
-                                                data-oid="aa8zw3x"
+                                                data-oid="il11h-."
                                             >
                                                 Location
                                             </div>
-                                            <div className="font-medium" data-oid="pdp5jsa">
+                                            <div className="font-medium" data-oid="4rs4qo3">
                                                 {workshop.location}
                                             </div>
                                         </div>
                                         <div
                                             className="bg-gray-800/50 p-4 rounded-lg"
-                                            data-oid="ggg5ert"
+                                            data-oid="rpavm.j"
                                         >
                                             <div
                                                 className="text-purple-400 mb-1 text-sm"
-                                                data-oid="ng4k2sn"
+                                                data-oid="9icffzt"
                                             >
                                                 Price
                                             </div>
@@ -379,7 +379,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                         ? 'text-green-400'
                                                         : 'text-white',
                                                 )}
-                                                data-oid="hc82:0:"
+                                                data-oid="kn-swm."
                                             >
                                                 {formatPrice(workshop.price)}
                                             </div>
@@ -473,16 +473,16 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
 
                                     <div
                                         className="flex items-center justify-between mb-6"
-                                        data-oid="95510my"
+                                        data-oid="7ctjc:x"
                                     >
-                                        <div className="text-3xl font-bold" data-oid="m50thf3">
+                                        <div className="text-3xl font-bold" data-oid="8.9p:gm">
                                             <span
                                                 className={
                                                     workshop.price === 'Free'
                                                         ? 'text-green-400'
                                                         : 'text-white'
                                                 }
-                                                data-oid="x2u85md"
+                                                data-oid="n99xnt6"
                                             >
                                                 {formatPrice(workshop.price)}
                                             </span>
@@ -491,7 +491,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                             <button
                                                 disabled
                                                 className="px-8 py-3 rounded-md bg-green-600 text-center font-medium cursor-default"
-                                                data-oid="vmyac13"
+                                                data-oid="jk2-r6c"
                                             >
                                                 Already Registered
                                             </button>
@@ -504,7 +504,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                         ? 'opacity-70 cursor-wait'
                                                         : ''
                                                 }`}
-                                                data-oid="2j.9.c."
+                                                data-oid="d:g6k_i"
                                             >
                                                 {registrationLoading
                                                     ? 'Processing...'
@@ -519,30 +519,30 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
 
                     {/* Workshop agenda */}
                     {workshop.agenda && (
-                        <div className="py-16 px-6 md:px-12 bg-black" data-oid="kirh6:q">
-                            <div className="max-w-6xl mx-auto" data-oid="-om3p:s">
+                        <div className="py-16 px-6 md:px-12 bg-black" data-oid="u_.cpjr">
+                            <div className="max-w-6xl mx-auto" data-oid="g0ts2ep">
                                 <h2
                                     className="text-2xl md:text-3xl font-bold mb-8"
-                                    data-oid="qgp53i:"
+                                    data-oid="pf:_4ng"
                                 >
                                     Workshop Agenda
                                 </h2>
-                                <div className="space-y-6" data-oid="6qsh8m-">
+                                <div className="space-y-6" data-oid="k9mv.br">
                                     <div
                                         className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-                                        data-oid="59aep_d"
+                                        data-oid="xn3qpwy"
                                     >
-                                        <div className="p-6" data-oid="vn7kobk">
-                                            <ul className="space-y-4" data-oid="y-x750w">
+                                        <div className="p-6" data-oid="xgwuqn5">
+                                            <ul className="space-y-4" data-oid="1l8dmbl">
                                                 {workshop.agenda.map((item, index) => (
                                                     <li
                                                         key={index}
                                                         className="flex justify-between items-center border-b border-gray-700 pb-4 last:border-0 last:pb-0"
-                                                        data-oid="qrt2_zk"
+                                                        data-oid="7xtyvve"
                                                     >
                                                         <div
                                                             className="flex items-center"
-                                                            data-oid="60bccz."
+                                                            data-oid="l2buzc1"
                                                         >
                                                             <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
@@ -550,29 +550,29 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                                 fill="none"
                                                                 viewBox="0 0 24 24"
                                                                 stroke="currentColor"
-                                                                data-oid="zl20jv9"
+                                                                data-oid="0y9v_jx"
                                                             >
                                                                 <path
                                                                     strokeLinecap="round"
                                                                     strokeLinejoin="round"
                                                                     strokeWidth={2}
                                                                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                                    data-oid="-skxiw-"
+                                                                    data-oid="lfcx58g"
                                                                 />
                                                             </svg>
                                                             <div
                                                                 className="flex flex-col"
-                                                                data-oid="ii73s2u"
+                                                                data-oid="6sl_6k9"
                                                             >
                                                                 <span
                                                                     className="font-medium"
-                                                                    data-oid="l-yl:1i"
+                                                                    data-oid="ha8--m8"
                                                                 >
                                                                     {item.title}
                                                                 </span>
                                                                 <p
                                                                     className="text-sm text-gray-400 mt-1"
-                                                                    data-oid="5d-ybms"
+                                                                    data-oid="qikzufd"
                                                                 >
                                                                     {item.description}
                                                                 </p>
@@ -580,7 +580,7 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                         </div>
                                                         <span
                                                             className="text-purple-400 text-sm ml-4"
-                                                            data-oid="cxsm96."
+                                                            data-oid="24y99ry"
                                                         >
                                                             {item.time}
                                                         </span>
@@ -596,22 +596,22 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
 
                     {/* Instructor Bio Section */}
                     {workshop.instructorBio && (
-                        <div className="py-16 px-6 md:px-12 bg-gray-900" data-oid="ruko.:x">
-                            <div className="max-w-6xl mx-auto" data-oid="-1..glm">
+                        <div className="py-16 px-6 md:px-12 bg-gray-900" data-oid="an0swzr">
+                            <div className="max-w-6xl mx-auto" data-oid="1a5o:qp">
                                 <h2
                                     className="text-2xl md:text-3xl font-bold mb-8"
-                                    data-oid="i.rge8x"
+                                    data-oid="qjr-_w2"
                                 >
                                     About the Instructor
                                 </h2>
-                                <div className="bg-gray-800/50 rounded-xl p-6" data-oid="tcffgkr">
+                                <div className="bg-gray-800/50 rounded-xl p-6" data-oid="jz:zh_.">
                                     <div
                                         className="flex flex-col md:flex-row gap-6"
-                                        data-oid="vk8qr93"
+                                        data-oid="fpip9:9"
                                     >
                                         <div
                                             className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden flex-shrink-0 mx-auto md:mx-0"
-                                            data-oid="7axirae"
+                                            data-oid="j2q80ye"
                                         >
                                             <img
                                                 src={
@@ -620,17 +620,17 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                                                 }
                                                 alt={workshop.instructor}
                                                 className="w-full h-full object-cover"
-                                                data-oid="j_vmwwm"
+                                                data-oid=":x06rlt"
                                             />
                                         </div>
-                                        <div data-oid="5_uv794">
+                                        <div data-oid="5xjd_8a">
                                             <h3
                                                 className="text-xl font-semibold mb-2 text-center md:text-left"
-                                                data-oid="mqkp3:1"
+                                                data-oid="-ogac3s"
                                             >
                                                 {workshop.instructor}
                                             </h3>
-                                            <p className="text-gray-300" data-oid="yracb3g">
+                                            <p className="text-gray-300" data-oid="i7t4yhb">
                                                 {workshop.instructorBio}
                                             </p>
                                         </div>
@@ -641,18 +641,18 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
                     )}
                 </>
             ) : (
-                <div className="flex justify-center items-center py-32" data-oid="pyagd.3">
-                    <div className="text-center" data-oid="llel5al">
-                        <h2 className="text-2xl font-bold mb-4" data-oid="53b0hh5">
+                <div className="flex justify-center items-center py-32" data-oid="m0dj5im">
+                    <div className="text-center" data-oid="xzoj0qe">
+                        <h2 className="text-2xl font-bold mb-4" data-oid="x_d:l_g">
                             Workshop not found
                         </h2>
-                        <p className="text-gray-400 mb-6" data-oid="4b40._r">
+                        <p className="text-gray-400 mb-6" data-oid="rtu91c.">
                             The workshop you're looking for doesn't exist or has been removed.
                         </p>
                         <button
                             onClick={() => router.push('/workshops')}
                             className="px-6 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                            data-oid="adu-iwe"
+                            data-oid="z-7kcvr"
                         >
                             Back to Workshops
                         </button>
@@ -663,11 +663,11 @@ export default function WorkshopDetailPage({ params }: { params: { id: string } 
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="d1dm5c1"
+                data-oid="vkx5i4b"
             >
-                <div className="max-w-6xl mx-auto" data-oid="ol932tl">
-                    <div className="text-center text-gray-500" data-oid="s_dx:mw">
-                        <p data-oid="m6tv81j">
+                <div className="max-w-6xl mx-auto" data-oid="r0l:hjw">
+                    <div className="text-center text-gray-500" data-oid="55osz0g">
+                        <p data-oid="1:fbi:s">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>
