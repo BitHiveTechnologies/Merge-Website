@@ -190,51 +190,53 @@ export default function AboutUsPage() {
                     data-oid="bno6qs."
                 ></div>
 
-                <div className="relative z-10 max-w-6xl mx-auto text-center" data-oid="v5t8kv2">
-                    <h1
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                        data-oid="ufywmli"
-                    >
-                        <span
-                            className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="n8xan0t"
+                <div className="relative z-10 max-w-6xl mx-auto" data-oid="v5t8kv2">
+                    <div className="max-w-4xl" data-oid="ayw6dy4">
+                        <h1
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
+                            data-oid="ufywmli"
                         >
-                            About Us
-                        </span>
-                    </h1>
-                    <div
-                        className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-10"
-                        data-oid="t4237pv"
-                    ></div>
-
-                    <div className="max-w-4xl mx-auto" data-oid=".40qriy">
-                        <p
-                            className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
-                            data-oid="nwvp058"
-                        >
-                            Merge is born out of a clear need—to bridge the gap between academic
-                            education and industry readiness. Unlike traditional training providers,
-                            Merge offers a deeply personalized, mentor-led, and outcomes-driven
-                            experience designed for Tier 2/3 colleges and aspiring technologists
-                            across India.
-                        </p>
-
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                data-oid="n8xan0t"
+                            >
+                                About Us
+                            </span>
+                        </h1>
                         <div
-                            className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
-                            data-oid="e286hac"
-                        >
-                            <h2
-                                className="text-2xl md:text-3xl font-bold mb-4 text-purple-300"
-                                data-oid="jjms43o"
-                            >
-                                Our Belief
-                            </h2>
+                            className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-10"
+                            data-oid="t4237pv"
+                        ></div>
+
+                        <div data-oid=".40qriy">
                             <p
-                                className="text-xl md:text-2xl text-gray-300 italic"
-                                data-oid="c4z7nlp"
+                                className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
+                                data-oid="nwvp058"
                             >
-                                "Real learning happens when mentorship meets execution."
+                                Merge is born out of a clear need—to bridge the gap between academic
+                                education and industry readiness. Unlike traditional training
+                                providers, Merge offers a deeply personalized, mentor-led, and
+                                outcomes-driven experience designed for Tier 2/3 colleges and
+                                aspiring technologists across India.
                             </p>
+
+                            <div
+                                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300"
+                                data-oid="e286hac"
+                            >
+                                <h2
+                                    className="text-2xl md:text-3xl font-bold mb-4 text-purple-300"
+                                    data-oid="jjms43o"
+                                >
+                                    Our Belief
+                                </h2>
+                                <p
+                                    className="text-xl md:text-2xl text-gray-300 italic"
+                                    data-oid="c4z7nlp"
+                                >
+                                    "Real learning happens when mentorship meets execution."
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
