@@ -235,7 +235,7 @@ export default function AboutUsPage() {
                             {/* LinkedIn Icon */}
                             <a
                                 href={member.linkedin}
-                                className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center hover:from-purple-500 hover:to-pink-500 transition-all duration-300 group-hover:scale-110"
+                                className="flex-shrink-0 transition-all duration-300 group-hover:scale-110"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`${member.name} LinkedIn`}
@@ -243,10 +243,10 @@ export default function AboutUsPage() {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="18"
-                                    height="18"
+                                    width="24"
+                                    height="24"
                                     fill="currentColor"
-                                    className="text-white"
+                                    className="text-[#0077B5] hover:text-[#005885] transition-colors duration-300"
                                     viewBox="0 0 16 16"
                                     data-oid="kocdgt-"
                                 >
@@ -637,16 +637,16 @@ export default function AboutUsPage() {
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/company/merge-prx"
-                                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                                    className="transition-colors"
                                     aria-label="LinkedIn"
                                     data-oid="a8zx-c6"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
+                                        width="24"
+                                        height="24"
                                         fill="currentColor"
-                                        className="text-gray-400"
+                                        className="text-[#0077B5] hover:text-[#005885] transition-colors duration-300"
                                         viewBox="0 0 16 16"
                                         data-oid="6sh6l-2"
                                     >
