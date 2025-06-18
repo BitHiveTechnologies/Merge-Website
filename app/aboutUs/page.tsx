@@ -284,39 +284,31 @@ export default function AboutUsPage() {
 
             {/* Hero Section */}
             <section
-                className="pt-16 pb-32 px-6 md:px-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
+                className="pt-10 pb-16 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden"
                 data-oid="cpiier5"
             >
-                {/* Enhanced Background Elements */}
+                {/* Background blur elements */}
                 <div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-pink-500/10"
-                    data-oid="zizb48-"
-                />
-
-                <div
-                    className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse"
+                    className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
                     data-oid="6bg:mvc"
                 />
 
                 <div
-                    className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl animate-pulse"
+                    className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
                     data-oid="lpuk6-9"
                 />
 
                 <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                    className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
                     data-oid="147-r9m"
                 />
 
-                <div className="relative z-10 max-w-7xl mx-auto" data-oid="h35nlkw">
-                    <div
-                        className="grid lg:grid-cols-2 gap-16 items-center w-[1279px]"
-                        data-oid="cnjc2s1"
-                    >
+                <div className="relative z-10 max-w-6xl mx-auto" data-oid="h35nlkw">
+                    <div className="max-w-4xl" data-oid="cnjc2s1">
                         {/* Left Content */}
                         <div data-oid="sykc84l">
-                            <h2
-                                className="text-6xl md:text-8xl font-bold mb-8 leading-tight"
+                            <h1
+                                className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
                                 data-oid="qc8lw.v"
                             >
                                 <span
@@ -329,14 +321,14 @@ export default function AboutUsPage() {
                                 <span className="text-white" data-oid="xwfi-d1">
                                     Merge
                                 </span>
-                            </h2>
+                            </h1>
                             <div
-                                className="w-32 h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
+                                className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
                                 data-oid="z-emiaf"
                             />
 
                             <p
-                                className="text-2xl text-gray-300 mb-10 leading-relaxed"
+                                className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed"
                                 data-oid="sb3b2qo"
                             >
                                 Bridging the gap between academic education and industry readiness
@@ -347,46 +339,22 @@ export default function AboutUsPage() {
                                 </span>{' '}
                                 learning experiences.
                             </p>
-                            <div className="flex flex-wrap gap-6" data-oid="6r158-w">
+                            <div className="flex flex-wrap gap-4" data-oid="6r158-w">
                                 <Link
                                     href="/courses"
-                                    className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                                    className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-medium"
                                     data-oid="px9s0vi"
                                 >
-                                    <span className="flex items-center gap-2" data-oid="5jz8j2x">
-                                        Explore Courses
-                                        <svg
-                                            className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                            data-oid="mzeij9y"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                                data-oid="knx0p3z"
-                                            />
-                                        </svg>
-                                    </span>
+                                    Explore Courses
                                 </Link>
                                 <Link
                                     href="#team"
-                                    className="px-8 py-4 border-2 border-purple-500 rounded-2xl hover:bg-purple-500/10 transition-all duration-300 font-semibold text-lg hover:scale-105"
+                                    className="px-6 py-3 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
                                     data-oid=".bg7_l0"
                                 >
                                     Meet Our Team
                                 </Link>
                             </div>
-                        </div>
-
-                        {/* Right Content - Enhanced Stats */}
-                        <div className="grid grid-cols-2 gap-8" data-oid="bgb9xto">
-                            {stats.map((stat, index) => (
-                                <StatCard key={index} stat={stat} data-oid="z-z_hd4" />
-                            ))}
                         </div>
                     </div>
                 </div>
