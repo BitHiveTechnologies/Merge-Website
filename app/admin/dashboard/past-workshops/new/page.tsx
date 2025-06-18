@@ -118,15 +118,15 @@ export default function NewPastWorkshopPage() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto py-8 px-4" data-oid="ohu-zkw">
-            <div className="flex items-center justify-between mb-8" data-oid="h5w0xf.">
-                <h1 className="text-3xl font-bold" data-oid="r1hcszn">
+        <div className="max-w-4xl mx-auto py-8 px-4" data-oid="y0wbuop">
+            <div className="flex items-center justify-between mb-8" data-oid="ctkfjpy">
+                <h1 className="text-3xl font-bold" data-oid="mvtr9rt">
                     Add New Past Workshop
                 </h1>
                 <Link
                     href="/admin/dashboard"
                     className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
-                    data-oid="4nub8rx"
+                    data-oid="e9q6ir:"
                 >
                     Back to Dashboard
                 </Link>
@@ -135,9 +135,9 @@ export default function NewPastWorkshopPage() {
             {error && (
                 <div
                     className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                    data-oid="88l:0f4"
+                    data-oid="374lu4b"
                 >
-                    <p className="text-red-200" data-oid="fad289:">
+                    <p className="text-red-200" data-oid=":6n309u">
                         {error}
                     </p>
                 </div>
@@ -146,14 +146,14 @@ export default function NewPastWorkshopPage() {
             <form
                 onSubmit={handleSubmit}
                 className="bg-gray-800 rounded-lg border border-gray-700 p-6"
-                data-oid="8isud_3"
+                data-oid="dttgbjd"
             >
-                <div className="grid grid-cols-1 gap-6" data-oid="nt:3o55">
-                    <div data-oid=":6bzq4:">
+                <div className="grid grid-cols-1 gap-6" data-oid="kgyl:8v">
+                    <div data-oid="hzck80j">
                         <label
                             htmlFor="institution"
                             className="block text-sm font-medium mb-2"
-                            data-oid="3_wcu75"
+                            data-oid="vjqnovs"
                         >
                             Institution
                         </label>
@@ -166,15 +166,15 @@ export default function NewPastWorkshopPage() {
                             required
                             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                             placeholder="e.g. Indian Institute of Technology Delhi"
-                            data-oid="sndw1f_"
+                            data-oid="3pte9l7"
                         />
                     </div>
 
-                    <div data-oid="xgu3zlo">
+                    <div data-oid="a2zynr:">
                         <label
                             htmlFor="date"
                             className="block text-sm font-medium mb-2"
-                            data-oid="s52ohbu"
+                            data-oid="d3x6dym"
                         >
                             Date
                         </label>
@@ -186,15 +186,15 @@ export default function NewPastWorkshopPage() {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                            data-oid="52wupw2"
+                            data-oid="ccno362"
                         />
                     </div>
 
-                    <div data-oid="cr.f0.t">
+                    <div data-oid="2xp3pl2">
                         <label
                             htmlFor="topic"
                             className="block text-sm font-medium mb-2"
-                            data-oid="aew07-g"
+                            data-oid="ai7az33"
                         >
                             Topic
                         </label>
@@ -207,23 +207,23 @@ export default function NewPastWorkshopPage() {
                             required
                             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                             placeholder="e.g. Advanced Web Development Workshop"
-                            data-oid="5fdjmuj"
+                            data-oid="hb9pa8d"
                         />
                     </div>
 
-                    <div data-oid="9.2fjx9">
-                        <label className="block text-sm font-medium mb-2" data-oid="t2g3.16">
+                    <div data-oid="87a11um">
+                        <label className="block text-sm font-medium mb-2" data-oid="jatjrqp">
                             Highlights
                         </label>
                         {formData.highlights.map((highlight, index) => (
-                            <div key={index} className="flex items-center mb-2" data-oid="_nl2jyg">
+                            <div key={index} className="flex items-center mb-2" data-oid="j_:qzld">
                                 <input
                                     type="text"
                                     value={highlight}
                                     onChange={(e) => handleHighlightChange(index, e.target.value)}
                                     className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                                     placeholder="e.g. Covered React.js"
-                                    data-oid="_ral49i"
+                                    data-oid="w27o-fj"
                                 />
 
                                 <button
@@ -231,20 +231,20 @@ export default function NewPastWorkshopPage() {
                                     onClick={() => removeHighlight(index)}
                                     className="ml-2 p-2 bg-red-600 hover:bg-red-700 rounded-md"
                                     disabled={formData.highlights.length <= 1}
-                                    data-oid="m81w_w0"
+                                    data-oid="._8-uf5"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-4 w-4"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
-                                        data-oid="pqwc9oe"
+                                        data-oid="jy7xtqa"
                                     >
                                         <path
                                             fillRule="evenodd"
                                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                             clipRule="evenodd"
-                                            data-oid="ti106zl"
+                                            data-oid="4z3kb11"
                                         />
                                     </svg>
                                 </button>
@@ -254,39 +254,39 @@ export default function NewPastWorkshopPage() {
                             type="button"
                             onClick={addHighlight}
                             className="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                            data-oid="v6v1b4v"
+                            data-oid="im.c23k"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-4 w-4 mr-1"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                data-oid="jaom4o6"
+                                data-oid="_qazp89"
                             >
                                 <path
                                     fillRule="evenodd"
                                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                     clipRule="evenodd"
-                                    data-oid=":jf9bf4"
+                                    data-oid="nngevkz"
                                 />
                             </svg>
                             Add Highlight
                         </button>
                     </div>
 
-                    <div data-oid="s03_4:x">
-                        <label className="block text-sm font-medium mb-2" data-oid="q4a47f1">
+                    <div data-oid="dpmxapw">
+                        <label className="block text-sm font-medium mb-2" data-oid="h:mwv33">
                             Media Links
                         </label>
                         {formData.mediaLinks.map((link, index) => (
-                            <div key={index} className="flex items-center mb-2" data-oid="a.hfb8_">
+                            <div key={index} className="flex items-center mb-2" data-oid="njn1-9y">
                                 <input
                                     type="url"
                                     value={link}
                                     onChange={(e) => handleMediaLinkChange(index, e.target.value)}
                                     className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                                     placeholder="e.g. https://example.com/images/workshop.jpg"
-                                    data-oid="z9zrjhj"
+                                    data-oid="w4.j694"
                                 />
 
                                 <button
@@ -294,20 +294,20 @@ export default function NewPastWorkshopPage() {
                                     onClick={() => removeMediaLink(index)}
                                     className="ml-2 p-2 bg-red-600 hover:bg-red-700 rounded-md"
                                     disabled={formData.mediaLinks.length <= 1}
-                                    data-oid="k8ix5u2"
+                                    data-oid="54d10vv"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-4 w-4"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
-                                        data-oid="vufhr1h"
+                                        data-oid="riiw-o7"
                                     >
                                         <path
                                             fillRule="evenodd"
                                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                             clipRule="evenodd"
-                                            data-oid="3-ur2fj"
+                                            data-oid="s:bv5-6"
                                         />
                                     </svg>
                                 </button>
@@ -317,32 +317,32 @@ export default function NewPastWorkshopPage() {
                             type="button"
                             onClick={addMediaLink}
                             className="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                            data-oid="09c:y6d"
+                            data-oid=".82f.2e"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-4 w-4 mr-1"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                data-oid="2e1-y::"
+                                data-oid="iqzh2q_"
                             >
                                 <path
                                     fillRule="evenodd"
                                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                     clipRule="evenodd"
-                                    data-oid="qox55m4"
+                                    data-oid="8x-tc4t"
                                 />
                             </svg>
                             Add Media Link
                         </button>
                     </div>
 
-                    <div className="flex justify-end mt-4" data-oid=".djn8u:">
+                    <div className="flex justify-end mt-4" data-oid="tjwi25j">
                         <button
                             type="submit"
                             disabled={isSubmitting}
                             className={`px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                            data-oid="r.f3.zb"
+                            data-oid="aykfn82"
                         >
                             {isSubmitting ? 'Saving...' : 'Save Past Workshop'}
                         </button>

@@ -64,10 +64,10 @@ export default function CourseRegistrationsPage() {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]" data-oid="r0.ooce">
+            <div className="flex justify-center items-center min-h-[50vh]" data-oid="jxe.al-">
                 <div
                     className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                    data-oid="a55t4he"
+                    data-oid="siczxn."
                 ></div>
             </div>
         );
@@ -77,15 +77,15 @@ export default function CourseRegistrationsPage() {
         return (
             <div
                 className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                data-oid="asvo:ym"
+                data-oid="85iocxg"
             >
-                <p className="text-red-200" data-oid="tf3c_34">
+                <p className="text-red-200" data-oid="b6p3q1u">
                     {error}
                 </p>
                 <button
                     onClick={() => window.location.reload()}
                     className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
-                    data-oid="tntb4d1"
+                    data-oid=".hjv:mu"
                 >
                     Try Again
                 </button>
@@ -94,20 +94,20 @@ export default function CourseRegistrationsPage() {
     }
 
     return (
-        <div data-oid="3.pt7h2">
-            <div className="flex justify-between items-center mb-6" data-oid="z1ti-e6">
-                <div data-oid="sl_rsup">
+        <div data-oid="sxckagp">
+            <div className="flex justify-between items-center mb-6" data-oid="5-i9cmh">
+                <div data-oid="yzh.ip8">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
-                        data-oid="t-ch0le"
+                        data-oid="8agk1ba"
                     >
-                        <span className="mr-1" data-oid="c6mmt3a">
+                        <span className="mr-1" data-oid="j_:xv0f">
                             ←
                         </span>{' '}
                         Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold" data-oid="k:4i8db">
+                    <h1 className="text-3xl font-bold" data-oid="0uc621v">
                         {course ? course.title : 'Course'} Registrations
                     </h1>
                 </div>
@@ -116,39 +116,39 @@ export default function CourseRegistrationsPage() {
             {registrations.length === 0 ? (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-8 text-center"
-                    data-oid="b4dt21l"
+                    data-oid="n3-lw7g"
                 >
-                    <p className="text-gray-400" data-oid="43.otfj">
+                    <p className="text-gray-400" data-oid="a.hiy1z">
                         No registrations found for this course.
                     </p>
                 </div>
             ) : (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                    data-oid="yy89ek1"
+                    data-oid="1l8hkau"
                 >
-                    <div className="overflow-x-auto" data-oid="xcpgfwr">
-                        <table className="min-w-full divide-y divide-gray-700" data-oid="ib8y8dx">
-                            <thead className="bg-gray-900" data-oid="2u-_z-f">
-                                <tr data-oid="60eof47">
+                    <div className="overflow-x-auto" data-oid="v9yo8pv">
+                        <table className="min-w-full divide-y divide-gray-700" data-oid="36l7igp">
+                            <thead className="bg-gray-900" data-oid="a8-7426">
+                                <tr data-oid="huzysap">
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="931--9o"
+                                        data-oid="y9phpli"
                                     >
                                         Student Name
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="4scpu0n"
+                                        data-oid=":gt:lx3"
                                     >
                                         Email
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="ubqu4b9"
+                                        data-oid="6a:z990"
                                     >
                                         Enrolled At
                                     </th>
@@ -156,29 +156,29 @@ export default function CourseRegistrationsPage() {
                             </thead>
                             <tbody
                                 className="bg-gray-800 divide-y divide-gray-700"
-                                data-oid="bz2ekqj"
+                                data-oid="1m47u9:"
                             >
                                 {registrations.map((registration) => (
                                     <tr
                                         key={registration._id}
                                         className="hover:bg-gray-750"
-                                        data-oid="ag0788t"
+                                        data-oid="qs:x4uf"
                                     >
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                            data-oid="ot3o4ls"
+                                            data-oid="ud:pf9_"
                                         >
                                             {registration.userId.name}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="bhet6ig"
+                                            data-oid="a9il_f_"
                                         >
                                             {registration.userId.email}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="_hylnci"
+                                            data-oid="tp5vtzl"
                                         >
                                             {new Date(
                                                 registration.enrollmentDate,

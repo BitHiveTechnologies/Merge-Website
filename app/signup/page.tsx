@@ -92,33 +92,33 @@ export default function SignupPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="j8fc:rd">
-            <Navbar data-oid="_lyhc-." />
+        <div className="min-h-screen bg-black text-white font-sans" data-oid="r0l9amf">
+            <Navbar data-oid="7w84dz3" />
 
-            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="qcqk4nt">
+            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="6vci5:9">
                 <div
                     className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-                    data-oid="az.84ml"
+                    data-oid="6232ap6"
                 >
                     {/* Background blur elements */}
-                    <div className="relative" data-oid="u0k:4se">
+                    <div className="relative" data-oid="tepgmix">
                         <div
                             className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"
-                            data-oid="rkg1l94"
+                            data-oid="5xsyxvd"
                         ></div>
                         <div
                             className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"
-                            data-oid="_sp0cpj"
+                            data-oid="gskmlb3"
                         ></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-6" data-oid="19y3n_u">
-                        <div className="text-center mb-6" data-oid="0rk1ei0">
-                            <h1 className="text-3xl font-bold mb-2" data-oid="593rhv6">
+                    <div className="relative p-6" data-oid="fnbdf6_">
+                        <div className="text-center mb-6" data-oid="y9yi.l5">
+                            <h1 className="text-3xl font-bold mb-2" data-oid="0z8pj8z">
                                 Create an Account
                             </h1>
-                            <p className="text-gray-400" data-oid="2sei.rg">
+                            <p className="text-gray-400" data-oid="b2par2_">
                                 Join our Community of Learners
                             </p>
                         </div>
@@ -126,18 +126,18 @@ export default function SignupPage() {
                         {error && (
                             <div
                                 className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm"
-                                data-oid="btwo9b."
+                                data-oid="4s3hqh-"
                             >
                                 {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} data-oid="x39k9:g">
-                            <div className="mb-6" data-oid="bqhsrxw">
+                        <form onSubmit={handleSubmit} data-oid="_1dr3qd">
+                            <div className="mb-6" data-oid="zdw:5-p">
                                 <label
                                     htmlFor="name"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="z9-dda3"
+                                    data-oid="v2gvdea"
                                 >
                                     Full Name
                                 </label>
@@ -150,15 +150,15 @@ export default function SignupPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="John Doe"
                                     required
-                                    data-oid="7w:_2.5"
+                                    data-oid="fc3q8av"
                                 />
                             </div>
 
-                            <div className="mb-6" data-oid="2ur_sym">
+                            <div className="mb-6" data-oid=":1rzrcz">
                                 <label
                                     htmlFor="email"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid=".k5k-fe"
+                                    data-oid="pq83-pu"
                                 >
                                     Email Address
                                 </label>
@@ -171,19 +171,19 @@ export default function SignupPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="your@email.com"
                                     required
-                                    data-oid="4z38qev"
+                                    data-oid="dt_cmep"
                                 />
                             </div>
 
-                            <div className="mb-6" data-oid="_mgs2nc">
+                            <div className="mb-6" data-oid="-8.w8z5">
                                 <label
                                     htmlFor="password"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="57-bqul"
+                                    data-oid="y47f9jk"
                                 >
                                     Password
                                 </label>
-                                <div className="relative" data-oid="sxya:ib">
+                                <div className="relative" data-oid="gmwtrf9">
                                     <input
                                         id="password"
                                         name="password"
@@ -193,7 +193,7 @@ export default function SignupPage() {
                                         className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors pr-10"
                                         placeholder="••••••••"
                                         required
-                                        data-oid="wo91t.z"
+                                        data-oid="d66-cpu"
                                     />
 
                                     <button
@@ -203,7 +203,7 @@ export default function SignupPage() {
                                         aria-label={
                                             showPassword ? 'Hide password' : 'Show password'
                                         }
-                                        data-oid="2shdern"
+                                        data-oid="q.yn1_9"
                                     >
                                         {showPassword ? (
                                             <svg
@@ -212,14 +212,14 @@ export default function SignupPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid="4vg5:vw"
+                                                data-oid="ptordm8"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
-                                                    data-oid="x5nnbqt"
+                                                    data-oid="teqw-_i"
                                                 />
                                             </svg>
                                         ) : (
@@ -229,14 +229,14 @@ export default function SignupPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid="-q1_d8w"
+                                                data-oid="vvmtp.3"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                                    data-oid="s5p1800"
+                                                    data-oid="vk63v1e"
                                                 />
 
                                                 <path
@@ -244,18 +244,18 @@ export default function SignupPage() {
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                                    data-oid="dolkipn"
+                                                    data-oid="8knhdki"
                                                 />
                                             </svg>
                                         )}
                                     </button>
                                 </div>
-                                <p className="mt-1 text-xs text-gray-400" data-oid="m85uatx">
+                                <p className="mt-1 text-xs text-gray-400" data-oid="fw.z1l4">
                                     Password must be at least 8 characters long
                                 </p>
                                 <div
                                     className="mt-2 p-2 bg-yellow-500/20 border border-yellow-500 rounded-md text-yellow-200 text-sm flex items-start"
-                                    data-oid="cdj0_m0"
+                                    data-oid="toy28o2"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -263,25 +263,25 @@ export default function SignupPage() {
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        data-oid="8_k8qkx"
+                                        data-oid="vm-a1_c"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
                                             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                                            data-oid="0fqnl2z"
+                                            data-oid="a0i71oi"
                                         />
                                     </svg>
-                                    <span data-oid="p99z42v">
+                                    <span data-oid="119av.:">
                                         Please remember the password or note it somewhere for future
                                         login.
                                     </span>
                                 </div>
                             </div>
 
-                            <div className="flex items-start mb-6" data-oid="upviq04">
-                                <div className="flex items-center h-5" data-oid="5iw8l3s">
+                            <div className="flex items-start mb-6" data-oid="x5k69fo">
+                                <div className="flex items-center h-5" data-oid="9087flj">
                                     <input
                                         id="agreeToTerms"
                                         name="agreeToTerms"
@@ -290,20 +290,20 @@ export default function SignupPage() {
                                         onChange={handleChange}
                                         className="h-4 w-4 rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500"
                                         required
-                                        data-oid="11:2w-r"
+                                        data-oid="x51ecz2"
                                     />
                                 </div>
-                                <div className="ml-3 text-sm" data-oid="gv.tzbf">
+                                <div className="ml-3 text-sm" data-oid=".s_aclg">
                                     <label
                                         htmlFor="agreeToTerms"
                                         className="text-gray-300"
-                                        data-oid=":g0906y"
+                                        data-oid="26s-o6g"
                                     >
                                         I agree to the{' '}
                                         <Link
                                             href="#"
                                             className="text-purple-400 hover:text-purple-300 transition-colors"
-                                            data-oid=":uife7i"
+                                            data-oid="uy.-.1r"
                                         >
                                             Terms of Service
                                         </Link>{' '}
@@ -311,7 +311,7 @@ export default function SignupPage() {
                                         <Link
                                             href="#"
                                             className="text-purple-400 hover:text-purple-300 transition-colors"
-                                            data-oid="ln0af51"
+                                            data-oid="gcy_pf7"
                                         >
                                             Privacy Policy
                                         </Link>
@@ -325,19 +325,19 @@ export default function SignupPage() {
                                 className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
                                     isLoading ? 'opacity-70 cursor-not-allowed' : ''
                                 }`}
-                                data-oid="y3mb8oa"
+                                data-oid="1c:g899"
                             >
                                 {isLoading ? 'Creating Account...' : 'Create Account'}
                             </button>
                         </form>
 
-                        <div className="mt-6 text-center" data-oid="x.k:.fa">
-                            <p className="text-gray-400" data-oid="vxxhbv_">
+                        <div className="mt-6 text-center" data-oid="6hfzfjq">
+                            <p className="text-gray-400" data-oid="yc-wmss">
                                 Already have an account?{' '}
                                 <Link
                                     href="/login"
                                     className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
-                                    data-oid="n5qb_xg"
+                                    data-oid="mye:k89"
                                 >
                                     Sign In
                                 </Link>

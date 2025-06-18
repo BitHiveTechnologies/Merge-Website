@@ -72,33 +72,33 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="by5g.na">
-            <Navbar data-oid="r1y65qt" />
+        <div className="min-h-screen bg-black text-white font-sans" data-oid="zmthiqh">
+            <Navbar data-oid="utitmnv" />
 
-            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="y7cipb0">
+            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="cmpfwo5">
                 <div
                     className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden  mt-12"
-                    data-oid="r5jnejh"
+                    data-oid="os.2eu9"
                 >
                     {/* Background blur elements */}
-                    <div className="relative" data-oid="zuxvhl8">
+                    <div className="relative" data-oid="0tq6n8k">
                         <div
                             className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"
-                            data-oid="trv0--q"
+                            data-oid="u7h:ntm"
                         ></div>
                         <div
                             className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"
-                            data-oid="uzybstp"
+                            data-oid="i:1hhzk"
                         ></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-6" data-oid="pq20arh">
-                        <div className="text-center mb-6" data-oid=".woyoyg">
-                            <h1 className="text-3xl font-bold mb-2" data-oid="trfe33l">
+                    <div className="relative p-6" data-oid="z6q8.h-">
+                        <div className="text-center mb-6" data-oid="job6nmr">
+                            <h1 className="text-3xl font-bold mb-2" data-oid="5ckvdik">
                                 Welcome Back
                             </h1>
-                            <p className="text-gray-400" data-oid="5wx:ygu">
+                            <p className="text-gray-400" data-oid="a.xpbs0">
                                 Sign in to continue your Learning Journey
                             </p>
                         </div>
@@ -106,18 +106,18 @@ export default function LoginPage() {
                         {error && (
                             <div
                                 className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm"
-                                data-oid="gk9196k"
+                                data-oid="jgw:4bz"
                             >
                                 {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} data-oid="vjc7bdm">
-                            <div className="mb-6" data-oid="zwb9383">
+                        <form onSubmit={handleSubmit} data-oid="y840h.b">
+                            <div className="mb-6" data-oid="6rfmoia">
                                 <label
                                     htmlFor="email"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="uyh13ue"
+                                    data-oid="ygro1vl"
                                 >
                                     Email Address
                                 </label>
@@ -129,24 +129,24 @@ export default function LoginPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="your@email.com"
                                     required
-                                    data-oid="c7m3g43"
+                                    data-oid="_2a8m7s"
                                 />
                             </div>
 
-                            <div className="mb-6" data-oid="f4jm3w2">
+                            <div className="mb-6" data-oid="_q-_s1j">
                                 <div
                                     className="flex justify-between items-center mb-2"
-                                    data-oid="m2xvnb9"
+                                    data-oid="gtpxjes"
                                 >
                                     <label
                                         htmlFor="password"
                                         className="block text-sm font-medium"
-                                        data-oid="7sta51s"
+                                        data-oid="wd9jkx_"
                                     >
                                         Password
                                     </label>
                                 </div>
-                                <div className="relative" data-oid=":6fwokr">
+                                <div className="relative" data-oid="sy5aru9">
                                     <input
                                         id="password"
                                         type={showPassword ? 'text' : 'password'}
@@ -155,7 +155,7 @@ export default function LoginPage() {
                                         className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors pr-10"
                                         placeholder="••••••••"
                                         required
-                                        data-oid="dbnww8t"
+                                        data-oid="bypiob:"
                                     />
 
                                     <button
@@ -165,7 +165,7 @@ export default function LoginPage() {
                                         aria-label={
                                             showPassword ? 'Hide password' : 'Show password'
                                         }
-                                        data-oid="-bow4bp"
+                                        data-oid="qw8v.4o"
                                     >
                                         {showPassword ? (
                                             <svg
@@ -174,14 +174,14 @@ export default function LoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid="_si-nl9"
+                                                data-oid="rokq4lb"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
-                                                    data-oid="sd5ymav"
+                                                    data-oid="vf3tpsx"
                                                 />
                                             </svg>
                                         ) : (
@@ -191,14 +191,14 @@ export default function LoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid=":nah7f4"
+                                                data-oid="3bp.a0t"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                                    data-oid="vkn_ovw"
+                                                    data-oid="sx-bc6i"
                                                 />
 
                                                 <path
@@ -206,7 +206,7 @@ export default function LoginPage() {
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                                    data-oid="3zm.jr7"
+                                                    data-oid="0cosvbi"
                                                 />
                                             </svg>
                                         )}
@@ -214,20 +214,20 @@ export default function LoginPage() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center mb-6" data-oid="ar--e3-">
+                            <div className="flex items-center mb-6" data-oid=".16aoki">
                                 <input
                                     id="remember-me"
                                     type="checkbox"
                                     checked={rememberMe}
                                     onChange={(e) => setRememberMe(e.target.checked)}
                                     className="h-4 w-4 rounded border-gray-600 bg-gray-700 text-purple-500 focus:ring-purple-500"
-                                    data-oid="dok5im6"
+                                    data-oid="k7xtq3c"
                                 />
 
                                 <label
                                     htmlFor="remember-me"
                                     className="ml-2 block text-sm text-gray-300"
-                                    data-oid="_966bqj"
+                                    data-oid=".w9poqc"
                                 >
                                     Remember me
                                 </label>
@@ -239,19 +239,19 @@ export default function LoginPage() {
                                 className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
                                     isLoading ? 'opacity-70 cursor-not-allowed' : ''
                                 }`}
-                                data-oid="0vb9j9-"
+                                data-oid="mkitxl8"
                             >
                                 {isLoading ? 'Signing in...' : 'Sign In'}
                             </button>
                         </form>
 
-                        <div className="mt-6 text-center" data-oid="twiz4.9">
-                            <p className="text-gray-400" data-oid="sv0ub24">
+                        <div className="mt-6 text-center" data-oid="2ud9b21">
+                            <p className="text-gray-400" data-oid="bd5v9.-">
                                 Don't have an account?{' '}
                                 <Link
                                     href="/signup"
                                     className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
-                                    data-oid="x.t.go2"
+                                    data-oid="sh.czav"
                                 >
                                     Sign Up
                                 </Link>
