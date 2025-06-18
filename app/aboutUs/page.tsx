@@ -34,7 +34,7 @@ export default function AboutUsPage() {
             role: 'Co-Founder',
             category: 'Leadership',
             description:
-                '🎓 IIT Delhi alumnus | Formerly at FunctionUp and Polaris. Expert in curriculum strategy and academic operations, Hariom brings deep insight into scalable tech education models.',
+                'IIT Delhi alumnus | Formerly at FunctionUp and Polaris. Expert in curriculum strategy and academic operations, bringing deep insight into scalable tech education models.',
             linkedin: '#',
             image: '/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
         },
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
             role: 'Co-Founder & CEO',
             category: 'Leadership',
             description:
-                "🚀 Passionate ed-tech entrepreneur, visionary behind Merge's mission to empower Tier 2 & Tier 3 students with accessible, affordable, and impactful learning.",
+                "Passionate ed-tech entrepreneur and visionary behind Merge's mission to empower Tier 2 & Tier 3 students with accessible, affordable, and impactful learning experiences.",
             linkedin: '#',
             image: '/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
         },
@@ -52,7 +52,7 @@ export default function AboutUsPage() {
             role: 'Co-Founder & CTO',
             category: 'Leadership',
             description:
-                '💻 Full-stack expert, AI developer, and industry mentor | SWE1 at Dograh AI | Open Source Contributor',
+                'Full-stack expert, AI developer, and industry mentor. Currently SWE1 at Dograh AI and active Open Source Contributor with extensive technical leadership experience.',
             linkedin: '#',
             image: '/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face',
         },
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
             role: 'Head of Academics',
             category: 'Core Team',
             description:
-                '🧠 Machine Learning Researcher at JNU | Project Mentor | Advocate of hands-on, real-world learning experiences for emerging tech talent',
+                'Machine Learning Researcher at JNU and Project Mentor. Passionate advocate of hands-on, real-world learning experiences for emerging tech talent.',
             linkedin: '#',
             image: '/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
         },
@@ -71,7 +71,7 @@ export default function AboutUsPage() {
             role: 'Head Of Admission',
             category: 'Core Team',
             description:
-                '🎓 Experienced in student guidance and educational consulting | Passionate about helping learners find the right opportunities and pathways at Merge',
+                'Experienced in student guidance and educational consulting. Passionate about helping learners find the right opportunities and pathways at Merge.',
             linkedin: '#',
             image: '/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
         },
@@ -81,7 +81,7 @@ export default function AboutUsPage() {
             role: 'Industry Mentor',
             category: 'Mentors',
             description:
-                '🎓 IIT Delhi | Engineer I at American Express | Experienced in product leadership | Committed to inclusive and impactful tech education',
+                'IIT Delhi graduate, Engineer I at American Express. Experienced in product leadership and committed to inclusive and impactful tech education.',
             linkedin: '#',
             image: '/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
         },
@@ -90,7 +90,7 @@ export default function AboutUsPage() {
             role: 'Open Source Mentor',
             category: 'Mentors',
             description:
-                "🏆 GSoC'24 @ P4 Lang | GDG Mentor | Top 100 Global – Google Solution Challenge Hackathon 2024 | Google DSC'23 Open-source Lead",
+                "GSoC'24 @ P4 Lang, GDG Mentor, Top 100 Global – Google Solution Challenge Hackathon 2024, Google DSC'23 Open-source Lead with extensive community experience.",
             linkedin: '#',
             image: '/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face',
         },
@@ -100,7 +100,7 @@ export default function AboutUsPage() {
             role: 'Professor & Director – USHMM',
             category: 'Advisory',
             description:
-                '🎓 Expertise: Educational Leadership, Strategic Planning, Curriculum Design at Uttaranchal University',
+                'Educational Leadership expert with specialization in Strategic Planning and Curriculum Design at Uttaranchal University.',
             linkedin: '#',
             image: '/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face',
         },
@@ -109,7 +109,7 @@ export default function AboutUsPage() {
             role: 'Director – Research & Innovation',
             category: 'Advisory',
             description:
-                '🎓 Author | Innovator. Thought leader in emerging technology, research ecosystems, and academic-industry collaboration at Uttaranchal University',
+                'Author and Innovator. Thought leader in emerging technology, research ecosystems, and academic-industry collaboration at Uttaranchal University.',
             linkedin: '#',
             image: '/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face',
         },
@@ -150,13 +150,16 @@ export default function AboutUsPage() {
     // Components
     const StatCard = ({ stat }: { stat: Stat }) => (
         <div
-            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-2xl border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
-            data-oid="kx74g1p"
+            className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-3xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-400/50 hover:bg-gradient-to-br hover:from-purple-900/30 hover:to-pink-900/30 transition-all duration-500 hover:scale-105"
+            data-oid="l8qeh5d"
         >
-            <div className="text-3xl font-bold text-purple-400 mb-2" data-oid="2b.s0.n">
+            <div
+                className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3"
+                data-oid="jbln6z2"
+            >
                 {stat.number}
             </div>
-            <div className="text-gray-300 text-sm" data-oid="919w9t-">
+            <div className="text-gray-300 font-medium" data-oid="g:1j_45">
                 {stat.label}
             </div>
         </div>
@@ -164,16 +167,25 @@ export default function AboutUsPage() {
 
     const ValueCard = ({ value }: { value: Value }) => (
         <div
-            className="text-center p-6 rounded-2xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2"
-            data-oid="0uiy9k_"
+            className="group text-center p-8 rounded-3xl bg-gradient-to-br from-gray-800/40 to-gray-900/40 border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/20"
+            data-oid="u.dt:jf"
         >
-            <div className="text-4xl mb-4" data-oid="l9lbnoj">
+            <div
+                className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300"
+                data-oid="e1._04y"
+            >
                 {value.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-purple-300" data-oid="266p6er">
+            <h3
+                className="text-2xl font-bold mb-4 text-purple-300 group-hover:text-purple-200 transition-colors"
+                data-oid="09n.faw"
+            >
                 {value.title}
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed" data-oid="031cgzg">
+            <p
+                className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors"
+                data-oid="9fbdbrz"
+            >
                 {value.description}
             </p>
         </div>
@@ -181,64 +193,88 @@ export default function AboutUsPage() {
 
     const TeamMemberCard = ({ member }: { member: TeamMember }) => (
         <div
-            className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2"
-            data-oid="-h26wgn"
+            className="group relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-3xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10 overflow-hidden"
+            data-oid="vx0u.wd"
         >
-            <div className="flex items-start space-x-4 mb-4" data-oid="r2xuka4">
-                <div className="relative w-20 h-20 flex-shrink-0" data-oid="pxhu7p4">
-                    <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        data-oid="-a51loh"
-                    />
-                </div>
-                <div className="flex-1" data-oid="yfjdrwo">
-                    <div className="flex items-start justify-between" data-oid="vjcp8xw">
-                        <div className="flex-1" data-oid="2_hr5_h">
-                            <h4
-                                className="text-lg font-semibold mb-1 group-hover:text-purple-300 transition-colors"
-                                data-oid=":px2j6n"
+            {/* Background Gradient Overlay */}
+            <div
+                className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                data-oid="x1cw86k"
+            />
+
+            <div className="relative p-8" data-oid="17kwgi1">
+                {/* Large Profile Image */}
+                <div className="flex flex-col items-center text-center mb-6" data-oid="h:z9_r4">
+                    <div className="relative w-32 h-32 mb-6" data-oid="nyrt-42">
+                        <div
+                            className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-1 group-hover:scale-110 transition-transform duration-300"
+                            data-oid="_rru5r9"
+                        >
+                            <div
+                                className="w-full h-full bg-gray-900 rounded-full p-1"
+                                data-oid="4n_:4g4"
                             >
-                                {member.name}
-                            </h4>
-                            <p className="text-purple-400 text-sm font-medium" data-oid="byfeinb">
-                                {member.role}
-                            </p>
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="rounded-full object-cover"
+                                    data-oid="3tggqrv"
+                                />
+                            </div>
                         </div>
+                    </div>
+
+                    {/* Name and Role */}
+                    <div className="mb-4" data-oid="4hlitr2">
+                        <h4
+                            className="text-2xl font-bold mb-2 group-hover:text-purple-300 transition-colors duration-300"
+                            data-oid="-8lg24n"
+                        >
+                            {member.name}
+                        </h4>
+                        <p
+                            className="text-purple-400 font-semibold text-lg mb-3"
+                            data-oid="_3d28a5"
+                        >
+                            {member.role}
+                        </p>
+
+                        {/* LinkedIn Icon */}
                         <a
                             href={member.linkedin}
-                            className="w-8 h-8 rounded-full bg-gray-700/50 flex items-center justify-center hover:bg-purple-500/20 transition-colors group-hover:scale-110 duration-300 ml-2"
+                            className="inline-flex w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 items-center justify-center hover:from-purple-500 hover:to-pink-500 transition-all duration-300 group-hover:scale-110"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${member.name} LinkedIn`}
-                            data-oid=".-s:j22"
+                            data-oid="2dfrqp3"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
+                                width="20"
+                                height="20"
                                 fill="currentColor"
-                                className="text-gray-400 hover:text-purple-400 transition-colors"
+                                className="text-white"
                                 viewBox="0 0 16 16"
-                                data-oid="9tc1rf3"
+                                data-oid="yz7n.9r"
                             >
                                 <path
                                     d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                                    data-oid="2ui5bc7"
+                                    data-oid="1ikahqf"
                                 />
                             </svg>
                         </a>
                     </div>
                 </div>
+
+                {/* Description */}
+                <p
+                    className="text-gray-300 leading-relaxed text-center group-hover:text-white transition-colors duration-300"
+                    data-oid="epfyk9t"
+                >
+                    {member.description}
+                </p>
             </div>
-            <p
-                className="text-gray-300 text-sm leading-relaxed group-hover:text-white transition-colors"
-                data-oid="g9w4.sk"
-            >
-                {member.description}
-            </p>
         </div>
     );
 
@@ -248,72 +284,108 @@ export default function AboutUsPage() {
 
             {/* Hero Section */}
             <section
-                className="pt-10 pb-20 px-6 md:px-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
-                data-oid="p-tfw9p"
+                className="pt-16 pb-32 px-6 md:px-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
+                data-oid="cpiier5"
             >
-                {/* Background Elements */}
+                {/* Enhanced Background Elements */}
                 <div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-pink-500/5"
-                    data-oid="dzc7a:q"
-                />
-                <div
-                    className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl"
-                    data-oid="kvw3tdj"
-                />
-                <div
-                    className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/10 rounded-full filter blur-3xl"
-                    data-oid="oe-3y0p"
+                    className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-pink-500/10"
+                    data-oid="zizb48-"
                 />
 
-                <div className="relative z-10 max-w-7xl mx-auto" data-oid="h8wegou">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center" data-oid="e1svxzm">
+                <div
+                    className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse"
+                    data-oid="6bg:mvc"
+                />
+
+                <div
+                    className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl animate-pulse"
+                    data-oid="lpuk6-9"
+                />
+
+                <div
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
+                    data-oid="147-r9m"
+                />
+
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid="h35nlkw">
+                    <div
+                        className="grid lg:grid-cols-2 gap-16 items-center w-[1279px]"
+                        data-oid="cnjc2s1"
+                    >
                         {/* Left Content */}
-                        <div data-oid="kgy-.q.">
-                            <h1 className="text-5xl md:text-7xl font-bold mb-6" data-oid="6jht1e4">
+                        <div data-oid="sykc84l">
+                            <h2
+                                className="text-6xl md:text-8xl font-bold mb-8 leading-tight"
+                                data-oid="qc8lw.v"
+                            >
                                 <span
-                                    className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                    data-oid="zrbzu.z"
+                                    className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600"
+                                    data-oid="x4:ap7b"
                                 >
                                     About
                                 </span>
-                                <br data-oid="cyrk606" />
-                                <span className="text-white" data-oid="xhtv13x">
+                                <br data-oid="1z7gd-z" />
+                                <span className="text-white" data-oid="xwfi-d1">
                                     Merge
                                 </span>
-                            </h1>
+                            </h2>
                             <div
-                                className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8"
-                                data-oid="9nmnb4p"
+                                className="w-32 h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
+                                data-oid="z-emiaf"
                             />
+
                             <p
-                                className="text-xl text-gray-300 mb-8 leading-relaxed"
-                                data-oid="o66hrjw"
+                                className="text-2xl text-gray-300 mb-10 leading-relaxed"
+                                data-oid="sb3b2qo"
                             >
                                 Bridging the gap between academic education and industry readiness
-                                through personalized, mentor-led learning experiences.
+                                through
+                                <span className="text-purple-400 font-semibold" data-oid="tpzj-f7">
+                                    {' '}
+                                    personalized, mentor-led
+                                </span>{' '}
+                                learning experiences.
                             </p>
-                            <div className="flex flex-wrap gap-4" data-oid="0w735j3">
+                            <div className="flex flex-wrap gap-6" data-oid="6r158-w">
                                 <Link
                                     href="/courses"
-                                    className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-medium"
-                                    data-oid="21l051:"
+                                    className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                                    data-oid="px9s0vi"
                                 >
-                                    Explore Courses
+                                    <span className="flex items-center gap-2" data-oid="5jz8j2x">
+                                        Explore Courses
+                                        <svg
+                                            className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            data-oid="mzeij9y"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                                data-oid="knx0p3z"
+                                            />
+                                        </svg>
+                                    </span>
                                 </Link>
                                 <Link
                                     href="#team"
-                                    className="px-6 py-3 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
-                                    data-oid="e4_ttwu"
+                                    className="px-8 py-4 border-2 border-purple-500 rounded-2xl hover:bg-purple-500/10 transition-all duration-300 font-semibold text-lg hover:scale-105"
+                                    data-oid=".bg7_l0"
                                 >
                                     Meet Our Team
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Right Content - Stats */}
-                        <div className="grid grid-cols-2 gap-6" data-oid="_:8vway">
+                        {/* Right Content - Enhanced Stats */}
+                        <div className="grid grid-cols-2 gap-8" data-oid="bgb9xto">
                             {stats.map((stat, index) => (
-                                <StatCard key={index} stat={stat} data-oid="ll-p2s8" />
+                                <StatCard key={index} stat={stat} data-oid="z-z_hd4" />
                             ))}
                         </div>
                     </div>
@@ -321,38 +393,75 @@ export default function AboutUsPage() {
             </section>
 
             {/* Values Section */}
-            <section className="py-20 px-6 md:px-12 bg-gray-900/50" data-oid="xlj65du">
-                <div className="max-w-7xl mx-auto" data-oid="_2e:a6x">
-                    <div className="text-center mb-16" data-oid=".q.fi26">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="er6hab7">
-                            Our{' '}
-                            <span className="text-purple-400" data-oid="wy:24il">
-                                Values
+            <section
+                className="py-32 px-6 md:px-12 bg-gradient-to-br from-gray-900/80 to-black relative"
+                data-oid="973v7vy"
+            >
+                <div
+                    className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"
+                    data-oid="-1c98ux"
+                />
+
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid="t-rwnal">
+                    <div className="text-center mb-20" data-oid="otjnewo">
+                        <span
+                            className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6"
+                            data-oid="hyyo:7p"
+                        >
+                            💎 Our Core Values
+                        </span>
+                        <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="r.1np1d">
+                            What Drives{' '}
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+                                data-oid="g3gvh4b"
+                            >
+                                Us
                             </span>
                         </h2>
-                        <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-oid="el60hc-">
+                        <p
+                            className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+                            data-oid="gw8dibg"
+                        >
                             The principles that guide everything we do at Merge Learning
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" data-oid="eiq:5rv">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10" data-oid="qs8ptac">
                         {values.map((value, index) => (
-                            <ValueCard key={index} value={value} data-oid="766bmnd" />
+                            <ValueCard key={index} value={value} data-oid="_m9u..z" />
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* Team Section */}
-            <section id="team" className="py-20 px-6 md:px-12 bg-black" data-oid=".kwg6_d">
-                <div className="max-w-7xl mx-auto" data-oid="t8c7exr">
-                    <div className="text-center mb-16" data-oid="7rpy4gt">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="orsksij">
-                            Meet Our{' '}
-                            <span className="text-purple-400" data-oid="qivt5e.">
-                                Team
+            <section id="team" className="py-32 px-6 md:px-12 bg-black relative" data-oid="k_613-0">
+                <div
+                    className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5"
+                    data-oid=".1x.12e"
+                />
+
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid=":gm1_1v">
+                    <div className="text-center mb-20" data-oid="bqki50g">
+                        <span
+                            className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6"
+                            data-oid="wjjgjg8"
+                        >
+                            👥 Meet the Team
+                        </span>
+                        <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="14fx49u">
+                            The People Behind{' '}
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+                                data-oid="f5b68jl"
+                            >
+                                Merge
                             </span>
                         </h2>
-                        <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-oid="f2n6ewi">
+                        <p
+                            className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+                            data-oid="166gtja"
+                        >
                             Passionate educators, technologists, and mentors committed to reshaping
                             tech education
                         </p>
@@ -360,15 +469,24 @@ export default function AboutUsPage() {
 
                     {/* Team Categories */}
                     {teamCategories.map((category) => (
-                        <div key={category} className="mb-16" data-oid="ump4udu">
-                            <h3 className="text-2xl font-bold mb-8 text-center" data-oid="vo8bmh4">
-                                <span className="text-purple-400" data-oid="artikbt">
-                                    {category}
-                                </span>
-                            </h3>
+                        <div key={category} className="mb-20" data-oid="n.p2faf">
+                            <div className="text-center mb-12" data-oid="mzdh6w.">
+                                <h3 className="text-3xl font-bold" data-oid="0cy:id7">
+                                    <span
+                                        className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+                                        data-oid="qdvc.t9"
+                                    >
+                                        {category}
+                                    </span>
+                                </h3>
+                                <div
+                                    className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-4"
+                                    data-oid="dckcv1c"
+                                />
+                            </div>
                             <div
-                                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                                data-oid="-dav:7y"
+                                className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+                                data-oid="o8lisp:"
                             >
                                 {allTeamMembers
                                     .filter((member) => member.category === category)
@@ -376,55 +494,12 @@ export default function AboutUsPage() {
                                         <TeamMemberCard
                                             key={index}
                                             member={member}
-                                            data-oid="-081308"
+                                            data-oid="zjx_j2_"
                                         />
                                     ))}
                             </div>
                         </div>
                     ))}
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section
-                className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden"
-                data-oid="3mgktzw"
-            >
-                <div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-pink-500/5"
-                    data-oid="8j08a.2"
-                />
-                <div className="relative z-10 max-w-4xl mx-auto text-center" data-oid="eq1b_.d">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="wv12dyr">
-                        Ready to{' '}
-                        <span className="text-purple-400" data-oid="2gki6vy">
-                            Transform
-                        </span>{' '}
-                        Your Future?
-                    </h2>
-                    <p className="text-xl text-gray-300 mb-10 leading-relaxed" data-oid="3mmjyrh">
-                        Join thousands of students who have already started their journey with Merge
-                        Learning
-                    </p>
-                    <div
-                        className="flex flex-col sm:flex-row gap-4 justify-center"
-                        data-oid="gdw2piq"
-                    >
-                        <Link
-                            href="/courses"
-                            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-medium text-lg"
-                            data-oid="41izgi_"
-                        >
-                            Explore Our Courses
-                        </Link>
-                        <Link
-                            href="/signup"
-                            className="px-8 py-4 border border-purple-500 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium text-lg"
-                            data-oid="t:5xqms"
-                        >
-                            Join Our Community
-                        </Link>
-                    </div>
                 </div>
             </section>
 
