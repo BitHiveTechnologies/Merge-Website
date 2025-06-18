@@ -97,6 +97,14 @@ export default function Navbar() {
                 >
                     Home
                 </Link>
+
+                <Link
+                    href="/aboutUs"
+                    className={`${isActive('/aboutUs') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                    data-oid="rp2isww"
+                >
+                    About Us
+                </Link>
                 <Link
                     href="/courses"
                     className={`${isActive('/courses') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
@@ -117,13 +125,6 @@ export default function Navbar() {
                     data-oid="amdbho:"
                 >
                     Hackathons
-                </Link>
-                <Link
-                    href="/aboutUs"
-                    className={`${isActive('/aboutUs') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
-                    data-oid="rp2isww"
-                >
-                    About Us
                 </Link>
             </div>
 

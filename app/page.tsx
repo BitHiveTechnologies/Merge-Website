@@ -1166,11 +1166,11 @@ export default function Page() {
                                         />
                                     </svg>
                                     <a
-                                        href="mailto:info@merge.com"
+                                        href="mailto:admissions@mergelearning.co.in"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="2jb0m66"
                                     >
-                                        admin@merge.org.in
+                                        admissions@mergelearning.co.in
                                     </a>
                                 </li>
                                 <li className="flex items-start" data-oid="i_66uzg">
@@ -1236,7 +1236,8 @@ export default function Page() {
                         data-oid=":_y4utf"
                     >
                         <p data-oid="0s03mme">
-                            &copy; {new Date().getFullYear()} Merge. All rights reserved.
+                            &copy; {new Date().getFullYear()} Merge Learning Pvt. Ltd. All rights
+                            reserved.{' '}
                         </p>
                         <p className="text" data-oid="6:ueer9">
                             Built with ❤️ by BitHive Technologies

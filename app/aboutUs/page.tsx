@@ -36,7 +36,7 @@ export default function AboutUsPage() {
             category: 'Leadership',
             description:
                 "Passionate Ed-tech Entrepreneur and visionary behind Merge's mission to empower Tier 2 & Tier 3 students with accessible, affordable, and impactful learning experiences.",
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/ayush-kumar-aa16a2241/',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQEx8_kIO9ovrg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726390458101?e=1755734400&v=beta&t=agQm2tOthIbYdm75dow3FQe7YQwYVBXgDMur4qWFrSk',
         },
         {
@@ -45,7 +45,7 @@ export default function AboutUsPage() {
             category: 'Leadership',
             description:
                 'IIT Delhi alumnus | Formerly at FunctionUp and Polaris. Expert in curriculum strategy and academic operations, bringing deep insight into scalable tech education models.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/hariom-yadav-7a8b50186/',
             image: 'https://media.licdn.com/dms/image/v2/C4E03AQGFaQO0G788Nw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1650194520512?e=1755734400&v=beta&t=Wai-ZhbJzgru4TiZ2K-E5D9HGHJA5dKEcXnY7WfGskg',
         },
         {
@@ -54,7 +54,7 @@ export default function AboutUsPage() {
             category: 'Leadership',
             description:
                 'Full-stack expert, AI developer, and Industry Mentor. Currently SWE at Dograh AI and active Open Source Contributor with extensive technical leadership experience.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/ayushsrivastava0609/',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQG0d4FRX5wLnA/profile-displayphoto-shrink_400_400/B56ZXdF_j1GQAg-/0/1743171091512?e=1755734400&v=beta&t=epuq9EfQHWVeXVA7WIuTUQgvGilCVq8dp3L0wu3Sw-I',
         },
         // Core Team
@@ -64,7 +64,7 @@ export default function AboutUsPage() {
             category: 'Core Team',
             description:
                 'Machine Learning Researcher at JNU and Project Mentor. Passionate advocate of hands-on, real-world learning experiences for emerging tech talent.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/sudhanshu-kumar-87993a255/',
             image: 'https://media.licdn.com/dms/image/v2/D4D03AQFIfpFhbyAxnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697997228419?e=1755734400&v=beta&t=ms-hGHrktTWvs0mpHNnRUWJVtO6TifHnZe9KNYl75BI',
         },
         {
@@ -73,7 +73,7 @@ export default function AboutUsPage() {
             category: 'Core Team',
             description:
                 'Experienced in student guidance and educational consulting. Passionate about helping learners find the right opportunities and pathways at Merge.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/abhishek-kumar-bharti-82b50122a/',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQEXRa6KX6Sl9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731675477034?e=1755734400&v=beta&t=Fmep5vl50Ma4bZ2ce9Ua4ooiPRIpLTP_fgGj2w40zlQ',
         },
         // Mentors
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
             category: 'Mentors/Open-Source Experts',
             description:
                 'IIT Delhi graduate, Engineer I at American Express. Experienced in product leadership and committed to inclusive and impactful tech education.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/avish-jain-a27141156/',
             image: 'https://media.licdn.com/dms/image/v2/D4D03AQH-i9IgoarIUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729859042117?e=1755734400&v=beta&t=CYFZNfDBCes8XB_aAyK4bH4OO9oH3VcV93Ha8BKpmRI',
         },
         {
@@ -92,7 +92,7 @@ export default function AboutUsPage() {
             category: 'Mentors/Open-Source Experts',
             description:
                 "GSoC'24 @ P4 Lang, GDG Mentor, Top 100 Global – Google Solution Challenge Hackathon 2024, Google DSC'23 Open-source Lead with extensive community experience.",
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/adarsh-rawat/',
             image: 'https://media.licdn.com/dms/image/v2/D4D03AQGYCZPVmZxp2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696130197120?e=1755734400&v=beta&t=_8KP605LYBZpEkzjmMLf89e2y3M1T8hentwLDCv0qrM',
         },
         // Advisory Team
@@ -102,7 +102,7 @@ export default function AboutUsPage() {
             category: 'Advisory',
             description:
                 'Educational Leadership expert with specialization in Strategic Planning and Curriculum Design at Uttaranchal University.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/dr-manish-badoni-3380a115/',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQFcHEHHDGOclQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718266726636?e=1755734400&v=beta&t=vOjq8yzcc3Rg6nT2PCXgygvOmqmoke7pLS4H6YNV814',
         },
         {
@@ -111,7 +111,7 @@ export default function AboutUsPage() {
             category: 'Advisory',
             description:
                 'Author and Innovator. Thought leader in emerging technology, research ecosystems, and academic-industry collaboration at Uttaranchal University.',
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/dr-rajeshsingh/',
             image: 'https://media.licdn.com/dms/image/v2/D4D03AQGvQV_MPIOwtw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696840963659?e=1755734400&v=beta&t=nQR2A17xvcd4CKMFCAEbOgaXYnqxy4PY1Cb569Mdq4Y',
         },
     ];
@@ -313,7 +313,7 @@ export default function AboutUsPage() {
                     data-oid="c0te.lz"
                 />
 
-                <div className="relative z-10 max-w-6xl mx-auto mt-10" data-oid="pkgtwt5">
+                <div className="relative z-10 max-w-6xl mx-auto mt-20" data-oid="pkgtwt5">
                     <div className="max-w-4xl" data-oid="2bcyi2q">
                         {/* Left Content */}
                         <div data-oid=":ltkej1">
@@ -637,22 +637,21 @@ export default function AboutUsPage() {
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/company/merge-prx"
-                                    className="transition-colors"
-                                    aria-label="LinkedIn"
-                                    data-oid="a8zx-c6"
+                                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500/20 transition-colors"
+                                    data-oid="b9_k2gw"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         fill="currentColor"
-                                        className="text-[#0077B5] hover:text-[#005885] transition-colors duration-300"
+                                        className="text-gray-400"
                                         viewBox="0 0 16 16"
-                                        data-oid="6sh6l-2"
+                                        data-oid="sqsjxy9"
                                     >
                                         <path
                                             d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                                            data-oid="vxe44qe"
+                                            data-oid="pcgehrk"
                                         />
                                     </svg>
                                 </a>
@@ -811,11 +810,11 @@ export default function AboutUsPage() {
                                         />
                                     </svg>
                                     <a
-                                        href="mailto:admin@merge.org.in"
+                                        href="mailto:admissions@mergelearning.co.in"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
                                         data-oid="lx8j76u"
                                     >
-                                        admin@merge.org.in
+                                        admissions@mergelearning.co.in
                                     </a>
                                 </li>
                                 <li className="flex items-start" data-oid="b4sy8ot">
@@ -881,7 +880,8 @@ export default function AboutUsPage() {
                         data-oid="ghewlpl"
                     >
                         <p data-oid="l15-5:y">
-                            &copy; {new Date().getFullYear()} Merge. All rights reserved.
+                            &copy; {new Date().getFullYear()} Merge Learning Pvt. Ltd. All rights
+                            reserved.
                         </p>
                         <p data-oid="1b8n.s8">Built with ❤️ by BitHive Technologies</p>
                     </div>
