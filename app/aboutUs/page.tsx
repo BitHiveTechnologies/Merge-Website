@@ -35,7 +35,7 @@ export default function AboutUsPage() {
             role: 'Co-Founder & CEO',
             category: 'Leadership',
             description:
-                "Passionate ed-tech entrepreneur and visionary behind Merge's mission to empower Tier 2 & Tier 3 students with accessible, affordable, and impactful learning experiences.",
+                "Passionate Ed-tech Entrepreneur and visionary behind Merge's mission to empower Tier 2 & Tier 3 students with accessible, affordable, and impactful learning experiences.",
             linkedin: '#',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQEx8_kIO9ovrg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726390458101?e=1755734400&v=beta&t=agQm2tOthIbYdm75dow3FQe7YQwYVBXgDMur4qWFrSk',
         },
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
             role: 'Co-Founder & CTO',
             category: 'Leadership',
             description:
-                'Full-stack expert, AI developer, and industry mentor. Currently SWE1 at Dograh AI and active Open Source Contributor with extensive technical leadership experience.',
+                'Full-stack expert, AI developer, and Industry Mentor. Currently SWE at Dograh AI and active Open Source Contributor with extensive technical leadership experience.',
             linkedin: '#',
             image: 'https://media.licdn.com/dms/image/v2/D5603AQG0d4FRX5wLnA/profile-displayphoto-shrink_400_400/B56ZXdF_j1GQAg-/0/1743171091512?e=1755734400&v=beta&t=epuq9EfQHWVeXVA7WIuTUQgvGilCVq8dp3L0wu3Sw-I',
         },
@@ -65,7 +65,7 @@ export default function AboutUsPage() {
             description:
                 'Machine Learning Researcher at JNU and Project Mentor. Passionate advocate of hands-on, real-world learning experiences for emerging tech talent.',
             linkedin: '#',
-            image: '/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D4D03AQFIfpFhbyAxnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697997228419?e=1755734400&v=beta&t=ms-hGHrktTWvs0mpHNnRUWJVtO6TifHnZe9KNYl75BI',
         },
         {
             name: 'Abhishek Bharti',
@@ -74,26 +74,26 @@ export default function AboutUsPage() {
             description:
                 'Experienced in student guidance and educational consulting. Passionate about helping learners find the right opportunities and pathways at Merge.',
             linkedin: '#',
-            image: '/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D5603AQEXRa6KX6Sl9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731675477034?e=1755734400&v=beta&t=Fmep5vl50Ma4bZ2ce9Ua4ooiPRIpLTP_fgGj2w40zlQ',
         },
         // Mentors
         {
             name: 'Avish Jain',
             role: 'Industry Mentor',
-            category: 'Mentors',
+            category: 'Mentors/Open-Source Experts',
             description:
                 'IIT Delhi graduate, Engineer I at American Express. Experienced in product leadership and committed to inclusive and impactful tech education.',
             linkedin: '#',
-            image: '/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D4D03AQH-i9IgoarIUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729859042117?e=1755734400&v=beta&t=CYFZNfDBCes8XB_aAyK4bH4OO9oH3VcV93Ha8BKpmRI',
         },
         {
             name: 'Adarsh Rawat',
             role: 'Open Source Mentor',
-            category: 'Mentors',
+            category: 'Mentors/Open-Source Experts',
             description:
                 "GSoC'24 @ P4 Lang, GDG Mentor, Top 100 Global – Google Solution Challenge Hackathon 2024, Google DSC'23 Open-source Lead with extensive community experience.",
             linkedin: '#',
-            image: '/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D4D03AQGYCZPVmZxp2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696130197120?e=1755734400&v=beta&t=_8KP605LYBZpEkzjmMLf89e2y3M1T8hentwLDCv0qrM',
         },
         // Advisory Team
         {
@@ -103,7 +103,7 @@ export default function AboutUsPage() {
             description:
                 'Educational Leadership expert with specialization in Strategic Planning and Curriculum Design at Uttaranchal University.',
             linkedin: '#',
-            image: '/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D5603AQFcHEHHDGOclQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718266726636?e=1755734400&v=beta&t=vOjq8yzcc3Rg6nT2PCXgygvOmqmoke7pLS4H6YNV814',
         },
         {
             name: 'Dr. Rajesh Singh',
@@ -112,7 +112,7 @@ export default function AboutUsPage() {
             description:
                 'Author and Innovator. Thought leader in emerging technology, research ecosystems, and academic-industry collaboration at Uttaranchal University.',
             linkedin: '#',
-            image: '/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face',
+            image: 'https://media.licdn.com/dms/image/v2/D4D03AQGvQV_MPIOwtw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696840963659?e=1755734400&v=beta&t=nQR2A17xvcd4CKMFCAEbOgaXYnqxy4PY1Cb569Mdq4Y',
         },
     ];
 
@@ -146,7 +146,7 @@ export default function AboutUsPage() {
         },
     ];
 
-    const teamCategories = ['Leadership', 'Core Team', 'Mentors', 'Advisory'];
+    const teamCategories = ['Leadership', 'Core Team', 'Mentors/Open-Source Experts', 'Advisory'];
 
     // Components
     const StatCard = ({ stat }: { stat: Stat }) => (
@@ -570,7 +570,12 @@ export default function AboutUsPage() {
                                 />
                             </div>
                             <div
-                                className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+                                className={`grid gap-10 ${
+                                    allTeamMembers.filter((member) => member.category === category)
+                                        .length === 2
+                                        ? 'md:grid-cols-2 lg:grid-cols-2 justify-items-center max-w-4xl mx-auto'
+                                        : 'md:grid-cols-2 lg:grid-cols-3'
+                                }`}
                                 data-oid="2o297rf"
                             >
                                 {allTeamMembers
