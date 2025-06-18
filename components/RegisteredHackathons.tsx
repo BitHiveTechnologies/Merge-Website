@@ -76,28 +76,28 @@ export default function RegisteredHackathons() {
     };
 
     return (
-        <div className="py-8 px-6 md:px-12 bg-black" data-oid="bk72ama">
-            <div className="max-w-6xl mx-auto" data-oid="-s8:1:6">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="g4_khlr">
+        <div className="py-8 px-6 md:px-12 bg-black" data-oid="3cvlc-e">
+            <div className="max-w-6xl mx-auto" data-oid="h6-7hw-">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="tq_udvq">
                     Your Registered Hackathons
                 </h2>
 
                 {isLoading ? (
-                    <div className="flex justify-center items-center py-20" data-oid="kjnaq4w">
+                    <div className="flex justify-center items-center py-20" data-oid="0u:27xi">
                         <div
                             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                            data-oid="2zrj.3g"
+                            data-oid="yi0qkqj"
                         ></div>
                     </div>
                 ) : error ? (
-                    <div className="text-center py-12" data-oid="vgr3pqb">
-                        <p className="text-red-400 mb-4" data-oid="hmyih0m">
+                    <div className="text-center py-12" data-oid="f_gbstt">
+                        <p className="text-red-400 mb-4" data-oid="9xp4vya">
                             {error}
                         </p>
                         <button
                             onClick={() => window.location.reload()}
                             className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                            data-oid="g:c8av8"
+                            data-oid="0wc6iy4"
                         >
                             Retry
                         </button>
@@ -105,110 +105,110 @@ export default function RegisteredHackathons() {
                 ) : registrations.length === 0 ? (
                     <div
                         className="text-center py-12 bg-gray-800 rounded-xl border border-gray-700 p-8"
-                        data-oid="0-o5qwb"
+                        data-oid="vo6.t1t"
                     >
-                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="v9zi_-n">
+                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="hwt3b_m">
                             You haven't registered for any hackathons yet
                         </h3>
-                        <p className="text-gray-400 mb-6" data-oid="nwo6zn0">
+                        <p className="text-gray-400 mb-6" data-oid="ho21qj3">
                             Explore our hackathons and register to showcase your skills!
                         </p>
                         <button
                             onClick={() => router.push('/hackathons')}
                             className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                            data-oid="b1ka9lr"
+                            data-oid="2-k_08n"
                         >
                             Browse Hackathons
                         </button>
                     </div>
                 ) : (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="65tnwii">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="cis4x0n">
                         {registrations.map((registration) => (
                             <div
                                 key={registration._id}
                                 className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                 onClick={() => handleHackathonClick(registration.hackathonId._id)}
-                                data-oid="y-w0czt"
+                                data-oid="tpxhph2"
                             >
-                                <div className="relative h-48 overflow-hidden" data-oid="drpc7zh">
+                                <div className="relative h-48 overflow-hidden" data-oid="9wk8z9v">
                                     <img
                                         src={registration.hackathonId.image}
                                         alt={registration.hackathonId.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="5y0-q-."
+                                        data-oid=".shid.2"
                                     />
 
                                     <div
                                         className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1"
-                                        data-oid="d8iax9w"
+                                        data-oid="d6f.8gk"
                                     >
                                         Registered
                                     </div>
                                 </div>
-                                <div className="p-6" data-oid="nlmll64">
-                                    <h3 className="text-xl font-semibold mb-2" data-oid="2qol6vh">
+                                <div className="p-6" data-oid="v7o6aci">
+                                    <h3 className="text-xl font-semibold mb-2" data-oid="0s-0e4a">
                                         {registration.hackathonId.title}
                                     </h3>
                                     <p
                                         className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                        data-oid="bw5hh4d"
+                                        data-oid=":xjem17"
                                     >
                                         {registration.hackathonId.description}
                                     </p>
                                     <div
                                         className="flex justify-between text-gray-400 text-sm mb-4"
-                                        data-oid="j2:hm_4"
+                                        data-oid="m:wiq0o"
                                     >
-                                        <span data-oid="jv5fm1v">
+                                        <span data-oid="w34k6_6">
                                             {formatDate(registration.hackathonId.startDate)}
                                         </span>
-                                        <span data-oid="0c52ss3">
+                                        <span data-oid="2ho44:i">
                                             to {formatDate(registration.hackathonId.endDate)}
                                         </span>
                                     </div>
                                     <div
                                         className="flex justify-between items-center mb-4"
-                                        data-oid="5lfm.75"
+                                        data-oid="6..5w1o"
                                     >
-                                        <span className="text-gray-300" data-oid="hue1lu6">
+                                        <span className="text-gray-300" data-oid="lcooeci">
                                             {registration.hackathonId.location}
                                         </span>
                                         <span
                                             className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs"
-                                            data-oid="hm9xdx8"
+                                            data-oid="nbuvd50"
                                         >
                                             {registration.hackathonId.isUpcoming
                                                 ? 'Upcoming'
                                                 : 'Past'}
                                         </span>
                                     </div>
-                                    <div className="bg-gray-700 p-3 rounded-md" data-oid="hwz1it-">
+                                    <div className="bg-gray-700 p-3 rounded-md" data-oid="yy7a60f">
                                         <div
                                             className="flex justify-between items-center mb-2"
-                                            data-oid="5f::7v0"
+                                            data-oid="6vkk4l1"
                                         >
                                             <span
                                                 className="text-sm font-medium text-purple-300"
-                                                data-oid="5r7gv60"
+                                                data-oid="p8izd-j"
                                             >
                                                 Team Details
                                             </span>
                                         </div>
-                                        <div className="text-sm text-gray-300" data-oid="0t6bein">
-                                            <p data-oid="49l.h8r">
-                                                <span className="text-gray-400" data-oid="zv2hk1o">
+                                        <div className="text-sm text-gray-300" data-oid="7920ppn">
+                                            <p data-oid="jlfb2ki">
+                                                <span className="text-gray-400" data-oid="6wc8j0w">
                                                     Team Name:
                                                 </span>{' '}
                                                 {registration.teamName}
                                             </p>
-                                            <p data-oid="z_tu6qj">
-                                                <span className="text-gray-400" data-oid="xgt_q7b">
+                                            <p data-oid="46qvfh_">
+                                                <span className="text-gray-400" data-oid="06ee-fq">
                                                     Team Size:
                                                 </span>{' '}
                                                 {registration.teamSize}
                                             </p>
-                                            <p data-oid=":l7q_g8">
-                                                <span className="text-gray-400" data-oid="rk:p92z">
+                                            <p data-oid="j:5vukv">
+                                                <span className="text-gray-400" data-oid="d-t97vf">
                                                     Track:
                                                 </span>{' '}
                                                 {registration.track}

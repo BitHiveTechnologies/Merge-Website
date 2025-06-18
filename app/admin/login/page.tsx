@@ -61,33 +61,33 @@ export default function AdminLoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans" data-oid="2t_j9.v">
-            <Navbar data-oid="xnd0i8l" />
+        <div className="min-h-screen bg-black text-white font-sans" data-oid=":irn-3s">
+            <Navbar data-oid="-e9jrmj" />
 
-            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="c_r444e">
+            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="k8ej26s">
                 <div
                     className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden mt-12"
-                    data-oid="0ubl.qw"
+                    data-oid="mytz4ww"
                 >
                     {/* Background blur elements */}
-                    <div className="relative" data-oid="s2fa:2u">
+                    <div className="relative" data-oid="k4a1kp4">
                         <div
                             className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"
-                            data-oid="4sfl5xh"
+                            data-oid="gzv42ej"
                         ></div>
                         <div
                             className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"
-                            data-oid="h7x3spj"
+                            data-oid="lpi.5z-"
                         ></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-6" data-oid="b4fdxoi">
-                        <div className="text-center mb-6" data-oid="t84l4_9">
-                            <h1 className="text-3xl font-bold mb-2" data-oid="t7hi158">
+                    <div className="relative p-6" data-oid="4lw-kg4">
+                        <div className="text-center mb-6" data-oid="pp.5i2d">
+                            <h1 className="text-3xl font-bold mb-2" data-oid="o2nqs0q">
                                 Admin Login
                             </h1>
-                            <p className="text-gray-400" data-oid="ahrslel">
+                            <p className="text-gray-400" data-oid="y96axuk">
                                 Sign in to access the admin dashboard
                             </p>
                         </div>
@@ -95,18 +95,18 @@ export default function AdminLoginPage() {
                         {error && (
                             <div
                                 className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm"
-                                data-oid="lymn5xv"
+                                data-oid="bo-tcq-"
                             >
                                 {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} data-oid="::.as:0">
-                            <div className="mb-6" data-oid="pw05zq6">
+                        <form onSubmit={handleSubmit} data-oid="hfj7_58">
+                            <div className="mb-6" data-oid="b:qy1lv">
                                 <label
                                     htmlFor="email"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="7ho98mn"
+                                    data-oid="2wn.-oc"
                                 >
                                     Email Address
                                 </label>
@@ -118,19 +118,19 @@ export default function AdminLoginPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="admin@example.com"
                                     required
-                                    data-oid="b.vk2no"
+                                    data-oid="7o.4ozk"
                                 />
                             </div>
 
-                            <div className="mb-6" data-oid="m--7z4v">
+                            <div className="mb-6" data-oid="99sqiz5">
                                 <label
                                     htmlFor="password"
                                     className="block text-sm font-medium mb-2"
-                                    data-oid="mm6ew3t"
+                                    data-oid="j12_vlc"
                                 >
                                     Password
                                 </label>
-                                <div className="relative" data-oid="i1ow0w-">
+                                <div className="relative" data-oid="i_e36lz">
                                     <input
                                         id="password"
                                         type={showPassword ? 'text' : 'password'}
@@ -139,7 +139,7 @@ export default function AdminLoginPage() {
                                         className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors pr-10"
                                         placeholder="••••••••"
                                         required
-                                        data-oid="sgqhuw:"
+                                        data-oid="2rmj_:2"
                                     />
 
                                     <button
@@ -149,7 +149,7 @@ export default function AdminLoginPage() {
                                         aria-label={
                                             showPassword ? 'Hide password' : 'Show password'
                                         }
-                                        data-oid=".6sj4e5"
+                                        data-oid="vqlqu81"
                                     >
                                         {showPassword ? (
                                             <svg
@@ -158,14 +158,14 @@ export default function AdminLoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid="bd1eoig"
+                                                data-oid="pu-vtya"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
-                                                    data-oid="-qoync0"
+                                                    data-oid="x0iuwc_"
                                                 />
                                             </svg>
                                         ) : (
@@ -175,14 +175,14 @@ export default function AdminLoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
-                                                data-oid="j.h6b-h"
+                                                data-oid="orxkkwf"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                                    data-oid="q0e:3.:"
+                                                    data-oid="zp:viqf"
                                                 />
 
                                                 <path
@@ -190,7 +190,7 @@ export default function AdminLoginPage() {
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                                    data-oid="v941w4n"
+                                                    data-oid=":j8kya3"
                                                 />
                                             </svg>
                                         )}
@@ -204,7 +204,7 @@ export default function AdminLoginPage() {
                                 className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
                                     isLoading ? 'opacity-70 cursor-not-allowed' : ''
                                 }`}
-                                data-oid="w-mps:c"
+                                data-oid="rcd7.dn"
                             >
                                 {isLoading ? 'Signing in...' : 'Sign In'}
                             </button>

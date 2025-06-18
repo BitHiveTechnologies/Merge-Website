@@ -74,28 +74,28 @@ export default function RegisteredWorkshops() {
     };
 
     return (
-        <div className="py-8 px-6 md:px-12 bg-black" data-oid="0_juhfg">
-            <div className="max-w-6xl mx-auto" data-oid="4onu-5h">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="m7xo25:">
+        <div className="py-8 px-6 md:px-12 bg-black" data-oid=":m2e:0r">
+            <div className="max-w-6xl mx-auto" data-oid="xedk.kz">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="3.amg8s">
                     Your Registered Workshops
                 </h2>
 
                 {isLoading ? (
-                    <div className="flex justify-center items-center py-20" data-oid="86h.gae">
+                    <div className="flex justify-center items-center py-20" data-oid="73zmk9i">
                         <div
                             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                            data-oid="4o-xk4n"
+                            data-oid="yq38.sc"
                         ></div>
                     </div>
                 ) : error ? (
-                    <div className="text-center py-12" data-oid=".lx90j8">
-                        <p className="text-red-400 mb-4" data-oid="l84nez_">
+                    <div className="text-center py-12" data-oid="-ru7ws3">
+                        <p className="text-red-400 mb-4" data-oid="5va4_mb">
                             {error}
                         </p>
                         <button
                             onClick={() => window.location.reload()}
                             className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                            data-oid="jgvx-74"
+                            data-oid="79jxzps"
                         >
                             Retry
                         </button>
@@ -103,86 +103,86 @@ export default function RegisteredWorkshops() {
                 ) : registrations.length === 0 ? (
                     <div
                         className="text-center py-12 bg-gray-800 rounded-xl border border-gray-700 p-8"
-                        data-oid="8qjq97i"
+                        data-oid="q101uaq"
                     >
-                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="5iv91f8">
+                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="7fb_eev">
                             You haven't registered for any workshops yet
                         </h3>
-                        <p className="text-gray-400 mb-6" data-oid="bbpa7wx">
+                        <p className="text-gray-400 mb-6" data-oid="ke2rzzs">
                             Explore our workshops and register to enhance your skills!
                         </p>
                         <button
                             onClick={() => router.push('/workshops')}
                             className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                            data-oid="ta4jk-x"
+                            data-oid="vlt1axm"
                         >
                             Browse Workshops
                         </button>
                     </div>
                 ) : (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="g5g1mo.">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="9ltjour">
                         {registrations.map((registration) => (
                             <div
                                 key={registration._id}
                                 className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                 onClick={() => handleWorkshopClick(registration.workshopId._id)}
-                                data-oid="ok4k-p5"
+                                data-oid="2psfjst"
                             >
-                                <div className="relative h-48 overflow-hidden" data-oid="elkxf72">
+                                <div className="relative h-48 overflow-hidden" data-oid="1z-sry8">
                                     <img
                                         src={registration.workshopId.image}
                                         alt={registration.workshopId.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="wn8x:i7"
+                                        data-oid="x.jhtre"
                                     />
 
                                     <div
                                         className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1"
-                                        data-oid="eq97x8e"
+                                        data-oid="6g0yyk-"
                                     >
                                         Registered
                                     </div>
                                 </div>
-                                <div className="p-6" data-oid="1x.z-xy">
-                                    <h3 className="text-xl font-semibold mb-2" data-oid="luq_e-v">
+                                <div className="p-6" data-oid="a9jy.de">
+                                    <h3 className="text-xl font-semibold mb-2" data-oid="vpojlys">
                                         {registration.workshopId.title}
                                     </h3>
                                     <p
                                         className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                        data-oid="7ihf6_y"
+                                        data-oid="3v1qhst"
                                     >
                                         {registration.workshopId.description}
                                     </p>
-                                    <div className="flex items-center mb-3" data-oid="_ev3ecw">
+                                    <div className="flex items-center mb-3" data-oid=".calukr">
                                         <div
                                             className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                            data-oid="voe1xps"
+                                            data-oid="czy1z45"
                                         ></div>
-                                        <span className="text-gray-300 text-sm" data-oid="qkj1mhd">
+                                        <span className="text-gray-300 text-sm" data-oid="9f5_q9x">
                                             {registration.workshopId.instructor}
                                         </span>
                                     </div>
                                     <div
                                         className="flex justify-between text-gray-400 text-sm mb-4"
-                                        data-oid="gmi8l_f"
+                                        data-oid="g93q:yu"
                                     >
-                                        <span data-oid="xnpocf1">
+                                        <span data-oid=":pimqh.">
                                             {formatDate(registration.workshopId.date)}
                                         </span>
-                                        <span data-oid="9j.rq72">
+                                        <span data-oid="dzzac9a">
                                             {registration.workshopId.time}
                                         </span>
                                     </div>
                                     <div
                                         className="flex justify-between items-center"
-                                        data-oid="1s143vm"
+                                        data-oid="qtuc0-v"
                                     >
-                                        <span className="text-gray-300" data-oid="196unpp">
+                                        <span className="text-gray-300" data-oid="uau81j2">
                                             {registration.workshopId.location}
                                         </span>
                                         <span
                                             className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs"
-                                            data-oid="gu.iset"
+                                            data-oid="jmndwip"
                                         >
                                             {registration.workshopId.isUpcoming
                                                 ? 'Upcoming'
