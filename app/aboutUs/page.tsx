@@ -404,12 +404,6 @@ export default function AboutUsPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto" data-oid="t-rwnal">
                     <div className="text-center mb-20" data-oid="otjnewo">
-                        <span
-                            className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6"
-                            data-oid="hyyo:7p"
-                        >
-                            💎 Our Core Values
-                        </span>
                         <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="r.1np1d">
                             What Drives{' '}
                             <span
@@ -443,12 +437,6 @@ export default function AboutUsPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto" data-oid=":gm1_1v">
                     <div className="text-center mb-20" data-oid="bqki50g">
-                        <span
-                            className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6"
-                            data-oid="wjjgjg8"
-                        >
-                            👥 Meet the Team
-                        </span>
                         <h2 className="text-5xl md:text-6xl font-bold mb-8" data-oid="14fx49u">
                             The People Behind{' '}
                             <span
