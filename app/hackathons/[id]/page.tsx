@@ -170,39 +170,39 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="neiv_la">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="xwj97h1">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="i7hcj2z" />
+            <Navbar data-oid="kw.56us" />
             {/* Hackathon Detail Content */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid="7bjp0ba">
-                <div className="max-w-6xl mx-auto" data-oid="c79kqzc">
+            <div className="py-12 px-6 md:px-12 bg-black" data-oid="uo6giu4">
+                <div className="max-w-6xl mx-auto" data-oid="tl:4ggi">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="v2bb3gu">
+                        <div className="flex justify-center items-center py-20" data-oid="e037ahs">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="o03eq3e"
+                                data-oid="9l-2p7."
                             ></div>
                         </div>
                     ) : hackathon ? (
-                        <div data-oid="j180zig">
+                        <div data-oid="a-5f1zs">
                             {/* Back button */}
                             <button
                                 onClick={() => router.push('/hackathons')}
                                 className="flex items-center text-gray-400 hover:text-purple-400 mb-8 transition-colors"
-                                data-oid="vbu:wr1"
+                                data-oid="e88.y50"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 mr-2"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="-qxrcam"
+                                    data-oid="17hj1yg"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
                                         clipRule="evenodd"
-                                        data-oid="i1ri1e_"
+                                        data-oid=":27a..5"
                                     />
                                 </svg>
                                 Back to Hackathons
@@ -211,113 +211,113 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                             {/* Hackathon header */}
                             <div
                                 className="relative rounded-xl overflow-hidden mb-12"
-                                data-oid="04lvsoo"
+                                data-oid="9zh5oui"
                             >
-                                <div className="absolute inset-0" data-oid="tfw_.f3">
+                                <div className="absolute inset-0" data-oid="wlia1.m">
                                     <img
                                         src={hackathon.image}
                                         alt={hackathon.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="hr58p0h"
+                                        data-oid="ca-rtnm"
                                     />
 
                                     <div
                                         className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"
-                                        data-oid=":qoyyn_"
+                                        data-oid="dkh8hm."
                                     ></div>
                                 </div>
                                 <div
                                     className="relative z-10 py-16 px-6 md:px-12"
-                                    data-oid="hie:46-"
+                                    data-oid="umu3d38"
                                 >
                                     <div
                                         className="max-w-4xl mx-auto text-center"
-                                        data-oid="6k_dcza"
+                                        data-oid="m.9kpgm"
                                     >
                                         <div
                                             className="inline-block px-4 py-1 bg-purple-500/30 backdrop-blur-sm rounded-full text-purple-300 text-sm font-medium mb-4"
-                                            data-oid=".qag122"
+                                            data-oid="as9bgod"
                                         >
                                             {hackathon.organizer}
                                         </div>
                                         <h1
                                             className="text-4xl md:text-6xl font-bold mb-6"
-                                            data-oid="q2m.:4o"
+                                            data-oid="1p7c-3l"
                                         >
                                             {hackathon.title}
                                         </h1>
                                         <p
                                             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-                                            data-oid="kiv:9xy"
+                                            data-oid="ox0krjd"
                                         >
                                             {hackathon.longDescription}
                                         </p>
                                         <div
                                             className="flex flex-wrap justify-center gap-6 mb-8"
-                                            data-oid="qqjckrb"
+                                            data-oid="f2-z:oa"
                                         >
                                             <div
                                                 className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
-                                                data-oid="q8sgu2v"
+                                                data-oid="njr:d3:"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     className="h-5 w-5 mr-2 text-purple-400"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
-                                                    data-oid="8_2kakn"
+                                                    data-oid="wptq7o3"
                                                 >
                                                     <path
                                                         fillRule="evenodd"
                                                         d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                                         clipRule="evenodd"
-                                                        data-oid="-wgxo-l"
+                                                        data-oid="emmui-m"
                                                     />
                                                 </svg>
-                                                <span data-oid="y6l_5pu">
+                                                <span data-oid="k3vney1">
                                                     {formatDate(hackathon.startDate)} -{' '}
                                                     {formatDate(hackathon.endDate)}
                                                 </span>
                                             </div>
                                             <div
                                                 className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
-                                                data-oid="cjaeb_b"
+                                                data-oid="uha7llw"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     className="h-5 w-5 mr-2 text-purple-400"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
-                                                    data-oid="w0ju7-k"
+                                                    data-oid="m2sdw71"
                                                 >
                                                     <path
                                                         fillRule="evenodd"
                                                         d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                                                         clipRule="evenodd"
-                                                        data-oid="n4h_v9i"
+                                                        data-oid="wf5c95:"
                                                     />
                                                 </svg>
-                                                <span data-oid="q6ssn:8">{hackathon.location}</span>
+                                                <span data-oid="4gs103_">{hackathon.location}</span>
                                             </div>
                                             <div
                                                 className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center"
-                                                data-oid="ch_i6_0"
+                                                data-oid="6zq0dpt"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     className="h-5 w-5 mr-2 text-purple-400"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
-                                                    data-oid="k22gzuz"
+                                                    data-oid="l98wq0k"
                                                 >
                                                     <path
                                                         fillRule="evenodd"
                                                         d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                         clipRule="evenodd"
-                                                        data-oid="zc:zrok"
+                                                        data-oid="a:vn68-"
                                                     />
                                                 </svg>
-                                                <span data-oid="etm4ooh">
+                                                <span data-oid="6ctu2.h">
                                                     Prizes: {hackathon.prizes.join(', ')}
                                                 </span>
                                             </div>
@@ -325,81 +325,81 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                         {/* Countdown timer */}
                                         {hackathon.isUpcoming && timeRemaining && (
-                                            <div className="mb-8" data-oid="dpwxdbh">
+                                            <div className="mb-8" data-oid="65imx44">
                                                 <h3
                                                     className="text-lg font-semibold mb-3"
-                                                    data-oid="lt2onrp"
+                                                    data-oid="m49upop"
                                                 >
                                                     Hackathon starts in:
                                                 </h3>
                                                 <div
                                                     className="flex justify-center gap-4"
-                                                    data-oid="lbe9pf9"
+                                                    data-oid="4h06jl7"
                                                 >
                                                     <div
                                                         className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg w-20"
-                                                        data-oid=".oosx6t"
+                                                        data-oid=".am7a9s"
                                                     >
                                                         <div
                                                             className="text-3xl font-bold text-purple-400"
-                                                            data-oid="zkoxa1n"
+                                                            data-oid="u8aq:f6"
                                                         >
                                                             {timeRemaining.days}
                                                         </div>
                                                         <div
                                                             className="text-xs text-gray-400"
-                                                            data-oid="-6v7vhs"
+                                                            data-oid="_rcik14"
                                                         >
                                                             Days
                                                         </div>
                                                     </div>
                                                     <div
                                                         className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg w-20"
-                                                        data-oid="jc1p4y_"
+                                                        data-oid="9ugo11s"
                                                     >
                                                         <div
                                                             className="text-3xl font-bold text-purple-400"
-                                                            data-oid="to5cjm6"
+                                                            data-oid="hjyazm-"
                                                         >
                                                             {timeRemaining.hours}
                                                         </div>
                                                         <div
                                                             className="text-xs text-gray-400"
-                                                            data-oid="i_7g:7p"
+                                                            data-oid="eq-1crc"
                                                         >
                                                             Hours
                                                         </div>
                                                     </div>
                                                     <div
                                                         className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg w-20"
-                                                        data-oid=":fx4qu7"
+                                                        data-oid="83gvd.h"
                                                     >
                                                         <div
                                                             className="text-3xl font-bold text-purple-400"
-                                                            data-oid="vqlap.:"
+                                                            data-oid="ml2zu9x"
                                                         >
                                                             {timeRemaining.minutes}
                                                         </div>
                                                         <div
                                                             className="text-xs text-gray-400"
-                                                            data-oid="p51ncfv"
+                                                            data-oid="e563u4b"
                                                         >
                                                             Minutes
                                                         </div>
                                                     </div>
                                                     <div
                                                         className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg w-20"
-                                                        data-oid="k-wd51_"
+                                                        data-oid="j-ta_s8"
                                                     >
                                                         <div
                                                             className="text-3xl font-bold text-purple-400"
-                                                            data-oid="2tso_86"
+                                                            data-oid="ywsie2b"
                                                         >
                                                             {timeRemaining.seconds}
                                                         </div>
                                                         <div
                                                             className="text-xs text-gray-400"
-                                                            data-oid="4tlclf8"
+                                                            data-oid="p6vp20m"
                                                         >
                                                             Seconds
                                                         </div>
@@ -411,7 +411,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                         <button
                                             onClick={handleRegisterClick}
                                             className="px-8 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-lg font-medium"
-                                            data-oid="5-e2o87"
+                                            data-oid="d-xd9nk"
                                         >
                                             Register Now
                                         </button>
@@ -420,10 +420,10 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                             </div>
 
                             {/* Navigation tabs */}
-                            <div className="border-b border-gray-800 mb-12" data-oid="g_bgha3">
+                            <div className="border-b border-gray-800 mb-12" data-oid="yhwixe:">
                                 <div
                                     className="flex overflow-x-auto scrollbar-hide"
-                                    data-oid="zsjdkej"
+                                    data-oid="xm6lp-o"
                                 >
                                     <button
                                         onClick={() => setActiveSection('overview')}
@@ -433,7 +433,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                                 : 'text-gray-400 hover:text-gray-300',
                                         )}
-                                        data-oid="1inenuu"
+                                        data-oid="r1jt2u8"
                                     >
                                         Overview
                                     </button>
@@ -445,7 +445,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                                 : 'text-gray-400 hover:text-gray-300',
                                         )}
-                                        data-oid="mg8zpy."
+                                        data-oid="pwpd5ca"
                                     >
                                         Tracks & Domains
                                     </button>
@@ -457,7 +457,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                                 : 'text-gray-400 hover:text-gray-300',
                                         )}
-                                        data-oid="t1dk7-9"
+                                        data-oid="w4alc9-"
                                     >
                                         Hackathon Structure
                                     </button>
@@ -469,7 +469,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                 ? 'text-purple-400 border-b-2 border-purple-400'
                                                 : 'text-gray-400 hover:text-gray-300',
                                         )}
-                                        data-oid="ze2mvcq"
+                                        data-oid="ayi:s6q"
                                     >
                                         Prerequisites
                                     </button>
@@ -482,7 +482,7 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                                     ? 'text-purple-400 border-b-2 border-purple-400'
                                                     : 'text-gray-400 hover:text-gray-300',
                                             )}
-                                            data-oid="zneh-m5"
+                                            data-oid="8gx-3k7"
                                         >
                                             FAQs
                                         </button>
@@ -491,14 +491,14 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                             </div>
 
                             {/* Content sections */}
-                            <div className="mb-16" data-oid="xnfxo65">
+                            <div className="mb-16" data-oid="8mmfsre">
                                 {/* Overview section */}
                                 {activeSection === 'overview' && (
-                                    <div data-oid="1u-6oiv">
-                                        <h2 className="text-3xl font-bold mb-6" data-oid="pfd1op_">
+                                    <div data-oid="zqki5fl">
+                                        <h2 className="text-3xl font-bold mb-6" data-oid="n_gv.42">
                                             <span
                                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                                data-oid="ijcadgx"
+                                                data-oid="0b02nuu"
                                             >
                                                 Program
                                             </span>{' '}
@@ -506,33 +506,33 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                         </h2>
                                         <p
                                             className="text-gray-300 mb-8 max-w-4xl"
-                                            data-oid="hpwum7b"
+                                            data-oid=":drfe2v"
                                         >
                                             {hackathon.longDescription}
                                         </p>
 
                                         {/* Judges section */}
                                         {hackathon.judges && hackathon.judges.length > 0 && (
-                                            <div className="mt-12" data-oid="y-bek5o">
+                                            <div className="mt-12" data-oid="m:ej0ek">
                                                 <h3
                                                     className="text-2xl font-bold mb-6"
-                                                    data-oid="uyy.8q0"
+                                                    data-oid="esldpmz"
                                                 >
                                                     Meet Our Judges
                                                 </h3>
                                                 <div
                                                     className="grid md:grid-cols-3 gap-6"
-                                                    data-oid="2bo43zs"
+                                                    data-oid="jxxkh7z"
                                                 >
                                                     {hackathon.judges.map((judge, index) => (
                                                         <div
                                                             key={index}
                                                             className="bg-gray-800/30 rounded-xl p-6 text-center"
-                                                            data-oid="we_3f7."
+                                                            data-oid="q_yra.o"
                                                         >
                                                             <h4
                                                                 className="text-xl font-semibold mb-1"
-                                                                data-oid="jga0jzz"
+                                                                data-oid="lurex1y"
                                                             >
                                                                 {judge}
                                                             </h4>
@@ -544,26 +544,26 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                         {/* Sponsors section */}
                                         {hackathon.sponsors && hackathon.sponsors.length > 0 && (
-                                            <div className="mt-12" data-oid="hntl-9c">
+                                            <div className="mt-12" data-oid="q:s39tp">
                                                 <h3
                                                     className="text-2xl font-bold mb-6"
-                                                    data-oid="sjcun51"
+                                                    data-oid="vymp-so"
                                                 >
                                                     Our Sponsors
                                                 </h3>
                                                 <div
                                                     className="flex flex-wrap gap-6 items-center"
-                                                    data-oid="ms4no4w"
+                                                    data-oid="2vv62g_"
                                                 >
                                                     {hackathon.sponsors.map((sponsor, index) => (
                                                         <div
                                                             key={index}
                                                             className="bg-gray-800/30 p-4 rounded-lg"
-                                                            data-oid="nxw76xu"
+                                                            data-oid="h9b8j.r"
                                                         >
                                                             <span
                                                                 className="text-white"
-                                                                data-oid="t0da_fq"
+                                                                data-oid="unw7:jq"
                                                             >
                                                                 {sponsor}
                                                             </span>
@@ -577,11 +577,11 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                 {/* Tracks section */}
                                 {activeSection === 'tracks' && (
-                                    <div data-oid="ax36wdt">
-                                        <h2 className="text-3xl font-bold mb-6" data-oid="xd5wpth">
+                                    <div data-oid="9q_-j12">
+                                        <h2 className="text-3xl font-bold mb-6" data-oid="wd7t7qw">
                                             <span
                                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                                data-oid="d8l.nq6"
+                                                data-oid=".w15exl"
                                             >
                                                 Tracks
                                             </span>{' '}
@@ -589,17 +589,17 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                         </h2>
                                         <div
                                             className="grid md:grid-cols-2 gap-8"
-                                            data-oid="ylm5hgm"
+                                            data-oid="5crp:lh"
                                         >
                                             {hackathon.tracks.map((track, index) => (
                                                 <div
                                                     key={index}
                                                     className="bg-gray-800/30 rounded-xl p-6"
-                                                    data-oid="sd7_55j"
+                                                    data-oid="4.kwjb6"
                                                 >
                                                     <h3
                                                         className="text-xl font-semibold mb-4 text-purple-400"
-                                                        data-oid="4zluw45"
+                                                        data-oid="wshr94w"
                                                     >
                                                         🔹 {track}
                                                     </h3>
@@ -611,38 +611,38 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                 {/* Structure section */}
                                 {activeSection === 'structure' && (
-                                    <div data-oid="oq:zf3y">
-                                        <h2 className="text-3xl font-bold mb-6" data-oid=".bm.1hz">
+                                    <div data-oid="j0pnpph">
+                                        <h2 className="text-3xl font-bold mb-6" data-oid="2x4w1k2">
                                             <span
                                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                                data-oid="98rdjx-"
+                                                data-oid="-i9_rkq"
                                             >
                                                 Hackathon
                                             </span>{' '}
                                             Structure
                                         </h2>
-                                        <div className="space-y-6" data-oid="bccmmui">
+                                        <div className="space-y-6" data-oid="a8uukep">
                                             {hackathon.structure.map((structureItem, index) => (
                                                 <div
                                                     key={index}
                                                     className="bg-gray-800/30 rounded-xl p-6 flex"
-                                                    data-oid="eg16:aw"
+                                                    data-oid="b1dwokz"
                                                 >
                                                     <div
                                                         className="mr-4 flex-shrink-0"
-                                                        data-oid="cn84g6a"
+                                                        data-oid="g_2k-vb"
                                                     >
                                                         <div
                                                             className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center font-bold"
-                                                            data-oid="ug.meau"
+                                                            data-oid="mpn.ftp"
                                                         >
                                                             {index + 1}
                                                         </div>
                                                     </div>
-                                                    <div data-oid="t22u3lz">
+                                                    <div data-oid="jvg9ljc">
                                                         <p
                                                             className="text-gray-300"
-                                                            data-oid="6oli7yp"
+                                                            data-oid="._qs:yz"
                                                         >
                                                             {structureItem}
                                                         </p>
@@ -651,72 +651,72 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                             ))}
                                         </div>
 
-                                        <div className="mt-12" data-oid="xe8t0sc">
+                                        <div className="mt-12" data-oid="ujcymql">
                                             <h3
                                                 className="text-2xl font-bold mb-4"
-                                                data-oid="126eb7n"
+                                                data-oid="8jmrecf"
                                             >
                                                 Why Participate?
                                             </h3>
                                             <div
                                                 className="grid md:grid-cols-2 gap-4"
-                                                data-oid="dro.vdb"
+                                                data-oid="m3p-r:3"
                                             >
                                                 <div
                                                     className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                    data-oid="h8acyp9"
+                                                    data-oid="rw-7vzd"
                                                 >
                                                     <span
                                                         className="text-green-400 mr-3"
-                                                        data-oid=":q_bs:d"
+                                                        data-oid="x8u2y:v"
                                                     >
                                                         ✔
                                                     </span>
-                                                    <span data-oid="we5zqwp">
+                                                    <span data-oid="t9m4yld">
                                                         Hands-on experience with real-world tech
                                                         challenges
                                                     </span>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                    data-oid="u.6rzex"
+                                                    data-oid="48xmob1"
                                                 >
                                                     <span
                                                         className="text-green-400 mr-3"
-                                                        data-oid="7_uhzqf"
+                                                        data-oid="fqk-:ao"
                                                     >
                                                         ✔
                                                     </span>
-                                                    <span data-oid="u_-0-e5">
+                                                    <span data-oid="n586r5j">
                                                         Networking with industry experts & mentors
                                                     </span>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                    data-oid="tt82sg9"
+                                                    data-oid="641p506"
                                                 >
                                                     <span
                                                         className="text-green-400 mr-3"
-                                                        data-oid=".ame4ax"
+                                                        data-oid="d-f2-wi"
                                                     >
                                                         ✔
                                                     </span>
-                                                    <span data-oid="51v7yo8">
+                                                    <span data-oid="lfm2jm4">
                                                         Exciting prizes, internship opportunities &
                                                         recognition
                                                     </span>
                                                 </div>
                                                 <div
                                                     className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                    data-oid="7oy4..t"
+                                                    data-oid="94rwu.m"
                                                 >
                                                     <span
                                                         className="text-green-400 mr-3"
-                                                        data-oid="gtbf93a"
+                                                        data-oid="t7vhfvn"
                                                     >
                                                         ✔
                                                     </span>
-                                                    <span data-oid="lo4khfz">
+                                                    <span data-oid="xp9nzwo">
                                                         Certificate of participation & winning
                                                         trophies
                                                     </span>
@@ -728,18 +728,18 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                 {/* Prerequisites section */}
                                 {activeSection === 'prerequisites' && (
-                                    <div data-oid="k6:.4td">
-                                        <h2 className="text-3xl font-bold mb-6" data-oid="mx1hdf9">
+                                    <div data-oid="hkt9:2h">
+                                        <h2 className="text-3xl font-bold mb-6" data-oid="3jahy3p">
                                             <span
                                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                                data-oid="i0rd5hx"
+                                                data-oid="2sjks7k"
                                             >
                                                 Prerequisites
                                             </span>
                                         </h2>
                                         <p
                                             className="text-gray-300 mb-8 max-w-4xl"
-                                            data-oid="jw_agii"
+                                            data-oid="gp96uva"
                                         >
                                             To ensure a smooth and productive hackathon experience,
                                             participants should meet the following prerequisites:
@@ -747,23 +747,23 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                         <div
                                             className="grid md:grid-cols-2 gap-4"
-                                            data-oid="749cxd6"
+                                            data-oid="zthpqcq"
                                         >
                                             {hackathon.prerequisites.map((prerequisite, index) => (
                                                 <div
                                                     key={index}
                                                     className="bg-gray-800/30 rounded-xl p-6 flex items-start"
-                                                    data-oid="g39xyd:"
+                                                    data-oid="khr3jc2"
                                                 >
                                                     <span
                                                         className="text-purple-400 mr-3"
-                                                        data-oid="3nxl6xz"
+                                                        data-oid="e.d-3te"
                                                     >
                                                         ✔
                                                     </span>
                                                     <span
                                                         className="text-gray-300"
-                                                        data-oid="_h-b.no"
+                                                        data-oid="5rpqsxz"
                                                     >
                                                         {prerequisite}
                                                     </span>
@@ -775,30 +775,30 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
 
                                 {/* FAQs section */}
                                 {activeSection === 'faqs' && hackathon.faqs && (
-                                    <div data-oid="jsq9xw1">
-                                        <h2 className="text-3xl font-bold mb-6" data-oid="4kyr835">
+                                    <div data-oid="ji2:okb">
+                                        <h2 className="text-3xl font-bold mb-6" data-oid="9jcggfr">
                                             <span
                                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                                data-oid="md7fqot"
+                                                data-oid="mj6brcq"
                                             >
                                                 Frequently Asked
                                             </span>{' '}
                                             Questions
                                         </h2>
-                                        <div className="space-y-6" data-oid="d2efpqa">
+                                        <div className="space-y-6" data-oid="-3o5f8.">
                                             {hackathon.faqs.map((faq, index) => (
                                                 <div
                                                     key={index}
                                                     className="bg-gray-800/30 rounded-xl p-6"
-                                                    data-oid="6sa3.1-"
+                                                    data-oid="1c6b6lo"
                                                 >
                                                     <h3
                                                         className="text-xl font-semibold mb-2"
-                                                        data-oid="gojv902"
+                                                        data-oid="ktew_zs"
                                                     >
                                                         {faq.question}
                                                     </h3>
-                                                    <p className="text-gray-300" data-oid="gaop3ze">
+                                                    <p className="text-gray-300" data-oid="pmp.ods">
                                                         {faq.answer}
                                                     </p>
                                                 </div>
@@ -811,17 +811,17 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                             {/* Registration CTA */}
                             <div
                                 className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-8 text-center"
-                                data-oid="p1430ua"
+                                data-oid="gzu8gqr"
                             >
                                 <h2
                                     className="text-2xl md:text-3xl font-bold mb-4"
-                                    data-oid="5zsfx94"
+                                    data-oid="llwwjy0"
                                 >
                                     Ready to join {hackathon.title}?
                                 </h2>
                                 <p
                                     className="text-gray-300 mb-6 max-w-2xl mx-auto"
-                                    data-oid="n7fsqmm"
+                                    data-oid="ymgw87q"
                                 >
                                     Register now to secure your spot and start preparing for an
                                     amazing hackathon experience!
@@ -829,27 +829,27 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
                                 <button
                                     onClick={handleRegisterClick}
                                     className="px-8 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-lg font-medium"
-                                    data-oid="2:r.d5n"
+                                    data-oid="wblq6-i"
                                 >
                                     Register Now
                                 </button>
                             </div>
                         </div>
                     ) : (
-                        <div className="text-center py-20" data-oid="48b95xu">
+                        <div className="text-center py-20" data-oid="er982:d">
                             <h3
                                 className="text-2xl font-semibold text-gray-300 mb-4"
-                                data-oid="mj70_xx"
+                                data-oid="i8dsy90"
                             >
                                 Hackathon not found
                             </h3>
-                            <p className="text-gray-400 mb-8" data-oid="sbnbx1k">
+                            <p className="text-gray-400 mb-8" data-oid="fprkb2s">
                                 The hackathon you're looking for doesn't exist or has been removed.
                             </p>
                             <button
                                 onClick={() => router.push('/hackathons')}
                                 className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                data-oid="2m55uv2"
+                                data-oid="w15pg5q"
                             >
                                 Back to Hackathons
                             </button>
@@ -861,11 +861,11 @@ export default function HackathonDetailPage({ params }: { params: { id: string }
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="76.83gp"
+                data-oid="c:0jd09"
             >
-                <div className="max-w-6xl mx-auto" data-oid="91grt9p">
-                    <div className="text-center text-gray-500" data-oid="ny3c:kv">
-                        <p data-oid="v9fqcqp">
+                <div className="max-w-6xl mx-auto" data-oid="d6m4zx_">
+                    <div className="text-center text-gray-500" data-oid="5i2f2ex">
+                        <p data-oid="f204a:p">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>

@@ -148,20 +148,20 @@ export default function NewWorkshopPage() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto" data-oid="9mlxy82">
-            <div className="flex justify-between items-center mb-6" data-oid=":918-um">
-                <div data-oid="ygkbee6">
+        <div className="max-w-4xl mx-auto" data-oid="7nyz52d">
+            <div className="flex justify-between items-center mb-6" data-oid="rlrdx-i">
+                <div data-oid="8_syjgt">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
-                        data-oid="xjh7k1h"
+                        data-oid="6.87qi7"
                     >
-                        <span className="mr-1" data-oid="qtll.gx">
+                        <span className="mr-1" data-oid="j9ndeq3">
                             ←
                         </span>{' '}
                         Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold mt-4" data-oid="9:n0x97">
+                    <h1 className="text-3xl font-bold mt-4" data-oid="sgq6fwf">
                         Add New Workshop
                     </h1>
                 </div>
@@ -170,9 +170,9 @@ export default function NewWorkshopPage() {
             {error && (
                 <div
                     className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                    data-oid="4:epth7"
+                    data-oid="lw06cas"
                 >
-                    <p className="text-red-200" data-oid="y5nxwx5">
+                    <p className="text-red-200" data-oid="yqq_ty1">
                         {error}
                     </p>
                 </div>
@@ -181,28 +181,28 @@ export default function NewWorkshopPage() {
             {success && (
                 <div
                     className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6"
-                    data-oid="tad9ala"
+                    data-oid="wjnffqv"
                 >
-                    <p className="text-green-200" data-oid="-70s1l2">
+                    <p className="text-green-200" data-oid="2ngid6n">
                         {success}
                     </p>
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6" data-oid="qnvd7pk">
+            <form onSubmit={handleSubmit} className="space-y-6" data-oid="7gpu5p5">
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-6"
-                    data-oid="4x8t10l"
+                    data-oid="rs55wtn"
                 >
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="76nof:q">
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="36t.rih">
                         Workshop Information
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="llgly6o">
-                        <div data-oid="jr:jvvg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="k_g-hdu">
+                        <div data-oid="q99dt0s">
                             <label
                                 htmlFor="title"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="mh44dsk"
+                                data-oid="1wf04it"
                             >
                                 Workshop Title*
                             </label>
@@ -213,14 +213,14 @@ export default function NewWorkshopPage() {
                                 value={formData.title}
                                 onChange={handleInputChange}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="qv8cgru"
+                                data-oid="t_ec6sb"
                             />
                         </div>
-                        <div data-oid="clhccir">
+                        <div data-oid="p_jz9sv">
                             <label
                                 htmlFor="instructor"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="wn4j.4x"
+                                data-oid="ltr:wcp"
                             >
                                 Instructor*
                             </label>
@@ -232,14 +232,14 @@ export default function NewWorkshopPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="vwovuio"
+                                data-oid="rqoh0gy"
                             />
                         </div>
-                        <div data-oid="rh8hrut">
+                        <div data-oid="0ju-_5q">
                             <label
                                 htmlFor="date"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="ya22jb4"
+                                data-oid="q79lzsa"
                             >
                                 Date*
                             </label>
@@ -251,14 +251,14 @@ export default function NewWorkshopPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="01rtjgz"
+                                data-oid="ag5l_g6"
                             />
                         </div>
-                        <div data-oid="m9w4rmf">
+                        <div data-oid="5vep:2p">
                             <label
                                 htmlFor="time"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="y:qs0d1"
+                                data-oid="6sgz-_s"
                             >
                                 Time*
                             </label>
@@ -270,14 +270,14 @@ export default function NewWorkshopPage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="-ml1n-n"
+                                data-oid="rrezd.u"
                             />
                         </div>
-                        <div data-oid="p5psoqx">
+                        <div data-oid="rp0kh:.">
                             <label
                                 htmlFor="location"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="m7aqafh"
+                                data-oid="nvf9qj8"
                             >
                                 Location*
                             </label>
@@ -290,14 +290,14 @@ export default function NewWorkshopPage() {
                                 required
                                 placeholder="e.g., Online, Conference Room A, etc."
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="5.cvyrt"
+                                data-oid="r4blf81"
                             />
                         </div>
-                        <div data-oid="_j4duzl">
+                        <div data-oid="4cq14-b">
                             <label
                                 htmlFor="price"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="1eivpg1"
+                                data-oid=".olns8t"
                             >
                                 Price (leave empty for free)
                             </label>
@@ -310,14 +310,14 @@ export default function NewWorkshopPage() {
                                 min="0"
                                 step="0.01"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="ae3y3b3"
+                                data-oid="vv5trjc"
                             />
                         </div>
-                        <div data-oid="e8_s:b7">
+                        <div data-oid="ub8ge_v">
                             <label
                                 htmlFor="image"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="ioflidm"
+                                data-oid="3:wibz1"
                             >
                                 Image URL
                             </label>
@@ -329,14 +329,14 @@ export default function NewWorkshopPage() {
                                 onChange={handleInputChange}
                                 placeholder="https://example.com/images/workshop.png"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="naphspk"
+                                data-oid="kte8_81"
                             />
                         </div>
-                        <div className="md:col-span-2" data-oid="_ds0l6-">
+                        <div className="md:col-span-2" data-oid="akqre3a">
                             <label
                                 htmlFor="description"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="_o.3mo0"
+                                data-oid="os:mkds"
                             >
                                 Description*
                             </label>
@@ -348,11 +348,11 @@ export default function NewWorkshopPage() {
                                 required
                                 rows={4}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="r57mgn-"
+                                data-oid="oz775yk"
                             ></textarea>
                         </div>
-                        <div className="md:col-span-2" data-oid="-zxgr2-">
-                            <div className="flex items-center mb-4" data-oid="rha6ilh">
+                        <div className="md:col-span-2" data-oid="mmyo_sj">
+                            <div className="flex items-center mb-4" data-oid="fry95pz">
                                 <input
                                     type="checkbox"
                                     id="isUpcoming"
@@ -360,13 +360,13 @@ export default function NewWorkshopPage() {
                                     checked={formData.isUpcoming}
                                     onChange={handleCheckboxChange}
                                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded"
-                                    data-oid="m5rl.kg"
+                                    data-oid="vdxts1e"
                                 />
 
                                 <label
                                     htmlFor="isUpcoming"
                                     className="ml-2 block text-sm text-gray-300"
-                                    data-oid="cz-_zl0"
+                                    data-oid="ii8u4:."
                                 >
                                     Mark as upcoming workshop
                                 </label>
@@ -377,13 +377,13 @@ export default function NewWorkshopPage() {
 
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-6"
-                    data-oid=".vtb822"
+                    data-oid="erl1gfw"
                 >
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="x887:gd">
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="0_ju08d">
                         Tags
                     </h2>
-                    <div className="space-y-4" data-oid="n9thq_m">
-                        <div className="flex items-center" data-oid="qvz8kak">
+                    <div className="space-y-4" data-oid="yivq0pc">
+                        <div className="flex items-center" data-oid="am4bu1i">
                             <input
                                 type="text"
                                 id="tagInput"
@@ -392,51 +392,51 @@ export default function NewWorkshopPage() {
                                 onKeyDown={handleTagInputKeyDown}
                                 placeholder="Add a tag and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="g:qwvd2"
+                                data-oid="-iikfbi"
                             />
 
                             <button
                                 type="button"
                                 onClick={addTag}
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
-                                data-oid=":xk69y1"
+                                data-oid=".ncddnx"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2" data-oid="isikk4t">
+                        <div className="flex flex-wrap gap-2" data-oid="hdq9qnq">
                             {formData.tags.map((tag, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
-                                    data-oid="nb4y3ww"
+                                    data-oid="b_hm3lk"
                                 >
-                                    <span data-oid="dplt_n:">{tag}</span>
+                                    <span data-oid="1g5s0r8">{tag}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeTag(tag)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
-                                        data-oid="skxubsh"
+                                        data-oid="279x:b6"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            data-oid="e6zuztf"
+                                            data-oid="5yy4-ex"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
-                                                data-oid="as1t5gk"
+                                                data-oid="3vayp81"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.tags.length === 0 && (
-                                <p className="text-gray-500 text-sm" data-oid="3yhu6pt">
+                                <p className="text-gray-500 text-sm" data-oid="r7azlzh">
                                     No tags added yet
                                 </p>
                             )}
@@ -444,11 +444,11 @@ export default function NewWorkshopPage() {
                     </div>
                 </div>
 
-                <div className="flex justify-end space-x-4" data-oid="2._9rkg">
+                <div className="flex justify-end space-x-4" data-oid="30wtb8g">
                     <Link
                         href="/admin/dashboard"
                         className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
-                        data-oid="o9_9k24"
+                        data-oid="1zrhwlw"
                     >
                         Cancel
                     </Link>
@@ -458,7 +458,7 @@ export default function NewWorkshopPage() {
                         className={`px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                         }`}
-                        data-oid="91n.ca_"
+                        data-oid="kl6h.60"
                     >
                         {isSubmitting ? 'Creating...' : 'Create Workshop'}
                     </button>
