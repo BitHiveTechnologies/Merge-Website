@@ -108,7 +108,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
         const hasHalfStar = rating % 1 >= 0.5;
 
         return (
-            <div className="flex items-center" data-oid="0h2_82:">
+            <div className="flex items-center" data-oid="ez58bsq">
                 {[...Array(5)].map((_, i) => (
                     <svg
                         key={i}
@@ -123,15 +123,15 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                         )}
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        data-oid="odjpsun"
+                        data-oid="vo9prk2"
                     >
                         <path
                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            data-oid="bjiw1uv"
+                            data-oid="qy.5aqm"
                         />
                     </svg>
                 ))}
-                <span className="ml-1 text-gray-300" data-oid="u.m40fr">
+                <span className="ml-1 text-gray-300" data-oid="bkqp2iq">
                     {rating?.toFixed(1)}
                 </span>
             </div>
@@ -226,16 +226,16 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="mwfwrd3">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="llis.ph">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="oes88n." />
+            <Navbar data-oid="x8o9:1:" />
             {/* Back Button */}
-            <div className="bg-gray-900 py-4 px-6 md:px-12" data-oid="x9p1r-s">
-                <div className="max-w-6xl mx-auto" data-oid="qsff8fh">
+            <div className="bg-gray-900 py-4 px-6 md:px-12" data-oid="a.cs5be">
+                <div className="max-w-6xl mx-auto" data-oid="_isfur0">
                     <button
                         onClick={handleBack}
                         className="flex items-center text-gray-300 hover:text-purple-400 transition-colors"
-                        data-oid="s4j9mmk"
+                        data-oid="qi7oz-2"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -243,14 +243,14 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            data-oid="vktqwkv"
+                            data-oid="xwnn8e8"
                         >
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
                                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                                data-oid="difj4vn"
+                                data-oid="_--qcug"
                             />
                         </svg>
                         Back to Courses
@@ -259,10 +259,10 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
             </div>
 
             {isLoading ? (
-                <div className="flex justify-center items-center py-32" data-oid="f6088a.">
+                <div className="flex justify-center items-center py-32" data-oid="is9etoi">
                     <div
                         className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                        data-oid="rmulbd1"
+                        data-oid="1p06-2:"
                     ></div>
                 </div>
             ) : course ? (
@@ -270,25 +270,25 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                     {/* Course Hero Section */}
                     <div
                         className="bg-gradient-to-b from-gray-900 to-black py-12 px-6 md:px-12"
-                        data-oid="bpwt5m4"
+                        data-oid="fp6q-lg"
                     >
                         <div
                             className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12"
-                            data-oid="6x2ch.0"
+                            data-oid=":-3z9.x"
                         >
                             <div
                                 className="rounded-xl overflow-hidden border border-gray-700"
-                                data-oid="gtfm14c"
+                                data-oid="ywizlcf"
                             >
                                 <img
                                     src={course.image}
                                     alt={course.title}
                                     className="w-full h-full object-cover"
-                                    data-oid="ny1qax9"
+                                    data-oid="dav0osf"
                                 />
                             </div>
-                            <div data-oid="xx2lwhy">
-                                <div className="flex items-center mb-4" data-oid="r0:zmlx">
+                            <div data-oid="6s8tbh3">
+                                <div className="flex items-center mb-4" data-oid=":4pc9x8">
                                     <span
                                         className={cn(
                                             'px-3 py-1 rounded-full text-sm font-medium mr-3',
@@ -298,27 +298,27 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                   ? 'bg-blue-500/20 text-blue-300'
                                                   : 'bg-purple-500/20 text-purple-300',
                                         )}
-                                        data-oid="7cj6k72"
+                                        data-oid=":a9bdcc"
                                     >
                                         {course.level}
                                     </span>
-                                    <span className="text-gray-400" data-oid="p:7m83j">
+                                    <span className="text-gray-400" data-oid="m8t7vct">
                                         {course.duration}
                                     </span>
                                 </div>
                                 <h1
                                     className="text-3xl md:text-4xl font-bold mb-4"
-                                    data-oid="3lca5x6"
+                                    data-oid="a9d_nt2"
                                 >
                                     {course.title}
                                 </h1>
-                                <p className="text-gray-300 mb-6" data-oid="4q3ugkl">
+                                <p className="text-gray-300 mb-6" data-oid="dexljwo">
                                     {course.description}
                                 </p>
-                                <div className="flex items-center mb-6" data-oid="1o0s:he">
+                                <div className="flex items-center mb-6" data-oid="o0_337a">
                                     <div
                                         className="w-8 h-8 rounded-full overflow-hidden mr-4"
-                                        data-oid=":-y1dj."
+                                        data-oid="6gwkgza"
                                     >
                                         <img
                                             src={
@@ -326,33 +326,33 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                             }
                                             alt={course.instructor}
                                             className="w-full h-full object-cover"
-                                            data-oid="l0g1hyv"
+                                            data-oid="rc7evxs"
                                         />
                                     </div>
-                                    <div data-oid="7phmf11">
-                                        <h3 className="font-medium" data-oid="6st2tu6">
+                                    <div data-oid="cz-d8_7">
+                                        <h3 className="font-medium" data-oid="llnpp:_">
                                             Instructor
                                         </h3>
-                                        <p className="text-gray-300" data-oid="45a5r-5">
+                                        <p className="text-gray-300" data-oid="9vsybxh">
                                             {course.instructor}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex items-center mb-8" data-oid="bt1ju4k">
+                                <div className="flex items-center mb-8" data-oid=":5:0bg.">
                                     {renderRating(course.rating)}
                                 </div>
                                 <div
                                     className="flex items-center justify-between mb-6"
-                                    data-oid="ubx_xpl"
+                                    data-oid="7m.2zeu"
                                 >
-                                    <div className="text-3xl font-bold" data-oid="ck:qz53">
+                                    <div className="text-3xl font-bold" data-oid="-hl0ajp">
                                         <span
                                             className={
                                                 course.price === 'Free'
                                                     ? 'text-green-400'
                                                     : 'text-white'
                                             }
-                                            data-oid="zidnb6m"
+                                            data-oid="tm9rzw7"
                                         >
                                             {formatPrice(course.price)}
                                         </span>
@@ -365,7 +365,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                 ? 'bg-green-600 cursor-default'
                                                 : 'bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600'
                                         } transition-colors font-medium`}
-                                        data-oid="ajbu4-o"
+                                        data-oid="pjy7as7"
                                     >
                                         {isEnrolled ? (
                                             'Already Enrolled'
@@ -375,7 +375,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                 title={course.title}
                                                 amount={Number(course.price)}
                                                 onSuccessRedirect={`/courses/${course._id}`}
-                                                data-oid="pgkxyk2"
+                                                data-oid="25-mlg-"
                                             />
                                         )}
                                     </button>
@@ -385,37 +385,37 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                     </div>
 
                     {/* Course Curriculum */}
-                    <div className="py-16 px-6 md:px-12 bg-black" data-oid="a_567.v">
-                        <div className="max-w-6xl mx-auto" data-oid=".s_fmse">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="fgluifs">
+                    <div className="py-16 px-6 md:px-12 bg-black" data-oid="ry1ep_f">
+                        <div className="max-w-6xl mx-auto" data-oid="q5d1ntb">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="jnncb77">
                                 Course Curriculum
                             </h2>
-                            <div className="space-y-6" data-oid="bm04ppc">
+                            <div className="space-y-6" data-oid="01jhm1q">
                                 {course.curriculum?.map((module) => (
                                     <div
                                         key={module._id}
                                         className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-                                        data-oid="4b9241v"
+                                        data-oid="2fmghsr"
                                     >
-                                        <div className="bg-gray-700 px-6 py-4" data-oid="34b49iw">
+                                        <div className="bg-gray-700 px-6 py-4" data-oid="4tczi0:">
                                             <h3
                                                 className="text-xl font-semibold"
-                                                data-oid="3bjepn4"
+                                                data-oid="ae6exty"
                                             >
                                                 {module.title}
                                             </h3>
                                         </div>
-                                        <div className="p-6" data-oid="21cjlhe">
-                                            <ul className="space-y-4" data-oid="7od:kdk">
+                                        <div className="p-6" data-oid="zte0:x1">
+                                            <ul className="space-y-4" data-oid="n7vjsoe">
                                                 {module.lessons.map((lesson) => (
                                                     <li
                                                         key={lesson._id}
                                                         className="flex justify-between items-center"
-                                                        data-oid="_tq-jdc"
+                                                        data-oid="hvqf_u:"
                                                     >
                                                         <div
                                                             className="flex items-center"
-                                                            data-oid="x63skx4"
+                                                            data-oid="yhz-gir"
                                                         >
                                                             <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
@@ -423,14 +423,14 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                                 fill="none"
                                                                 viewBox="0 0 24 24"
                                                                 stroke="currentColor"
-                                                                data-oid="dav4f:w"
+                                                                data-oid="a6pew.n"
                                                             >
                                                                 <path
                                                                     strokeLinecap="round"
                                                                     strokeLinejoin="round"
                                                                     strokeWidth={2}
                                                                     d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                                                                    data-oid="l29ncw:"
+                                                                    data-oid="1hvxf.9"
                                                                 />
 
                                                                 <path
@@ -438,22 +438,22 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                                     strokeLinejoin="round"
                                                                     strokeWidth={2}
                                                                     d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                                    data-oid="nsfmxwc"
+                                                                    data-oid="cysnhyr"
                                                                 />
                                                             </svg>
                                                             <div
                                                                 className="flex flex-col"
-                                                                data-oid="jekqi9-"
+                                                                data-oid="cl-7_e_"
                                                             >
                                                                 <span
                                                                     className="font-medium"
-                                                                    data-oid="64d3m5c"
+                                                                    data-oid="znx7kyc"
                                                                 >
                                                                     {lesson.title}
                                                                 </span>
                                                                 <p
                                                                     className="text-sm text-gray-400 mt-1"
-                                                                    data-oid="3gmd.5m"
+                                                                    data-oid="xcif1tp"
                                                                 >
                                                                     {lesson.content}
                                                                 </p>
@@ -461,7 +461,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                         </div>
                                                         <span
                                                             className="text-gray-400 text-sm ml-4"
-                                                            data-oid="otgn5ke"
+                                                            data-oid="ejhk1xz"
                                                         >
                                                             {lesson.duration}
                                                         </span>
@@ -479,23 +479,23 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                     {showPaymentModal && (
                         <div
                             className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-                            data-oid="tqws6b4"
+                            data-oid="o9f8.1v"
                         >
                             <div
                                 className="bg-gray-800 rounded-xl max-w-md w-full p-6 border border-gray-700"
-                                data-oid="qqb:_oi"
+                                data-oid="91t-brb"
                             >
                                 <div
                                     className="flex justify-between items-center mb-6"
-                                    data-oid="s24k9gk"
+                                    data-oid="41chb6q"
                                 >
-                                    <h3 className="text-xl font-bold" data-oid="a4nllkn">
+                                    <h3 className="text-xl font-bold" data-oid="7c0dlbu">
                                         Complete Your Purchase
                                     </h3>
                                     <button
                                         onClick={() => setShowPaymentModal(false)}
                                         className="text-gray-400 hover:text-white"
-                                        data-oid="iydji3l"
+                                        data-oid="shclrxy"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -503,26 +503,26 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            data-oid="0-bfuo4"
+                                            data-oid="u7qil0q"
                                         >
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
                                                 strokeWidth={2}
                                                 d="M6 18L18 6M6 6l12 12"
-                                                data-oid="xl2iszv"
+                                                data-oid="nw9jpkg"
                                             />
                                         </svg>
                                     </button>
                                 </div>
-                                <div className="mb-6" data-oid="-x_q7rj">
-                                    <div className="flex justify-between mb-2" data-oid="1nnebj8">
-                                        <span data-oid="4.o3txt">Course Price</span>
-                                        <span data-oid="vp5axiw">{formatPrice(course.price)}</span>
+                                <div className="mb-6" data-oid="q82u5xf">
+                                    <div className="flex justify-between mb-2" data-oid="gbdu047">
+                                        <span data-oid="_cb_845">Course Price</span>
+                                        <span data-oid="2wqjspw">{formatPrice(course.price)}</span>
                                     </div>
-                                    <div className="flex justify-between mb-2" data-oid="07xl5m1">
-                                        <span data-oid="ot:7ko5">Tax</span>
-                                        <span data-oid="x72ytlf">
+                                    <div className="flex justify-between mb-2" data-oid="lkxmli0">
+                                        <span data-oid="aui:_2k">Tax</span>
+                                        <span data-oid="xbmude7">
                                             ₹
                                             {course.price !== 'Free'
                                                 ? Math.floor(
@@ -533,37 +533,37 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                     </div>
                                     <div
                                         className="border-t border-gray-700 my-4"
-                                        data-oid="95jdb40"
+                                        data-oid="k2w17wh"
                                     ></div>
                                     <div
                                         className="flex justify-between font-bold"
-                                        data-oid="9xo-w86"
+                                        data-oid="0gv2gac"
                                     >
-                                        <span data-oid="nasdxxu">Total</span>
-                                        <span data-oid="vx2qysf">
+                                        <span data-oid="8qiebvw">Total</span>
+                                        <span data-oid="3kmrrvb">
                                             {course.price !== 'Free'
                                                 ? `₹${Math.floor(Number(course.price) * 1.18).toLocaleString('en-IN')}`
                                                 : 'Free'}
                                         </span>
                                     </div>
                                 </div>
-                                <div className="space-y-4" data-oid="iji:bf_">
-                                    <div className="space-y-2" data-oid="9q-twbf">
-                                        <label className="block text-gray-300" data-oid="3.jmfeg">
+                                <div className="space-y-4" data-oid="o_zgiin">
+                                    <div className="space-y-2" data-oid="wdx:ax.">
+                                        <label className="block text-gray-300" data-oid=".8cwd:a">
                                             Card Number
                                         </label>
                                         <input
                                             type="text"
                                             placeholder="1234 5678 9012 3456"
                                             className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"
-                                            data-oid="kby-535"
+                                            data-oid="lflf183"
                                         />
                                     </div>
-                                    <div className="grid grid-cols-2 gap-4" data-oid="zvtyg1b">
-                                        <div className="space-y-2" data-oid="gzrld3.">
+                                    <div className="grid grid-cols-2 gap-4" data-oid="ag.j1tt">
+                                        <div className="space-y-2" data-oid="y.vap.s">
                                             <label
                                                 className="block text-gray-300"
-                                                data-oid="gmx9y_i"
+                                                data-oid="jhvj8he"
                                             >
                                                 Expiry Date
                                             </label>
@@ -571,13 +571,13 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                 type="text"
                                                 placeholder="MM/YY"
                                                 className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"
-                                                data-oid="-njgx33"
+                                                data-oid="aq821zd"
                                             />
                                         </div>
-                                        <div className="space-y-2" data-oid="xe8x0yd">
+                                        <div className="space-y-2" data-oid="823zd8.">
                                             <label
                                                 className="block text-gray-300"
-                                                data-oid="2w37r9r"
+                                                data-oid=".1w97nu"
                                             >
                                                 CVV
                                             </label>
@@ -585,31 +585,31 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                                 type="text"
                                                 placeholder="123"
                                                 className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"
-                                                data-oid="xz6nzou"
+                                                data-oid="qgn7era"
                                             />
                                         </div>
                                     </div>
-                                    <div className="space-y-2" data-oid="p39xtcm">
-                                        <label className="block text-gray-300" data-oid="aic8a8w">
+                                    <div className="space-y-2" data-oid="84jze3r">
+                                        <label className="block text-gray-300" data-oid="z.8oai5">
                                             Name on Card
                                         </label>
                                         <input
                                             type="text"
                                             placeholder="John Smith"
                                             className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white"
-                                            data-oid="2r8glhi"
+                                            data-oid="5nyt-s9"
                                         />
                                     </div>
                                     <button
                                         onClick={handlePaymentComplete}
                                         className="w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                        data-oid="z.cuj91"
+                                        data-oid="uyyer_f"
                                     >
                                         Pay {formatPrice(course.price)}
                                     </button>
                                     <div
                                         className="text-center text-gray-400 text-sm"
-                                        data-oid="jsuz.7l"
+                                        data-oid="30plv77"
                                     >
                                         Your payment is secure and encrypted
                                     </div>
@@ -619,18 +619,18 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                     )}
                 </>
             ) : (
-                <div className="flex justify-center items-center py-32" data-oid="y1hpqwn">
-                    <div className="text-center" data-oid="0.ubqdg">
-                        <h2 className="text-2xl font-bold mb-4" data-oid="62r29z5">
+                <div className="flex justify-center items-center py-32" data-oid="ai4dek0">
+                    <div className="text-center" data-oid="111wm7k">
+                        <h2 className="text-2xl font-bold mb-4" data-oid="swh.7rb">
                             Course not found
                         </h2>
-                        <p className="text-gray-400 mb-6" data-oid="zhflqim">
+                        <p className="text-gray-400 mb-6" data-oid="51vhvju">
                             The course you're looking for doesn't exist or has been removed.
                         </p>
                         <button
                             onClick={handleBack}
                             className="px-6 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                            data-oid="-el4hwg"
+                            data-oid=".hfmad6"
                         >
                             Back to Courses
                         </button>
@@ -641,11 +641,11 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="eyryo1k"
+                data-oid="67wpnx0"
             >
-                <div className="max-w-6xl mx-auto" data-oid="fylusej">
-                    <div className="text-center text-gray-500" data-oid="639jys:">
-                        <p data-oid="f--hmr.">
+                <div className="max-w-6xl mx-auto" data-oid="7fam9yy">
+                    <div className="text-center text-gray-500" data-oid="9xnvbib">
+                        <p data-oid="9x:0b.-">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>

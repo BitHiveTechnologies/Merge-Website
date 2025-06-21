@@ -95,143 +95,143 @@ export default function WorkshopsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid=".mo4ovo">
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="n-27d8t">
             {/* Navbar - reusing from main page */}
-            <Navbar data-oid="zeknu5n" />
-            <SalesBanner data-oid="errr40a" />
+            <Navbar data-oid="wtcuw4j" />
+            <SalesBanner data-oid="bpquxtf" />
             {/* Page Header */}
             <div
                 className="bg-gradient-to-b from-black to-gray-900 pt-24 pb-28 px-6 md:px-12 relative overflow-hidden"
-                data-oid="zn78azu"
+                data-oid="2_hy08a"
             >
                 {/* Background elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="ck3xiik"
+                    data-oid="p60kcih"
                 ></div>
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="dwixwbm"
+                    data-oid="l05g:be"
                 ></div>
                 <div
                     className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                    data-oid="_5y4y0e"
+                    data-oid="u15mb12"
                 ></div>
 
-                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid="wxsligt">
+                <div className="max-w-6xl mx-auto relative z-10 py-8" data-oid=":n1olcr">
                     <h1
                         className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                        data-oid="-srqbbj"
+                        data-oid=":dars64"
                     >
                         Our{' '}
                         <span
                             className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                            data-oid="fbih_-0"
+                            data-oid="usx2slc"
                         >
                             Workshops
                         </span>
                     </h1>
                     <p
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-6"
-                        data-oid="3iqs899"
+                        data-oid="3fgcmf-"
                     >
                         Join our Interactive Workshops and Webinars to Enhance your Skills in
                         Open-source, Git, GitHub and more.
                     </p>
                     <div
                         className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-6 mb-8"
-                        data-oid="b5mthxb"
+                        data-oid="53a_:9_"
                     ></div>
-                    <div className="flex flex-wrap gap-4 mt-8" data-oid="bk-eju2">
+                    <div className="flex flex-wrap gap-4 mt-8" data-oid=".xl3ah5">
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="wm.5eww"
+                            data-oid="z.2ku0w"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="ekf.y8z"
+                                data-oid="kmgrc38"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="bcra81v"
+                                    data-oid="p.wrbaq"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="xx.52hs"
+                                        data-oid="ba2.thx"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="da6ore6"
+                                data-oid="q8k3pgd"
                             >
                                 Expert Instructors
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid=":nomkjf"
+                            data-oid=".5h2do2"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="7rn877l"
+                                data-oid="l...j7r"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="we1dkvg"
+                                    data-oid="-f8.lu8"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="k__k_ws"
+                                        data-oid="p-zdn24"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="h4pdlpb"
+                                data-oid="-0o:t8n"
                             >
                                 Interactive Sessions
                             </span>
                         </div>
                         <div
                             className="bg-gray-800/50 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-700 inline-flex items-center hover:bg-gray-700/50 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                            data-oid="ihr6wu6"
+                            data-oid="sf0anuu"
                         >
                             <span
                                 className="text-purple-400 mr-2 group-hover:text-purple-300"
-                                data-oid="oe:7foe"
+                                data-oid=".c1w_63"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-12"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
-                                    data-oid="mtuyb9:"
+                                    data-oid="tj4y77m"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clipRule="evenodd"
                                         className="group-hover:animate-pulse"
-                                        data-oid="v:4xy5q"
+                                        data-oid="gr7rzae"
                                     />
                                 </svg>
                             </span>
                             <span
                                 className="group-hover:text-white transition-colors duration-300"
-                                data-oid="35mq8fa"
+                                data-oid="hrvgeel"
                             >
                                 Hands-on Learning
                             </span>
@@ -243,10 +243,10 @@ export default function WorkshopsPage() {
             {/* Tabs */}
             <div
                 className="bg-gray-900 py-8 px-6 md:px-12 border-b border-black"
-                data-oid="d57iaov"
+                data-oid="b2y7lvh"
             >
-                <div className="max-w-6xl mx-auto" data-oid="-tnh-6o">
-                    <div className="flex space-x-4 border-b border-gray-800" data-oid=".norrvd">
+                <div className="max-w-6xl mx-auto" data-oid="mn5q.wz">
+                    <div className="flex space-x-4 border-b border-gray-800" data-oid="dxh:yoi">
                         <button
                             onClick={() => setActiveTab('upcoming')}
                             className={cn(
@@ -255,7 +255,7 @@ export default function WorkshopsPage() {
                                     ? 'text-purple-400 border-b-2 border-purple-400'
                                     : 'text-gray-400 hover:text-gray-300',
                             )}
-                            data-oid="y-.q._j"
+                            data-oid="pw.0x-j"
                         >
                             Upcoming Workshops
                         </button>
@@ -267,7 +267,7 @@ export default function WorkshopsPage() {
                                     ? 'text-purple-400 border-b-2 border-purple-400'
                                     : 'text-gray-400 hover:text-gray-300',
                             )}
-                            data-oid="g3s.yn8"
+                            data-oid="nmoq:1s"
                         >
                             Past Workshops
                         </button>
@@ -276,62 +276,62 @@ export default function WorkshopsPage() {
             </div>
 
             {/* Workshop Listings */}
-            <div className="py-12 px-6 md:px-12 bg-black" data-oid="kp-havg">
-                <div className="max-w-6xl mx-auto" data-oid="pnqx0gv">
+            <div className="py-12 px-6 md:px-12 bg-black" data-oid=".bw0wjw">
+                <div className="max-w-6xl mx-auto" data-oid="vz_.zei">
                     {isLoading ? (
-                        <div className="flex justify-center items-center py-20" data-oid="q2kkdoh">
+                        <div className="flex justify-center items-center py-20" data-oid="q515_2w">
                             <div
                                 className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                                data-oid="4dnntws"
+                                data-oid="v41m881"
                             ></div>
                         </div>
                     ) : activeTab === 'upcoming' ? (
                         <div
                             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                            data-oid="pqb_._i"
+                            data-oid="kq4_5z4"
                         >
                             {upcomingWorkshops.map((workshop) => (
                                 <div
                                     key={workshop._id}
                                     className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                     onClick={() => handleWorkshopClick(workshop._id)}
-                                    data-oid="gxqd-7f"
+                                    data-oid="hxv_nyk"
                                 >
                                     <div
                                         className="relative h-48 overflow-hidden"
-                                        data-oid="7se1bio"
+                                        data-oid="lojv4s_"
                                     >
                                         <img
                                             src={workshop.image}
                                             alt={workshop.title}
                                             className="w-full h-full object-cover"
-                                            data-oid="yus_ynd"
+                                            data-oid="h5nbdnc"
                                         />
 
                                         <div
                                             className="absolute top-0 left-0 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold px-3 py-1"
-                                            data-oid="fadfayl"
+                                            data-oid="k7cstv6"
                                         >
                                             {formatDate(workshop.date)}
                                         </div>
                                     </div>
-                                    <div className="p-6" data-oid="gkbbaog">
+                                    <div className="p-6" data-oid="dsg5a5x">
                                         <h3
                                             className="text-xl font-semibold mb-2"
-                                            data-oid=".fwp_q:"
+                                            data-oid="dui4a3h"
                                         >
                                             {workshop.title}
                                         </h3>
                                         <p
                                             className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                            data-oid="4m14ij0"
+                                            data-oid="9o-z.9."
                                         >
                                             {workshop.description}
                                         </p>
-                                        <div className="flex items-center mb-3" data-oid="kqljhvw">
+                                        <div className="flex items-center mb-3" data-oid="ir661_u">
                                             <div
                                                 className="w-8 h-8 rounded-full overflow-hidden mr-4"
-                                                data-oid="de-5wpl"
+                                                data-oid="w1l5txm"
                                             >
                                                 <img
                                                     src={
@@ -339,32 +339,32 @@ export default function WorkshopsPage() {
                                                     }
                                                     alt={workshop.instructor}
                                                     className="w-full h-full object-cover"
-                                                    data-oid="o6qm_.e"
+                                                    data-oid="b::ts:d"
                                                 />
                                             </div>
                                             <span
                                                 className="text-gray-300 text-sm"
-                                                data-oid=".y2agsm"
+                                                data-oid="v6ldz4r"
                                             >
                                                 {workshop.instructor}
                                             </span>
                                         </div>
                                         <div
                                             className="flex justify-between text-gray-400 text-sm mb-4"
-                                            data-oid="df07_p2"
+                                            data-oid="hs8e_og"
                                         >
-                                            <span data-oid="va14zgg">{workshop.time}</span>
-                                            <span data-oid="7jw2eq.">{workshop.location}</span>
+                                            <span data-oid="p18v0s2">{workshop.time}</span>
+                                            <span data-oid="x6u9b_5">{workshop.location}</span>
                                         </div>
                                         <div
                                             className="flex flex-wrap gap-2 mb-4"
-                                            data-oid="jrjcq6r"
+                                            data-oid="944iaff"
                                         >
                                             {workshop.tags.map((tag, index) => (
                                                 <span
                                                     key={index}
                                                     className="px-2 py-1 bg-gray-700 rounded-md text-xs text-gray-300"
-                                                    data-oid="7f4rwzl"
+                                                    data-oid="l0.usox"
                                                 >
                                                     {tag}
                                                 </span>
@@ -372,7 +372,7 @@ export default function WorkshopsPage() {
                                         </div>
                                         <div
                                             className="flex justify-between items-center"
-                                            data-oid="019yl.z"
+                                            data-oid="khydqkr"
                                         >
                                             <span
                                                 className={cn(
@@ -381,13 +381,13 @@ export default function WorkshopsPage() {
                                                         ? 'text-green-400'
                                                         : 'text-white',
                                                 )}
-                                                data-oid="6ju6au2"
+                                                data-oid="o4x5r6k"
                                             >
                                                 {formatPrice(workshop.price)}
                                             </span>
                                             <button
                                                 className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium"
-                                                data-oid="nqdp1:4"
+                                                data-oid="ya87an2"
                                             >
                                                 Register
                                             </button>
@@ -397,18 +397,18 @@ export default function WorkshopsPage() {
                             ))}
                         </div>
                     ) : (
-                        <div className="space-y-12" data-oid="92784as">
-                            <div className="mb-8" data-oid="y7fs40h">
-                                <h2 className="text-3xl font-bold mb-6" data-oid="gob:xe.">
+                        <div className="space-y-12" data-oid="zft2ije">
+                            <div className="mb-8" data-oid="oezh14u">
+                                <h2 className="text-3xl font-bold mb-6" data-oid="h7gdvk5">
                                     <span
                                         className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-                                        data-oid="5.fc_g8"
+                                        data-oid="7vt3v00"
                                     >
                                         Successful Webinars
                                     </span>{' '}
                                     Conducted by Merge
                                 </h2>
-                                <p className="text-gray-300 mb-8 max-w-4xl" data-oid="0ydzqkv">
+                                <p className="text-gray-300 mb-8 max-w-4xl" data-oid="zia40hr">
                                     At Merge, we are committed to empowering students with hands-on
                                     knowledge and skills in open-source contributions, Git, GitHub,
                                     and software development. We have successfully organized free
@@ -417,77 +417,77 @@ export default function WorkshopsPage() {
                                 </p>
                             </div>
 
-                            <div className="grid gap-8" data-oid="bs-or_h">
+                            <div className="grid gap-8" data-oid="fbwm3as">
                                 {pastWorkshops.map((workshop) => (
                                     <div
                                         key={workshop._id}
                                         className="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 p-6"
-                                        data-oid=":u3.h8d"
+                                        data-oid="w:z936s"
                                     >
                                         <div
                                             className="flex flex-col md:flex-row gap-6"
-                                            data-oid="0dcco0n"
+                                            data-oid="vsgrfzo"
                                         >
-                                            <div className="md:w-1/4" data-oid="m:om86.">
+                                            <div className="md:w-1/4" data-oid="_f3cr9h">
                                                 <h3
                                                     className="text-2xl font-bold text-purple-400 mb-2"
-                                                    data-oid="pvq3x-6"
+                                                    data-oid=":sb48u9"
                                                 >
                                                     {workshop.institution}
                                                 </h3>
                                                 <div
                                                     className="flex items-center mb-4"
-                                                    data-oid="a3l2.64"
+                                                    data-oid="ixz..xe"
                                                 >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         className="h-5 w-5 text-pink-500 mr-2"
                                                         viewBox="0 0 20 20"
                                                         fill="currentColor"
-                                                        data-oid="d.p68nq"
+                                                        data-oid="ml.cqzr"
                                                     >
                                                         <path
                                                             fillRule="evenodd"
                                                             d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                                             clipRule="evenodd"
-                                                            data-oid="hucfnp-"
+                                                            data-oid=":aqn7nb"
                                                         />
                                                     </svg>
                                                     <span
                                                         className="text-gray-300"
-                                                        data-oid="nttro18"
+                                                        data-oid="hw858el"
                                                     >
                                                         {formatDate(workshop.date)}
                                                     </span>
                                                 </div>
                                                 <div
                                                     className="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium px-3 py-2 rounded-md inline-block"
-                                                    data-oid="yz:16kg"
+                                                    data-oid="90ak207"
                                                 >
                                                     {workshop.topic}
                                                 </div>
                                             </div>
-                                            <div className="md:w-3/4" data-oid="w_ghwgq">
+                                            <div className="md:w-3/4" data-oid="y9u_kn_">
                                                 <div
                                                     className="flex flex-col md:flex-row gap-6"
-                                                    data-oid="zo3q7r9"
+                                                    data-oid="y97eua:"
                                                 >
-                                                    <div className="md:w-3/4" data-oid="9m83jwx">
+                                                    <div className="md:w-3/4" data-oid="gqk8zgj">
                                                         <h4
                                                             className="text-lg font-semibold mb-2"
-                                                            data-oid="k.rk98g"
+                                                            data-oid="05of9.n"
                                                         >
                                                             Highlights:
                                                         </h4>
                                                         <ul
                                                             className="list-disc pl-5 space-y-1 text-gray-300"
-                                                            data-oid=".xwvd6h"
+                                                            data-oid="s9vum56"
                                                         >
                                                             {workshop.highlights.map(
                                                                 (highlight, index) => (
                                                                     <li
                                                                         key={index}
-                                                                        data-oid="gfets95"
+                                                                        data-oid="_m_5-bg"
                                                                     >
                                                                         {highlight}
                                                                     </li>
@@ -495,16 +495,16 @@ export default function WorkshopsPage() {
                                                             )}
                                                         </ul>
                                                     </div>
-                                                    <div className="md:w-1/4" data-oid="3iegddj">
+                                                    <div className="md:w-1/4" data-oid="y_t8gcx">
                                                         <h4
                                                             className="text-lg font-semibold mb-2"
-                                                            data-oid="y1rzvjn"
+                                                            data-oid="u2wk0t7"
                                                         >
                                                             Media Links:
                                                         </h4>
                                                         <div
                                                             className="flex flex-wrap gap-3"
-                                                            data-oid="p_i8zdm"
+                                                            data-oid="utdm7ix"
                                                         >
                                                             {workshop.mediaLinks.map(
                                                                 (link, index) => (
@@ -521,7 +521,7 @@ export default function WorkshopsPage() {
                                                                                   ? 'Videos'
                                                                                   : `Media ${index + 1}`
                                                                         }
-                                                                        data-oid="c6bd-xr"
+                                                                        data-oid="natt8y_"
                                                                     >
                                                                         <svg
                                                                             xmlns="http://www.w3.org/2000/svg"
@@ -529,14 +529,14 @@ export default function WorkshopsPage() {
                                                                             fill="none"
                                                                             viewBox="0 0 24 24"
                                                                             stroke="currentColor"
-                                                                            data-oid="ys_v7to"
+                                                                            data-oid="vrlhe1-"
                                                                         >
                                                                             <path
                                                                                 strokeLinecap="round"
                                                                                 strokeLinejoin="round"
                                                                                 strokeWidth={2}
                                                                                 d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                                                                                data-oid="q6532ly"
+                                                                                data-oid="-96ji0w"
                                                                             />
                                                                         </svg>
                                                                     </a>
@@ -558,11 +558,11 @@ export default function WorkshopsPage() {
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="c-f80l-"
+                data-oid="nd3-w.9"
             >
-                <div className="max-w-6xl mx-auto" data-oid="9ll3v5x">
-                    <div className="text-center text-gray-500" data-oid="-q04dw9">
-                        <p data-oid="tr4v5i1">
+                <div className="max-w-6xl mx-auto" data-oid="acf2mi4">
+                    <div className="text-center text-gray-500" data-oid="p87pchm">
+                        <p data-oid="ucfad.3">
                             &copy; {new Date().getFullYear()} Merge. All rights reserved.
                         </p>
                     </div>

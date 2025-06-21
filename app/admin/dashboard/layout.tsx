@@ -21,26 +21,26 @@ export default function AdminDashboardLayout({ children }: { children: React.Rea
     };
 
     return (
-        <div className="min-h-screen bg-black text-white" data-oid="xnjbdr4">
+        <div className="min-h-screen bg-black text-white" data-oid=".cspfty">
             {/* Admin Header */}
-            <header className="bg-gray-900 border-b border-gray-800" data-oid="8u0q6f6">
+            <header className="bg-gray-900 border-b border-gray-800" data-oid=".5bw23l">
                 <div
                     className="container mx-auto px-4 py-4 flex justify-between items-center"
-                    data-oid=":p7sjlf"
+                    data-oid="f_t5o2k"
                 >
-                    <Link href="/" data-oid="a1h9c1s">
+                    <Link href="/" data-oid="w61c26i">
                         <Image
                             src="/images/Merge.png"
                             alt="Merge logo"
                             width={150}
                             height={150}
-                            data-oid="exdk7nn"
+                            data-oid=".7z1o-i"
                         />
                     </Link>
                     <button
                         onClick={handleLogout}
                         className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
-                        data-oid="hmv6i-u"
+                        data-oid="n0zxl8b"
                     >
                         Logout
                     </button>
@@ -48,7 +48,7 @@ export default function AdminDashboardLayout({ children }: { children: React.Rea
             </header>
 
             {/* Main Content */}
-            <main className="container mx-auto px-4 py-8" data-oid="sarijjx">
+            <main className="container mx-auto px-4 py-8" data-oid="r2h9pu2">
                 {children}
             </main>
         </div>

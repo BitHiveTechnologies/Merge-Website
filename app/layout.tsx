@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en" data-oid="4qf:8y.">
-            <body className="" data-oid=":h44trk">
+        <html lang="en" data-oid="fvsqljs">
+            <body className="" data-oid="7hs4yg9">
                 {children}
-                <SpeedInsights data-oid="lwn.z-:" />
-                <Analytics data-oid="6vw66oh" />
+                <SpeedInsights data-oid="4i8a5yt" />
+                <Analytics data-oid="wszbdk4" />
             </body>
         </html>
     );

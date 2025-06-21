@@ -205,20 +205,20 @@ export default function NewCoursePage() {
     };
 
     return (
-        <div className="max-w-4xl mx-auto" data-oid="zkcjd43">
-            <div className="flex justify-between items-center mb-6" data-oid="yo:ve6j">
-                <div data-oid="2oer_01">
+        <div className="max-w-4xl mx-auto" data-oid="gn3pkuj">
+            <div className="flex justify-between items-center mb-6" data-oid="::ybbx3">
+                <div data-oid=":jdc_7a">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
-                        data-oid="kawmh1i"
+                        data-oid="e2:k61t"
                     >
-                        <span className="mr-1" data-oid="92e_rkd">
+                        <span className="mr-1" data-oid="qtj9bf_">
                             ←
                         </span>{' '}
                         Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold mt-4" data-oid="_3o6ph2">
+                    <h1 className="text-3xl font-bold mt-4" data-oid="pde2tn8">
                         Add New Course
                     </h1>
                 </div>
@@ -227,9 +227,9 @@ export default function NewCoursePage() {
             {error && (
                 <div
                     className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                    data-oid="a0b74dz"
+                    data-oid="-eqtn2b"
                 >
-                    <p className="text-red-200" data-oid="0cigned">
+                    <p className="text-red-200" data-oid="3:uutee">
                         {error}
                     </p>
                 </div>
@@ -238,28 +238,28 @@ export default function NewCoursePage() {
             {success && (
                 <div
                     className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6"
-                    data-oid="fjhdbjc"
+                    data-oid="2.qb2j9"
                 >
-                    <p className="text-green-200" data-oid="1f_n:9:">
+                    <p className="text-green-200" data-oid="r1k5ztg">
                         {success}
                     </p>
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6" data-oid="8t-2p.p">
+            <form onSubmit={handleSubmit} className="space-y-6" data-oid="b9w87qf">
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-6"
-                    data-oid=":dugchz"
+                    data-oid="-e9qu27"
                 >
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="tsyksxr">
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="a8.9khm">
                         Basic Information
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="qlbjlfx">
-                        <div data-oid="0drokzr">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="-gni648">
+                        <div data-oid="s39y:kg">
                             <label
                                 htmlFor="title"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="-wqvnko"
+                                data-oid="a0-dk9n"
                             >
                                 Course Title*
                             </label>
@@ -271,14 +271,14 @@ export default function NewCoursePage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="0u-j4jv"
+                                data-oid="9__oedl"
                             />
                         </div>
-                        <div data-oid="soi_a.y">
+                        <div data-oid="0vgaue7">
                             <label
                                 htmlFor="instructor"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="o:t40cl"
+                                data-oid="945w0ep"
                             >
                                 Instructor*
                             </label>
@@ -290,14 +290,14 @@ export default function NewCoursePage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="0m90s3_"
+                                data-oid="ob9g5py"
                             />
                         </div>
-                        <div data-oid="_107owt">
+                        <div data-oid="du8bwbv">
                             <label
                                 htmlFor="duration"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="kuc9gxa"
+                                data-oid="mdb5fhr"
                             >
                                 Duration*
                             </label>
@@ -310,14 +310,14 @@ export default function NewCoursePage() {
                                 required
                                 placeholder="e.g., 6 weeks"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="d:a6p_:"
+                                data-oid="evmvyoz"
                             />
                         </div>
-                        <div data-oid="de7fi3e">
+                        <div data-oid="lrz:wtv">
                             <label
                                 htmlFor="level"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="86zlh54"
+                                data-oid="84c19c1"
                             >
                                 Level*
                             </label>
@@ -328,24 +328,24 @@ export default function NewCoursePage() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="rg5qxve"
+                                data-oid="mmvr2l2"
                             >
-                                <option value="Beginner" data-oid="57hcs1d">
+                                <option value="Beginner" data-oid="r0e7smb">
                                     Beginner
                                 </option>
-                                <option value="Intermediate" data-oid="x49rn.4">
+                                <option value="Intermediate" data-oid="mdfk08k">
                                     Intermediate
                                 </option>
-                                <option value="Advanced" data-oid="g3brn3n">
+                                <option value="Advanced" data-oid="sbxzq7l">
                                     Advanced
                                 </option>
                             </select>
                         </div>
-                        <div data-oid="gcxc4pt">
+                        <div data-oid="wtppfhx">
                             <label
                                 htmlFor="price"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="knea.zn"
+                                data-oid="oliua6k"
                             >
                                 Price*
                             </label>
@@ -359,14 +359,14 @@ export default function NewCoursePage() {
                                 min="0"
                                 step="0.01"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="upbc3l5"
+                                data-oid="qju:0k4"
                             />
                         </div>
-                        <div data-oid="lyhj1kj">
+                        <div data-oid="zvy9n2s">
                             <label
                                 htmlFor="rating"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="u9vjwpw"
+                                data-oid="ii56m.p"
                             >
                                 Rating (0-5)
                             </label>
@@ -380,14 +380,14 @@ export default function NewCoursePage() {
                                 max="5"
                                 step="0.1"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="hqxtzpv"
+                                data-oid="d22bo.i"
                             />
                         </div>
-                        <div className="md:col-span-2" data-oid="uazvv.a">
+                        <div className="md:col-span-2" data-oid="lhnkcul">
                             <label
                                 htmlFor="image"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="ph59ocv"
+                                data-oid="1z11v8m"
                             >
                                 Image URL
                             </label>
@@ -399,14 +399,14 @@ export default function NewCoursePage() {
                                 onChange={handleInputChange}
                                 placeholder="https://example.com/images/course.png"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="qdv88.p"
+                                data-oid="o79mgmn"
                             />
                         </div>
-                        <div className="md:col-span-2" data-oid=":v3.ru2">
+                        <div className="md:col-span-2" data-oid="hs-wwy-">
                             <label
                                 htmlFor="description"
                                 className="block text-sm font-medium text-gray-300 mb-1"
-                                data-oid="r98l7pj"
+                                data-oid="x0:y5u5"
                             >
                                 Description*
                             </label>
@@ -418,11 +418,11 @@ export default function NewCoursePage() {
                                 required
                                 rows={4}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                data-oid="7bz748b"
+                                data-oid="ey896js"
                             ></textarea>
                         </div>
-                        <div className="md:col-span-2" data-oid="vfrl5bg">
-                            <div className="flex items-center" data-oid="aqdbuwd">
+                        <div className="md:col-span-2" data-oid="l5xv8io">
+                            <div className="flex items-center" data-oid="rkm1ilj">
                                 <input
                                     type="checkbox"
                                     id="isFeatured"
@@ -430,13 +430,13 @@ export default function NewCoursePage() {
                                     checked={formData.isFeatured}
                                     onChange={handleCheckboxChange}
                                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded"
-                                    data-oid="l210gp6"
+                                    data-oid="qer2aev"
                                 />
 
                                 <label
                                     htmlFor="isFeatured"
                                     className="ml-2 block text-sm text-gray-300"
-                                    data-oid="fdpz8k0"
+                                    data-oid="p3o0doi"
                                 >
                                     Feature this course on the homepage
                                 </label>
@@ -447,50 +447,50 @@ export default function NewCoursePage() {
 
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-6"
-                    data-oid="ua:r1nm"
+                    data-oid="c739qc6"
                 >
-                    <div className="flex justify-between items-center mb-4" data-oid="m4j1-0c">
-                        <h2 className="text-xl font-semibold text-purple-400" data-oid="-cyesp4">
+                    <div className="flex justify-between items-center mb-4" data-oid="44jmpui">
+                        <h2 className="text-xl font-semibold text-purple-400" data-oid="wkzz_6_">
                             Curriculum
                         </h2>
                         <button
                             type="button"
                             onClick={addModule}
                             className="px-3 py-1 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors flex items-center"
-                            data-oid="uoblu36"
+                            data-oid="ylg4fx0"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-4 w-4 mr-1"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
-                                data-oid="81ozp.j"
+                                data-oid="s48t12v"
                             >
                                 <path
                                     fillRule="evenodd"
                                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                     clipRule="evenodd"
-                                    data-oid="_:60dc."
+                                    data-oid="gnclao0"
                                 />
                             </svg>
                             Add Module
                         </button>
                     </div>
 
-                    <div className="space-y-6" data-oid="b:mlan3">
+                    <div className="space-y-6" data-oid="uew0bsp">
                         {formData.curriculum.map((module, moduleIndex) => (
                             <div
                                 key={moduleIndex}
                                 className="bg-gray-750 rounded-lg border border-gray-600 p-4"
-                                data-oid="f.2orx9"
+                                data-oid="3-d58il"
                             >
                                 <div
                                     className="flex justify-between items-center mb-3"
-                                    data-oid="ynekz.l"
+                                    data-oid="ycwykoz"
                                 >
                                     <h3
                                         className="text-lg font-medium text-white"
-                                        data-oid="o_6jh-m"
+                                        data-oid="z0l0bz0"
                                     >
                                         Module {moduleIndex + 1}
                                     </h3>
@@ -499,31 +499,31 @@ export default function NewCoursePage() {
                                             type="button"
                                             onClick={() => removeModule(moduleIndex)}
                                             className="text-red-400 hover:text-red-300"
-                                            data-oid="tlx8c15"
+                                            data-oid="7:pldi7"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 className="h-5 w-5"
                                                 viewBox="0 0 20 20"
                                                 fill="currentColor"
-                                                data-oid="lzz3zta"
+                                                data-oid="a95a5qf"
                                             >
                                                 <path
                                                     fillRule="evenodd"
                                                     d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                                                     clipRule="evenodd"
-                                                    data-oid="i_cg4-q"
+                                                    data-oid="7ikehxr"
                                                 />
                                             </svg>
                                         </button>
                                     )}
                                 </div>
 
-                                <div className="mb-4" data-oid="mlz64j4">
+                                <div className="mb-4" data-oid="xaq:5f_">
                                     <label
                                         htmlFor={`module-title-${moduleIndex}`}
                                         className="block text-sm font-medium text-gray-300 mb-1"
-                                        data-oid="m1-:t-g"
+                                        data-oid="_r-_tm:"
                                     >
                                         Module Title*
                                     </label>
@@ -535,18 +535,18 @@ export default function NewCoursePage() {
                                         onChange={(e) => handleModuleChange(moduleIndex, e)}
                                         required
                                         className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                        data-oid=".o.-pro"
+                                        data-oid="m2z_5mc"
                                     />
                                 </div>
 
-                                <div className="mb-3" data-oid="3tjzrej">
+                                <div className="mb-3" data-oid="h:xnswx">
                                     <div
                                         className="flex justify-between items-center mb-2"
-                                        data-oid="utzt9q5"
+                                        data-oid=".nstp0."
                                     >
                                         <h4
                                             className="text-md font-medium text-gray-300"
-                                            data-oid="iq.jlbp"
+                                            data-oid="1t:130b"
                                         >
                                             Lessons
                                         </h4>
@@ -554,40 +554,40 @@ export default function NewCoursePage() {
                                             type="button"
                                             onClick={() => addLesson(moduleIndex)}
                                             className="px-2 py-1 bg-gray-600 hover:bg-gray-500 rounded-md text-xs font-medium transition-colors flex items-center"
-                                            data-oid=".b53s77"
+                                            data-oid="ba8:9ht"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 className="h-3 w-3 mr-1"
                                                 viewBox="0 0 20 20"
                                                 fill="currentColor"
-                                                data-oid="qeag4c:"
+                                                data-oid="fgh640y"
                                             >
                                                 <path
                                                     fillRule="evenodd"
                                                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                                                     clipRule="evenodd"
-                                                    data-oid="n55-_zk"
+                                                    data-oid="8dc_2f7"
                                                 />
                                             </svg>
                                             Add Lesson
                                         </button>
                                     </div>
 
-                                    <div className="space-y-4" data-oid="670-kv2">
+                                    <div className="space-y-4" data-oid="_i:73gp">
                                         {module.lessons.map((lesson, lessonIndex) => (
                                             <div
                                                 key={lessonIndex}
                                                 className="bg-gray-700 rounded-md border border-gray-600 p-3"
-                                                data-oid="zho3btx"
+                                                data-oid="4o_4.6_"
                                             >
                                                 <div
                                                     className="flex justify-between items-center mb-2"
-                                                    data-oid="p0fcnwn"
+                                                    data-oid="eahlsoi"
                                                 >
                                                     <h5
                                                         className="text-sm font-medium text-gray-300"
-                                                        data-oid="kc1fcfx"
+                                                        data-oid="wvim25i"
                                                     >
                                                         Lesson {lessonIndex + 1}
                                                     </h5>
@@ -601,20 +601,20 @@ export default function NewCoursePage() {
                                                                 )
                                                             }
                                                             className="text-red-400 hover:text-red-300"
-                                                            data-oid="d2197us"
+                                                            data-oid="9ik3l9b"
                                                         >
                                                             <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 className="h-4 w-4"
                                                                 viewBox="0 0 20 20"
                                                                 fill="currentColor"
-                                                                data-oid="l-j1-v_"
+                                                                data-oid="7ylp4h3"
                                                             >
                                                                 <path
                                                                     fillRule="evenodd"
                                                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                                     clipRule="evenodd"
-                                                                    data-oid="h21fa3c"
+                                                                    data-oid="zq8xm00"
                                                                 />
                                                             </svg>
                                                         </button>
@@ -623,13 +623,13 @@ export default function NewCoursePage() {
 
                                                 <div
                                                     className="grid grid-cols-1 md:grid-cols-2 gap-3"
-                                                    data-oid="j9wb._-"
+                                                    data-oid="p76lz1y"
                                                 >
-                                                    <div data-oid="p01v7uv">
+                                                    <div data-oid="io093nz">
                                                         <label
                                                             htmlFor={`lesson-title-${moduleIndex}-${lessonIndex}`}
                                                             className="block text-xs font-medium text-gray-400 mb-1"
-                                                            data-oid="2ymprx8"
+                                                            data-oid="j8t8-k0"
                                                         >
                                                             Lesson Title*
                                                         </label>
@@ -647,14 +647,14 @@ export default function NewCoursePage() {
                                                             }
                                                             required
                                                             className="w-full bg-gray-600 border border-gray-500 rounded-md py-1 px-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                                            data-oid="d.bv4ck"
+                                                            data-oid="hk9_w5m"
                                                         />
                                                     </div>
-                                                    <div data-oid="zng1:-t">
+                                                    <div data-oid="i.qbe57">
                                                         <label
                                                             htmlFor={`lesson-duration-${moduleIndex}-${lessonIndex}`}
                                                             className="block text-xs font-medium text-gray-400 mb-1"
-                                                            data-oid="uy5ycmr"
+                                                            data-oid="5j0ht4a"
                                                         >
                                                             Duration*
                                                         </label>
@@ -673,17 +673,17 @@ export default function NewCoursePage() {
                                                             required
                                                             placeholder="e.g., 15 min"
                                                             className="w-full bg-gray-600 border border-gray-500 rounded-md py-1 px-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                                            data-oid="54s3j44"
+                                                            data-oid="s618a3w"
                                                         />
                                                     </div>
                                                     <div
                                                         className="md:col-span-2"
-                                                        data-oid="szih1h7"
+                                                        data-oid="dycopba"
                                                     >
                                                         <label
                                                             htmlFor={`lesson-content-${moduleIndex}-${lessonIndex}`}
                                                             className="block text-xs font-medium text-gray-400 mb-1"
-                                                            data-oid="2klxfxl"
+                                                            data-oid="hr0zq--"
                                                         >
                                                             Content*
                                                         </label>
@@ -701,7 +701,7 @@ export default function NewCoursePage() {
                                                             required
                                                             rows={2}
                                                             className="w-full bg-gray-600 border border-gray-500 rounded-md py-1 px-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                                            data-oid="6ma53dx"
+                                                            data-oid="g2wzmnr"
                                                         ></textarea>
                                                     </div>
                                                 </div>
@@ -714,11 +714,11 @@ export default function NewCoursePage() {
                     </div>
                 </div>
 
-                <div className="flex justify-end space-x-4" data-oid="mpgcxz9">
+                <div className="flex justify-end space-x-4" data-oid="gfubczf">
                     <Link
                         href="/admin/dashboard"
                         className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
-                        data-oid="yo3qsdf"
+                        data-oid="sgk2sa3"
                     >
                         Cancel
                     </Link>
@@ -728,7 +728,7 @@ export default function NewCoursePage() {
                         className={`px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                         }`}
-                        data-oid="3.39vzy"
+                        data-oid="5xc1xby"
                     >
                         {isSubmitting ? 'Creating...' : 'Create Course'}
                     </button>

@@ -70,10 +70,10 @@ export default function HackathonRegistrationsPage() {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]" data-oid="f0rz_gl">
+            <div className="flex justify-center items-center min-h-[50vh]" data-oid="2.xr6_m">
                 <div
                     className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                    data-oid="d46gukm"
+                    data-oid="ltt1ulu"
                 ></div>
             </div>
         );
@@ -83,15 +83,15 @@ export default function HackathonRegistrationsPage() {
         return (
             <div
                 className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
-                data-oid=":oy4kr5"
+                data-oid="p-hr5y4"
             >
-                <p className="text-red-200" data-oid="_dj:irp">
+                <p className="text-red-200" data-oid="vgjs9d2">
                     {error}
                 </p>
                 <button
                     onClick={() => window.location.reload()}
                     className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
-                    data-oid="3bxckmk"
+                    data-oid="h_enut:"
                 >
                     Try Again
                 </button>
@@ -100,24 +100,24 @@ export default function HackathonRegistrationsPage() {
     }
 
     return (
-        <div data-oid=":ic6ty:">
-            <div className="flex justify-between items-center mb-6" data-oid="trgkusi">
-                <div data-oid="edmwclx">
+        <div data-oid="k.cz.q8">
+            <div className="flex justify-between items-center mb-6" data-oid=":.x4m-6">
+                <div data-oid="ghs6cng">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
-                        data-oid="h5:gsyq"
+                        data-oid="-1e_6in"
                     >
-                        <span className="mr-1" data-oid="i4ovqu3">
+                        <span className="mr-1" data-oid=".6a0fmb">
                             ←
                         </span>{' '}
                         Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold" data-oid="kukxpje">
+                    <h1 className="text-3xl font-bold" data-oid="igbo5qf">
                         {hackathon ? hackathon.title : 'Hackathon'} Registrations
                     </h1>
                     {hackathon && (
-                        <p className="text-gray-400 mt-1" data-oid="a-vl9yw">
+                        <p className="text-gray-400 mt-1" data-oid="hg8gnaz">
                             {new Date(hackathon.startDate).toLocaleDateString()} -{' '}
                             {new Date(hackathon.endDate).toLocaleDateString()} at{' '}
                             {hackathon.location}
@@ -129,60 +129,60 @@ export default function HackathonRegistrationsPage() {
             {registrations.length === 0 ? (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 p-8 text-center"
-                    data-oid="qfl41l:"
+                    data-oid="m-nw6a2"
                 >
-                    <p className="text-gray-400" data-oid="y-of02c">
+                    <p className="text-gray-400" data-oid="nx.i0.r">
                         No registrations found for this hackathon.
                     </p>
                 </div>
             ) : (
                 <div
                     className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
-                    data-oid="u7-31ip"
+                    data-oid="kq5ql4u"
                 >
-                    <div className="overflow-x-auto" data-oid=":fq2oo2">
-                        <table className="min-w-full divide-y divide-gray-700" data-oid="4j2u4--">
-                            <thead className="bg-gray-900" data-oid="a9w:_lf">
-                                <tr data-oid="ucz8nhs">
+                    <div className="overflow-x-auto" data-oid="jxmi6oh">
+                        <table className="min-w-full divide-y divide-gray-700" data-oid="f1ytz9l">
+                            <thead className="bg-gray-900" data-oid="_1p1._.">
+                                <tr data-oid="aizmz30">
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="hg0.39s"
+                                        data-oid="d_kr7es"
                                     >
                                         Team Name
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="n24..qn"
+                                        data-oid="wc43op6"
                                     >
                                         Team Lead
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid=":1l3r_n"
+                                        data-oid="ugt:7mo"
                                     >
                                         Email
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="04qn0jp"
+                                        data-oid="c4u.v3h"
                                     >
                                         Team Size
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="orgityg"
+                                        data-oid="7-:-uyv"
                                     >
                                         Track
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
-                                        data-oid="z6l:xp0"
+                                        data-oid="i79vhju"
                                     >
                                         Registered At
                                     </th>
@@ -190,47 +190,47 @@ export default function HackathonRegistrationsPage() {
                             </thead>
                             <tbody
                                 className="bg-gray-800 divide-y divide-gray-700"
-                                data-oid=":oli:zp"
+                                data-oid="ij83721"
                             >
                                 {registrations.map((registration) => (
                                     <tr
                                         key={registration._id}
                                         className="hover:bg-gray-750"
-                                        data-oid="r10sslx"
+                                        data-oid="1xiuja:"
                                     >
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                            data-oid="sk81p41"
+                                            data-oid="sqg78hf"
                                         >
                                             {registration.teamName}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="xs9twnz"
+                                            data-oid="byqqvmb"
                                         >
                                             {registration.userId.name}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="_ee8v1z"
+                                            data-oid="c2.do0b"
                                         >
                                             {registration.userId.email}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="dthm8qa"
+                                            data-oid="5v3j57r"
                                         >
                                             {registration.teamSize}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="x2h2z7l"
+                                            data-oid="hq:balm"
                                         >
                                             {registration.track}
                                         </td>
                                         <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
-                                            data-oid="bp-cf6r"
+                                            data-oid="3j.zl:j"
                                         >
                                             {new Date(
                                                 registration.registrationDate,
