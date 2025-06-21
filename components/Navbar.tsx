@@ -126,6 +126,13 @@ export default function Navbar() {
                 >
                     Hackathons
                 </Link>
+                <Link
+                    href="/collaborations"
+                    className={`${isActive('/collaborations') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                    data-oid="collab_link"
+                >
+                    Collaborations
+                </Link>
             </div>
 
             <div className="hidden md:flex items-center space-x-4" data-oid="712sqc0">
@@ -373,6 +380,14 @@ export default function Navbar() {
                             data-oid="0e178zb"
                         >
                             About Us
+                        </Link>
+                        <Link
+                            href="/collaborations"
+                            className={`${isActive('/collaborations') ? 'text-purple-400' : 'hover:text-purple-400'} transition-colors`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            data-oid="collab_mobile"
+                        >
+                            Collaborations
                         </Link>
                         <div
                             className="flex flex-col space-y-2 pt-2 border-t border-gray-800"

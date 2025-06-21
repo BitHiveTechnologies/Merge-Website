@@ -3,7 +3,7 @@ import path from 'path';
 const nextConfig = {
     output: 'standalone',
     images: {
-      domains: ['media.licdn.com'],
+      domains: ['media.licdn.com','upload.wikimedia.org'],
     },
   };
 export default nextConfig;
