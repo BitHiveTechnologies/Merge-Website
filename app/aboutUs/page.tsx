@@ -41,7 +41,7 @@ export default function AboutUsPage() {
         },
         {
             name: 'Hariom Yadav',
-            role: 'Co-Founder',
+            role: 'Advisor & Mentor',
             category: 'Leadership',
             description:
                 'IIT Delhi alumnus | Formerly at FunctionUp and Polaris. Expert in curriculum strategy and academic operations, bringing deep insight into scalable tech education models.',

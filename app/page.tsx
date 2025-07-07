@@ -154,7 +154,6 @@ export default function Page() {
         },
     ];
 
-
     return (
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="9srwerw">
             {/* Navbar */}
@@ -581,63 +580,86 @@ export default function Page() {
 
                     {/* Infinite Scrolling Carousel */}
                     <div className="relative overflow-hidden" data-oid="kg4byof">
-                        <div 
+                        <div
                             className="flex animate-infinite-scroll"
                             style={{
-                                width: `${testimonials.length * 2 * 100}%`,
-                                animation: 'infinite-scroll 20s linear infinite'
+                                animation: 'infinite-scroll 8s linear infinite',
                             }}
+                            data-oid="x3vbq3x"
                         >
                             {/* First set of testimonials */}
                             {testimonials.map((testimonial, index) => (
-                                <div 
-                                    key={`first-${index}`} 
-                                    className="flex-shrink-0 px-4"
-                                    style={{ width: `${100 / (testimonials.length * 2)}%` }}
+                                <div
+                                    key={`first-${index}`}
+                                    className="flex-shrink-0 px-3 w-80"
+                                    data-oid="bn4jx8d"
                                 >
-                                    <div className="bg-gray-800 p-6 md:p-8 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-full">
-                                        <div className="flex items-center mb-6">
-                                            <div className="relative">
+                                    <div
+                                        className="bg-gray-800 p-5 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-64"
+                                        data-oid="x1unsgm"
+                                    >
+                                        <div className="flex items-center mb-4" data-oid="d7.qy7c">
+                                            <div className="relative" data-oid="3f_tv-b">
                                                 <img
                                                     src={testimonial.avatar}
                                                     alt={testimonial.name}
-                                                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-purple-500/30"
+                                                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-500/30"
+                                                    data-oid=":i.h8:g"
                                                 />
-                                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+
+                                                <div
+                                                    className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
+                                                    data-oid="bogryne"
+                                                >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-2 w-2 md:h-3 md:w-3 text-white"
+                                                        className="h-2 w-2 text-white"
                                                         fill="none"
                                                         viewBox="0 0 24 24"
                                                         stroke="currentColor"
+                                                        data-oid="d4mj:kw"
                                                     >
                                                         <path
                                                             strokeLinecap="round"
                                                             strokeLinejoin="round"
                                                             strokeWidth={3}
                                                             d="M5 13l4 4L19 7"
+                                                            data-oid="i0g85ft"
                                                         />
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <div className="ml-4">
-                                                <h3 className="text-lg md:text-xl font-semibold text-white">
+                                            <div className="ml-3" data-oid="g1veu77">
+                                                <h3
+                                                    className="text-base font-semibold text-white"
+                                                    data-oid="icw6r7t"
+                                                >
                                                     {testimonial.name}
                                                 </h3>
-                                                <p className="text-purple-400 font-medium text-sm md:text-base">
+                                                <p
+                                                    className="text-purple-400 font-medium text-sm"
+                                                    data-oid="keyls3g"
+                                                >
                                                     {testimonial.role}
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="relative">
+                                        <div className="relative" data-oid="6np::h_">
                                             <svg
-                                                className="absolute -top-2 -left-2 w-6 h-6 md:w-8 md:h-8 text-purple-500/30"
+                                                className="absolute -top-1 -left-1 w-5 h-5 text-purple-500/30"
                                                 fill="currentColor"
                                                 viewBox="0 0 32 32"
+                                                data-oid="k9sjxku"
                                             >
-                                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
+                                                <path
+                                                    d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z"
+                                                    data-oid="p-5b:k-"
+                                                />
                                             </svg>
-                                            <p className="text-base md:text-lg text-gray-300 italic leading-relaxed pl-4 md:pl-6">
+                                            <p
+                                                className="text-sm text-gray-300 italic leading-relaxed pl-3 "
+                                                data-oid="6iv6hvu"
+                                            >
                                                 "{testimonial.content}"
                                             </p>
                                         </div>
@@ -646,54 +668,77 @@ export default function Page() {
                             ))}
                             {/* Duplicate set for seamless loop */}
                             {testimonials.map((testimonial, index) => (
-                                <div 
-                                    key={`second-${index}`} 
-                                    className="flex-shrink-0 px-4"
-                                    style={{ width: `${100 / (testimonials.length * 2)}%` }}
+                                <div
+                                    key={`second-${index}`}
+                                    className="flex-shrink-0 px-3 w-80"
+                                    data-oid="8:y8_fm"
                                 >
-                                    <div className="bg-gray-800 p-6 md:p-8 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-full">
-                                        <div className="flex items-center mb-6">
-                                            <div className="relative">
+                                    <div
+                                        className="bg-gray-800 p-5 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-64"
+                                        data-oid="3quu3a4"
+                                    >
+                                        <div className="flex items-center mb-4" data-oid="ze7rzp2">
+                                            <div className="relative" data-oid="acbzjqd">
                                                 <img
                                                     src={testimonial.avatar}
                                                     alt={testimonial.name}
-                                                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-purple-500/30"
+                                                    className="w-12 h-12 rounded-full object-cover border-2 border-purple-500/30"
+                                                    data-oid="i0-6pe_"
                                                 />
-                                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+
+                                                <div
+                                                    className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
+                                                    data-oid="1s0va_t"
+                                                >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        className="h-2 w-2 md:h-3 md:w-3 text-white"
+                                                        className="h-2 w-2 text-white"
                                                         fill="none"
                                                         viewBox="0 0 24 24"
                                                         stroke="currentColor"
+                                                        data-oid="znqh16y"
                                                     >
                                                         <path
                                                             strokeLinecap="round"
                                                             strokeLinejoin="round"
                                                             strokeWidth={3}
                                                             d="M5 13l4 4L19 7"
+                                                            data-oid="ap65_d7"
                                                         />
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <div className="ml-4">
-                                                <h3 className="text-lg md:text-xl font-semibold text-white">
+                                            <div className="ml-3" data-oid="f9q0cz0">
+                                                <h3
+                                                    className="text-base font-semibold text-white"
+                                                    data-oid="-6f08:0"
+                                                >
                                                     {testimonial.name}
                                                 </h3>
-                                                <p className="text-purple-400 font-medium text-sm md:text-base">
+                                                <p
+                                                    className="text-purple-400 font-medium text-sm"
+                                                    data-oid="j_gxjs5"
+                                                >
                                                     {testimonial.role}
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="relative">
+                                        <div className="relative" data-oid="vl4eh:4">
                                             <svg
-                                                className="absolute -top-2 -left-2 w-6 h-6 md:w-8 md:h-8 text-purple-500/30"
+                                                className="absolute -top-1 -left-1 w-5 h-5 text-purple-500/30"
                                                 fill="currentColor"
                                                 viewBox="0 0 32 32"
+                                                data-oid="7h08-jj"
                                             >
-                                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8z" />
+                                                <path
+                                                    d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8z"
+                                                    data-oid="u92ui:h"
+                                                />
                                             </svg>
-                                            <p className="text-base md:text-lg text-gray-300 italic leading-relaxed pl-4 md:pl-6">
+                                            <p
+                                                className="text-sm text-gray-300 italic leading-relaxed pl-3 "
+                                                data-oid=".fw7g8h"
+                                            >
                                                 "{testimonial.content}"
                                             </p>
                                         </div>
@@ -701,38 +746,29 @@ export default function Page() {
                                 </div>
                             ))}
                         </div>
-                        
-                        {/* Gradient overlays for smooth edges */}
-                        <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none"></div>
-                        <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
-                    </div>
-
-                    {/* Continuous scroll indicator */}
-                    <div className="flex justify-center mt-8">
-                        <div className="flex items-center space-x-2 text-sm text-gray-500">
-                            <div className="flex space-x-1">
-                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                            </div>
-                            <span>Continuously scrolling testimonials</span>
-                        </div>
                     </div>
                 </div>
 
                 {/* CSS Animation */}
-                <style jsx>{`
+                <style jsx data-oid="orxosbw">{`
                     @keyframes infinite-scroll {
                         0% {
                             transform: translateX(0);
                         }
                         100% {
-                            transform: translateX(-50%);
+                            transform: translateX(calc(-320px * ${testimonials.length}));
                         }
                     }
-                    
+
                     .animate-infinite-scroll:hover {
                         animation-play-state: paused;
+                    }
+
+                    .line-clamp-4 {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                     }
                 `}</style>
             </section>
