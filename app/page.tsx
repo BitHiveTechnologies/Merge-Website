@@ -12,6 +12,7 @@ import SalesBanner from '@/components/SalesBanner';
 export default function Page() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [activeVideoTestimonial, setActiveVideoTestimonial] = useState(0);
     const [courses, setCourses] = useState([]);
     const [events, setEvents] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -771,6 +772,422 @@ export default function Page() {
                         overflow: hidden;
                     }
                 `}</style>
+            </section>
+
+            {/* Video Testimonials Section */}
+            <section
+                className="py-20 px-6 md:px-12 bg-black relative overflow-hidden"
+                data-oid="jexx0c_"
+            >
+                {/* Background Elements */}
+                <div
+                    className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-pink-900/10"
+                    data-oid="zj686ec"
+                />
+                <div
+                    className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl"
+                    data-oid="8t6evp3"
+                />
+                <div
+                    className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full filter blur-3xl"
+                    data-oid="s467cwy"
+                />
+
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid="f0gq3ck">
+                    {/* Section Header */}
+                    <div className="text-center mb-16" data-oid="f4x-3ci">
+                        <div
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
+                            data-oid="31ebzu0"
+                        >
+                            <svg
+                                className="w-5 h-5 text-purple-400"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                data-oid="3b7r409"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                    data-oid="o3h6bvf"
+                                />
+                            </svg>
+                            <span className="text-purple-300 font-medium" data-oid="a5qsols">
+                                Video Stories
+                            </span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="g9_17q.">
+                            Success Stories in{' '}
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+                                data-oid="03h3b:o"
+                            >
+                                Motion
+                            </span>
+                        </h2>
+                        <p
+                            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                            data-oid="yt59-:e"
+                        >
+                            Watch real students share their transformative journey with Merge
+                            Learning - from beginners to industry professionals.
+                        </p>
+                    </div>
+
+                    {/* Video Grid */}
+                    <div
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+                        data-oid="wc15vo8"
+                    >
+                        {/* Featured Video - Larger */}
+                        <div className="md:col-span-2 lg:col-span-2 group" data-oid="bfy3va:">
+                            <div
+                                className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-3xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
+                                data-oid="dlwva97"
+                            >
+                                {/* Video Container */}
+                                <div
+                                    className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
+                                    data-oid="c7kn0zd"
+                                >
+                                    {/* Placeholder for video - replace with actual video */}
+                                    <div
+                                        className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
+                                        data-oid="ac-5ut1"
+                                    >
+                                        <div className="text-center" data-oid="zbayv:r">
+                                            <div
+                                                className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                                                data-oid="85porh-"
+                                            >
+                                                <svg
+                                                    className="w-8 h-8 text-white ml-1"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    data-oid="-j_pb4n"
+                                                >
+                                                    <path d="M8 5v14l11-7z" data-oid="jgv68r1" />
+                                                </svg>
+                                            </div>
+                                            <p className="text-gray-400 text-sm" data-oid="sm7vm1t">
+                                                Click to play video
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Video Overlay Info */}
+                                    <div
+                                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6"
+                                        data-oid="vso5owq"
+                                    >
+                                        <div className="flex items-center gap-4" data-oid="kdmbzji">
+                                            <img
+                                                src="https://i.ibb.co/VY22XNhs/Image-05-05-25-at-1-27-AM.jpg"
+                                                alt="Srijan Raman"
+                                                className="w-12 h-12 rounded-full border-2 border-purple-400/50"
+                                                data-oid="-v.t42u"
+                                            />
+
+                                            <div data-oid="3k0p9ji">
+                                                <h3
+                                                    className="text-lg font-semibold text-white"
+                                                    data-oid="_qweqgz"
+                                                >
+                                                    Srijan Raman
+                                                </h3>
+                                                <p
+                                                    className="text-purple-300 text-sm"
+                                                    data-oid="tpmfb2u"
+                                                >
+                                                    Full Stack Developer at TechCorp
+                                                </p>
+                                                <p
+                                                    className="text-gray-400 text-xs"
+                                                    data-oid="m.t9lw4"
+                                                >
+                                                    From Student to Professional in 6 months
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Smaller Video Cards */}
+                        <div className="space-y-8" data-oid="lm43tgu">
+                            {/* Video Card 1 */}
+                            <div className="group" data-oid="8wn2yhn">
+                                <div
+                                    className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
+                                    data-oid="mptr96."
+                                >
+                                    <div
+                                        className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
+                                        data-oid="yq17r0z"
+                                    >
+                                        <div
+                                            className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
+                                            data-oid="c9z3_-9"
+                                        >
+                                            <div
+                                                className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                                                data-oid="wgyx:ri"
+                                            >
+                                                <svg
+                                                    className="w-5 h-5 text-white ml-0.5"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    data-oid="7i-62tb"
+                                                >
+                                                    <path d="M8 5v14l11-7z" data-oid="vdm5a8x" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
+                                            data-oid="9-ui3-h"
+                                        >
+                                            <div
+                                                className="flex items-center gap-3"
+                                                data-oid="wvvns7z"
+                                            >
+                                                <img
+                                                    src="https://i.ibb.co/chcXYNKh/PHOTO-2025-04-25-02-39-11.jpg"
+                                                    alt="Priyansh Kandwal"
+                                                    className="w-8 h-8 rounded-full border border-purple-400/50"
+                                                    data-oid="l:7_tef"
+                                                />
+
+                                                <div data-oid="nagrpmq">
+                                                    <h4
+                                                        className="text-sm font-semibold text-white"
+                                                        data-oid=":-kri3g"
+                                                    >
+                                                        Priyansh Kandwal
+                                                    </h4>
+                                                    <p
+                                                        className="text-purple-300 text-xs"
+                                                        data-oid="js8:z6s"
+                                                    >
+                                                        ML Engineer
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Video Card 2 */}
+                            <div className="group" data-oid="gztowj9">
+                                <div
+                                    className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
+                                    data-oid="ctlq-hv"
+                                >
+                                    <div
+                                        className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
+                                        data-oid="9f4w4hk"
+                                    >
+                                        <div
+                                            className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
+                                            data-oid="v95l9cb"
+                                        >
+                                            <div
+                                                className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+                                                data-oid="tg9ysf_"
+                                            >
+                                                <svg
+                                                    className="w-5 h-5 text-white ml-0.5"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    data-oid="ij-6f7w"
+                                                >
+                                                    <path d="M8 5v14l11-7z" data-oid="-ja0xsw" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
+                                            data-oid="aroe64x"
+                                        >
+                                            <div
+                                                className="flex items-center gap-3"
+                                                data-oid="mh0arup"
+                                            >
+                                                <img
+                                                    src="https://i.ibb.co/Q7HdhYw9/PHOTO-2025-05-05-01-36-16.jpg"
+                                                    alt="Himanshu Prajapati"
+                                                    className="w-8 h-8 rounded-full border border-purple-400/50"
+                                                    data-oid="fwtaa3-"
+                                                />
+
+                                                <div data-oid="o30g8:j">
+                                                    <h4
+                                                        className="text-sm font-semibold text-white"
+                                                        data-oid="l3ujx0p"
+                                                    >
+                                                        Himanshu Prajapati
+                                                    </h4>
+                                                    <p
+                                                        className="text-purple-300 text-xs"
+                                                        data-oid="v5q-a8v"
+                                                    >
+                                                        Software Developer
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Stats Row */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12" data-oid="-b6p966">
+                        <div className="text-center group" data-oid="3hiu:kk">
+                            <div
+                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                data-oid="0k85:lo"
+                            >
+                                <svg
+                                    className="w-8 h-8 text-purple-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    data-oid="y8jrqtv"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                        data-oid="ow.0ayp"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="text-2xl font-bold text-white mb-1" data-oid="7lu220_">
+                                50+
+                            </div>
+                            <div className="text-gray-400 text-sm" data-oid="x2w:-m7">
+                                Video Stories
+                            </div>
+                        </div>
+
+                        <div className="text-center group" data-oid="36mlb6.">
+                            <div
+                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                data-oid="_r92ld5"
+                            >
+                                <svg
+                                    className="w-8 h-8 text-purple-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    data-oid="cw8t7np"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        data-oid="-:1kmmz"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="text-2xl font-bold text-white mb-1" data-oid="a5_.o10">
+                                3-6
+                            </div>
+                            <div className="text-gray-400 text-sm" data-oid="isrrcek">
+                                Months to Success
+                            </div>
+                        </div>
+
+                        <div className="text-center group" data-oid="sn59s7d">
+                            <div
+                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                data-oid="ou187ch"
+                            >
+                                <svg
+                                    className="w-8 h-8 text-purple-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    data-oid="yoluzaa"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        data-oid="mfq:6ro"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="text-2xl font-bold text-white mb-1" data-oid="s48:7lh">
+                                95%
+                            </div>
+                            <div className="text-gray-400 text-sm" data-oid="qfdw6uh">
+                                Success Rate
+                            </div>
+                        </div>
+
+                        <div className="text-center group" data-oid="cikxmyo">
+                            <div
+                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                data-oid="ir9pmi1"
+                            >
+                                <svg
+                                    className="w-8 h-8 text-purple-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    data-oid="3lm5_oa"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                        data-oid="z781exi"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="text-2xl font-bold text-white mb-1" data-oid="uz3jr_8">
+                                500+
+                            </div>
+                            <div className="text-gray-400 text-sm" data-oid="ngaface">
+                                Alumni Network
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Call to Action */}
+                    <div className="text-center" data-oid="6-147hy">
+                        <div className="inline-flex flex-col sm:flex-row gap-4" data-oid="romg3c8">
+                            <a
+                                href="/courses"
+                                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-semibold text-white shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                                data-oid="5g3byi3"
+                            >
+                                Start Your Journey
+                            </a>
+                            <a
+                                href="#"
+                                className="px-8 py-4 rounded-xl border border-purple-500/50 hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-300 font-semibold text-purple-300 hover:text-purple-200"
+                                data-oid="7hu41zh"
+                            >
+                                Watch All Stories
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* Upcoming Events Section */}
