@@ -154,14 +154,6 @@ export default function Page() {
         },
     ];
 
-    // Auto-scrolling testimonials effect
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-        }, 5000); // Auto-scroll every 5 seconds
-
-        return () => clearInterval(interval);
-    }, [testimonials.length]);
 
     return (
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="9srwerw">
@@ -587,189 +579,162 @@ export default function Page() {
                         </p>
                     </div>
 
-                    <div className="relative group" data-oid="kg4byof">
-                        {/* Previous Button */}
-                        <button
-                            onClick={() =>
-                                setActiveTestimonial((prev) =>
-                                    prev === 0 ? testimonials.length - 1 : prev - 1,
-                                )
-                            }
-                            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-gray-800/80 border border-gray-600 flex items-center justify-center text-white hover:bg-gray-700/80 transition-all duration-300 opacity-0 group-hover:opacity-100"
-                            aria-label="Previous testimonial"
-                            data-oid="6q7w:j0"
+                    {/* Infinite Scrolling Carousel */}
+                    <div className="relative overflow-hidden" data-oid="kg4byof">
+                        <div 
+                            className="flex animate-infinite-scroll"
+                            style={{
+                                width: `${testimonials.length * 2 * 100}%`,
+                                animation: 'infinite-scroll 20s linear infinite'
+                            }}
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                data-oid="2z9ckdd"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M15 19l-7-7 7-7"
-                                    data-oid="pp8k-04"
-                                />
-                            </svg>
-                        </button>
-
-                        {/* Next Button */}
-                        <button
-                            onClick={() =>
-                                setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
-                            }
-                            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-gray-800/80 border border-gray-600 flex items-center justify-center text-white hover:bg-gray-700/80 transition-all duration-300 opacity-0 group-hover:opacity-100"
-                            aria-label="Next testimonial"
-                            data-oid="z4fhy9z"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                data-oid="8p:ymjf"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                    data-oid="kt5m2_3"
-                                />
-                            </svg>
-                        </button>
-
-                        <div className="overflow-hidden" data-oid="otm3y.u">
-                            <div
-                                className="flex transition-transform duration-700 ease-in-out"
-                                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
-                                data-oid="w13gg4o"
-                            >
-                                {testimonials.map((testimonial, index) => (
-                                    <div key={index} className="min-w-full px-4" data-oid="-tov43q">
-                                        <div
-                                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 max-w-3xl mx-auto hover:border-purple-500/50 transition-all duration-300"
-                                            data-oid="knc6raz"
-                                        >
-                                            <div
-                                                className="flex items-center mb-6"
-                                                data-oid="bbjc8:4"
-                                            >
-                                                <div className="relative" data-oid="kbfqh3q">
-                                                    <img
-                                                        src={testimonial.avatar}
-                                                        alt={testimonial.name}
-                                                        className="w-16 h-16 rounded-full object-cover border-2 border-purple-500/30"
-                                                        data-oid="l5ky2yr"
-                                                    />
-
-                                                    <div
-                                                        className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
-                                                        data-oid="a.n95c3"
+                            {/* First set of testimonials */}
+                            {testimonials.map((testimonial, index) => (
+                                <div 
+                                    key={`first-${index}`} 
+                                    className="flex-shrink-0 px-4"
+                                    style={{ width: `${100 / (testimonials.length * 2)}%` }}
+                                >
+                                    <div className="bg-gray-800 p-6 md:p-8 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-full">
+                                        <div className="flex items-center mb-6">
+                                            <div className="relative">
+                                                <img
+                                                    src={testimonial.avatar}
+                                                    alt={testimonial.name}
+                                                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-purple-500/30"
+                                                />
+                                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="h-2 w-2 md:h-3 md:w-3 text-white"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
                                                     >
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            className="h-3 w-3 text-white"
-                                                            fill="none"
-                                                            viewBox="0 0 24 24"
-                                                            stroke="currentColor"
-                                                            data-oid="xzxt-w4"
-                                                        >
-                                                            <path
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                                strokeWidth={3}
-                                                                d="M5 13l4 4L19 7"
-                                                                data-oid="koe4adg"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-
-                                                <div className="ml-4" data-oid=":olsx_j">
-                                                    <h3
-                                                        className="text-xl font-semibold text-white"
-                                                        data-oid="og4135d"
-                                                    >
-                                                        {testimonial.name}
-                                                    </h3>
-                                                    <p
-                                                        className="text-purple-400 font-medium"
-                                                        data-oid="pd3fc11"
-                                                    >
-                                                        {testimonial.role}
-                                                    </p>
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            strokeWidth={3}
+                                                            d="M5 13l4 4L19 7"
+                                                        />
+                                                    </svg>
                                                 </div>
                                             </div>
-                                            <div className="relative" data-oid="gmrjx66">
-                                                <svg
-                                                    className="absolute -top-2 -left-2 w-8 h-8 text-purple-500/30"
-                                                    fill="currentColor"
-                                                    viewBox="0 0 32 32"
-                                                    data-oid="tr:xz:o"
-                                                >
-                                                    <path
-                                                        d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z"
-                                                        data-oid="dng1ced"
-                                                    />
-                                                </svg>
-                                                <p
-                                                    className="text-lg text-gray-300 italic leading-relaxed pl-6"
-                                                    data-oid="0wx4i7k"
-                                                >
-                                                    "{testimonial.content}"
+                                            <div className="ml-4">
+                                                <h3 className="text-lg md:text-xl font-semibold text-white">
+                                                    {testimonial.name}
+                                                </h3>
+                                                <p className="text-purple-400 font-medium text-sm md:text-base">
+                                                    {testimonial.role}
                                                 </p>
                                             </div>
                                         </div>
+                                        <div className="relative">
+                                            <svg
+                                                className="absolute -top-2 -left-2 w-6 h-6 md:w-8 md:h-8 text-purple-500/30"
+                                                fill="currentColor"
+                                                viewBox="0 0 32 32"
+                                            >
+                                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
+                                            </svg>
+                                            <p className="text-base md:text-lg text-gray-300 italic leading-relaxed pl-4 md:pl-6">
+                                                "{testimonial.content}"
+                                            </p>
+                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Progress Indicators */}
-                        <div className="flex justify-center mt-8 space-x-3" data-oid="kjgh_.t">
-                            {testimonials.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setActiveTestimonial(index)}
-                                    className={`relative w-3 h-3 rounded-full transition-all duration-300 ${
-                                        activeTestimonial === index
-                                            ? 'bg-purple-500 scale-125'
-                                            : 'bg-gray-600 hover:bg-gray-500'
-                                    }`}
-                                    aria-label={`Go to testimonial ${index + 1}`}
-                                    data-oid="t6vo5_q"
+                                </div>
+                            ))}
+                            {/* Duplicate set for seamless loop */}
+                            {testimonials.map((testimonial, index) => (
+                                <div 
+                                    key={`second-${index}`} 
+                                    className="flex-shrink-0 px-4"
+                                    style={{ width: `${100 / (testimonials.length * 2)}%` }}
                                 >
-                                    {activeTestimonial === index && (
-                                        <div
-                                            className="absolute inset-0 rounded-full bg-purple-500 animate-ping opacity-75"
-                                            data-oid="ebjcaaz"
-                                        ></div>
-                                    )}
-                                </button>
+                                    <div className="bg-gray-800 p-6 md:p-8 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 h-full">
+                                        <div className="flex items-center mb-6">
+                                            <div className="relative">
+                                                <img
+                                                    src={testimonial.avatar}
+                                                    alt={testimonial.name}
+                                                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-purple-500/30"
+                                                />
+                                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="h-2 w-2 md:h-3 md:w-3 text-white"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                    >
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            strokeWidth={3}
+                                                            d="M5 13l4 4L19 7"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div className="ml-4">
+                                                <h3 className="text-lg md:text-xl font-semibold text-white">
+                                                    {testimonial.name}
+                                                </h3>
+                                                <p className="text-purple-400 font-medium text-sm md:text-base">
+                                                    {testimonial.role}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="relative">
+                                            <svg
+                                                className="absolute -top-2 -left-2 w-6 h-6 md:w-8 md:h-8 text-purple-500/30"
+                                                fill="currentColor"
+                                                viewBox="0 0 32 32"
+                                            >
+                                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8z" />
+                                            </svg>
+                                            <p className="text-base md:text-lg text-gray-300 italic leading-relaxed pl-4 md:pl-6">
+                                                "{testimonial.content}"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             ))}
                         </div>
+                        
+                        {/* Gradient overlays for smooth edges */}
+                        <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+                    </div>
 
-                        {/* Auto-scroll indicator */}
-                        <div className="flex justify-center mt-4" data-oid="h9ahlzt">
-                            <div
-                                className="flex items-center space-x-2 text-sm text-gray-500"
-                                data-oid="_4c:351"
-                            >
-                                <div
-                                    className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"
-                                    data-oid="p4xluzm"
-                                ></div>
-                                <span data-oid="ljz3x4d">Auto-scrolling every 5 seconds</span>
+                    {/* Continuous scroll indicator */}
+                    <div className="flex justify-center mt-8">
+                        <div className="flex items-center space-x-2 text-sm text-gray-500">
+                            <div className="flex space-x-1">
+                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                             </div>
+                            <span>Continuously scrolling testimonials</span>
                         </div>
                     </div>
                 </div>
+
+                {/* CSS Animation */}
+                <style jsx>{`
+                    @keyframes infinite-scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    
+                    .animate-infinite-scroll:hover {
+                        animation-play-state: paused;
+                    }
+                `}</style>
             </section>
 
             {/* Upcoming Events Section */}
