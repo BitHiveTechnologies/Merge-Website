@@ -57,15 +57,6 @@ export default function Page() {
         fetchData();
     }, []);
 
-    // Auto-scrolling testimonials effect
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-        }, 5000); // Auto-scroll every 5 seconds
-
-        return () => clearInterval(interval);
-    }, [testimonials.length]);
-
     const testimonials = [
         {
             name: 'Srijan Raman',
@@ -162,6 +153,15 @@ export default function Page() {
             tags: ['career', 'tech industry', 'professional development'],
         },
     ];
+
+    // Auto-scrolling testimonials effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+        }, 5000); // Auto-scroll every 5 seconds
+
+        return () => clearInterval(interval);
+    }, [testimonials.length]);
 
     return (
         <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="9srwerw">
