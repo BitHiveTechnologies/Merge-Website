@@ -93,7 +93,7 @@ export default function AboutUsPage() {
             description:
                 "GSoC'24 @ P4 Lang, GDG Mentor, Top 100 Global – Google Solution Challenge Hackathon 2024, Google DSC'23 Open-source Lead with extensive community experience.",
             linkedin: 'https://www.linkedin.com/in/adarsh-rawat/',
-            image: 'https://media.licdn.com/dms/image/v2/D4D03AQGYCZPVmZxp2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696130197120?e=1755734400&v=beta&t=_8KP605LYBZpEkzjmMLf89e2y3M1T8hentwLDCv0qrM',
+            image: 'https://media.licdn.com/dms/image/v2/D5603AQGBa99gHNT3ig/profile-displayphoto-crop_800_800/B56Ze7Tw7aH8AM-/0/1751194210473?e=1757548800&v=beta&t=J8RPqoQnaMueG9DKMs9AgwNg8CBsimD4FNkG6uzqkQU',
         },
         // Advisory Team
         {
