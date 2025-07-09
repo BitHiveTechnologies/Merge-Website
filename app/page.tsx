@@ -1,13 +1,12 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
 import FeaturedCourses from '@/components/FeaturedCourses';
+import Navbar from '@/components/Navbar';
+import SalesBanner from '@/components/SalesBanner';
+import { BACKEND_URL } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { env } from 'process';
-import { BACKEND_URL } from '@/lib/utils';
-import SalesBanner from '@/components/SalesBanner';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,51 +66,184 @@ export default function Page() {
             avatar: 'https://i.ibb.co/VY22XNhs/Image-05-05-25-at-1-27-AM.jpg',
         },
         {
-            name: 'Priyansh Kandwal',
-            role: 'Student, PST',
-            content:
-                "Participating in Merge's Course gave me real-world experience and helped me build my portfolio. I landed my dream Internship shortly after!",
-            avatar: 'https://i.ibb.co/chcXYNKh/PHOTO-2025-04-25-02-39-11.jpg',
-        },
-        {
             name: 'Himanshu Prajapati',
             role: 'Student, Starex University',
             content:
                 'The instructors are industry professionals who provide practical insights. The WhatsApp community continues to be a valuable resource.',
             avatar: 'https://i.ibb.co/Q7HdhYw9/PHOTO-2025-05-05-01-36-16.jpg',
         },
+        {
+            name: 'Amit Kumar Mehta',
+            role: 'Student',
+            content:
+                'The session was extremely informative and engaging. I truly appreciated the way complex topics were broken down into simple, digestible parts. Looking forward to more such experiences!',
+            avatar: 'https://i.ibb.co/HpVGgcGc/Screenshot-2025-07-09-at-6-06-59-PM.png',
+        },
+        {
+            name: 'Md Adil Ali',
+            role: 'Student',
+            content:
+                'I really liked the Python class. In just under a week, I was able to understand the fundamentals clearly—something I’ve struggled with before. The instructors made everything so approachable.',
+            avatar: 'https://i.ibb.co/PzQ9PfhZ/Screenshot-2025-07-09-at-6-08-24-PM.png',
+        },
+        {
+            name: 'Shri Om Verma',
+            role: 'Student',
+            content:
+                'Quite a good experience overall. The instructors were knowledgeable and the sessions were very practical. I got to learn things that aren’t usually taught in classrooms.',
+            avatar: 'https://i.ibb.co/hRQ85kK2/Screenshot-2025-07-09-at-6-09-28-PM.png',
+        },
+        {
+            name: 'Aditi Meena',
+            role: 'Student',
+            content:
+                'Excellent session! The workshop was full of actionable insights and I left with a stronger grasp of programming concepts. Great job to the entire team!',
+            avatar: 'https://i.ibb.co/NnsWDW0M/Screenshot-2025-07-09-at-6-10-17-PM.png',
+        },
+        {
+            name: 'Vishveshwar Pandey',
+            role: 'Student',
+            content:
+                'The session was well-structured and easy to follow. The content covered both theory and practical parts, which made the learning process smoother and more effective.',
+            avatar: 'https://i.ibb.co/rf387zTG/Screenshot-2025-07-09-at-6-11-03-PM.png',
+        },
+        {
+            name: 'Yogita Yadav',
+            role: 'Student',
+            content:
+                'I found the event really beneficial. The pace was perfect, and the instructors were approachable. Loved the practical exercises and real-life applications.',
+            avatar: 'https://i.ibb.co/3y7mh5RL/Screenshot-2025-07-09-at-6-11-58-PM.png',
+        },
+        {
+            name: 'Vipin Babu Vishwakarma',
+            role: 'Student',
+            content:
+                'Very good and productive workshop. It helped me strengthen my basics and introduced me to industry-level practices in a fun, digestible way.',
+            avatar: 'https://i.ibb.co/MDHycdCP/Screenshot-2025-07-09-at-6-12-38-PM.png',
+        },
+        {
+            name: 'Ishaan Sen',
+            role: 'Student',
+            content:
+                'Good overall! The trainers explained concepts very well and the hands-on approach really helped me to understand and retain the material.',
+            avatar: 'https://i.ibb.co/xKdjsqKD/Screenshot-2025-07-09-at-6-14-02-PM.png',
+        },
+        {
+            name: 'Pratibha Tiwari',
+            role: 'Student',
+            content:
+                'Nice session with well-paced instruction. The materials provided were helpful, and I appreciated the chance to ask questions and get direct support.',
+            avatar: 'https://i.ibb.co/W4p9rQMs/Screenshot-2025-07-09-at-6-15-02-PM.png',
+        },
+        {
+            name: 'Yashaswini Tripathi',
+            role: 'Student',
+            content:
+                'The workshop was good and beginner-friendly. I liked how the instructors kept it interactive and included plenty of examples to relate with.',
+            avatar: 'https://i.ibb.co/M5QyzpVh/Screenshot-2025-07-09-at-6-15-34-PM.png',
+        },
+        {
+            name: 'Sahil Patel',
+            role: 'Student',
+            content:
+                'A very nice session overall. It gave me the confidence to explore more advanced concepts on my own, and the explanations were very clear.',
+            avatar: 'https://i.ibb.co/n8nt5N7M/Screenshot-2025-07-09-at-6-16-10-PM.png',
+        },
+        {
+            name: 'Abhinav Kumar',
+            role: 'Student',
+            content:
+                'Excellent experience! The instructors were top-notch and the real-world examples made everything so easy to understand.',
+            avatar: 'https://i.ibb.co/mYGcxyq/Screenshot-2025-07-09-at-6-17-01-PM.png',
+        },
+        {
+            name: 'Rajdeep Patel',
+            role: 'Student',
+            content:
+                'It was an Okay experience for me. While the content was fine, I think the delivery could be made a bit more dynamic.',
+            avatar: 'https://i.ibb.co/0RK15jPQ/Screenshot-2025-07-09-at-6-18-02-PM.png',
+        },
+        {
+            name: 'Ritu Rai',
+            role: 'Student',
+            content:
+                'The event was really helpful and I loved the friendly environment. The instructors ensured everyone stayed on the same page.',
+            avatar: 'https://i.ibb.co/bjG8F8WG/Screenshot-2025-07-09-at-6-18-35-PM.png',
+        },
+        {
+            name: 'Harsh Shivhare',
+            role: 'Student',
+            content:
+                'Excellent workshop! I liked the hands-on project and how everything was structured step-by-step. Definitely helped me grow.',
+            avatar: 'https://i.ibb.co/5hNJh1sp/Screenshot-2025-07-09-at-6-19-10-PM.png',
+        },
+        {
+            name: 'Tamanna Saraf',
+            role: 'Student',
+            content:
+                'It was an amazing session where I got to learn a lot from industry-level mentors. The examples and support were top class!',
+            avatar: 'https://i.ibb.co/NdWk9CNM/Screenshot-2025-07-09-at-6-19-47-PM.png',
+        },
+        {
+            name: 'Suhani Tiwari',
+            role: 'Student',
+            content:
+                'One of the best workshops I’ve attended recently. The instructors were clear, professional, and super helpful.',
+            avatar: 'https://i.ibb.co/6z0NjQn/Screenshot-2025-07-09-at-6-21-23-PM.png',
+        },
+        {
+            name: 'Surya Soni',
+            role: 'Student',
+            content:
+                'An awesome event with an energetic vibe. Got to explore new tools and techniques that I’ll definitely use going forward.',
+            avatar: 'https://i.ibb.co/j9xD74qN/Screenshot-2025-07-09-at-6-20-21-PM.png',
+        },
+        {
+            name: 'Aditya Kumar',
+            role: 'Student',
+            content:
+                'A good introduction to important concepts. The structure was helpful, and I feel more confident in tackling similar topics now.',
+            avatar: 'https://i.ibb.co/Z11pyZth/Screenshot-2025-07-09-at-6-20-52-PM.png',
+        },
     ];
 
-    // Fallback data in case API fails
-    const fallbackCourses = [
+    const videoTestimonials = [
         {
             id: 1,
-            title: 'Full Stack Web Development',
-            instructor: 'John Smith',
-            duration: '12 weeks',
-            level: 'Intermediate',
-            price: '₹12,999',
-            image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+            videoUrl: 'https://youtu.be/DIFCMtzg7xg?si=8C81OCvzdvVB7Htr',
+            embedId: 'DIFCMtzg7xg',
         },
         {
             id: 2,
-            title: 'UI/UX Design Fundamentals',
-            instructor: 'Maya Patel',
-            duration: '8 weeks',
-            level: 'Beginner',
-            price: '₹8,999',
-            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+            videoUrl: 'https://youtu.be/lXqHjBoSiGs?si=BIcUY0ILojaKAk4V', // Replace with actual video
+            embedId: 'lXqHjBoSiGs', // Replace with actual embed ID
         },
         {
             id: 3,
-            title: 'Data Structures & Algorithms',
-            instructor: 'David Lee',
-            duration: '10 weeks',
-            level: 'Advanced',
-            price: '₹10,999',
-            image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+            videoUrl: 'https://youtu.be/DIFCMtzg7xg?si=8C81OCvzdvVB7Htr', // Replace with actual video
+            embedId: 'DIFCMtzg7xg', // Replace with actual embed ID
+        },
+        {
+            id: 4,
+            videoUrl: 'https://youtu.be/DIFCMtzg7xg?si=8C81OCvzdvVB7Htr', // Replace with actual video
+            embedId: 'DIFCMtzg7xg', // Replace with actual embed ID
+        },
+        {
+            id: 5,
+            videoUrl: 'https://youtu.be/DIFCMtzg7xg?si=8C81OCvzdvVB7Htr', // Replace with actual video
+            embedId: 'DIFCMtzg7xg', // Replace with actual embed ID
         },
     ];
+
+    const nextVideoTestimonial = () => {
+        setActiveVideoTestimonial((prev) => (prev + 1) % videoTestimonials.length);
+    };
+
+    const prevVideoTestimonial = () => {
+        setActiveVideoTestimonial(
+            (prev) => (prev - 1 + videoTestimonials.length) % videoTestimonials.length,
+        );
+    };
 
     const fallbackEvents = [
         {
@@ -560,6 +692,272 @@ export default function Page() {
                 </div>
             </section>
 
+            {/* Video Testimonials Section */}
+            {/* <section
+        className="py-20 px-6 md:px-12 bg-black relative overflow-hidden"
+        data-oid="qb19go0"
+        > */}
+            {/* Background Elements */}
+            {/* <div
+        className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-pink-900/10"
+        data-oid="wv1wi1_"
+        />
+        <div
+        className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl"
+        data-oid="xz1ozu9"
+        />
+        <div
+        className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full filter blur-3xl"
+        data-oid="rtte2u0"
+        />
+        <div className="relative z-10 max-w-6xl mx-auto" data-oid="yi9i.z9"> */}
+            {/* Section Header */}
+            {/* <div className="text-center mb-16" data-oid="74aes.k">
+        <div
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
+        data-oid="yhs8nz9"
+        >
+        <svg
+        className="w-5 h-5 text-purple-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="zwl-wwm"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+        data-oid="vt06xnp"
+        />
+        </svg>
+        <span className="text-purple-300 font-medium" data-oid="lbinrls">
+        Video Stories
+        </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="972mv8u">
+        Success Stories in{' '}
+        <span
+        className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+        data-oid="qd:p0f."
+        >
+        Motion
+        </span>
+        </h2>
+        <p
+        className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+        data-oid="d.oxhr:"
+        >
+        Watch real students share their transformative journey with Merge
+        Learning - from beginners to industry professionals.
+        </p>
+        </div> */}
+
+            {/* Video Carousel */}
+            {/* <div className="relative mb-12" data-oid="x-607_4"> */}
+            {/* Main Video Container */}
+            {/* <div
+        className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-3xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden group"
+        data-oid="mxi_uep"
+        > */}
+            {/* Video Player */}
+            {/* <div className="relative aspect-video" data-oid="sn.lt29">
+        <iframe
+        key={videoTestimonials[activeVideoTestimonial].embedId}
+        src={`https://www.youtube.com/embed/${videoTestimonials[activeVideoTestimonial].embedId}?autoplay=1&mute=1&loop=1&playlist=${videoTestimonials[activeVideoTestimonial].embedId}&controls=1&modestbranding=1&rel=0`}
+        // title={`${videoTestimonials[activeVideoTestimonial].name} Testimonial`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+        allowFullScreen
+        className="w-full h-full rounded-3xl"
+        data-oid=":mwyz0k"
+        />
+        </div> */}
+
+            {/* Navigation Arrows */}
+            {/* <button
+        onClick={prevVideoTestimonial}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/70 hover:bg-black/90 border border-purple-500/30 hover:border-purple-400 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
+        aria-label="Previous video"
+        data-oid="pj.bfy0"
+        >
+        <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="w.14u0:"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M15 19l-7-7 7-7"
+        data-oid="486f9fo"
+        />
+        </svg>
+        </button>
+        <button
+        onClick={nextVideoTestimonial}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/70 hover:bg-black/90 border border-purple-500/30 hover:border-purple-400 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
+        aria-label="Next video"
+        data-oid="m7k73ig"
+        >
+        <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="e1u0f_b"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M9 5l7 7-7 7"
+        data-oid="-3xy8yd"
+        />
+        </svg>
+        </button>
+        </div> */}
+
+            {/* Video Indicators */}
+            {/* <div className="flex justify-center mt-6 gap-3" data-oid="tl8zvrw">
+        {videoTestimonials.map((_, index) => (
+        <button
+        key={index}
+        onClick={() => setActiveVideoTestimonial(index)}
+        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+        index === activeVideoTestimonial
+        ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+        : 'bg-gray-600 hover:bg-gray-500'
+        }`}
+        aria-label={`Go to video ${index + 1}`}
+        data-oid="i_:l3ne"
+        />
+        ))}
+        </div>
+        </div> */}
+
+            {/* Stats Row */}
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6" data-oid="ot.yigb">
+        <div className="text-center group" data-oid="a8fo74-">
+        <div
+        className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+        data-oid="cm0xsoa"
+        >
+        <svg
+        className="w-8 h-8 text-purple-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="8l9oeg6"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+        data-oid="46awant"
+        />
+        </svg>
+        </div>
+        <div className="text-2xl font-bold text-white mb-1" data-oid="leni_cv">
+        {videoTestimonials.length}+
+        </div>
+        <div className="text-gray-400 text-sm" data-oid="lf_1.q7">
+        Video Stories
+        </div>
+        </div>
+        <div className="text-center group" data-oid="w7.bfnw">
+        <div
+        className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+        data-oid="tcmts.a"
+        >
+        <svg
+        className="w-8 h-8 text-purple-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="1xenjnr"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+        data-oid="a195ghl"
+        />
+        </svg>
+        </div>
+        <div className="text-2xl font-bold text-white mb-1" data-oid="x2_z.9u">
+        3-6
+        </div>
+        <div className="text-gray-400 text-sm" data-oid="yb_3b-o">
+        Months to Success
+        </div>
+        </div>
+        <div className="text-center group" data-oid="vapiazv">
+        <div
+        className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+        data-oid="c8j.b8m"
+        >
+        <svg
+        className="w-8 h-8 text-purple-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="-82n5wt"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M13 10V3L4 14h7v7l9-11h-7z"
+        data-oid="3h:h1hn"
+        />
+        </svg>
+        </div>
+        <div className="text-2xl font-bold text-white mb-1" data-oid="icdar4i">
+        95%
+        </div>
+        <div className="text-gray-400 text-sm" data-oid="895a7-7">
+        Success Rate
+        </div>
+        </div>
+        <div className="text-center group" data-oid="d6ypwk_">
+        <div
+        className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+        data-oid="oz.:zth"
+        >
+        <svg
+        className="w-8 h-8 text-purple-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-oid="1-_n0z2"
+        >
+        <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+        data-oid="q5w.9rh"
+        />
+        </svg>
+        </div>
+        <div className="text-2xl font-bold text-white mb-1" data-oid="yk3-2_p">
+        500+
+        </div>
+        <div className="text-gray-400 text-sm" data-oid="s6k.iii">
+        Alumni Network
+        </div>
+        </div>
+        </div>
+        </div>
+        </section> */}
+
             {/* Featured Courses Section */}
             <FeaturedCourses data-oid="b3utjqs" />
 
@@ -584,7 +982,7 @@ export default function Page() {
                         <div
                             className="flex animate-infinite-scroll"
                             style={{
-                                animation: 'infinite-scroll 8s linear infinite',
+                                animation: 'infinite-scroll 35s linear infinite',
                             }}
                             data-oid="x3vbq3x"
                         >
@@ -772,422 +1170,6 @@ export default function Page() {
                         overflow: hidden;
                     }
                 `}</style>
-            </section>
-
-            {/* Video Testimonials Section */}
-            <section
-                className="py-20 px-6 md:px-12 bg-black relative overflow-hidden"
-                data-oid="jexx0c_"
-            >
-                {/* Background Elements */}
-                <div
-                    className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-pink-900/10"
-                    data-oid="zj686ec"
-                />
-                <div
-                    className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl"
-                    data-oid="8t6evp3"
-                />
-                <div
-                    className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full filter blur-3xl"
-                    data-oid="s467cwy"
-                />
-
-                <div className="relative z-10 max-w-7xl mx-auto" data-oid="f0gq3ck">
-                    {/* Section Header */}
-                    <div className="text-center mb-16" data-oid="f4x-3ci">
-                        <div
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
-                            data-oid="31ebzu0"
-                        >
-                            <svg
-                                className="w-5 h-5 text-purple-400"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                data-oid="3b7r409"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                    data-oid="o3h6bvf"
-                                />
-                            </svg>
-                            <span className="text-purple-300 font-medium" data-oid="a5qsols">
-                                Video Stories
-                            </span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="g9_17q.">
-                            Success Stories in{' '}
-                            <span
-                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
-                                data-oid="03h3b:o"
-                            >
-                                Motion
-                            </span>
-                        </h2>
-                        <p
-                            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-                            data-oid="yt59-:e"
-                        >
-                            Watch real students share their transformative journey with Merge
-                            Learning - from beginners to industry professionals.
-                        </p>
-                    </div>
-
-                    {/* Video Grid */}
-                    <div
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-                        data-oid="wc15vo8"
-                    >
-                        {/* Featured Video - Larger */}
-                        <div className="md:col-span-2 lg:col-span-2 group" data-oid="bfy3va:">
-                            <div
-                                className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-3xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
-                                data-oid="dlwva97"
-                            >
-                                {/* Video Container */}
-                                <div
-                                    className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
-                                    data-oid="c7kn0zd"
-                                >
-                                    {/* Placeholder for video - replace with actual video */}
-                                    <div
-                                        className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
-                                        data-oid="ac-5ut1"
-                                    >
-                                        <div className="text-center" data-oid="zbayv:r">
-                                            <div
-                                                className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                                                data-oid="85porh-"
-                                            >
-                                                <svg
-                                                    className="w-8 h-8 text-white ml-1"
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    data-oid="-j_pb4n"
-                                                >
-                                                    <path d="M8 5v14l11-7z" data-oid="jgv68r1" />
-                                                </svg>
-                                            </div>
-                                            <p className="text-gray-400 text-sm" data-oid="sm7vm1t">
-                                                Click to play video
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Video Overlay Info */}
-                                    <div
-                                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6"
-                                        data-oid="vso5owq"
-                                    >
-                                        <div className="flex items-center gap-4" data-oid="kdmbzji">
-                                            <img
-                                                src="https://i.ibb.co/VY22XNhs/Image-05-05-25-at-1-27-AM.jpg"
-                                                alt="Srijan Raman"
-                                                className="w-12 h-12 rounded-full border-2 border-purple-400/50"
-                                                data-oid="-v.t42u"
-                                            />
-
-                                            <div data-oid="3k0p9ji">
-                                                <h3
-                                                    className="text-lg font-semibold text-white"
-                                                    data-oid="_qweqgz"
-                                                >
-                                                    Srijan Raman
-                                                </h3>
-                                                <p
-                                                    className="text-purple-300 text-sm"
-                                                    data-oid="tpmfb2u"
-                                                >
-                                                    Full Stack Developer at TechCorp
-                                                </p>
-                                                <p
-                                                    className="text-gray-400 text-xs"
-                                                    data-oid="m.t9lw4"
-                                                >
-                                                    From Student to Professional in 6 months
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Smaller Video Cards */}
-                        <div className="space-y-8" data-oid="lm43tgu">
-                            {/* Video Card 1 */}
-                            <div className="group" data-oid="8wn2yhn">
-                                <div
-                                    className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
-                                    data-oid="mptr96."
-                                >
-                                    <div
-                                        className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
-                                        data-oid="yq17r0z"
-                                    >
-                                        <div
-                                            className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
-                                            data-oid="c9z3_-9"
-                                        >
-                                            <div
-                                                className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                                                data-oid="wgyx:ri"
-                                            >
-                                                <svg
-                                                    className="w-5 h-5 text-white ml-0.5"
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    data-oid="7i-62tb"
-                                                >
-                                                    <path d="M8 5v14l11-7z" data-oid="vdm5a8x" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
-                                            data-oid="9-ui3-h"
-                                        >
-                                            <div
-                                                className="flex items-center gap-3"
-                                                data-oid="wvvns7z"
-                                            >
-                                                <img
-                                                    src="https://i.ibb.co/chcXYNKh/PHOTO-2025-04-25-02-39-11.jpg"
-                                                    alt="Priyansh Kandwal"
-                                                    className="w-8 h-8 rounded-full border border-purple-400/50"
-                                                    data-oid="l:7_tef"
-                                                />
-
-                                                <div data-oid="nagrpmq">
-                                                    <h4
-                                                        className="text-sm font-semibold text-white"
-                                                        data-oid=":-kri3g"
-                                                    >
-                                                        Priyansh Kandwal
-                                                    </h4>
-                                                    <p
-                                                        className="text-purple-300 text-xs"
-                                                        data-oid="js8:z6s"
-                                                    >
-                                                        ML Engineer
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Video Card 2 */}
-                            <div className="group" data-oid="gztowj9">
-                                <div
-                                    className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-2xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 overflow-hidden"
-                                    data-oid="ctlq-hv"
-                                >
-                                    <div
-                                        className="relative aspect-video bg-gradient-to-br from-purple-900/20 to-pink-900/20"
-                                        data-oid="9f4w4hk"
-                                    >
-                                        <div
-                                            className="absolute inset-0 flex items-center justify-center bg-gray-900/80"
-                                            data-oid="v95l9cb"
-                                        >
-                                            <div
-                                                className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer"
-                                                data-oid="tg9ysf_"
-                                            >
-                                                <svg
-                                                    className="w-5 h-5 text-white ml-0.5"
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    data-oid="ij-6f7w"
-                                                >
-                                                    <path d="M8 5v14l11-7z" data-oid="-ja0xsw" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
-                                            data-oid="aroe64x"
-                                        >
-                                            <div
-                                                className="flex items-center gap-3"
-                                                data-oid="mh0arup"
-                                            >
-                                                <img
-                                                    src="https://i.ibb.co/Q7HdhYw9/PHOTO-2025-05-05-01-36-16.jpg"
-                                                    alt="Himanshu Prajapati"
-                                                    className="w-8 h-8 rounded-full border border-purple-400/50"
-                                                    data-oid="fwtaa3-"
-                                                />
-
-                                                <div data-oid="o30g8:j">
-                                                    <h4
-                                                        className="text-sm font-semibold text-white"
-                                                        data-oid="l3ujx0p"
-                                                    >
-                                                        Himanshu Prajapati
-                                                    </h4>
-                                                    <p
-                                                        className="text-purple-300 text-xs"
-                                                        data-oid="v5q-a8v"
-                                                    >
-                                                        Software Developer
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Stats Row */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12" data-oid="-b6p966">
-                        <div className="text-center group" data-oid="3hiu:kk">
-                            <div
-                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                data-oid="0k85:lo"
-                            >
-                                <svg
-                                    className="w-8 h-8 text-purple-400"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    data-oid="y8jrqtv"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                        data-oid="ow.0ayp"
-                                    />
-                                </svg>
-                            </div>
-                            <div className="text-2xl font-bold text-white mb-1" data-oid="7lu220_">
-                                50+
-                            </div>
-                            <div className="text-gray-400 text-sm" data-oid="x2w:-m7">
-                                Video Stories
-                            </div>
-                        </div>
-
-                        <div className="text-center group" data-oid="36mlb6.">
-                            <div
-                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                data-oid="_r92ld5"
-                            >
-                                <svg
-                                    className="w-8 h-8 text-purple-400"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    data-oid="cw8t7np"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        data-oid="-:1kmmz"
-                                    />
-                                </svg>
-                            </div>
-                            <div className="text-2xl font-bold text-white mb-1" data-oid="a5_.o10">
-                                3-6
-                            </div>
-                            <div className="text-gray-400 text-sm" data-oid="isrrcek">
-                                Months to Success
-                            </div>
-                        </div>
-
-                        <div className="text-center group" data-oid="sn59s7d">
-                            <div
-                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                data-oid="ou187ch"
-                            >
-                                <svg
-                                    className="w-8 h-8 text-purple-400"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    data-oid="yoluzaa"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                                        data-oid="mfq:6ro"
-                                    />
-                                </svg>
-                            </div>
-                            <div className="text-2xl font-bold text-white mb-1" data-oid="s48:7lh">
-                                95%
-                            </div>
-                            <div className="text-gray-400 text-sm" data-oid="qfdw6uh">
-                                Success Rate
-                            </div>
-                        </div>
-
-                        <div className="text-center group" data-oid="cikxmyo">
-                            <div
-                                className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                data-oid="ir9pmi1"
-                            >
-                                <svg
-                                    className="w-8 h-8 text-purple-400"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    data-oid="3lm5_oa"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                        data-oid="z781exi"
-                                    />
-                                </svg>
-                            </div>
-                            <div className="text-2xl font-bold text-white mb-1" data-oid="uz3jr_8">
-                                500+
-                            </div>
-                            <div className="text-gray-400 text-sm" data-oid="ngaface">
-                                Alumni Network
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Call to Action */}
-                    <div className="text-center" data-oid="6-147hy">
-                        <div className="inline-flex flex-col sm:flex-row gap-4" data-oid="romg3c8">
-                            <a
-                                href="/courses"
-                                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all duration-300 font-semibold text-white shadow-lg hover:shadow-purple-500/25 hover:scale-105"
-                                data-oid="5g3byi3"
-                            >
-                                Start Your Journey
-                            </a>
-                            <a
-                                href="#"
-                                className="px-8 py-4 rounded-xl border border-purple-500/50 hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-300 font-semibold text-purple-300 hover:text-purple-200"
-                                data-oid="7hu41zh"
-                            >
-                                Watch All Stories
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             {/* Upcoming Events Section */}
