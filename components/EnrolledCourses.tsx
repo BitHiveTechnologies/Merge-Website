@@ -62,28 +62,28 @@ export default function EnrolledCourses() {
     };
 
     return (
-        <div className="py-8 px-6 md:px-12 bg-black" data-oid="ec:85at">
-            <div className="max-w-6xl mx-auto" data-oid="ugjpd:a">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="c6do59l">
+        <div className="py-8 px-6 md:px-12 bg-black" data-oid="87b88s7">
+            <div className="max-w-6xl mx-auto" data-oid="q9c-20-">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8" data-oid="tehka9r">
                     Your Enrolled Courses
                 </h2>
 
                 {isLoading ? (
-                    <div className="flex justify-center items-center py-20" data-oid="8j0kmsn">
+                    <div className="flex justify-center items-center py-20" data-oid="krla27n">
                         <div
                             className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
-                            data-oid="hn7u4_x"
+                            data-oid="8kc.v1g"
                         ></div>
                     </div>
                 ) : error ? (
-                    <div className="text-center py-12" data-oid="xo.ny3p">
-                        <p className="text-red-400 mb-4" data-oid="odyi_a1">
+                    <div className="text-center py-12" data-oid="kp3rqrm">
+                        <p className="text-red-400 mb-4" data-oid=":k:c5.c">
                             {error}
                         </p>
                         <button
                             onClick={() => window.location.reload()}
                             className="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
-                            data-oid="n_nrm56"
+                            data-oid="oxa.3sp"
                         >
                             Retry
                         </button>
@@ -91,52 +91,52 @@ export default function EnrolledCourses() {
                 ) : enrollments.length === 0 ? (
                     <div
                         className="text-center py-12 bg-gray-800 rounded-xl border border-gray-700 p-8"
-                        data-oid="u7ui0o-"
+                        data-oid="t7t9o4r"
                     >
-                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="lc-gvps">
+                        <h3 className="text-xl font-semibold text-gray-300 mb-4" data-oid="qj9vdrw">
                             You haven't enrolled in any courses yet
                         </h3>
-                        <p className="text-gray-400 mb-6" data-oid="ix7t4p3">
+                        <p className="text-gray-400 mb-6" data-oid="13b287c">
                             Explore our courses and start your learning journey today!
                         </p>
                         <button
                             onClick={() => router.push('/courses')}
                             className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                            data-oid=".xtoa:4"
+                            data-oid="3buqqer"
                         >
                             Browse Courses
                         </button>
                     </div>
                 ) : (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid=".vjp52v">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="jf90w8e">
                         {enrollments.map((enrollment) => (
                             <div
                                 key={enrollment._id}
                                 className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all hover:-translate-y-1 cursor-pointer"
                                 onClick={() => handleCourseClick(enrollment.courseId._id)}
-                                data-oid="xo2_-sb"
+                                data-oid="g.wl68o"
                             >
-                                <div className="relative h-48 overflow-hidden" data-oid="361039i">
+                                <div className="relative h-48 overflow-hidden" data-oid="qcjbp.-">
                                     <img
                                         src={enrollment.courseId?.image}
                                         alt={enrollment.courseId?.title}
                                         className="w-full h-full object-cover"
-                                        data-oid="uog_txe"
+                                        data-oid="4a-iy1b"
                                     />
 
                                     <div
                                         className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1"
-                                        data-oid="43a1b1c"
+                                        data-oid="p_9kki6"
                                     >
                                         Enrolled
                                     </div>
                                 </div>
-                                <div className="p-6" data-oid="e27dx36">
+                                <div className="p-6" data-oid="8tiyiud">
                                     <div
                                         className="flex justify-between items-start mb-2"
-                                        data-oid="b-fwxk-"
+                                        data-oid="c1bg_e0"
                                     >
-                                        <h3 className="text-xl font-semibold" data-oid="x9by5s1">
+                                        <h3 className="text-xl font-semibold" data-oid="t6oo3vu">
                                             {enrollment.courseId?.title}
                                         </h3>
                                         <span
@@ -147,29 +147,29 @@ export default function EnrolledCourses() {
                                                       ? 'bg-blue-500/20 text-blue-300'
                                                       : 'bg-purple-500/20 text-purple-300'
                                             }`}
-                                            data-oid="npfqi.4"
+                                            data-oid="n3kq3ct"
                                         >
                                             {enrollment.courseId.level}
                                         </span>
                                     </div>
                                     <p
                                         className="text-gray-400 text-sm mb-4 line-clamp-2"
-                                        data-oid="07szsw-"
+                                        data-oid=".lrucdi"
                                     >
                                         {enrollment.courseId.description}
                                     </p>
-                                    <div className="flex items-center mb-3" data-oid="05546gu">
+                                    <div className="flex items-center mb-3" data-oid="nvqf_:y">
                                         <div
                                             className="w-8 h-8 rounded-full bg-gray-600 mr-3"
-                                            data-oid="qjet:a."
+                                            data-oid="w-gu55a"
                                         ></div>
-                                        <span className="text-gray-300 text-sm" data-oid="srkpdjp">
+                                        <span className="text-gray-300 text-sm" data-oid="m5pw98y">
                                             {enrollment.courseId.instructor}
                                         </span>
                                     </div>
                                     <button
                                         className="w-full py-2 text-center rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium"
-                                        data-oid="u14ndjk"
+                                        data-oid="fhtbd4m"
                                     >
                                         Continue Learning
                                     </button>
