@@ -186,100 +186,237 @@ export default function CollaborationsPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-center" data-oid="l.i0hmw">
-                        <div data-oid="e92n_y0">
-                            <div className="space-y-6" data-oid="x5higx1">
-                                {[
-                                    'Real-world projects (startup-inspired)',
-                                    '1:1 mentorship sessions',
-                                    'Technical masterclasses (DSA, System Design, AI/ML)',
-                                    'Soft skills & placement readiness',
-                                    'Regular reviews & demo days',
-                                ].map((feature, index) => (
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="l.i0hmw">
+                        {[
+                            {
+                                title: 'Full-Stack Development with GenAI',
+                                features: [
+                                    'System Design & Architecture',
+                                    'Real-world project experience',
+                                    'Generative AI',
+                                    'Industry Mentorship',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1yT2SjBvuk3GTcZOm5R-Gl4adxcR7l7Mo/view?usp=drive_link',
+                                color: 'from-blue-500 to-cyan-500',
+                            },
+                            {
+                                title: 'Full-Stack Development with AI + Open-Source',
+                                features: [
+                                    'System Design & Architecture',
+                                    'Real-world project experience',
+                                    'Open Source Contributions',
+                                    'Industry Mentorship',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1vLq42aLvH6hmlafkYtiITlKVpRYqS7dg/view?usp=drive_link',
+                                color: 'from-indigo-500 to-purple-500',
+                            },
+                            {
+                                title: 'Data Science with Artificial Intelligence',
+                                features: [
+                                    'Python, TensorFlow, PyTorch',
+                                    'Statistical Analysis & Modeling',
+                                    'Deep Learning & Neural Networks',
+                                    'Industry case studies',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1URdadFzpL_7AeHdZXCSbDr61LB28YgJK/view?usp=drive_link',
+                                color: 'from-green-500 to-emerald-500',
+                            },
+                            {
+                                title: 'Data Science + Open-Source',
+                                features: [
+                                    'Python, TensorFlow, PyTorch',
+                                    'Statistical Analysis & Modeling',
+                                    'Deep Learning & Neural Networks',
+                                    'Open Source Contributions',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1QQ2ZvkCsdy56tV_-96vdkCAYdCR6B5bv/view?usp=drive_link',
+                                color: 'from-teal-400 to-teal-500',
+                            },
+                            {
+                                title: 'Generative AI',
+                                features: [
+                                    'Conversational AI',
+                                    'Speech Processing',
+                                    'AI Model Training & Fine-tuning',
+                                    'AI Ethics & Bias',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1-deF64O-vXaRXmE4mMhBXNdZV_cxUYo0/view?usp=drive_link',
+                                color: 'from-purple-500 to-pink-500',
+                            },
+                            {
+                                title: 'Content Creation',
+                                features: [
+                                    'Content Strategy & Planning',
+                                    'SEO Optimization',
+                                    'Social Media Marketing',
+                                    'Video Production & Editing',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1Q5C2dTy0b_LFKhYbgR4uUy-vdIdtgdDO/view?usp=drive_link',
+                                color: 'from-orange-500 to-red-500',
+                            },
+                            {
+                                title: 'Data Analytics with GenAI',
+                                features: [
+                                    'Data Visualization',
+                                    'Predictive Analytics',
+                                    'Data Mining & Processing',
+                                    'GenAI Integration',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1vxxYRXsxxkIPddAIvGd67HvW8Ez1Yb8Z/view?usp=drive_link',
+                                color: 'from-red-400 to-red-500',
+                            },
+                            {
+                                title: 'Open-Source',
+                                features: [
+                                    'Version Control with Git',
+                                    'Open Source Contributions',
+                                    'Project Management',
+                                    'Collaboration Tools',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1VIR54gXc2GDKhL6L_oEe4oRkOOxrhrQ4/view?usp=drive_link',
+                                color: 'from-purple-500 to-gray-700',
+                            },
+                            {
+                                title: 'Placement Training',
+                                features: [
+                                    'Resume Building',
+                                    'Interview Preparation',
+                                    'Mock Interviews',
+                                    'Soft Skills Development',
+                                ],
+
+                                driveLink:
+                                    'https://drive.google.com/file/d/1yqYJTi8nNrjnD744f6nEytVu3YMSZzrm/view?usp=drive_link',
+                                color: 'from-yellow-300 to-pink-500',
+                            },
+                        ].map((course, index) => (
+                            <div
+                                key={index}
+                                className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:-translate-y-2 group"
+                                data-oid="course-tile"
+                            >
+                                <div className="mb-4" data-oid="33souty">
                                     <div
-                                        key={index}
-                                        className="flex items-center space-x-4"
-                                        data-oid="aztix50"
+                                        className={`w-12 h-12 bg-gradient-to-r ${course.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                                        data-oid=".r-9y.:"
                                     >
-                                        <div
-                                            className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
-                                            data-oid="uvdj6-."
+                                        <svg
+                                            className="w-6 h-6 text-white"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            data-oid="mkp4s36"
                                         >
-                                            <svg
-                                                className="w-4 h-4 text-white"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                                data-oid="fv72z_q"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M5 13l4 4L19 7"
-                                                    data-oid="g8_vq1q"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <p className="text-lg text-gray-300" data-oid="wm7h.74">
-                                            {feature}
-                                        </p>
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                                data-oid="pv--u0d"
+                                            />
+                                        </svg>
                                     </div>
-                                ))}
-                            </div>
-                            <div
-                                className="mt-8 p-6 bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl border border-purple-500/30"
-                                data-oid="c8brwgj"
-                            >
-                                <p className="text-gray-300 italic" data-oid="nbgyy84">
-                                    "We use a flipped classroom model, where students learn theory
-                                    at home and apply it with live mentor guidance."
-                                </p>
-                            </div>
-                        </div>
-                        <div className="relative" data-oid="z_vgf71">
-                            <div
-                                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700"
-                                data-oid="sy6p.-i"
-                            >
-                                <div className="space-y-4" data-oid="9oyc0p5">
-                                    <div className="flex items-center space-x-3" data-oid="r5iv.bd">
-                                        <div
-                                            className="w-3 h-3 bg-red-500 rounded-full"
-                                            data-oid="zuio9c8"
-                                        ></div>
-                                        <div
-                                            className="w-3 h-3 bg-yellow-500 rounded-full"
-                                            data-oid="-p-l:oo"
-                                        ></div>
-                                        <div
-                                            className="w-3 h-3 bg-green-500 rounded-full"
-                                            data-oid="k0k_tg."
-                                        ></div>
-                                    </div>
-                                    <div
-                                        className="bg-black p-4 rounded-lg font-mono text-sm"
-                                        data-oid="svs2s.:"
+                                    <h3
+                                        className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors"
+                                        data-oid="v5is5wi"
                                     >
-                                        <div className="text-green-400" data-oid="xc29cra">
-                                            $ merge --start-journey
+                                        {course.title}
+                                    </h3>
+                                </div>
+
+                                <div className="space-y-2 mb-6" data-oid="fywgfws">
+                                    {course.features.map((feature, featureIndex) => (
+                                        <div
+                                            key={featureIndex}
+                                            className="flex items-center text-sm text-gray-300"
+                                            data-oid="kzrjbj8"
+                                        >
+                                            <div
+                                                className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3 flex-shrink-0"
+                                                data-oid="593leax"
+                                            ></div>
+                                            {feature}
                                         </div>
-                                        <div className="text-gray-400" data-oid="p.jzty5">
-                                            Initializing learning path...
-                                        </div>
-                                        <div className="text-purple-400" data-oid="anl0smt">
-                                            ✓ Mentor assigned
-                                        </div>
-                                        <div className="text-blue-400" data-oid="v_g_bmo">
-                                            ✓ Project repository created
-                                        </div>
-                                        <div className="text-yellow-400" data-oid="2u5ee7j">
-                                            ✓ Community access granted
-                                        </div>
-                                        <div className="text-green-400" data-oid="bgwf9o8">
-                                            Ready to merge your skills! 🚀
-                                        </div>
-                                    </div>
+                                    ))}
+                                </div>
+
+                                <a
+                                    href={course.driveLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`w-full inline-flex items-center justify-center px-4 py-3 rounded-lg bg-gradient-to-r ${course.color} hover:opacity-90 transition-all duration-300 text-white font-medium text-sm group-hover:shadow-lg`}
+                                    data-oid="kzq85g:"
+                                >
+                                    <svg
+                                        className="w-4 h-4 mr-2"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        data-oid="qq2l25e"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                            data-oid="6th79c6"
+                                        />
+                                    </svg>
+                                    View Full Curriculum
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-12 text-center" data-oid="dz9i89u">
+                        <div
+                            className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 rounded-xl border border-purple-500/30"
+                            data-oid="ggqdvtp"
+                        >
+                            <p className="text-xl text-gray-300 italic mb-4" data-oid="yw4hd:g">
+                                "We use a flipped classroom model, where students learn theory at
+                                home and apply it with live mentor guidance."
+                            </p>
+                            <div
+                                className="flex items-center justify-center space-x-4 text-sm text-gray-400"
+                                data-oid="c.4g:j2"
+                            >
+                                <div className="flex items-center" data-oid="f12h.ae">
+                                    <div
+                                        className="w-2 h-2 bg-green-500 rounded-full mr-2"
+                                        data-oid="hhj8893"
+                                    ></div>
+                                    Live Mentorship
+                                </div>
+                                <div className="flex items-center" data-oid="-t562rr">
+                                    <div
+                                        className="w-2 h-2 bg-blue-500 rounded-full mr-2"
+                                        data-oid="1gl.5_y"
+                                    ></div>
+                                    Real Projects
+                                </div>
+                                <div className="flex items-center" data-oid="aqa8qzk">
+                                    <div
+                                        className="w-2 h-2 bg-purple-500 rounded-full mr-2"
+                                        data-oid="h-z6hb8"
+                                    ></div>
+                                    Industry Ready
                                 </div>
                             </div>
                         </div>
