@@ -810,13 +810,13 @@ export default function CollaborationsPage() {
                                         className="px-6 py-4 text-center font-semibold"
                                         data-oid="ol997jl"
                                     >
-                                        Merge
+                                        Merge Learning
                                     </th>
                                     <th
                                         className="px-6 py-4 text-center font-semibold"
                                         data-oid="kg6wkez"
                                     >
-                                        Others (Scaler, Masai, etc.)
+                                        Others
                                     </th>
                                 </tr>
                             </thead>
