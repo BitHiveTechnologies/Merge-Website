@@ -1749,7 +1749,7 @@ export default function Page() {
                                         />
                                     </svg>
                                     <span className="text-gray-400" data-oid="w50rdlp">
-                                        Dehradun, Uttarakhand, India
+                                        Gaya, Bihar, India
                                     </span>
                                 </li>
                             </ul>

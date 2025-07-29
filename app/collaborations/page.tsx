@@ -333,7 +333,7 @@ export default function CollaborationsPage() {
                                         </svg>
                                     </div>
                                     <h3
-                                        className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors"
+                                        className="text-xl font-bold text-white mb-2 transition-colors"
                                         data-oid="v5is5wi"
                                     >
                                         {course.title}
@@ -1374,7 +1374,7 @@ export default function CollaborationsPage() {
                                         />
                                     </svg>
                                     <span className="text-gray-400" data-oid="wucvo:e">
-                                        Dehradun, Uttarakhand, India
+                                        Gaya, Bihar, India
                                     </span>
                                 </li>
                             </ul>

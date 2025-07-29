@@ -936,7 +936,7 @@ export default function AboutUsPage() {
                                         />
                                     </svg>
                                     <span className="text-gray-400" data-oid="chjfi4b">
-                                        Dehradun, Uttarakhand, India
+                                        Gaya, Bihar, India
                                     </span>
                                 </li>
                             </ul>

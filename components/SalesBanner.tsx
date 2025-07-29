@@ -8,8 +8,14 @@ interface SalesBannerProps {
 }
 
 export default function SalesBanner({ message }: SalesBannerProps) {
-    const defaultMessage =
-        '!! EARLYBIRD SALE - Exclusive 30% OFF for New Students (Discount Auto Applied on Checkout) !!';
+    const defaultMessage = (
+        <span data-oid="n7d4tqa">
+            Connect to Us{' '}
+            <a href="/" className="underline" data-oid="rpsm-2u">
+                here
+            </a>
+        </span>
+    );
 
     // Animation variants for text
     const textVariants = {
