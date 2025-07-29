@@ -983,7 +983,7 @@ export default function Page() {
                         <div
                             className="flex animate-infinite-scroll"
                             style={{
-                                animation: 'infinite-scroll 60s linear infinite',
+                                animation: 'infinite-scroll 100s linear infinite',
                             }}
                             data-oid="xpffwa6"
                         >

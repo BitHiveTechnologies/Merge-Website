@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 
 interface SalesBannerProps {
     message?: string;
@@ -10,9 +10,9 @@ interface SalesBannerProps {
 export default function SalesBanner({ message }: SalesBannerProps) {
     const defaultMessage = (
         <span data-oid="n7d4tqa">
-            Connect to Us{' '}
-            <a href="/" className="underline" data-oid="rpsm-2u">
-                here
+            <a href="/#contactUs" data-oid="rpsm-2u" className="inline-flex items-center space-x-1">
+                <span data-oid="wvabru_">Connect to Us</span>
+                <ExternalLink size={20} data-oid=".dhbz6o" />
             </a>
         </span>
     );
@@ -32,7 +32,7 @@ export default function SalesBanner({ message }: SalesBannerProps) {
     const pulseVariants = {
         pulse: {
             scale: [1, 1.05, 1],
-            color: ['#ffffff', '#ffd700', '#ffffff'],
+            color: ['#ffffff'],
             transition: {
                 duration: 2,
                 repeat: Infinity,
