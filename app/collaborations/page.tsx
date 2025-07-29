@@ -782,7 +782,7 @@ export default function CollaborationsPage() {
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
                                 data-oid="10jokiz"
                             >
-                                Other Tech Startups
+                                Other Tech Programs
                             </span>
                         </h2>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-oid="i1fn2jc">
@@ -823,48 +823,161 @@ export default function CollaborationsPage() {
                             <tbody className="divide-y divide-gray-700" data-oid="qyv1esm">
                                 {[
                                     {
-                                        criteria: 'College Integration',
-                                        merge: { text: '✅ Yes', color: 'text-green-400' },
+                                        criteria: 'Curriculum',
+                                        merge: {
+                                            text: 'Practical & project-based',
+                                            color: 'text-green-400',
+                                        },
                                         others: {
-                                            text: '❌ Mostly external',
+                                            text: 'Mostly theoretical',
                                             color: 'text-red-400',
                                         },
                                     },
                                     {
-                                        criteria: 'Cost',
-                                        merge: { text: '🟢 Affordable', color: 'text-green-400' },
+                                        criteria: '1:1 Doubt session',
+                                        merge: { text: '✅', color: 'text-green-400' },
                                         others: {
-                                            text: '🔴 Higher ticket pricing',
+                                            text: '❌',
                                             color: 'text-red-400',
                                         },
                                     },
                                     {
-                                        criteria: 'Mentor Access',
-                                        merge: { text: '🟢 1:1 + group', color: 'text-green-400' },
+                                        criteria: 'Pricing',
+                                        merge: { text: 'Affordable', color: 'text-green-400' },
                                         others: {
-                                            text: '🔶 Mostly group',
-                                            color: 'text-yellow-400',
+                                            text: 'Too costly',
+                                            color: 'text-red-400',
                                         },
                                     },
                                     {
-                                        criteria: 'Internship-to-Placement',
+                                        criteria: 'Tools & Tech',
                                         merge: {
-                                            text: '✅ Real projects',
+                                            text: 'Fulfilling Industry Requirements',
                                             color: 'text-green-400',
                                         },
                                         others: {
-                                            text: '🔶 Simulation-based',
-                                            color: 'text-yellow-400',
+                                            text: 'Outdated tools',
+                                            color: 'text-red-400',
                                         },
                                     },
                                     {
-                                        criteria: 'Language Flexibility',
+                                        criteria: 'Global Focus',
                                         merge: {
-                                            text: '✅ Hinglish-friendly',
+                                            text: 'Prepares for GSoC, LFX, open source',
                                             color: 'text-green-400',
                                         },
                                         others: {
-                                            text: '❌ Mostly English-only',
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Mock Interviews',
+                                        merge: {
+                                            text: '30+',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '0',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Language & Delivery',
+                                        merge: {
+                                            text: 'Bilingual, live & interactive',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: 'Mostly English, video-only',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'College Partnership',
+                                        merge: {
+                                            text: 'MoU model supports NAAC/NIRF goals',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: 'No structured academic tie-up',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'AI Integration',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Student Support',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Student Limitation',
+                                        merge: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                        others: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Placement Readiness',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Certification',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Student Performance Tracker',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
+                                            color: 'text-red-400',
+                                        },
+                                    },
+                                    {
+                                        criteria: 'Fireside chat',
+                                        merge: {
+                                            text: '✅',
+                                            color: 'text-green-400',
+                                        },
+                                        others: {
+                                            text: '❌',
                                             color: 'text-red-400',
                                         },
                                     },
