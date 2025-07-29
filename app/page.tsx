@@ -1,5 +1,6 @@
 'use client';
 
+import ContactUs from '@/components/ContactUs';
 import FeaturedCourses from '@/components/FeaturedCourses';
 import Navbar from '@/components/Navbar';
 import SalesBanner from '@/components/SalesBanner';
@@ -982,7 +983,7 @@ export default function Page() {
                         <div
                             className="flex animate-infinite-scroll"
                             style={{
-                                animation: 'infinite-scroll 35s linear infinite',
+                                animation: 'infinite-scroll 60s linear infinite',
                             }}
                             data-oid="xpffwa6"
                         >
@@ -1352,6 +1353,10 @@ export default function Page() {
                 </div>
             </section>
 
+            <section id="contactUs" data-oid="eggceb9">
+                <ContactUs data-oid="lo.qayz" />
+            </section>
+
             {/* Newsletter & WhatsApp CTA */}
             <section className="py-20 px-6 md:px-12 bg-black" data-oid="3ublib_">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12" data-oid="rliscry">
@@ -1465,7 +1470,6 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"

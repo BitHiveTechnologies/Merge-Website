@@ -1,0 +1,345 @@
+'use client';
+
+import { useState } from 'react';
+
+interface ContactFormData {
+    name: string;
+    email: string;
+    mobile: string;
+    university: string;
+    message: string;
+}
+
+export default function ContactUs() {
+    const [formData, setFormData] = useState<ContactFormData>({
+        name: '',
+        email: '',
+        mobile: '',
+        university: '',
+        message: '',
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setShowSuccess(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    mobile: '',
+                    university: '',
+                    message: '',
+                });
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    setShowSuccess(false);
+                }, 5000);
+            } else {
+                alert('Failed to submit query. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('An error occurred. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    if (showSuccess) {
+        return (
+            <section
+                className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900"
+                data-oid="dgz3..r"
+            >
+                <div className="max-w-4xl mx-auto" data-oid="vit46ha">
+                    <div className="text-center" data-oid="7oxwn8r">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-16" data-oid="3ox0lhz">
+                            Contact{' '}
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                data-oid="z9l7p7."
+                            >
+                                Us
+                            </span>
+                        </h2>
+
+                        {/* Success Animation */}
+                        <div
+                            className="flex flex-col items-center justify-center min-h-[400px]"
+                            data-oid="ed4533g"
+                        >
+                            <div className="relative" data-oid="1vh44y3">
+                                {/* Animated checkmark circle */}
+                                <div
+                                    className="w-32 h-32 rounded-full bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center"
+                                    data-oid="5vt8t.m"
+                                >
+                                    <svg
+                                        className="w-16 h-16 text-white animate-pulse"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        data-oid="0.25.qw"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={3}
+                                            d="M5 13l4 4L19 7"
+                                            className="animate-draw-check"
+                                            data-oid="7ovlw1c"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <h3
+                                className="text-2xl font-bold text-green-400 mt-8 mb-4"
+                                data-oid="uuqb7ru"
+                            >
+                                Query Submitted Successfully!
+                            </h3>
+                            <p
+                                className="text-lg text-gray-300 max-w-md text-center"
+                                data-oid="8_vdwbo"
+                            >
+                                Our Team will contact you soon. Thank you for reaching out to us!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <style jsx data-oid="2q-9:zr">{`
+                    @keyframes draw-check {
+                        0% {
+                            stroke-dasharray: 0 100;
+                        }
+                        100% {
+                            stroke-dasharray: 100 0;
+                        }
+                    }
+
+                    .animate-draw-check {
+                        animation: draw-check 1s ease-in-out;
+                    }
+
+                    .animation-delay-200 {
+                        animation-delay: 200ms;
+                    }
+                `}</style>
+            </section>
+        );
+    }
+
+    return (
+        <section
+            className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900"
+            data-oid="sss7j8d"
+        >
+            <div className="max-w-4xl mx-auto" data-oid="aw__qok">
+                <div className="text-center mb-16" data-oid="b7qx8cl">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="52nntvf">
+                        Contact{' '}
+                        <span
+                            className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                            data-oid="9d6jfxe"
+                        >
+                            Us
+                        </span>
+                    </h2>
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto" data-oid="94dk2sm">
+                        Have questions or need assistance? We're here to help! Fill out the form
+                        below and our team will get back to you soon.
+                    </p>
+                </div>
+
+                <div
+                    className="bg-gray-800 p-8 md:p-12 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+                    data-oid="btyeca4"
+                >
+                    <form onSubmit={handleSubmit} className="space-y-6" data-oid="my299k:">
+                        <div className="grid md:grid-cols-2 gap-6" data-oid="_q96vhf">
+                            {/* Name Field */}
+                            <div data-oid="g_o6pxf">
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="k91w2vp"
+                                >
+                                    Full Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
+                                    placeholder="Enter your full name"
+                                    data-oid="w_tev04"
+                                />
+                            </div>
+
+                            {/* Email Field */}
+                            <div data-oid="khb227i">
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="6xpwgqq"
+                                >
+                                    Email Address *
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
+                                    placeholder="Enter your email address"
+                                    data-oid="z4:d:le"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6" data-oid="ir41tc9">
+                            {/* Mobile Number Field */}
+                            <div data-oid="a0mmwtl">
+                                <label
+                                    htmlFor="mobile"
+                                    className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="kul82ul"
+                                >
+                                    Mobile Number *
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="mobile"
+                                    name="mobile"
+                                    value={formData.mobile}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
+                                    placeholder="Enter your mobile number"
+                                    data-oid="cld.gqt"
+                                />
+                            </div>
+
+                            {/* University/College Field */}
+                            <div data-oid="eczrxl.">
+                                <label
+                                    htmlFor="university"
+                                    className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="6897f6i"
+                                >
+                                    University/College Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="university"
+                                    name="university"
+                                    value={formData.university}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
+                                    placeholder="Enter your university/college name"
+                                    data-oid="h1qc1se"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Message Field */}
+                        <div data-oid="_8-24ei">
+                            <label
+                                htmlFor="message"
+                                className="block text-sm font-medium text-gray-300 mb-2"
+                                data-oid="8jdtjpn"
+                            >
+                                Concern/Message *
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                required
+                                rows={5}
+                                className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400 resize-vertical"
+                                placeholder="Please describe your concern or message..."
+                                data-oid="u5.tgeg"
+                            />
+                        </div>
+
+                        {/* Submit Button */}
+                        <div className="text-center" data-oid="uas1pn5">
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed transition-all duration-300 text-white font-medium text-lg transform hover:scale-105 disabled:hover:scale-100"
+                                data-oid="reev6dd"
+                            >
+                                {isSubmitting ? (
+                                    <div
+                                        className="flex items-center justify-center"
+                                        data-oid="0gr5soy"
+                                    >
+                                        <svg
+                                            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            data-oid="diezqff"
+                                        >
+                                            <circle
+                                                className="opacity-25"
+                                                cx="12"
+                                                cy="12"
+                                                r="10"
+                                                stroke="currentColor"
+                                                strokeWidth="4"
+                                                data-oid="_.4h1ku"
+                                            ></circle>
+                                            <path
+                                                className="opacity-75"
+                                                fill="currentColor"
+                                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                data-oid="nnnlkgz"
+                                            ></path>
+                                        </svg>
+                                        Submitting...
+                                    </div>
+                                ) : (
+                                    'Submit Query'
+                                )}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    );
+}
