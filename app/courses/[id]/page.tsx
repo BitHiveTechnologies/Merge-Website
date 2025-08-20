@@ -12,6 +12,7 @@ interface Course {
     title: string;
     description: string;
     instructor: string;
+    instructorImg?: string;
     duration: string;
     level: 'Beginner' | 'Intermediate' | 'Advanced';
     rating: number;
@@ -322,6 +323,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                                     >
                                         <img
                                             src={
+                                                course.instructorImg ||
                                                 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'
                                             }
                                             alt={course.instructor}

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { BACKEND_URL } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // Course type definition
 interface Course {
@@ -10,6 +10,7 @@ interface Course {
     title: string;
     description: string;
     instructor: string;
+    instructorImg: string;
     duration: string;
     level: 'Beginner' | 'Intermediate' | 'Advanced';
     rating: number;
@@ -75,6 +76,7 @@ export default function FeaturedCourses() {
             _id: '2',
             title: 'UI/UX Design Fundamentals',
             instructor: 'Maya Patel',
+            instructorImg: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg',
             duration: '8 weeks',
             level: 'Beginner',
             price: 8999,
@@ -84,6 +86,7 @@ export default function FeaturedCourses() {
             _id: '3',
             title: 'Data Structures & Algorithms',
             instructor: 'David Lee',
+            instructorImg: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg',
             duration: '10 weeks',
             level: 'Advanced',
             price: 10999,
@@ -165,6 +168,7 @@ export default function FeaturedCourses() {
                                         <div className="w-8 h-8 rounded-full overflow-hidden mr-4">
                                             <img
                                                 src={
+                                                    course.instructorImg ||
                                                     'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'
                                                 }
                                                 alt={course.instructor}
