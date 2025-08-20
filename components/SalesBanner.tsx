@@ -9,10 +9,10 @@ interface SalesBannerProps {
 
 export default function SalesBanner({ message }: SalesBannerProps) {
     const defaultMessage = (
-        <span data-oid="43.fhqn">
-            <a href="/#contactUs" className="inline-flex items-center space-x-1" data-oid="uxhyzh.">
-                <span data-oid="1b580uz">Connect to Us</span>
-                <ExternalLink size={20} data-oid="zxwxzvi" />
+        <span>
+            <a href="/#contactUs" className="inline-flex items-center space-x-1">
+                <span>Connect to Us</span>
+                <ExternalLink size={20} />
             </a>
         </span>
     );
@@ -41,22 +41,17 @@ export default function SalesBanner({ message }: SalesBannerProps) {
     };
 
     return (
-        <div
-            className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md"
-            data-oid="8zj3vc8"
-        >
+        <div className="fixed top-[70px] left-0 right-0 z-40 bg-gradient-to-r from-purple-800 to-pink-700 text-white py-1 md:py-2 px-2 md:px-4 text-center shadow-md">
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={textVariants}
                 className="flex items-center justify-center"
-                data-oid="hg0_27e"
             >
                 <motion.span
                     animate="pulse"
                     variants={pulseVariants}
                     className="font-medium text-xs md:text-base"
-                    data-oid="x76c8em"
                 >
                     {message || defaultMessage}
                 </motion.span>

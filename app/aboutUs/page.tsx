@@ -131,14 +131,14 @@ export default function AboutUsPage() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    data-oid="0r_6bm3"
+                    data-oid="t5sppuj"
                 >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        data-oid="fowg3_y"
+                        data-oid="n-_8spw"
                     />
                 </svg>
             ),
@@ -153,14 +153,14 @@ export default function AboutUsPage() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    data-oid="-71oc9t"
+                    data-oid="8rcqw7b"
                 >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                        data-oid="70-hi7-"
+                        data-oid="aj46b7g"
                     />
                 </svg>
             ),
@@ -175,14 +175,14 @@ export default function AboutUsPage() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    data-oid="nj.jhy1"
+                    data-oid="efnr6ij"
                 >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M13 10V3L4 14h7v7l9-11h-7z"
-                        data-oid="3vc:q-z"
+                        data-oid="an_0jd7"
                     />
                 </svg>
             ),
@@ -197,14 +197,14 @@ export default function AboutUsPage() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    data-oid="oz59qar"
+                    data-oid="ehz5ixo"
                 >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        data-oid="2g-ws.w"
+                        data-oid="_ybss-q"
                     />
                 </svg>
             ),
@@ -220,15 +220,15 @@ export default function AboutUsPage() {
     const StatCard = ({ stat }: { stat: Stat }) => (
         <div
             className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-3xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-400/50 hover:bg-gradient-to-br hover:from-purple-900/30 hover:to-pink-900/30 transition-all duration-500 hover:scale-105"
-            data-oid="a:cs-21"
+            data-oid="9rlvg2y"
         >
             <div
                 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3"
-                data-oid="0r9gqr9"
+                data-oid="dpz7w-7"
             >
                 {stat.number}
             </div>
-            <div className="text-gray-300 font-medium" data-oid="x8a:axv">
+            <div className="text-gray-300 font-medium" data-oid="j5qpfnv">
                 {stat.label}
             </div>
         </div>
@@ -237,23 +237,23 @@ export default function AboutUsPage() {
     const ValueCard = ({ value }: { value: Value }) => (
         <div
             className="group text-center p-8 rounded-3xl bg-gradient-to-br from-gray-800/40 to-gray-900/40 border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/20"
-            data-oid="h7yu2of"
+            data-oid="qc.rbwv"
         >
             <div
                 className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                data-oid="cs1gr-b"
+                data-oid="l37:5up"
             >
                 {value.icon}
             </div>
             <h3
                 className="text-2xl font-bold mb-4 text-purple-300 group-hover:text-purple-200 transition-colors"
-                data-oid="oz18jlm"
+                data-oid="5p.76zg"
             >
                 {value.title}
             </h3>
             <p
                 className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors"
-                data-oid="67cmdxn"
+                data-oid="_k-oimc"
             >
                 {value.description}
             </p>
@@ -263,42 +263,42 @@ export default function AboutUsPage() {
     const TeamMemberCard = ({ member }: { member: TeamMember }) => (
         <div
             className="group relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 rounded-3xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10 overflow-hidden"
-            data-oid="ruq.6li"
+            data-oid="9bsjlev"
         >
             {/* Background Gradient Overlay */}
             <div
                 className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                data-oid="ftxw6uz"
+                data-oid="-o58dva"
             />
 
-            <div className="relative p-8" data-oid="gfsmf3-">
+            <div className="relative p-8" data-oid="d3msb1:">
                 {/* Large Profile Image */}
-                <div className="flex flex-col items-center text-center mb-6" data-oid="knun_6-">
-                    <div className="relative w-32 h-32 mb-6" data-oid="18nr7xq">
+                <div className="flex flex-col items-center text-center mb-6" data-oid="fgdgou4">
+                    <div className="relative w-32 h-32 mb-6" data-oid="kaikgw2">
                         <div
                             className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-1 group-hover:scale-110 transition-transform duration-300"
-                            data-oid="fq4artx"
+                            data-oid="vxv4dbg"
                         >
                             <div
                                 className="w-full h-full bg-gray-900 rounded-full p-1"
-                                data-oid="pyoey6z"
+                                data-oid="2hjh4pl"
                             >
                                 <Image
                                     src={member.image}
                                     alt={member.name}
                                     fill
                                     className="rounded-full object-cover"
-                                    data-oid="3o7qwq."
+                                    data-oid="j1j8z5w"
                                 />
                             </div>
                         </div>
                     </div>
 
                     {/* Name and Role */}
-                    <div className="mb-4" data-oid="rgdzcp4">
+                    <div className="mb-4" data-oid="m:yx:ss">
                         <div
                             className="flex items-center justify-center gap-3 mb-3"
-                            data-oid="1u0gtf1"
+                            data-oid="b7evsg4"
                         >
                             {/* LinkedIn Icon */}
                             <a
@@ -307,7 +307,7 @@ export default function AboutUsPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`${member.name} LinkedIn`}
-                                data-oid="ny6si9i"
+                                data-oid=".:pv3aa"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -316,19 +316,19 @@ export default function AboutUsPage() {
                                     fill="currentColor"
                                     className="text-[#0077B5] hover:text-[#005885] transition-colors duration-300"
                                     viewBox="0 0 16 16"
-                                    data-oid="-m8n78x"
+                                    data-oid="njhbeif"
                                 >
                                     <path
                                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                                        data-oid="8g-9a1k"
+                                        data-oid="f7n2vq0"
                                     />
                                 </svg>
                             </a>
 
-                            <div className="text-center" data-oid="mx64ec3">
+                            <div className="text-center" data-oid="x:nl9m4">
                                 <h4
                                     className="text-2xl font-bold group-hover:text-purple-300 transition-colors duration-300"
-                                    data-oid=".4yjbv6"
+                                    data-oid="dnqzbp4"
                                 >
                                     {member.name}
                                 </h4>
@@ -337,7 +337,7 @@ export default function AboutUsPage() {
 
                         <p
                             className="text-purple-400 font-semibold text-base leading-tight"
-                            data-oid="a3w98y2"
+                            data-oid="7c8jmuo"
                         >
                             {member.role}
                         </p>
@@ -347,7 +347,7 @@ export default function AboutUsPage() {
                 {/* Description */}
                 <p
                     className="text-gray-300 leading-relaxed text-center group-hover:text-white transition-colors duration-300"
-                    data-oid="k1e253o"
+                    data-oid="bjyjwy:"
                 >
                     {member.description}
                 </p>
@@ -356,45 +356,45 @@ export default function AboutUsPage() {
     );
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="8gb3bgf">
-            <SalesBanner data-oid="komo1-c" />
-            <Navbar data-oid="d.m_is4" />
+        <div className="min-h-screen bg-black text-white font-sans pt-20" data-oid="4353rod">
+            <SalesBanner data-oid="y6ziuhb" />
+            <Navbar data-oid="ngj32s:" />
 
             {/* Hero Section */}
             <section
                 className="pt-10 pb-16 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden"
-                data-oid="3hmiw3."
+                data-oid="_xhui:8"
             >
                 {/* Background blur elements */}
                 <div
                     className="absolute -top-20 -left-20 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"
-                    data-oid="kznniou"
+                    data-oid="ty8md5q"
                 />
 
                 <div
                     className="absolute -bottom-20 -right-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl"
-                    data-oid="gnbiif9"
+                    data-oid="tgv5:b4"
                 />
 
                 <div
                     className="absolute top-1/2 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"
-                    data-oid="_9zpqco"
+                    data-oid="-gp6rj9"
                 />
 
-                <div className="relative z-10 max-w-6xl mx-auto mt-20" data-oid="a_ly7r4">
-                    <div className="max-w-4xl" data-oid="bwsr50v">
+                <div className="relative z-10 max-w-6xl mx-auto mt-20" data-oid="d.xfau_">
+                    <div className="max-w-4xl" data-oid="855eyzc">
                         {/* Left Content */}
-                        <div data-oid="cfx.n3v">
+                        <div data-oid="t06rgs4">
                             <h1
                                 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8"
-                                data-oid="vqy1xzd"
+                                data-oid="o3czjue"
                             >
-                                <span className="text-white" data-oid="5.83far">
+                                <span className="text-white" data-oid="4:g-vqx">
                                     About{' '}
                                 </span>
                                 <span
                                     className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600"
-                                    data-oid="4cmv557"
+                                    data-oid="xoal7w5"
                                 >
                                     Merge
                                 </span>
@@ -402,11 +402,11 @@ export default function AboutUsPage() {
 
                             <p
                                 className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed"
-                                data-oid="7fa358j"
+                                data-oid="da3myb6"
                             >
                                 Bridging the Gap between Academic Education and Industry readiness
                                 through
-                                <span className="text-purple-400 font-semibold" data-oid="8vmmljm">
+                                <span className="text-purple-400 font-semibold" data-oid="li5fbhh">
                                     {' '}
                                     Personalized, Mentor-led
                                 </span>{' '}
@@ -415,43 +415,43 @@ export default function AboutUsPage() {
 
                             <div
                                 className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 rounded-full mb-10"
-                                data-oid="76-zway"
+                                data-oid="hdsxsd:"
                             />
 
                             {/* Hero Cards */}
                             <div
                                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-                                data-oid="b9oh:25"
+                                data-oid="-xqepyt"
                             >
                                 <div
                                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1"
-                                    data-oid="9un:rpn"
+                                    data-oid="y-znhnb"
                                 >
-                                    <div className="flex items-center mb-4" data-oid="oecz26k">
+                                    <div className="flex items-center mb-4" data-oid="osyv412">
                                         <div
                                             className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
-                                            data-oid="uiqei3n"
+                                            data-oid="k99l:kt"
                                         >
                                             <svg
                                                 className="w-6 h-6 text-white"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
-                                                data-oid="ar9uf7w"
+                                                data-oid="5a7p6qd"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                                    data-oid="sam3t5m"
+                                                    data-oid="us.lj5y"
                                                 />
                                             </svg>
                                         </div>
-                                        <div data-oid="xopwsv9">
+                                        <div data-oid="zv6jej6">
                                             <h3
                                                 className="text-lg font-semibold text-white"
-                                                data-oid="ih1e4bk"
+                                                data-oid="25af16n"
                                             >
                                                 Our Mission
                                             </h3>
@@ -459,7 +459,7 @@ export default function AboutUsPage() {
                                     </div>
                                     <p
                                         className="text-gray-300 text-sm leading-relaxed"
-                                        data-oid="oh56sf7"
+                                        data-oid="dj0d.o6"
                                     >
                                         Democratizing tech education for Tier 2/3 colleges through
                                         practical, industry-aligned learning experiences.
@@ -468,33 +468,33 @@ export default function AboutUsPage() {
 
                                 <div
                                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1"
-                                    data-oid="7w8jk7k"
+                                    data-oid="bup.gaj"
                                 >
-                                    <div className="flex items-center mb-4" data-oid="uyxf7z2">
+                                    <div className="flex items-center mb-4" data-oid="5vtxih1">
                                         <div
                                             className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
-                                            data-oid="qdi835f"
+                                            data-oid="x-x9td8"
                                         >
                                             <svg
                                                 className="w-6 h-6 text-white"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
-                                                data-oid="wvjpd03"
+                                                data-oid="2evc:je"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                    data-oid="h9a4rn."
+                                                    data-oid="9oz1mf7"
                                                 />
                                             </svg>
                                         </div>
-                                        <div data-oid="-kzzead">
+                                        <div data-oid="tbcmvpf">
                                             <h3
                                                 className="text-lg font-semibold text-white"
-                                                data-oid="zt6tq09"
+                                                data-oid="tbu5qs."
                                             >
                                                 Our Vision
                                             </h3>
@@ -502,7 +502,7 @@ export default function AboutUsPage() {
                                     </div>
                                     <p
                                         className="text-gray-300 text-sm leading-relaxed"
-                                        data-oid="q041gcx"
+                                        data-oid="2g:atp7"
                                     >
                                         Creating a future where every student has access to quality
                                         tech education and career opportunities.
@@ -511,33 +511,33 @@ export default function AboutUsPage() {
 
                                 <div
                                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1"
-                                    data-oid="9vakga3"
+                                    data-oid="sf:og9t"
                                 >
-                                    <div className="flex items-center mb-4" data-oid="_lx_v.r">
+                                    <div className="flex items-center mb-4" data-oid="6:1rn14">
                                         <div
                                             className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4"
-                                            data-oid="_5y6-:e"
+                                            data-oid="9s20nc3"
                                         >
                                             <svg
                                                 className="w-6 h-6 text-white"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
-                                                data-oid=".nu-8np"
+                                                data-oid="88_aaw8"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M13 10V3L4 14h7v7l9-11h-7z"
-                                                    data-oid="7nrllq9"
+                                                    data-oid="i:f32ht"
                                                 />
                                             </svg>
                                         </div>
-                                        <div data-oid=":q2f-yl">
+                                        <div data-oid="ne1.dhd">
                                             <h3
                                                 className="text-lg font-semibold text-white"
-                                                data-oid=".vq2kws"
+                                                data-oid="qks0upp"
                                             >
                                                 Our Impact
                                             </h3>
@@ -545,7 +545,7 @@ export default function AboutUsPage() {
                                     </div>
                                     <p
                                         className="text-gray-300 text-sm leading-relaxed"
-                                        data-oid="pri.8qv"
+                                        data-oid="lodzobu"
                                     >
                                         500+ students mentored with 95% placement rate, transforming
                                         careers across India.
@@ -560,60 +560,60 @@ export default function AboutUsPage() {
             {/* Values Section */}
             <section
                 className="py-32 px-6 md:px-12 bg-gradient-to-br from-gray-900/80 to-black relative"
-                data-oid="4q3k8pa"
+                data-oid="29cib1f"
             >
                 <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"
-                    data-oid="a7mu667"
+                    data-oid="irovqvm"
                 />
 
-                <div className="relative z-10 max-w-7xl mx-auto" data-oid="6.t20n.">
-                    <div className="text-center mb-20" data-oid="63um8fk">
-                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid="vvmtdex">
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid="5sgay9i">
+                    <div className="text-center mb-20" data-oid="fwxznoi">
+                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid="i0es9xr">
                             What Drives{' '}
                             <span
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
-                                data-oid="spclfng"
+                                data-oid="iwx0idc"
                             >
                                 Us ?
                             </span>
                         </h2>
                         <p
                             className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-                            data-oid="kyrztnz"
+                            data-oid="i4rebcu"
                         >
                             The Principles that guide everything we do at Merge Learning
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10" data-oid="d0y0y6q">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10" data-oid="gaeq9r7">
                         {values.map((value, index) => (
-                            <ValueCard key={index} value={value} data-oid="dkcc0ic" />
+                            <ValueCard key={index} value={value} data-oid="vgb27gd" />
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* Team Section */}
-            <section id="team" className="py-32 px-6 md:px-12 bg-black relative" data-oid="sv2o5k3">
+            <section id="team" className="py-32 px-6 md:px-12 bg-black relative" data-oid="gqbevkg">
                 <div
                     className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5"
-                    data-oid="v2gtbyq"
+                    data-oid="lkveoxh"
                 />
 
-                <div className="relative z-10 max-w-7xl mx-auto" data-oid="rbj81ao">
-                    <div className="text-center mb-20" data-oid="ln02w6:">
-                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid="03:ng-i">
+                <div className="relative z-10 max-w-7xl mx-auto" data-oid="e7m9dks">
+                    <div className="text-center mb-20" data-oid="4pc5:h6">
+                        <h2 className="text-5xl md:text-5xl font-bold mb-8" data-oid=":bk0idq">
                             The People Behind{' '}
                             <span
                                 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
-                                data-oid="d:wrj9-"
+                                data-oid="8bkt1_l"
                             >
                                 Merge
                             </span>
                         </h2>
                         <p
                             className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-                            data-oid="cos5bsc"
+                            data-oid="278v0_u"
                         >
                             Passionate Educators, Technologists, and Mentors committed to reshaping
                             Tech Education
@@ -622,19 +622,19 @@ export default function AboutUsPage() {
 
                     {/* Team Categories */}
                     {teamCategories.map((category) => (
-                        <div key={category} className="mb-20" data-oid="3gn0bm2">
-                            <div className="text-center mb-12" data-oid="gbxumwp">
-                                <h3 className="text-3xl font-bold" data-oid="b6r2n:.">
+                        <div key={category} className="mb-20" data-oid="1e._upc">
+                            <div className="text-center mb-12" data-oid=":xyhn0y">
+                                <h3 className="text-3xl font-bold" data-oid="cppzei4">
                                     <span
                                         className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
-                                        data-oid="d20ixbn"
+                                        data-oid="cb_v2vo"
                                     >
                                         {category}
                                     </span>
                                 </h3>
                                 <div
                                     className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-4"
-                                    data-oid="d:j70ms"
+                                    data-oid="2qa7yi0"
                                 />
                             </div>
                             <div
@@ -644,7 +644,7 @@ export default function AboutUsPage() {
                                         ? 'md:grid-cols-2 lg:grid-cols-2 justify-items-center max-w-4xl mx-auto'
                                         : 'md:grid-cols-2 lg:grid-cols-3'
                                 }`}
-                                data-oid="ysqdyo-"
+                                data-oid="icppcm8"
                             >
                                 {allTeamMembers
                                     .filter((member) => member.category === category)
@@ -652,7 +652,7 @@ export default function AboutUsPage() {
                                         <TeamMemberCard
                                             key={index}
                                             member={member}
-                                            data-oid="jqhv5b:"
+                                            data-oid="65m_y4s"
                                         />
                                     ))}
                             </div>
@@ -664,29 +664,29 @@ export default function AboutUsPage() {
             {/* Footer */}
             <footer
                 className="py-12 px-6 md:px-12 bg-gray-900 border-t border-gray-800"
-                data-oid="s:sdh2_"
+                data-oid="tbkyaz2"
             >
-                <div className="max-w-6xl mx-auto" data-oid="-8p0-am">
-                    <div className="grid md:grid-cols-4 gap-8 mb-12" data-oid="m2dx:l_">
-                        <div data-oid="og5ijw2">
-                            <Link href="/" data-oid="oomsy7b">
+                <div className="max-w-6xl mx-auto" data-oid="19nqb8-">
+                    <div className="grid md:grid-cols-4 gap-8 mb-12" data-oid="v0rq8uj">
+                        <div data-oid="jcb2k32">
+                            <Link href="/" data-oid="sdb3goz">
                                 <Image
                                     src="/images/Merge.png"
                                     alt="Merge logo"
                                     width={150}
                                     height={150}
-                                    data-oid="kvyu-up"
+                                    data-oid="6pdpviz"
                                 />
                             </Link>
-                            <p className="text-gray-400 mb-6 mt-4" data-oid="f6dmoh5">
+                            <p className="text-gray-400 mb-6 mt-4" data-oid="nwd0ng4">
                                 Empowering Tech Enthusiasts to Learn, Build, and Grow Together.
                             </p>
-                            <div className="flex space-x-2" data-oid="pdaopks">
+                            <div className="flex space-x-2" data-oid="xz9hx0h">
                                 <a
                                     href="https://www.instagram.com/coding_.merge"
                                     className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500/20 transition-colors"
                                     aria-label="Instagram"
-                                    data-oid="r_lo8lf"
+                                    data-oid="7s35fb."
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -695,18 +695,18 @@ export default function AboutUsPage() {
                                         fill="currentColor"
                                         className="text-gray-400"
                                         viewBox="0 0 16 16"
-                                        data-oid="ii:n5rv"
+                                        data-oid="b70hal."
                                     >
                                         <path
                                             d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                                            data-oid="vtm5drw"
+                                            data-oid="0mcyufi"
                                         />
                                     </svg>
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/company/merge-prx"
                                     className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500/20 transition-colors"
-                                    data-oid=":df4e4w"
+                                    data-oid="93f9xi8"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -715,11 +715,11 @@ export default function AboutUsPage() {
                                         fill="currentColor"
                                         className="text-gray-400"
                                         viewBox="0 0 16 16"
-                                        data-oid="9d:ty0u"
+                                        data-oid="uf5vu.f"
                                     >
                                         <path
                                             d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                                            data-oid="edmy_r6"
+                                            data-oid=".myk3l-"
                                         />
                                     </svg>
                                 </a>
@@ -729,7 +729,7 @@ export default function AboutUsPage() {
                                     aria-label="YouTube"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    data-oid="np07xs:"
+                                    data-oid="1snalxl"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -738,63 +738,63 @@ export default function AboutUsPage() {
                                         fill="currentColor"
                                         className="text-gray-400 hover:text-red-500"
                                         viewBox="0 0 16 16"
-                                        data-oid="8h58g_:"
+                                        data-oid="mnt5br4"
                                     >
                                         <path
                                             d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
-                                            data-oid="mj.20_4"
+                                            data-oid="5zzu_0c"
                                         />
                                     </svg>
                                 </a>
                             </div>
                         </div>
 
-                        <div data-oid="now3tzf">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="pz59g7f">
+                        <div data-oid="pvlbu1s">
+                            <h4 className="text-lg font-semibold mb-4" data-oid="72pb0z7">
                                 Quick Links
                             </h4>
-                            <ul className="space-y-2" data-oid="cyzv19t">
-                                <li data-oid="i.dru3i">
+                            <ul className="space-y-2" data-oid=".v6o---">
+                                <li data-oid=".az4vih">
                                     <Link
                                         href="/"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="if6vh4s"
+                                        data-oid="ttsr9.w"
                                     >
                                         Home
                                     </Link>
                                 </li>
-                                <li data-oid="nx11bq:">
+                                <li data-oid="4s7y3:l">
                                     <Link
                                         href="/courses"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="y7p8105"
+                                        data-oid="qc-.zm4"
                                     >
                                         Courses
                                     </Link>
                                 </li>
-                                <li data-oid="fiy2025">
+                                <li data-oid="h5xrpwn">
                                     <Link
                                         href="/workshops"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="2.mqluf"
+                                        data-oid="4n-tlt-"
                                     >
                                         Workshops
                                     </Link>
                                 </li>
-                                <li data-oid="_72:btw">
+                                <li data-oid="zh1gtoz">
                                     <Link
                                         href="/hackathons"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="i:.jw2w"
+                                        data-oid=":.6iv5v"
                                     >
                                         Hackathons
                                     </Link>
                                 </li>
-                                <li data-oid="-eqilb0">
+                                <li data-oid="1ep1c-9">
                                     <Link
                                         href="/aboutUs"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="tge9jpb"
+                                        data-oid="kpe6lml"
                                     >
                                         About Us
                                     </Link>
@@ -802,52 +802,52 @@ export default function AboutUsPage() {
                             </ul>
                         </div>
 
-                        <div data-oid="mi.slpw">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="1mtfx3-">
+                        <div data-oid="1j-4wn7">
+                            <h4 className="text-lg font-semibold mb-4" data-oid="un_-yws">
                                 Resources
                             </h4>
-                            <ul className="space-y-2" data-oid="4hipv3d">
-                                <li data-oid="__ekof_">
+                            <ul className="space-y-2" data-oid="9cg3x1x">
+                                <li data-oid="ks57m_l">
                                     <a
                                         href="#"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="wx189bl"
+                                        data-oid=".25g6h6"
                                     >
                                         Blog
                                     </a>
                                 </li>
-                                <li data-oid="hhpsw40">
+                                <li data-oid="-3maowe">
                                     <a
                                         href="#"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid=":29refe"
+                                        data-oid="spo-jxq"
                                     >
                                         Documentation
                                     </a>
                                 </li>
-                                <li data-oid="e6psg3e">
+                                <li data-oid="mfb7ggb">
                                     <a
                                         href="#"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="-2fxxkw"
+                                        data-oid="nq38_nr"
                                     >
                                         Community
                                     </a>
                                 </li>
-                                <li data-oid="rovr76n">
+                                <li data-oid="n_iwykh">
                                     <a
                                         href="#"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="1xgserc"
+                                        data-oid=":esxm2d"
                                     >
                                         FAQ
                                     </a>
                                 </li>
-                                <li data-oid="s5l8as8">
+                                <li data-oid="ot3b8g9">
                                     <a
                                         href="#"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="7k8zv7m"
+                                        data-oid="lk27c4a"
                                     >
                                         Support
                                     </a>
@@ -855,76 +855,76 @@ export default function AboutUsPage() {
                             </ul>
                         </div>
 
-                        <div data-oid="iy4x9jx">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="1wabd8c">
+                        <div data-oid="6u7heg-">
+                            <h4 className="text-lg font-semibold mb-4" data-oid="7papdoc">
                                 Contact Us
                             </h4>
-                            <ul className="space-y-2" data-oid="-x8ihuw">
-                                <li className="flex items-start" data-oid=":gfwm65">
+                            <ul className="space-y-2" data-oid="x.k2k7b">
+                                <li className="flex items-start" data-oid="-cmgyi3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-5 w-5 mr-2 text-gray-400"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        data-oid="8mklhwj"
+                                        data-oid="oaa8fqv"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
                                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                            data-oid="s4.uboq"
+                                            data-oid="vyyop2-"
                                         />
                                     </svg>
                                     <a
                                         href="mailto:admissions@mergelearning.co.in"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid="e.0imsa"
+                                        data-oid=":vfr3:t"
                                     >
                                         admissions@mergelearning.co.in
                                     </a>
                                 </li>
-                                <li className="flex items-start" data-oid="nasv-_h">
+                                <li className="flex items-start" data-oid="c2.8jpv">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-5 w-5 mr-2 text-gray-400"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        data-oid="68ggt:w"
+                                        data-oid="hrovoz9"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
                                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                            data-oid="fl_8elr"
+                                            data-oid="o03im3n"
                                         />
                                     </svg>
                                     <a
                                         href="tel:+91 70700 30645"
                                         className="text-gray-400 hover:text-purple-400 transition-colors"
-                                        data-oid=":qf_q82"
+                                        data-oid="8430114"
                                     >
                                         +91 70700 30645
                                     </a>
                                 </li>
-                                <li className="flex items-start" data-oid=":l90p3r">
+                                <li className="flex items-start" data-oid="l0qx45u">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-5 w-5 mr-2 text-gray-400"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        data-oid="0txnjz."
+                                        data-oid="8c3p3kc"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
                                             d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                            data-oid="-etvg-f"
+                                            data-oid="0e82dgg"
                                         />
 
                                         <path
@@ -932,10 +932,10 @@ export default function AboutUsPage() {
                                             strokeLinejoin="round"
                                             strokeWidth={2}
                                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                            data-oid="tb3ozlc"
+                                            data-oid="44.d82r"
                                         />
                                     </svg>
-                                    <span className="text-gray-400" data-oid="o6fvcig">
+                                    <span className="text-gray-400" data-oid="q2d:_c1">
                                         Gaya, Bihar, India
                                     </span>
                                 </li>
@@ -945,13 +945,13 @@ export default function AboutUsPage() {
 
                     <div
                         className="pt-8 border-t border-gray-800 text-gray-500 flex flex-wrap justify-between"
-                        data-oid="6rqrgvz"
+                        data-oid="rv:tfyw"
                     >
-                        <p data-oid="gu2ozh1">
+                        <p data-oid="3q2gts:">
                             &copy; {new Date().getFullYear()} Merge Learning Pvt. Ltd. All rights
                             reserved.
                         </p>
-                        <p data-oid="uu76oh3">Built with ❤️ by BitHive Technologies</p>
+                        <p data-oid="evfop25">Built with ❤️ by BitHive Technologies</p>
                     </div>
                 </div>
             </footer>
