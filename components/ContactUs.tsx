@@ -69,26 +69,39 @@ export default function ContactUs() {
 
     if (showSuccess) {
         return (
-            <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-16">
+            <section
+                className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900"
+                data-oid="my.nsrj"
+            >
+                <div className="max-w-4xl mx-auto" data-oid="h0x0pw-">
+                    <div className="text-center" data-oid="_4sdy--">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-16" data-oid="1xgmw8x">
                             Contact{' '}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                                data-oid="wqwq.kv"
+                            >
                                 Us
                             </span>
                         </h2>
 
                         {/* Success Animation */}
-                        <div className="flex flex-col items-center justify-center min-h-[400px]">
-                            <div className="relative">
+                        <div
+                            className="flex flex-col items-center justify-center min-h-[400px]"
+                            data-oid="upzf_os"
+                        >
+                            <div className="relative" data-oid="kaixa5c">
                                 {/* Animated checkmark circle */}
-                                <div className="w-32 h-32 rounded-full bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                                <div
+                                    className="w-32 h-32 rounded-full bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center"
+                                    data-oid="d5aduek"
+                                >
                                     <svg
                                         className="w-16 h-16 text-white animate-pulse"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
+                                        data-oid="m3ddx-7"
                                     >
                                         <path
                                             strokeLinecap="round"
@@ -96,22 +109,29 @@ export default function ContactUs() {
                                             strokeWidth={3}
                                             d="M5 13l4 4L19 7"
                                             className="animate-draw-check"
+                                            data-oid="el:-8ww"
                                         />
                                     </svg>
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-green-400 mt-8 mb-4">
+                            <h3
+                                className="text-2xl font-bold text-green-400 mt-8 mb-4"
+                                data-oid="7l11q1d"
+                            >
                                 Query Submitted Successfully!
                             </h3>
-                            <p className="text-lg text-gray-300 max-w-md text-center">
+                            <p
+                                className="text-lg text-gray-300 max-w-md text-center"
+                                data-oid=".z-lnjw"
+                            >
                                 Our Team will contact you soon. Thank you for reaching out to us!
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <style jsx>{`
+                <style jsx data-oid="aqnt.ln">{`
                     @keyframes draw-check {
                         0% {
                             stroke-dasharray: 0 100;
@@ -134,29 +154,39 @@ export default function ContactUs() {
     }
 
     return (
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section
+            className="py-20 px-6 md:px-12 bg-gradient-to-b from-black to-gray-900"
+            data-oid="jv12p.p"
+        >
+            <div className="max-w-4xl mx-auto" data-oid="jz0zy_i">
+                <div className="text-center mb-16" data-oid="e.c_w45">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4" data-oid="06u9dzm">
                         Contact{' '}
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+                        <span
+                            className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+                            data-oid="dyvxzgf"
+                        >
                             Us
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto" data-oid="g0r_8v4">
                         Have questions or need assistance? We're here to help! Fill out the form
                         below and our team will get back to you soon.
                     </p>
                 </div>
 
-                <div className="bg-gray-800 p-8 md:p-12 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
+                <div
+                    className="bg-gray-800 p-8 md:p-12 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+                    data-oid=".03_4l1"
+                >
+                    <form onSubmit={handleSubmit} className="space-y-6" data-oid="x_:haek">
+                        <div className="grid md:grid-cols-2 gap-6" data-oid=":m6zjek">
                             {/* Name Field */}
-                            <div>
+                            <div data-oid="9od0het">
                                 <label
                                     htmlFor="name"
                                     className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="qz:o9jb"
                                 >
                                     Full Name *
                                 </label>
@@ -169,14 +199,16 @@ export default function ContactUs() {
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
                                     placeholder="Enter your full name"
+                                    data-oid="mkeiz3j"
                                 />
                             </div>
 
                             {/* Email Field */}
-                            <div>
+                            <div data-oid="nodsp_d">
                                 <label
                                     htmlFor="email"
                                     className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="s4z9uuy"
                                 >
                                     Email Address *
                                 </label>
@@ -189,16 +221,18 @@ export default function ContactUs() {
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
                                     placeholder="Enter your email address"
+                                    data-oid="vk8b6az"
                                 />
                             </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-6" data-oid="qiq4.gd">
                             {/* Mobile Number Field */}
-                            <div>
+                            <div data-oid="ta5rbo5">
                                 <label
                                     htmlFor="mobile"
                                     className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="rg4zcyp"
                                 >
                                     Mobile Number *
                                 </label>
@@ -211,14 +245,16 @@ export default function ContactUs() {
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
                                     placeholder="Enter your mobile number"
+                                    data-oid="s:-1oav"
                                 />
                             </div>
 
                             {/* University/College Field */}
-                            <div>
+                            <div data-oid="fdy.6i1">
                                 <label
                                     htmlFor="university"
                                     className="block text-sm font-medium text-gray-300 mb-2"
+                                    data-oid="63uqhzd"
                                 >
                                     University/College Name *
                                 </label>
@@ -231,15 +267,17 @@ export default function ContactUs() {
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400"
                                     placeholder="Enter your university/college name"
+                                    data-oid="3w_a8zx"
                                 />
                             </div>
                         </div>
 
                         {/* Message Field */}
-                        <div>
+                        <div data-oid="c0c4i.2">
                             <label
                                 htmlFor="message"
                                 className="block text-sm font-medium text-gray-300 mb-2"
+                                data-oid="wv3iak5"
                             >
                                 Concern/Message *
                             </label>
@@ -252,23 +290,29 @@ export default function ContactUs() {
                                 rows={5}
                                 className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-white placeholder-gray-400 resize-vertical"
                                 placeholder="Please describe your concern or message..."
+                                data-oid="_yf_vag"
                             />
                         </div>
 
                         {/* Submit Button */}
-                        <div className="text-center">
+                        <div className="text-center" data-oid="w:szu7z">
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
                                 className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed transition-all duration-300 text-white font-medium text-lg transform hover:scale-105 disabled:hover:scale-100"
+                                data-oid="wmf2icp"
                             >
                                 {isSubmitting ? (
-                                    <div className="flex items-center justify-center">
+                                    <div
+                                        className="flex items-center justify-center"
+                                        data-oid="n-3r-38"
+                                    >
                                         <svg
                                             className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
+                                            data-oid="8ua.29_"
                                         >
                                             <circle
                                                 className="opacity-25"
@@ -277,11 +321,13 @@ export default function ContactUs() {
                                                 r="10"
                                                 stroke="currentColor"
                                                 strokeWidth="4"
+                                                data-oid="hvsdxot"
                                             ></circle>
                                             <path
                                                 className="opacity-75"
                                                 fill="currentColor"
                                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                data-oid="3l0774s"
                                             ></path>
                                         </svg>
                                         Submitting...

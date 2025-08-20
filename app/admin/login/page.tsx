@@ -61,33 +61,53 @@ export default function AdminLoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            <Navbar />
+        <div className="min-h-screen bg-black text-white font-sans" data-oid="ldpabnx">
+            <Navbar data-oid="adirl8n" />
 
-            <div className="pt-32 pb-20 px-6 md:px-12">
-                <div className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden mt-12">
+            <div className="pt-32 pb-20 px-6 md:px-12" data-oid="uos9c7d">
+                <div
+                    className="max-w-md mx-auto bg-gray-800 rounded-xl border border-gray-700 overflow-hidden mt-12"
+                    data-oid="vogo8fb"
+                >
                     {/* Background blur elements */}
-                    <div className="relative">
-                        <div className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"></div>
-                        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"></div>
+                    <div className="relative" data-oid="c9n2i::">
+                        <div
+                            className="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full filter blur-3xl"
+                            data-oid="7jss--5"
+                        ></div>
+                        <div
+                            className="absolute -bottom-20 -right-20 w-40 h-40 bg-pink-500/20 rounded-full filter blur-3xl"
+                            data-oid="d4lz5uu"
+                        ></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative p-6">
-                        <div className="text-center mb-6">
-                            <h1 className="text-3xl font-bold mb-2">Admin Login</h1>
-                            <p className="text-gray-400">Sign in to access the admin dashboard</p>
+                    <div className="relative p-6" data-oid="scxt1nz">
+                        <div className="text-center mb-6" data-oid="_uel-06">
+                            <h1 className="text-3xl font-bold mb-2" data-oid="pya4v4j">
+                                Admin Login
+                            </h1>
+                            <p className="text-gray-400" data-oid="1d5y0_.">
+                                Sign in to access the admin dashboard
+                            </p>
                         </div>
 
                         {error && (
-                            <div className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm">
+                            <div
+                                className="mb-6 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200 text-sm"
+                                data-oid="s.ozgpx"
+                            >
                                 {error}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit}>
-                            <div className="mb-6">
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                        <form onSubmit={handleSubmit} data-oid="re_d0o0">
+                            <div className="mb-6" data-oid="8pw69v1">
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium mb-2"
+                                    data-oid="hjayh7z"
+                                >
                                     Email Address
                                 </label>
                                 <input
@@ -98,17 +118,19 @@ export default function AdminLoginPage() {
                                     className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
                                     placeholder="admin@example.com"
                                     required
+                                    data-oid="casi4_q"
                                 />
                             </div>
 
-                            <div className="mb-6">
+                            <div className="mb-6" data-oid=":vn8ssh">
                                 <label
                                     htmlFor="password"
                                     className="block text-sm font-medium mb-2"
+                                    data-oid="6q4pjp8"
                                 >
                                     Password
                                 </label>
-                                <div className="relative">
+                                <div className="relative" data-oid="hcnqd33">
                                     <input
                                         id="password"
                                         type={showPassword ? 'text' : 'password'}
@@ -117,6 +139,7 @@ export default function AdminLoginPage() {
                                         className="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 transition-colors pr-10"
                                         placeholder="••••••••"
                                         required
+                                        data-oid="n4ufhcj"
                                     />
 
                                     <button
@@ -126,6 +149,7 @@ export default function AdminLoginPage() {
                                         aria-label={
                                             showPassword ? 'Hide password' : 'Show password'
                                         }
+                                        data-oid="ys.ztoj"
                                     >
                                         {showPassword ? (
                                             <svg
@@ -134,12 +158,14 @@ export default function AdminLoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
+                                                data-oid="c.uh_gx"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                                                    data-oid="awbar:w"
                                                 />
                                             </svg>
                                         ) : (
@@ -149,12 +175,14 @@ export default function AdminLoginPage() {
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
+                                                data-oid="88g1woo"
                                             >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                                    data-oid="oj2otp3"
                                                 />
 
                                                 <path
@@ -162,6 +190,7 @@ export default function AdminLoginPage() {
                                                     strokeLinejoin="round"
                                                     strokeWidth={2}
                                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                                    data-oid="d6b518-"
                                                 />
                                             </svg>
                                         )}
@@ -175,6 +204,7 @@ export default function AdminLoginPage() {
                                 className={`w-full py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-colors font-medium ${
                                     isLoading ? 'opacity-70 cursor-not-allowed' : ''
                                 }`}
+                                data-oid="a.ets0f"
                             >
                                 {isLoading ? 'Signing in...' : 'Sign In'}
                             </button>

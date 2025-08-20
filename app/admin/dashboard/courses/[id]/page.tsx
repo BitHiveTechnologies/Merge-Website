@@ -64,19 +64,28 @@ export default function CourseRegistrationsPage() {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+            <div className="flex justify-center items-center min-h-[50vh]" data-oid="sm6t3c9">
+                <div
+                    className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
+                    data-oid="i0-2p10"
+                ></div>
             </div>
         );
     }
 
     if (error) {
         return (
-            <div className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6">
-                <p className="text-red-200">{error}</p>
+            <div
+                className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
+                data-oid="vem7le-"
+            >
+                <p className="text-red-200" data-oid="093x5pk">
+                    {error}
+                </p>
                 <button
                     onClick={() => window.location.reload()}
                     className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium transition-colors"
+                    data-oid="h06fxp."
                 >
                     Try Again
                 </button>
@@ -85,61 +94,92 @@ export default function CourseRegistrationsPage() {
     }
 
     return (
-        <div>
-            <div className="flex justify-between items-center mb-6">
-                <div>
+        <div data-oid="_pjkzil">
+            <div className="flex justify-between items-center mb-6" data-oid=":nj:54e">
+                <div data-oid="3o-reud">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
+                        data-oid="3wduutx"
                     >
-                        <span className="mr-1">←</span> Back to Dashboard
+                        <span className="mr-1" data-oid="xhveh2o">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold">
+                    <h1 className="text-3xl font-bold" data-oid="e9tthfu">
                         {course ? course.title : 'Course'} Registrations
                     </h1>
                 </div>
             </div>
 
             {registrations.length === 0 ? (
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-8 text-center">
-                    <p className="text-gray-400">No registrations found for this course.</p>
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-8 text-center"
+                    data-oid="ycq1.1k"
+                >
+                    <p className="text-gray-400" data-oid="dq-z16y">
+                        No registrations found for this course.
+                    </p>
                 </div>
             ) : (
-                <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="min-w-full divide-y divide-gray-700">
-                            <thead className="bg-gray-900">
-                                <tr>
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+                    data-oid="usvfz.4"
+                >
+                    <div className="overflow-x-auto" data-oid="ims3wis">
+                        <table className="min-w-full divide-y divide-gray-700" data-oid="rmcf341">
+                            <thead className="bg-gray-900" data-oid="ath-656">
+                                <tr data-oid="cl_ly-z">
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                        data-oid="aia8j7:"
                                     >
                                         Student Name
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                        data-oid="h_dlg:q"
                                     >
                                         Email
                                     </th>
                                     <th
                                         scope="col"
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider"
+                                        data-oid="wv_h9uc"
                                     >
                                         Enrolled At
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody className="bg-gray-800 divide-y divide-gray-700">
+                            <tbody
+                                className="bg-gray-800 divide-y divide-gray-700"
+                                data-oid="m3nf2:v"
+                            >
                                 {registrations.map((registration) => (
-                                    <tr key={registration._id} className="hover:bg-gray-750">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <tr
+                                        key={registration._id}
+                                        className="hover:bg-gray-750"
+                                        data-oid="qnjg8mm"
+                                    >
+                                        <td
+                                            className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                            data-oid="hjdkvmk"
+                                        >
                                             {registration.userId.name}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                                        <td
+                                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                            data-oid="hsneo6t"
+                                        >
                                             {registration.userId.email}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                                        <td
+                                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+                                            data-oid="ku76:ed"
+                                        >
                                             {new Date(
                                                 registration.enrollmentDate,
                                             ).toLocaleDateString()}

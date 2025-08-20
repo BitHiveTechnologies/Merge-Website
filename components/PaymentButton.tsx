@@ -132,9 +132,10 @@ export default function PaymentButton({
             <Script
                 src="https://checkout.razorpay.com/v1/checkout.js"
                 strategy="afterInteractive"
+                data-oid="2espue:"
             />
 
-            <button onClick={handleClick} disabled={loading}>
+            <button onClick={handleClick} disabled={loading} data-oid="l-j5212">
                 {loading ? 'Processing…' : `Buy Now`}
             </button>
         </>

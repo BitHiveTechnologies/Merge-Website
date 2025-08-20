@@ -196,48 +196,71 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+            <div className="flex justify-center items-center min-h-[50vh]" data-oid="gyj0b8i">
+                <div
+                    className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"
+                    data-oid="wgty0bs"
+                ></div>
             </div>
         );
     }
 
     return (
-        <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-center mb-6">
-                <div>
+        <div className="max-w-4xl mx-auto" data-oid="t_l.yk9">
+            <div className="flex justify-between items-center mb-6" data-oid="-r-kepo">
+                <div data-oid="i:crk5y">
                     <Link
                         href="/admin/dashboard"
                         className="text-purple-400 hover:text-purple-300 border border-purple-500 hover:border-purple-400 rounded-lg px-4 py-2 transition-all duration-300 mb-4 inline-flex items-center"
+                        data-oid="syrci.9"
                     >
-                        <span className="mr-1">←</span> Back to Dashboard
+                        <span className="mr-1" data-oid=":bzby-8">
+                            ←
+                        </span>{' '}
+                        Back to Dashboard
                     </Link>
-                    <h1 className="text-3xl font-bold mt-4">Edit Workshop</h1>
+                    <h1 className="text-3xl font-bold mt-4" data-oid="cn5m-u0">
+                        Edit Workshop
+                    </h1>
                 </div>
             </div>
 
             {error && (
-                <div className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6">
-                    <p className="text-red-200">{error}</p>
+                <div
+                    className="bg-red-500/20 border border-red-500 rounded-md p-4 mb-6"
+                    data-oid="k_1i:2x"
+                >
+                    <p className="text-red-200" data-oid="3nhhu_1">
+                        {error}
+                    </p>
                 </div>
             )}
 
             {success && (
-                <div className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6">
-                    <p className="text-green-200">{success}</p>
+                <div
+                    className="bg-green-500/20 border border-green-500 rounded-md p-4 mb-6"
+                    data-oid="di2xoqk"
+                >
+                    <p className="text-green-200" data-oid="9l8s1r2">
+                        {success}
+                    </p>
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">
+            <form onSubmit={handleSubmit} className="space-y-6" data-oid="9ztm:jr">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="z6dnnxo"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="p49icxd">
                         Workshop Information
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="eds4o-j">
+                        <div data-oid="m5:tbft">
                             <label
                                 htmlFor="title"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="sa9gld-"
                             >
                                 Workshop Title*
                             </label>
@@ -248,12 +271,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 value={formData.title}
                                 onChange={handleInputChange}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="z2vd3i4"
                             />
                         </div>
-                        <div>
+                        <div data-oid="utf3z11">
                             <label
                                 htmlFor="instructor"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="xq0snuw"
                             >
                                 Instructor*
                             </label>
@@ -265,12 +290,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid=":af82el"
                             />
                         </div>
-                        <div>
+                        <div data-oid=".0d76ws">
                             <label
                                 htmlFor="date"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="ovdajro"
                             >
                                 Date*
                             </label>
@@ -282,12 +309,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="_lva_4k"
                             />
                         </div>
-                        <div>
+                        <div data-oid="5jnuh89">
                             <label
                                 htmlFor="time"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="6vew8e0"
                             >
                                 Time*
                             </label>
@@ -299,12 +328,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="ijq:eme"
                             />
                         </div>
-                        <div>
+                        <div data-oid="8v6pc12">
                             <label
                                 htmlFor="location"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="rsjjdf_"
                             >
                                 Location*
                             </label>
@@ -317,12 +348,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 required
                                 placeholder="e.g., Online, Conference Room A, etc."
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="gr5naqo"
                             />
                         </div>
-                        <div>
+                        <div data-oid="g0o27vd">
                             <label
                                 htmlFor="price"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="ucf10_2"
                             >
                                 Price (leave empty for free)
                             </label>
@@ -335,12 +368,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 min="0"
                                 step="0.01"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="ztsk0v5"
                             />
                         </div>
-                        <div>
+                        <div data-oid="a82ukm2">
                             <label
                                 htmlFor="image"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="wcbbxxw"
                             >
                                 Image URL
                             </label>
@@ -352,12 +387,14 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 onChange={handleInputChange}
                                 placeholder="https://example.com/images/workshop.png"
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="_01u9a9"
                             />
                         </div>
-                        <div className="md:col-span-2">
+                        <div className="md:col-span-2" data-oid="a21t118">
                             <label
                                 htmlFor="description"
                                 className="block text-sm font-medium text-gray-300 mb-1"
+                                data-oid="nam60yc"
                             >
                                 Description*
                             </label>
@@ -369,10 +406,11 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 required
                                 rows={4}
                                 className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="dsbfee3"
                             ></textarea>
                         </div>
-                        <div className="md:col-span-2">
-                            <div className="flex items-center mb-4">
+                        <div className="md:col-span-2" data-oid="_oz792x">
+                            <div className="flex items-center mb-4" data-oid="it9dwo:">
                                 <input
                                     type="checkbox"
                                     id="isUpcoming"
@@ -380,11 +418,13 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                     checked={formData.isUpcoming}
                                     onChange={handleCheckboxChange}
                                     className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded"
+                                    data-oid="t._t1uh"
                                 />
 
                                 <label
                                     htmlFor="isUpcoming"
                                     className="ml-2 block text-sm text-gray-300"
+                                    data-oid="-02-2ns"
                                 >
                                     Mark as upcoming workshop
                                 </label>
@@ -393,10 +433,15 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                     </div>
                 </div>
 
-                <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-                    <h2 className="text-xl font-semibold mb-4 text-purple-400">Tags</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
+                <div
+                    className="bg-gray-800 rounded-lg border border-gray-700 p-6"
+                    data-oid="wgu:5jy"
+                >
+                    <h2 className="text-xl font-semibold mb-4 text-purple-400" data-oid="4yqrbo5">
+                        Tags
+                    </h2>
+                    <div className="space-y-4" data-oid="_q0j_6p">
+                        <div className="flex items-center" data-oid="i28.3da">
                             <input
                                 type="text"
                                 id="tagInput"
@@ -405,54 +450,63 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                                 onKeyDown={handleTagInputKeyDown}
                                 placeholder="Add a tag and press Enter"
                                 className="flex-grow bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                data-oid="5.9_btw"
                             />
 
                             <button
                                 type="button"
                                 onClick={addTag}
                                 className="ml-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors"
+                                data-oid=":kig9h0"
                             >
                                 Add
                             </button>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2" data-oid="fyaz0a4">
                             {formData.tags.map((tag, index) => (
                                 <div
                                     key={index}
                                     className="bg-gray-700 text-gray-200 px-3 py-1 rounded-full flex items-center"
+                                    data-oid="ufct4ji"
                                 >
-                                    <span>{tag}</span>
+                                    <span data-oid="o-bskza">{tag}</span>
                                     <button
                                         type="button"
                                         onClick={() => removeTag(tag)}
                                         className="ml-2 text-gray-400 hover:text-gray-200"
+                                        data-oid="3hz:-_x"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-4 w-4"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
+                                            data-oid="u605111"
                                         >
                                             <path
                                                 fillRule="evenodd"
                                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
+                                                data-oid="dum-44k"
                                             />
                                         </svg>
                                     </button>
                                 </div>
                             ))}
                             {formData.tags.length === 0 && (
-                                <p className="text-gray-500 text-sm">No tags added yet</p>
+                                <p className="text-gray-500 text-sm" data-oid="_ij:h-u">
+                                    No tags added yet
+                                </p>
                             )}
                         </div>
                     </div>
                 </div>
 
-                <div className="flex justify-end space-x-4">
+                <div className="flex justify-end space-x-4" data-oid="i3-8_m4">
                     <Link
                         href="/admin/dashboard"
                         className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors"
+                        data-oid="m2l0jg:"
                     >
                         Cancel
                     </Link>
@@ -462,6 +516,7 @@ export default function EditWorkshopPage({ params }: WorkshopParams) {
                         className={`px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm font-medium transition-colors ${
                             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                         }`}
+                        data-oid="4i8kvue"
                     >
                         {isSubmitting ? 'Updating...' : 'Update Workshop'}
                     </button>
