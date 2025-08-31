@@ -10,8 +10,8 @@ interface SalesBannerProps {
 export default function SalesBanner({ message }: SalesBannerProps) {
     const defaultMessage = (
         <span>
-            <a href="/#contactUs" className="inline-flex items-center space-x-1">
-                <span>Connect to Us</span>
+            <a href="/courses/68b43f0d78f61888f4d68fa6" className="inline-flex items-center space-x-1">
+                <span>Register for Data Analytics Test</span>
                 <ExternalLink size={20} />
             </a>
         </span>
